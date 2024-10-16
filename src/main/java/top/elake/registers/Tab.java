@@ -9,7 +9,6 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import top.elake.ElakeChemical;
 import top.elake.registers.item.Elements;
 
 import java.util.function.Supplier;

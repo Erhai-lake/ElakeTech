@@ -6,7 +6,6 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import top.elake.ElakeChemical;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
-
 import java.util.ArrayList;
 import java.util.List;
 
