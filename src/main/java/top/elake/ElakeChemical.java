@@ -1,8 +1,16 @@
 package top.elake;
 
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import top.elake.registers.item.Elements;
+import top.elake.registers.Tab;
 
 @Mod(ElakeChemical.MODID)
 public class ElakeChemical {
     public static final String MODID = "elake_chemical";
+
+    public ElakeChemical(IEventBus event) {
+        Elements.register(event);
+        Tab.register(event);
+    }
 }
