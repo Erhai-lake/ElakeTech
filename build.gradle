@@ -11,6 +11,23 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    // For Jei
+    maven {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    // For Jade
+    maven {
+        name = "CurseMaven"
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 base {
@@ -64,10 +81,17 @@ neoForge {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+}
 
 
 dependencies {
+    // JEI
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    // Jade
+    implementation("curse.maven:jade-324717:${jade_file_id}")
 }
 
 tasks.withType(ProcessResources).configureEach {

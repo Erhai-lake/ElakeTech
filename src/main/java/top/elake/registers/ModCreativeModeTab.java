@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 import static top.elake.ElakeChemical.MODID;
 
-public class Tab {
+public class ModCreativeModeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     public static final Supplier<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register("element_tab", () -> CreativeModeTab.builder()
@@ -25,8 +25,7 @@ public class Tab {
                 for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
                     output.accept(item);
                 }
-            })
-            .build()
+            }).build()
     );
 
     public static void register(IEventBus eventBus) {
