@@ -1,4 +1,4 @@
-package top.elake.registers.block.custom;
+package top.elake.elakechemical.registers.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

@@ -1,4 +1,4 @@
-package top.elake.registers;
+package top.elake.elakechemical.registers;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -9,12 +9,12 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import top.elake.registers.block.ModBlock;
-import top.elake.registers.item.Elements;
+import top.elake.elakechemical.registers.block.ModBlock;
+import top.elake.elakechemical.registers.item.Elements;
 
 import java.util.function.Supplier;
 
-import static top.elake.ElakeChemical.MODID;
+import static top.elake.elakechemical.ElakeChemical.MODID;
 
 public class ModCreativeModeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);

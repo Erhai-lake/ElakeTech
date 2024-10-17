@@ -1,4 +1,4 @@
-package top.elake.registers.block;
+package top.elake.elakechemical.registers.block;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -9,9 +9,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import top.elake.ElakeChemical;
-import top.elake.registers.block.custom.Test;
-import top.elake.registers.item.Elements;
+import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.registers.block.custom.Test;
+import top.elake.elakechemical.registers.item.Elements;
 
 import java.util.function.Supplier;
 
