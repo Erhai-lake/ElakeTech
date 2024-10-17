@@ -28,6 +28,13 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    // For KubeJS
+    maven {
+        url = "https://maven.saps.dev/minecraft"
+        content {
+            includeGroup "dev.latvian.mods"
+        }
+    }
 }
 
 base {
@@ -92,6 +99,9 @@ dependencies {
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
     // Jade
     implementation("curse.maven:jade-324717:${jade_file_id}")
+    // KubeJS
+    implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
+    implementation("curse.maven:rhinp-416294:${rhinp_file_id}")
 }
 
 tasks.withType(ProcessResources).configureEach {
