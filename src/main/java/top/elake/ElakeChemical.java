@@ -2,6 +2,7 @@ package top.elake;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import top.elake.registers.block.ModBlock;
 import top.elake.registers.item.Elements;
 import top.elake.registers.ModCreativeModeTab;
 
@@ -11,6 +12,7 @@ public class ElakeChemical {
 
     public ElakeChemical(IEventBus event) {
         Elements.register(event);
+        ModBlock.register(event);
         ModCreativeModeTab.register(event);
     }
 }

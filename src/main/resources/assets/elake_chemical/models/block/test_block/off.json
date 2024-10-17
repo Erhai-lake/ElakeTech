@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:block/orientable",
+	"textures": {
+		"front": "elake_chemical:block/test/off",
+		"side": "elake_chemical:block/test/off",
+		"top": "elake_chemical:block/test/top",
+		"particle": "elake_chemical:block/test/top"
+	}
+}

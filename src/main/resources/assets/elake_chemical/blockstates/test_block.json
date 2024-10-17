@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"on=false": {
+			"model": "elake_chemical:block/test_block/off"
+		},
+		"on=true": {
+			"model": "elake_chemical:block/test_block/on"
+		}
+	}
+}

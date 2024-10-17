@@ -1,6 +1,8 @@
 {
     "itemGroup.elake_chemical.element_tab": "洱海科学-元素",
 
+    "block.elake_chemical.test_block": "测试方块",
+
     "item.elake_chemical.hydrogen": "H",
     "item.elake_chemical.helium": "He",
     "item.elake_chemical.lithium": "Li",

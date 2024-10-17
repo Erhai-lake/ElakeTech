@@ -1,6 +1,8 @@
 {
     "itemGroup.elake_chemical.element_tab": "ElakeChemical - Elements",
 
+    "block.elake_chemical.test_block": "Test Block",
+
     "item.elake_chemical.hydrogen": "H",
     "item.elake_chemical.helium": "He",
     "item.elake_chemical.lithium": "Li",

@@ -9,6 +9,7 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import top.elake.registers.block.ModBlock;
 import top.elake.registers.item.Elements;
 
 import java.util.function.Supplier;
@@ -24,6 +25,7 @@ public class ModCreativeModeTab {
             .displayItems((params, output) -> {
                 for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
                     output.accept(item);
+                    output.accept(ModBlock.TEST_BLOCK.get());
                 }
             }).build()
     );
