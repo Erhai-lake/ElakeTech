@@ -40,7 +40,7 @@ public class Elements {
      */
     public static void register(IEventBus eventBus) {
         for (String element : ELEMENTS_ITEM_ARR) {
-            registerElement(element, Rarity.EPIC);
+            registerElement(element);
         }
         ITEMS.register(eventBus);
     }
@@ -48,15 +48,14 @@ public class Elements {
     /**
      * 注册单个元素物品
      *
-     * @param name   物品名称
-     * @param rarity 物品稀有度
+     * @param name 物品名称
      */
-    private static void registerElement(String name, Rarity rarity) {
+    private static void registerElement(String name) {
         DeferredItem<Item> item = ITEMS.registerItem(
                 name,
                 Item::new,
                 new Item.Properties()
-                        .rarity(rarity)
+                        .rarity(Rarity.EPIC)
         );
         REGISTERED_ELEMENTS.add(item);
     }

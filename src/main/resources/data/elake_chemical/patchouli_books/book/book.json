@@ -1,0 +1,9 @@
+{
+    "name": "elake_chemical.patchouli.book.name",
+    "landing_text": "elake_chemical.patchouli.book.landing",
+    "advancement_namespaces": [
+        "Elake Chemical"
+    ],
+    "advancements_tab": "element_tab",
+    "version": 1
+}
