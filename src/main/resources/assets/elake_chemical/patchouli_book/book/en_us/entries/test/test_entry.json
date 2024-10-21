@@ -1,0 +1,11 @@
+{
+    "name": "Test Entry",
+    "category": "elake_chemical:test_category",
+    "icon": "minecraft:writable_book",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This is a test entry, but it should show up!"
+        }
+    ]
+}
