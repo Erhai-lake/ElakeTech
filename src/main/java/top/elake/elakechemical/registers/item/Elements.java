@@ -51,11 +51,8 @@ public class Elements {
      * @param name 物品名称
      */
     private static void registerElement(String name) {
-        DeferredItem<Item> item = ITEMS.registerItem(
-                name,
-                Item::new,
-                new Item.Properties()
-                        .rarity(Rarity.EPIC)
+        DeferredItem<Item> item = ITEMS.registerItem(name, Item::new, new Item.Properties()
+                .rarity(Rarity.EPIC)
         );
         REGISTERED_ELEMENTS.add(item);
     }

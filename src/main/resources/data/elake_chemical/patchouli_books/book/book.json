@@ -1,9 +1,7 @@
 {
     "name": "elake_chemical.patchouli.book.name",
     "landing_text": "elake_chemical.patchouli.book.landing",
-    "advancement_namespaces": [
-        "Elake Chemical"
-    ],
-    "advancements_tab": "element_tab",
-    "version": 1
+    "version": 1,
+    "creative_tab": "elake_chemical:element_tab",
+    "use_resource_pack": true
 }
