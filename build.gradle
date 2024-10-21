@@ -35,6 +35,10 @@ repositories {
             includeGroup "dev.latvian.mods"
         }
     }
+    // For Patchouli
+    maven {
+        url 'https://maven.blamejared.com'
+    }
 }
 
 base {
@@ -102,6 +106,9 @@ dependencies {
     // KubeJS
     implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
     implementation("curse.maven:rhinp-416294:${rhinp_file_id}")
+    // Patchouli
+    compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+    runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
 }
 
 tasks.withType(ProcessResources).configureEach {

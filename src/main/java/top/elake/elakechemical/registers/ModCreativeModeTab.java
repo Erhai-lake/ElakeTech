@@ -9,18 +9,28 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.Elements;
 
 import java.util.function.Supplier;
 
-import static top.elake.elakechemical.ElakeChemical.MODID;
-
+/**
+ * 创造模式物品栏
+ *
+ * @author Erhai_lake
+ */
 public class ModCreativeModeTab {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    /**
+     * 创造模式物品栏注册
+     */
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ElakeChemical.MODID);
 
-    public static final Supplier<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register("element_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + MODID + ".element_tab"))
+    /**
+     * 元素创造模式物品栏
+     */
+    public static final Supplier<CreativeModeTab> ELEMENT_TAB = CREATIVE_MODE_TABS.register("element_tab", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element_tab"))
             .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
             .displayItems((params, output) -> {
                 for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
@@ -30,6 +40,11 @@ public class ModCreativeModeTab {
             }).build()
     );
 
+    /**
+     * 注册
+     *
+     * @param eventBus
+     */
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }
