@@ -32,6 +32,17 @@ public class ModBlock {
             )
     );
 
+    public static final DeferredBlock<Block> TEST_BLOCK_ENTITY = registerBlock("test_block_entity",
+            () -> new Test(BlockBehaviour.Properties
+                    // 复制方块属性
+                    .ofFullCopy(Blocks.STONE)
+                    // 设置声音类型
+                    .sound(SoundType.WOOD)
+                    // 设置硬度和爆炸抗性(分别为2和6)
+                    .strength(2f, 6f)
+            )
+    );
+
     // BlockItem
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

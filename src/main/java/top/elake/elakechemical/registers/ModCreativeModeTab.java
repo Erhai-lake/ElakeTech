@@ -36,6 +36,7 @@ public class ModCreativeModeTab {
                 for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
                     output.accept(item);
                     output.accept(ModBlock.TEST_BLOCK.get());
+                    output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
                 }
             }).build()
     );
