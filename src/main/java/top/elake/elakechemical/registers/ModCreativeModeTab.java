@@ -30,44 +30,47 @@ public class ModCreativeModeTab {
     /**
      * 全部物品创造模式标签页
      */
-    public static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".all"))
-            .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
-            .displayItems((params, output) -> {
-                output.accept(ModBlock.TEST_BLOCK.get());
-                output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
-                for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
-                    output.accept(item);
-                }
-                for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
-                    output.accept(item);
-                }
-            }).build()
+    public static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".all"))
+                    .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
+                    .displayItems((params, output) -> {
+                        output.accept(ModBlock.TEST_BLOCK.get());
+                        output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
+                        for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
+                            output.accept(item);
+                        }
+                        for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
+                            output.accept(item);
+                        }
+                    }).build()
     );
     /**
      * 元素创造模式标签页
      */
-    public static final Supplier<CreativeModeTab> ELEMENT = CREATIVE_MODE_TABS.register("element", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element"))
-            .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
-            .displayItems((params, output) -> {
-                for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
-                    output.accept(item);
-                }
-            }).build()
+    public static final Supplier<CreativeModeTab> ELEMENT = CREATIVE_MODE_TABS.register("element",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element"))
+                    .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
+                    .displayItems((params, output) -> {
+                        for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
+                            output.accept(item);
+                        }
+                    }).build()
     );
 
     /**
      * 工具创造模式标签页
      */
-    public static final Supplier<CreativeModeTab> TOOL = CREATIVE_MODE_TABS.register("tool", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".tool"))
-            .icon(() -> new ItemStack((ItemLike) Flint.getRegisteredElements().get(0)))
-            .displayItems((params, output) -> {
-                for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
-                    output.accept(item);
-                }
-            }).build()
+    public static final Supplier<CreativeModeTab> TOOL = CREATIVE_MODE_TABS.register("tool",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".tool"))
+                    .icon(() -> new ItemStack((ItemLike) Flint.getRegisteredElements().get(0)))
+                    .displayItems((params, output) -> {
+                        for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
+                            output.accept(item);
+                        }
+                    }).build()
     );
 
     /**

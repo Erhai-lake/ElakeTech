@@ -132,5 +132,9 @@
     "item.elake_chemical.zr":"Zr",
 
     "item.elake_chemical.flint_sword":"Flint Sword",
-    "item.elake_chemical.flint_pickaxe":"Flint Pickaxe"
+    "item.elake_chemical.flint_pickaxe":"Flint Pickaxe",
+    "item.elake_chemical.flint_axe":"Flint Axe",
+    "item.elake_chemical.flint_handaxe":"Flint HandAxe",
+    "item.elake_chemical.flint_shovel":"Flint Shovel",
+    "item.elake_chemical.flint_hoe":"Flint Hoe"
 }

@@ -1,9 +1,6 @@
 package top.elake.elakechemical.registers.tool;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.SimpleTier;
@@ -55,7 +52,7 @@ public class Flint {
      */
     public static final Tier FLINT_TIER = new SimpleTier(
             ModBlockTags.NEEDS_FLINT_TOOL,
-            200,
+            5,
             5f,
             1.5f,
             20,
@@ -75,7 +72,7 @@ public class Flint {
     }
 
     /**
-     * 注册剑
+     * 注册镐
      */
     public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
             () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
@@ -84,5 +81,50 @@ public class Flint {
 
     static {
         REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) PICKAXE);
+    }
+
+    /**
+     * 注册斧
+     */
+    public static final Supplier<AxeItem> AXE = ITEMS.register("flint_axe",
+            () -> new AxeItem(FLINT_TIER, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+    /**
+     * 注册手斧
+     */
+    public static final Supplier<AxeItem> HANDAXE = ITEMS.register("flint_handaxe",
+            () -> new AxeItem(FLINT_TIER, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+    /**
+     * 注册铲
+     */
+    public static final Supplier<ShovelItem> SHOVEL = ITEMS.register("flint_shovel",
+            () -> new ShovelItem(FLINT_TIER, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+    /**
+     * 注册锄
+     */
+    public static final Supplier<HoeItem> HOE = ITEMS.register("flint_hoe",
+            () -> new HoeItem(FLINT_TIER, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) AXE);
+    }
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) HANDAXE);
+    }
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SHOVEL);
+    }
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) HOE);
     }
 }
