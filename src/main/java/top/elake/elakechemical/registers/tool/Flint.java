@@ -10,8 +10,8 @@ import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
-import top.elake.elakechemical.registers.tags.ModBlockTags;
-import top.elake.elakechemical.registers.tags.ModItemTags;
+import top.elake.elakechemical.registers.tag.ModBlockTags;
+import top.elake.elakechemical.registers.tag.ModItemTags;
 
 import java.util.ArrayList;
 import java.util.List;
