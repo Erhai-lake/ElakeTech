@@ -10,14 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+/**
+ * @author Qi-Month
+ */
 public class Sundries {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister
-            .createItems(ElakeChemical.MODID);
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
-
     /**
      * 已注册的元素
      */
@@ -32,8 +28,34 @@ public class Sundries {
         return REGISTERED_ELEMENTS;
     }
 
-    // 杂草
+    /**
+     * Item
+     */
+    public static final DeferredRegister.Items ITEMS = DeferredRegister
+            .createItems(ElakeChemical.MODID);
+    /**
+     * 注册杂草
+     */
     public static final Supplier<Item> GRASS_FIBER = ITEMS.registerSimpleItem("grass_fiber", new Item.Properties());
-    // 草绳
+    /**
+     * 注册草绳
+     */
     public static final Supplier<Item> GRASS_STRING = ITEMS.registerSimpleItem("grass_string", new Item.Properties());
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) GRASS_FIBER);
+    }
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) GRASS_STRING);
+    }
+
+    /**
+     * 注册
+     *
+     * @param eventBus 事件总线
+     */
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
 }

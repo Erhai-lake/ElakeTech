@@ -98,7 +98,7 @@ public class Flint {
                     .attributes(AxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
             ));
     /**
-     * 注册铲
+     * 注册锹
      */
     public static final Supplier<ShovelItem> SHOVEL = ITEMS.register("flint_shovel",
             () -> new ShovelItem(FLINT_TIER, new Item.Properties()

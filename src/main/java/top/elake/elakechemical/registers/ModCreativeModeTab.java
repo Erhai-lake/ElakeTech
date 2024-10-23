@@ -38,10 +38,16 @@ public class ModCreativeModeTab {
                     .displayItems((params, output) -> {
                         output.accept(ModBlock.TEST_BLOCK.get());
                         output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
+                        // 元素
                         for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
                             output.accept(item);
                         }
+                        // 燧石工具
                         for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
+                            output.accept(item);
+                        }
+                        // 杂物
+                        for (DeferredItem<? extends Item> item : Sundries.getRegisteredElements()) {
                             output.accept(item);
                         }
                     }).build()

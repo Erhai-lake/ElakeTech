@@ -7,6 +7,7 @@ import top.elake.elakechemical.function.NoDiggingWood;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.Elements;
+import top.elake.elakechemical.registers.item.Sundries;
 import top.elake.elakechemical.registers.tool.Flint;
 
 /**
@@ -33,6 +34,9 @@ public class ElakeChemical {
         NoDiggingWood.register(NeoForge.EVENT_BUS);
         // 注册创造模式物品栏
         ModCreativeModeTab.register(event);
+        // 注册燧石工具
         Flint.register(event);
+        // 注册杂项
+        Sundries.register(event);
     }
 }
