@@ -1,6 +1,5 @@
 package top.elake.elakechemical.registers.tool;
 
-
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
@@ -47,6 +46,7 @@ public class Flint {
      */
     public static final DeferredRegister.Items ITEMS = DeferredRegister
             .createItems(ElakeChemical.MODID);
+
     /**
      * 等级
      */
@@ -58,6 +58,10 @@ public class Flint {
             20,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SWORD);
+    }
 
     /**
      * 获取已注册的元素物品列表
@@ -75,10 +79,6 @@ public class Flint {
      */
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
-    }
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SWORD);
     }
 
     static {
