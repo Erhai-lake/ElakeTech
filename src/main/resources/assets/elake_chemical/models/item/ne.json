@@ -1,1 +1,6 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "elake_chemical:item/element/ne" } }
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "elake_chemical:item/element/ne"
+	}
+}
