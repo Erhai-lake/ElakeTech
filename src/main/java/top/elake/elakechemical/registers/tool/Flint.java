@@ -10,8 +10,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
-import top.elake.elakechemical.registers.Tags.ModBlockTags;
-import top.elake.elakechemical.registers.Tags.ModItemTags;
+import top.elake.elakechemical.registers.tags.ModBlockTags;
+import top.elake.elakechemical.registers.tags.ModItemTags;
 
 import java.util.function.Supplier;
 
