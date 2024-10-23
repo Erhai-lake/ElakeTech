@@ -1,5 +1,6 @@
 {
-    "itemGroup.elake_chemical.element_tab": "洱海科学-元素",
+    "itemGroup.elake_chemical.all": "洱海化学 - 全部",
+    "itemGroup.elake_chemical.element": "洱海化学 - 元素",
 
     "block.elake_chemical.test_block": "测试方块",
 

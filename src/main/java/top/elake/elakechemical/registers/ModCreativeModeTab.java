@@ -24,17 +24,29 @@ public class ModCreativeModeTab {
     /**
      * 创造模式物品栏注册
      */
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ElakeChemical.MODID);
-
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
+            .create(Registries.CREATIVE_MODE_TAB, ElakeChemical.MODID);
     /**
-     * 元素创造模式物品栏
+     * 全部物品创造模式物品栏
      */
-    public static final Supplier<CreativeModeTab> ELEMENT_TAB = CREATIVE_MODE_TABS.register("element_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element_tab"))
+    public static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".all"))
             .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
             .displayItems((params, output) -> {
                 output.accept(ModBlock.TEST_BLOCK.get());
                 output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
+                for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
+                    output.accept(item);
+                }
+            }).build()
+    );
+    /**
+     * 元素创造模式物品栏
+     */
+    public static final Supplier<CreativeModeTab> ELEMENT = CREATIVE_MODE_TABS.register("element", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element"))
+            .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
+            .displayItems((params, output) -> {
                 for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
                     output.accept(item);
                 }
