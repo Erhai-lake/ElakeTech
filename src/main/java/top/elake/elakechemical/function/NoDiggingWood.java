@@ -10,7 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 /**
- * @author Erhai_lake
+ * @author Erhai-lake
  */
 public class NoDiggingWood {
     /**

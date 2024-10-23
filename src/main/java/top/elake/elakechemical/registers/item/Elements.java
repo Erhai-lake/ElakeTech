@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 元素物品注册类
  *
- * @author Erhai_lake
+ * @author Erhai-lake
  */
 public class Elements {
     /**
@@ -26,12 +26,22 @@ public class Elements {
     /**
      * Item
      */
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ElakeChemical.MODID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister
+            .createItems(ElakeChemical.MODID);
 
     /**
      * 已注册的元素
      */
-    public static final List<DeferredItem<Item>> REGISTERED_ELEMENTS = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
+
+    /**
+     * 获取已注册的元素物品列表
+     *
+     * @return 已注册的元素物品列表
+     */
+    public static List<DeferredItem<? extends Item>> getRegisteredElements() {
+        return REGISTERED_ELEMENTS;
+    }
 
     /**
      * 注册
@@ -55,14 +65,5 @@ public class Elements {
                 .rarity(Rarity.EPIC)
         );
         REGISTERED_ELEMENTS.add(item);
-    }
-
-    /**
-     * 获取已注册的元素物品列表
-     *
-     * @return 已注册的元素物品列表
-     */
-    public static List<DeferredItem<Item>> getRegisteredElements() {
-        return REGISTERED_ELEMENTS;
     }
 }

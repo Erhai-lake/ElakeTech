@@ -2,7 +2,6 @@ package top.elake.elakechemical.registers;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -13,13 +12,14 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.Elements;
+import top.elake.elakechemical.registers.tool.Flint;
 
 import java.util.function.Supplier;
 
 /**
  * 创造模式物品栏
  *
- * @author Erhai_lake
+ * @author Erhai-lake
  */
 public class ModCreativeModeTab {
     /**
@@ -36,7 +36,10 @@ public class ModCreativeModeTab {
             .displayItems((params, output) -> {
                 output.accept(ModBlock.TEST_BLOCK.get());
                 output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
-                for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
+                for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
+                    output.accept(item);
+                }
+                for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
                     output.accept(item);
                 }
             }).build()
@@ -48,7 +51,20 @@ public class ModCreativeModeTab {
             .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element"))
             .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
             .displayItems((params, output) -> {
-                for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
+                for (DeferredItem<? extends Item> item : Elements.getRegisteredElements()) {
+                    output.accept(item);
+                }
+            }).build()
+    );
+
+    /**
+     * 工具创造模式物品栏
+     */
+    public static final Supplier<CreativeModeTab> TOOL = CREATIVE_MODE_TABS.register("tool", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".tool"))
+            .icon(() -> new ItemStack((ItemLike) Flint.getRegisteredElements().get(0)))
+            .displayItems((params, output) -> {
+                for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
                     output.accept(item);
                 }
             }).build()
@@ -57,7 +73,7 @@ public class ModCreativeModeTab {
     /**
      * 注册
      *
-     * @param eventBus
+     * @param eventBus 事件总线
      */
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

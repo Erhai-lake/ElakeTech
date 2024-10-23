@@ -3,7 +3,6 @@ package top.elake.elakechemical;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.common.NeoForge;
 import top.elake.elakechemical.function.NoDiggingWood;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.block.ModBlock;
@@ -11,7 +10,7 @@ import top.elake.elakechemical.registers.item.Elements;
 import top.elake.elakechemical.registers.tool.Flint;
 
 /**
- * @author Erhai_lake
+ * @author Erhai-lake
  */
 @Mod(ElakeChemical.MODID)
 public class ElakeChemical {
