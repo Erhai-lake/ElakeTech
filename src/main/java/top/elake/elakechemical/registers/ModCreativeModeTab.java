@@ -33,10 +33,10 @@ public class ModCreativeModeTab {
             .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element_tab"))
             .icon(() -> new ItemStack((ItemLike) Elements.getRegisteredElements().get(0)))
             .displayItems((params, output) -> {
+                output.accept(ModBlock.TEST_BLOCK.get());
+                output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
                 for (DeferredItem<Item> item : Elements.getRegisteredElements()) {
                     output.accept(item);
-                    output.accept(ModBlock.TEST_BLOCK.get());
-                    output.accept(ModBlock.TEST_BLOCK_ENTITY.get());
                 }
             }).build()
     );
