@@ -12,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.Elements;
+import top.elake.elakechemical.registers.item.Sundries;
 import top.elake.elakechemical.registers.tool.Flint;
 
 import java.util.function.Supplier;
@@ -68,6 +69,20 @@ public class ModCreativeModeTab {
                     .icon(() -> new ItemStack((ItemLike) Flint.getRegisteredElements().get(0)))
                     .displayItems((params, output) -> {
                         for (DeferredItem<? extends Item> item : Flint.getRegisteredElements()) {
+                            output.accept(item);
+                        }
+                    }).build()
+    );
+
+    /**
+     * 杂物创造模式标签页
+     */
+    public static final Supplier<CreativeModeTab> SUNDRIES = CREATIVE_MODE_TABS.register("sundries",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".sundries"))
+                    .icon(() -> new ItemStack((ItemLike) Sundries.getRegisteredElements().get(0)))
+                    .displayItems((params, output) -> {
+                        for (DeferredItem<? extends Item> item : Sundries.getRegisteredElements()) {
                             output.accept(item);
                         }
                     }).build()

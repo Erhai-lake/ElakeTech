@@ -1,0 +1,89 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - ElakeChemical",
+        "order": 0
+      },
+      "projectName": "ElakeChemical",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003delake_chemical%%D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Data",
+      "presentation": {
+        "group": "Mod Development - ElakeChemical",
+        "order": 1
+      },
+      "projectName": "ElakeChemical",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\dataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003delake_chemical%%D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "GameTestServer",
+      "presentation": {
+        "group": "Mod Development - ElakeChemical",
+        "order": 2
+      },
+      "projectName": "ElakeChemical",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003delake_chemical%%D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - ElakeChemical",
+        "order": 3
+      },
+      "projectName": "ElakeChemical",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003delake_chemical%%D:\\.minecraft\\Project\\Mod\\1.21\\ElakeChemical\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-package top.elake.elakechemical.registers.tags;
+package top.elake.elakechemical.registers.tag;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
