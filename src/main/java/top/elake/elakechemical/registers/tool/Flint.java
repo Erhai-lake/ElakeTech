@@ -27,19 +27,22 @@ public class Flint {
     public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
 
     /**
-     * 注册剑
+     * 获取已注册的元素物品列表
+     *
+     * @return 已注册的元素物品列表
      */
-    public static final Supplier<SwordItem> SWORD = ITEMS.register("flint_sword",
-            () -> new SwordItem(FLINT_TIER, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
-            ));
+    public static List<DeferredItem<? extends Item>> getRegisteredElements() {
+        return REGISTERED_ELEMENTS;
+    }
+
     /**
-     * 注册剑
+     * 注册
+     *
+     * @param eventBus 事件总线
      */
-    public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
-            () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
-            ));
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
 
     /**
      * Item
@@ -59,27 +62,25 @@ public class Flint {
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
 
+    /**
+     * 注册剑
+     */
+    public static final Supplier<SwordItem> SWORD = ITEMS.register("flint_sword",
+            () -> new SwordItem(FLINT_TIER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+
     static {
         REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SWORD);
     }
 
     /**
-     * 获取已注册的元素物品列表
-     *
-     * @return 已注册的元素物品列表
+     * 注册剑
      */
-    public static List<DeferredItem<? extends Item>> getRegisteredElements() {
-        return REGISTERED_ELEMENTS;
-    }
-
-    /**
-     * 注册
-     *
-     * @param eventBus 事件总线
-     */
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
+    public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
+            () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
 
     static {
         REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) PICKAXE);
