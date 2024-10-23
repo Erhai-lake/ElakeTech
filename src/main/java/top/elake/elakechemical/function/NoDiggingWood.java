@@ -17,7 +17,6 @@ public class NoDiggingWood {
      * 注册事件
      *
      * @param eventBus
-     * @param event
      */
     public static void register(IEventBus eventBus) {
         eventBus.register(new NoDiggingWood());
