@@ -53,9 +53,9 @@ public class Flint {
     public static final Tier FLINT_TIER = new SimpleTier(
             ModBlockTags.NEEDS_FLINT_TOOL,
             5,
-            5f,
-            1.5f,
-            20,
+            1,
+            1f,
+            0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
 
@@ -76,7 +76,7 @@ public class Flint {
      */
     public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
             () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+                    .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f))
             ));
 
     static {
@@ -88,28 +88,28 @@ public class Flint {
      */
     public static final Supplier<AxeItem> AXE = ITEMS.register("flint_axe",
             () -> new AxeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+                    .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
             ));
     /**
      * 注册手斧
      */
     public static final Supplier<AxeItem> HANDAXE = ITEMS.register("flint_handaxe",
             () -> new AxeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+                    .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
             ));
     /**
      * 注册锹
      */
     public static final Supplier<ShovelItem> SHOVEL = ITEMS.register("flint_shovel",
             () -> new ShovelItem(FLINT_TIER, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(FLINT_TIER, 3, -2.4f))
+                    .attributes(ShovelItem.createAttributes(FLINT_TIER, 1.5F, -3))
             ));
     /**
      * 注册锄
      */
     public static final Supplier<HoeItem> HOE = ITEMS.register("flint_hoe",
             () -> new HoeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(HoeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
             ));
 
     static {
