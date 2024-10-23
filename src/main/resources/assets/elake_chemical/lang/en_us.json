@@ -1,6 +1,7 @@
 {
     "itemGroup.elake_chemical.all": "ElakeChemical - All",
     "itemGroup.elake_chemical.element": "ElakeChemical - Elements",
+    "itemGroup.elake_chemical.tool": "ElakeChemical - Tool",
 
     "block.elake_chemical.test_block": "Test Block",
 
@@ -128,5 +129,8 @@
     "item.elake_chemical.y":"Y",
     "item.elake_chemical.yb":"Yb",
     "item.elake_chemical.zn":"Zn",
-    "item.elake_chemical.zr":"Zr"
+    "item.elake_chemical.zr":"Zr",
+
+    "item.elake_chemical.flint_sword":"Flint Sword",
+    "item.elake_chemical.flint_pickaxe":"Flint Pickaxe"
 }

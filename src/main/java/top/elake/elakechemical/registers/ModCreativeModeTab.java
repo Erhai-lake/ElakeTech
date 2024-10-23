@@ -28,7 +28,7 @@ public class ModCreativeModeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, ElakeChemical.MODID);
     /**
-     * 全部物品创造模式物品栏
+     * 全部物品创造模式标签页
      */
     public static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".all"))
@@ -45,7 +45,7 @@ public class ModCreativeModeTab {
             }).build()
     );
     /**
-     * 元素创造模式物品栏
+     * 元素创造模式标签页
      */
     public static final Supplier<CreativeModeTab> ELEMENT = CREATIVE_MODE_TABS.register("element", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".element"))
@@ -58,7 +58,7 @@ public class ModCreativeModeTab {
     );
 
     /**
-     * 工具创造模式物品栏
+     * 工具创造模式标签页
      */
     public static final Supplier<CreativeModeTab> TOOL = CREATIVE_MODE_TABS.register("tool", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".tool"))

@@ -26,6 +26,22 @@ public class Flint {
      * 已注册的元素
      */
     public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
+
+    /**
+     * 注册剑
+     */
+    public static final Supplier<SwordItem> SWORD = ITEMS.register("flint_sword",
+            () -> new SwordItem(FLINT_TIER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+    /**
+     * 注册剑
+     */
+    public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
+            () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            ));
+
     /**
      * Item
      */
@@ -42,28 +58,6 @@ public class Flint {
             20,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
-    /**
-     * 剑
-     */
-    public static final Supplier<SwordItem> SWORD = ITEMS.register("flint_sword",
-            () -> new SwordItem(FLINT_TIER, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
-            ));
-    /**
-     * 镐
-     */
-    public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
-            () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(FLINT_TIER, 3, -2.4f))
-            ));
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SWORD);
-    }
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) PICKAXE);
-    }
 
     /**
      * 获取已注册的元素物品列表
@@ -81,5 +75,13 @@ public class Flint {
      */
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
+    }
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SWORD);
+    }
+
+    static {
+        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) PICKAXE);
     }
 }

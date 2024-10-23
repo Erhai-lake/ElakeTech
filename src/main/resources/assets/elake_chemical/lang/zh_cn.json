@@ -1,6 +1,7 @@
 {
     "itemGroup.elake_chemical.all": "洱海化学 - 全部",
     "itemGroup.elake_chemical.element": "洱海化学 - 元素",
+    "itemGroup.elake_chemical.tool": "ElakeChemical - 工具",
 
     "block.elake_chemical.test_block": "测试方块",
 
@@ -128,5 +129,8 @@
     "item.elake_chemical.y":"Y",
     "item.elake_chemical.yb":"Yb",
     "item.elake_chemical.zn":"Zn",
-    "item.elake_chemical.zr":"Zr"
+    "item.elake_chemical.zr":"Zr",
+
+    "item.elake_chemical.flint_sword":"燧石剑",
+    "item.elake_chemical.flint_pickaxe":"燧石搞"
 }
