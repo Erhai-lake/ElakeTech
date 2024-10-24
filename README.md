@@ -52,7 +52,7 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
         .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeChemical.ModID, "incorrect_for_custom_tool"));
 ```
 
-然后新建`Tag`,目录在`src/main/resources/data/mod_id/tags/block`下
+然后新建`Tag`,目录在`src/main/resources/data/${modid}/tags/block`下
 
 如果想让这个工具只能挖石头,就这样写
 
