@@ -51,17 +51,17 @@ public class Flint {
             .createItems(ElakeChemical.MODID);
 
     /**
-     * 燧石镐可以破坏的方块(继承原版木质工具)
+     * 燧石镐可以破坏的方块(继承原版木质工具Tag)
      */
-    public static final TagKey<Block> NEEDS_FLINT_TOOL = TagKey
+    public static final TagKey<Block> INCORRECT_FOR_FLINT_TOOL = TagKey
             .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath("minecraft", "incorrect_for_wooden_tool"));
 
     /**
      * 等级
      */
     public static final Tier FLINT_TIER = new SimpleTier(
-            NEEDS_FLINT_TOOL,
-            5,
+            INCORRECT_FOR_FLINT_TOOL,
+            10,
             0.3F,
             1,
             0,
@@ -86,6 +86,7 @@ public class Flint {
     public static final Supplier<PickaxeItem> PICKAXE = ITEMS.register("flint_pickaxe",
             () -> new PickaxeItem(FLINT_TIER, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f))
+                    .rarity(Rarity.COMMON)
             ));
 
     static {
@@ -98,6 +99,7 @@ public class Flint {
     public static final Supplier<AxeItem> AXE = ITEMS.register("flint_axe",
             () -> new AxeItem(FLINT_TIER, new Item.Properties()
                     .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
+                    .rarity(Rarity.COMMON)
             ));
     /**
      * 注册手斧
@@ -105,6 +107,7 @@ public class Flint {
     public static final Supplier<AxeItem> HANDAXE = ITEMS.register("flint_handaxe",
             () -> new AxeItem(FLINT_TIER, new Item.Properties()
                     .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
+                    .rarity(Rarity.COMMON)
             ));
     /**
      * 注册锹
@@ -112,6 +115,7 @@ public class Flint {
     public static final Supplier<ShovelItem> SHOVEL = ITEMS.register("flint_shovel",
             () -> new ShovelItem(FLINT_TIER, new Item.Properties()
                     .attributes(ShovelItem.createAttributes(FLINT_TIER, 1.5F, -3))
+                    .rarity(Rarity.COMMON)
             ));
     /**
      * 注册锄
@@ -119,6 +123,7 @@ public class Flint {
     public static final Supplier<HoeItem> HOE = ITEMS.register("flint_hoe",
             () -> new HoeItem(FLINT_TIER, new Item.Properties()
                     .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
+                    .rarity(Rarity.COMMON)
             ));
 
     static {
