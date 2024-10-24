@@ -101,12 +101,25 @@ public class Flint {
                     .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
                     .rarity(Rarity.COMMON)
             ));
+
+    /**
+     * 手斧等级
+     */
+    public static final Tier FLINT_HANDAXE_TIER = new SimpleTier(
+            INCORRECT_FOR_FLINT_TOOL,
+            2,
+            0.3F,
+            1,
+            0,
+            () -> Ingredient.of(ModItemTags.Items.FLINT)
+    );
+
     /**
      * 注册手斧
      */
     public static final Supplier<AxeItem> HANDAXE = ITEMS.register("flint_handaxe",
-            () -> new AxeItem(FLINT_TIER, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
+            () -> new AxeItem(FLINT_HANDAXE_TIER, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2))
                     .rarity(Rarity.COMMON)
             ));
     /**
