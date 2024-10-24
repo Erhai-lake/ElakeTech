@@ -62,7 +62,7 @@ public class Flint {
     public static final Tier FLINT_TIER = new SimpleTier(
             INCORRECT_FOR_FLINT_TOOL,
             10,
-            0.3F,
+            0.5F,
             1,
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)

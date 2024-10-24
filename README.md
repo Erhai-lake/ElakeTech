@@ -1,7 +1,7 @@
 # ElakeChemical
 
 > [!WARNING]
-> 
+>
 > 我操这个模组可太模组了!!!
 
 [🐮佛哦🐔](//neoforged.net/)
@@ -28,7 +28,7 @@ public static final TagKey<Block> NEEDS_CUSTOM_TOOL = TagKey
 * `minecraft:needs_iron_tool`: 需要铁工具Tag
 * `minecraft:needs_stone_tool`: 需要石工具Tag
 * `minecraft:needs_diamond_tool`: 需要钻石工具Tag
-* 
+*
 * `minecraft:incorrect_for_wooden_tool`: 木工具不可挖掘Tag
 * `minecraft:incorrect_for_stone_tool`: 石工具不可挖掘Tag
 * `minecraft:incorrect_for_iron_tool`: 铁工具不可挖掘Tag
@@ -62,9 +62,9 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 
 ```json
 {
-  "values": [
-    "minecraft:stone"
-  ]
+    "values": [
+        "minecraft:stone"
+    ]
 }
 ```
 
