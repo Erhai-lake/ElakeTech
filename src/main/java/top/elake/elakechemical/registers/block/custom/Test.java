@@ -12,9 +12,15 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author Qi-Month
+ */
 public class Test extends Block {
-    // 创建一个方块状态"on", 类型是boolean
+    /**
+     * 创建一个方块状态"on", 类型是boolean
+     */
     public static final BooleanProperty ON = BooleanProperty
             .create("on");
 
@@ -24,13 +30,25 @@ public class Test extends Block {
         this.registerDefaultState(this.defaultBlockState().setValue(ON, false));
     }
 
-    // 意义不明的碰撞箱
+    /**
+     * 意义不明的碰撞箱
+     */
     private static final VoxelShape SHAPE = Block
             .box(0d, 0d, 0d, 16d, 16d, 16d);
 
-    // 玩家右键(use)让其更换状态on or off(只能空手)
+    /**
+     * 玩家右键(use)让其更换状态on or off(只能空手)
+     *
+     * @param stack    玩家手
+     * @param state    当前方块状态
+     * @param level    世界
+     * @param blockPos 坐标
+     * @param player   玩家
+     * @param hand     手
+     * @param result   点击结果
+     */
     @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult result) {
+    public @NotNull ItemInteractionResult useItemOn(@NotNull ItemStack stack, @NotNull BlockState state, Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult result) {
         if (!level.isClientSide && hand == InteractionHand.MAIN_HAND && player.getItemInHand(hand).isEmpty()) {
             level.setBlock(blockPos, state.cycle(ON), 3);
             return super.useItemOn(stack, state, level, blockPos, player, hand, result);

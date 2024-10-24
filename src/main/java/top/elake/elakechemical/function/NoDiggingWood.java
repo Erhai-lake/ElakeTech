@@ -16,7 +16,7 @@ public class NoDiggingWood {
     /**
      * 注册事件
      *
-     * @param eventBus
+     * @param eventBus 事件总线
      */
     public static void register(IEventBus eventBus) {
         eventBus.register(new NoDiggingWood());
@@ -25,7 +25,7 @@ public class NoDiggingWood {
     /**
      * 玩家挖掘事件
      *
-     * @param event
+     * @param event 事件
      */
     @SubscribeEvent
     public void onPlayerDig(PlayerInteractEvent.LeftClickBlock event) {

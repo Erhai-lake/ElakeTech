@@ -10,7 +10,9 @@ import top.elake.elakechemical.ElakeChemical;
  * @author Qi-Month
  */
 public class ModBlockTags {
-    // 燧石
+    /**
+     * 镐子需要用的标签
+     */
     public static final TagKey<Block> NEEDS_FLINT_TOOL = TagKey
             .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeChemical.MODID, "needs_flint_tool"));
 }
