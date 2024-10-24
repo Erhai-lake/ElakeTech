@@ -4,7 +4,8 @@
 > 
 > 我操这个模组可太模组了!!!
 
-[NeoForged](//neoforged.net/)
+[🐮佛哦🐔](//neoforged.net/)
+[NeoForge](//neoforged.net/)
 
 ## 随便写些文档
 
@@ -72,9 +73,9 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 
 ```json
 {
-  "values": [
-    "minecraft:stone"
-  ]
+    "values": [
+        "minecraft:stone"
+    ]
 }
 ```
 
