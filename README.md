@@ -11,6 +11,8 @@
 ## 随便写些文档
 
 ### 怎么自定义工具挖掘
+<details open>
+<summary>点击展开或收起</summary>
 
 https://docs.neoforged.net/docs/items/tools/
 
@@ -97,3 +99,12 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 
 > [!NOTE]
 > 定义了`Tier`的工具不可以单独设置耐久, `Tier`设置的耐久是多少那工具就是多少, 除非定义一个新的`Tier`不然耐久都是固定的耐久
+
+</details>
+
+### 如何为物品进行着色
+
+<details open>
+<summary>点击展开或收起</summary>
+
+</details>
