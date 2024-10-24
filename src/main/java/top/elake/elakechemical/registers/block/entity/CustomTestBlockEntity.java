@@ -12,6 +12,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
+
+/**
+ * @author Qi-Month
+ */
 public class CustomTestBlockEntity extends AbstractFurnaceBlockEntity {
     public CustomTestBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntity.CUSTOM_GUI.get(), pos, state, RecipeType.SMOKING);
@@ -23,8 +28,8 @@ public class CustomTestBlockEntity extends AbstractFurnaceBlockEntity {
     }
 
     @Override
-    protected @NotNull AbstractContainerMenu createMenu(int id, Inventory inventory) {
-        return createMenuInternal(id, inventory, null);
+    protected @NotNull AbstractContainerMenu createMenu(int id, @NotNull Inventory inventory) {
+        return Objects.requireNonNull(createMenuInternal(id, inventory, null));
     }
 
     @Nullable
@@ -37,15 +42,15 @@ public class CustomTestBlockEntity extends AbstractFurnaceBlockEntity {
         };
     }
 
+    @Override
     public boolean stillValid(@NotNull Player player) {
-        if (this.level.getBlockEntity(this.worldPosition) != this) {
-            return false;
-        } else {
+        if (this.level != null && this.level.getBlockEntity(this.worldPosition) == this) {
             return player.distanceToSqr(
                     (double) this.worldPosition.getX() + 0.5D,
                     (double) this.worldPosition.getY() + 0.5D,
                     (double) this.worldPosition.getZ() + 0.5D
             ) <= 64.0D;
         }
+        return false;
     }
 }

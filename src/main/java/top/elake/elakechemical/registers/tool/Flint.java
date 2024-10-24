@@ -1,13 +1,16 @@
 package top.elake.elakechemical.registers.tool;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
-import top.elake.elakechemical.registers.tag.ModBlockTags;
 import top.elake.elakechemical.registers.tag.ModItemTags;
 
 import java.util.ArrayList;
@@ -48,13 +51,19 @@ public class Flint {
             .createItems(ElakeChemical.MODID);
 
     /**
+     * 燧石镐可以破坏的方块(继承原版木质工具)
+     */
+    public static final TagKey<Block> INCORRECT_FOR_FLINT_TOOL = TagKey
+            .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath("minecraft", "incorrect_for_wooden_tool"));
+
+    /**
      * 等级
      */
     public static final Tier FLINT_TIER = new SimpleTier(
-            ModBlockTags.NEEDS_FLINT_TOOL,
+            INCORRECT_FOR_FLINT_TOOL,
             5,
+            0.3F,
             1,
-            1f,
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );

@@ -15,10 +15,19 @@ import top.elake.elakechemical.registers.item.Elements;
 
 import java.util.function.Supplier;
 
+/**
+ * @author Qi-Month
+ */
 public class ModBlock {
+    /**
+     * Block
+     */
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister
             .createBlocks(ElakeChemical.MODID);
 
+    /**
+     * 测试方块
+     */
     public static final DeferredBlock<Block> TEST_BLOCK = registerBlock("test_block",
             () -> new Test(BlockBehaviour.Properties
                     // 复制方块属性
@@ -32,6 +41,9 @@ public class ModBlock {
             )
     );
 
+    /**
+     * 测试方块(实体)
+     */
     public static final DeferredBlock<Block> TEST_BLOCK_ENTITY = registerBlock("test_block_entity",
             () -> new Test(BlockBehaviour.Properties
                     // 复制方块属性
@@ -43,18 +55,34 @@ public class ModBlock {
             )
     );
 
-    // BlockItem
+    /**
+     * 注册方块
+     *
+     * @param name  名称
+     * @param block 方块
+     */
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
+    /**
+     * 注册方块物品
+     *
+     * @param name  名称
+     * @param block 方块
+     */
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         // 实在懒得注册一个新的Item类了(
         Elements.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
+    /**
+     * 注册
+     *
+     * @param event 事件总线
+     */
     public static void register(IEventBus event) {
         BLOCKS.register(event);
     }
