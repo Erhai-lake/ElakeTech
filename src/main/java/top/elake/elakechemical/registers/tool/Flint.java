@@ -11,30 +11,15 @@ import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.tag.ModItemTags;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Supplier;
 
 /**
  * @author Qi-Month
  */
 public class Flint {
-    /**
-     * 已注册的元素
-     */
-    public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
-
-    /**
-     * 获取已注册的元素物品列表
-     *
-     * @return 已注册的元素物品列表
-     */
-    public static List<DeferredItem<? extends Item>> getRegisteredElements() {
-        return REGISTERED_ELEMENTS;
-    }
-
     /**
      * 注册
      *
@@ -75,11 +60,6 @@ public class Flint {
             () -> new SwordItem(FLINT_TIER, new Item.Properties()
                     .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
             ));
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SWORD);
-    }
-
     /**
      * 注册镐
      */
@@ -88,11 +68,6 @@ public class Flint {
                     .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f))
                     .rarity(Rarity.COMMON)
             ));
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) PICKAXE);
-    }
-
     /**
      * 注册斧
      */
@@ -101,7 +76,6 @@ public class Flint {
                     .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
                     .rarity(Rarity.COMMON)
             ));
-
     /**
      * 手斧等级
      */
@@ -113,7 +87,6 @@ public class Flint {
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
-
     /**
      * 注册手斧
      */
@@ -140,18 +113,12 @@ public class Flint {
             ));
 
     static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) AXE);
-    }
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) HANDAXE);
-    }
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) SHOVEL);
-    }
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) HOE);
+        // 全部便签页
+        ModCreativeModeTab.addTools((DeferredItem<? extends Item>) SWORD);
+        ModCreativeModeTab.addTools((DeferredItem<? extends Item>) PICKAXE);
+        ModCreativeModeTab.addTools((DeferredItem<? extends Item>) AXE);
+        ModCreativeModeTab.addTools((DeferredItem<? extends Item>) HANDAXE);
+        ModCreativeModeTab.addTools((DeferredItem<? extends Item>) SHOVEL);
+        ModCreativeModeTab.addTools((DeferredItem<? extends Item>) HOE);
     }
 }

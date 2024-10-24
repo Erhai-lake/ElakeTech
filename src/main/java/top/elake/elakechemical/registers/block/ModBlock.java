@@ -8,8 +8,10 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.block.custom.Test;
 import top.elake.elakechemical.registers.item.Elements;
 
@@ -75,7 +77,8 @@ public class ModBlock {
      */
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         // 实在懒得注册一个新的Item类了(
-        Elements.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        DeferredItem<BlockItem> item = Elements.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ModCreativeModeTab.addAll(item);
     }
 
     /**

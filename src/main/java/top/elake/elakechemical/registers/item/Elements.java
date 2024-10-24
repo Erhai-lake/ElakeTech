@@ -6,13 +6,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
-
-import java.util.ArrayList;
-import java.util.List;
+import top.elake.elakechemical.registers.ModCreativeModeTab;
 
 /**
- * 元素物品注册类
- *
  * @author Erhai-lake
  */
 public class Elements {
@@ -28,20 +24,6 @@ public class Elements {
      */
     public static final DeferredRegister.Items ITEMS = DeferredRegister
             .createItems(ElakeChemical.MODID);
-
-    /**
-     * 已注册的元素
-     */
-    public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
-
-    /**
-     * 获取已注册的元素物品列表
-     *
-     * @return 已注册的元素物品列表
-     */
-    public static List<DeferredItem<? extends Item>> getRegisteredElements() {
-        return REGISTERED_ELEMENTS;
-    }
 
     /**
      * 注册
@@ -64,6 +46,6 @@ public class Elements {
         DeferredItem<Item> item = ITEMS.registerItem(name, Item::new, new Item.Properties()
                 .rarity(Rarity.EPIC)
         );
-        REGISTERED_ELEMENTS.add(item);
+        ModCreativeModeTab.addElement(item);
     }
 }

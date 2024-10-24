@@ -5,29 +5,14 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.registers.ModCreativeModeTab;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Supplier;
 
 /**
  * @author Qi-Month
  */
 public class Sundries {
-    /**
-     * 已注册的元素
-     */
-    public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
-
-    /**
-     * 获取已注册的元素物品列表
-     *
-     * @return 已注册的元素物品列表
-     */
-    public static List<DeferredItem<? extends Item>> getRegisteredElements() {
-        return REGISTERED_ELEMENTS;
-    }
-
     /**
      * Item
      */
@@ -43,11 +28,8 @@ public class Sundries {
     public static final Supplier<Item> GRASS_STRING = ITEMS.registerSimpleItem("grass_string", new Item.Properties());
 
     static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) GRASS_FIBER);
-    }
-
-    static {
-        REGISTERED_ELEMENTS.add((DeferredItem<? extends Item>) GRASS_STRING);
+        ModCreativeModeTab.addSubItems((DeferredItem<? extends Item>) GRASS_FIBER);
+        ModCreativeModeTab.addSubItems((DeferredItem<? extends Item>) GRASS_STRING);
     }
 
     /**
