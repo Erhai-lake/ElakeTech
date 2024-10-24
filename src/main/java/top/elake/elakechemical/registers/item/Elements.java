@@ -2,7 +2,7 @@ package top.elake.elakechemical.registers.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import top.elake.elakechemical.Utils;
+import top.elake.elakechemical.utils.Registers;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 
 /**
@@ -21,7 +21,7 @@ public class Elements {
      */
     public static void register() {
         for (String element : ELEMENTS_ITEM_ARR) {
-            ModCreativeModeTab.addElement(Utils.registerItem(element, new Item.Properties()
+            ModCreativeModeTab.addElement(Registers.registerItem(element, new Item.Properties()
                     .rarity(Rarity.EPIC)));
         }
     }

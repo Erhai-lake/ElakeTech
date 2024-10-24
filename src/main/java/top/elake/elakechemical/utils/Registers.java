@@ -1,4 +1,4 @@
-package top.elake.elakechemical;
+package top.elake.elakechemical.utils;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -7,32 +7,35 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import top.elake.elakechemical.ElakeChemical;
 
 import java.util.function.Supplier;
 
 /**
  * @author Erhai-lake
  */
-public class Utils {
+public class Registers {
     /**
-     * ITEMS
+     * Item
      */
-    private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ElakeChemical.MODID);
+    private static final DeferredRegister.Items ITEMS = DeferredRegister
+            .createItems(ElakeChemical.MODID);
 
     /**
      * Block
      */
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ElakeChemical.MODID);
+    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister
+            .createBlocks(ElakeChemical.MODID);
 
     /**
      * 注册物品
      *
      * @param name           名称
-     * @param itemProperties 物品属性
+     * @param properties 物品属性
      * @return 物品句柄
      */
-    public static DeferredItem<Item> registerItem(String name, Item.Properties itemProperties) {
-        return ITEMS.register(name, () -> new Item(itemProperties));
+    public static DeferredItem<Item> registerItem(String name, Item.Properties properties) {
+        return ITEMS.register(name, () -> new Item(properties));
     }
 
     /**
@@ -48,22 +51,22 @@ public class Utils {
      * 注册方块
      *
      * @param name            名称
-     * @param blockProperties 方块属性
+     * @param properties 方块属性
      * @return 方块句柄
      */
-    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> blockProperties) {
-        return BLOCKS.register(name, blockProperties);
+    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> properties) {
+        return BLOCKS.register(name, properties);
     }
 
     /**
      * 注册方块物品
      *
      * @param name           名称
-     * @param itemProperties 物品属性
+     * @param properties 物品属性
      * @return 物品句柄
      */
-    public static <T extends Block> DeferredItem<Item> registerBlockItem(String name, Supplier<T> block, Item.Properties itemProperties) {
-        return ITEMS.register(name, () -> new BlockItem(block.get(), itemProperties));
+    public static <T extends Block> DeferredItem<Item> registerBlockItem(String name, Supplier<T> block, Item.Properties properties) {
+        return ITEMS.register(name, () -> new BlockItem(block.get(), properties));
     }
 
     /**

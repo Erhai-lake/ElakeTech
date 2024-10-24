@@ -3,12 +3,13 @@ package top.elake.elakechemical;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
-import top.elake.elakechemical.function.NoDiggingWood;
+import top.elake.elakechemical.event.NoDiggingWood;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.Elements;
 import top.elake.elakechemical.registers.item.Sundries;
 import top.elake.elakechemical.registers.tool.Flint;
+import top.elake.elakechemical.utils.Registers;
 
 /**
  * @author Erhai-lake
@@ -34,9 +35,9 @@ public class ElakeChemical {
         ModBlock.register();
 
         // 注册物品
-        Utils.registerItems(event);
+        Registers.registerItems(event);
         // 注册方块
-        Utils.registerBlocks(event);
+        Registers.registerBlocks(event);
 
 
         // 注册非空手掘木

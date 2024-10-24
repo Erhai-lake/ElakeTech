@@ -1,7 +1,8 @@
 package top.elake.elakechemical.registers.item;
 
 import net.minecraft.world.item.Item;
-import top.elake.elakechemical.Utils;
+import net.neoforged.neoforge.registries.DeferredItem;
+import top.elake.elakechemical.utils.Registers;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 
 /**
@@ -12,7 +13,9 @@ public class Sundries {
      * 注册
      */
     public static void register() {
-        ModCreativeModeTab.addSubItems(Utils.registerItem("grass_fiber", new Item.Properties()));
-        ModCreativeModeTab.addSubItems(Utils.registerItem("grass_string", new Item.Properties()));
+        ModCreativeModeTab.addSubItems(Registers.registerItem("grass_fiber", new Item.Properties()));
+        ModCreativeModeTab.addSubItems(Registers.registerItem("grass_string", new Item.Properties()));
     }
+
+    public static final DeferredItem<Item> TEST_INGOT = Registers.registerItem("test_ingot", new Item.Properties());
 }
