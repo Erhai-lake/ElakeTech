@@ -94,3 +94,6 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 ```
 
 这个的意思是,继承`minecraft:incorrect_for_diamond_tool`,但是从中去除了`elake_chemical:needs_custom_tool`
+
+> [!NOTE]
+> 定义了`Tier`的工具不可以单独设置等级, `Tier`设置的耐久是多少那工具就是多少, 除非定义一个新的`Tier`不然耐久都是固定的
