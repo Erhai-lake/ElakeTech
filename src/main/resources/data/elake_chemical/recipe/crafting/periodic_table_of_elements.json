@@ -5,7 +5,7 @@
             "item": "minecraft:painting"
         },
         {
-            "item": "elake_chemical:o"
+            "tag": "elake_chemical:elements/all"
         }
     ],
     "result": {
