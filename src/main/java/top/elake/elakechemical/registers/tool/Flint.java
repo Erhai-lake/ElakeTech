@@ -53,14 +53,14 @@ public class Flint {
     /**
      * 燧石镐可以破坏的方块(继承原版木质工具)
      */
-    public static final TagKey<Block> INCORRECT_FOR_FLINT_TOOL = TagKey
+    public static final TagKey<Block> NEEDS_FLINT_TOOL = TagKey
             .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath("minecraft", "incorrect_for_wooden_tool"));
 
     /**
      * 等级
      */
     public static final Tier FLINT_TIER = new SimpleTier(
-            INCORRECT_FOR_FLINT_TOOL,
+            NEEDS_FLINT_TOOL,
             5,
             0.3F,
             1,
