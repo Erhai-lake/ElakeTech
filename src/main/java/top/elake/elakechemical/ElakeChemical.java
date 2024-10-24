@@ -26,17 +26,24 @@ public class ElakeChemical {
      * @param event 事件总线
      */
     public ElakeChemical(IEventBus event) {
-        // 注册元素
-        Elements.register(event);
+        // 元素
+        Elements.register();
+        // 杂项
+        Sundries.register();
+        // 方块
+        ModBlock.register();
+
+        // 注册物品
+        Utils.registerItems(event);
         // 注册方块
-        ModBlock.register(event);
+        Utils.registerBlocks(event);
+
+
         // 注册非空手掘木
         NoDiggingWood.register(NeoForge.EVENT_BUS);
         // 注册创造模式物品栏
         ModCreativeModeTab.register(event);
         // 注册燧石工具
         Flint.register(event);
-        // 注册杂项
-        Sundries.register(event);
     }
 }

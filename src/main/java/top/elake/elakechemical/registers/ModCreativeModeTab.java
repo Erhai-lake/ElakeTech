@@ -15,8 +15,6 @@ import java.util.List;
 import java.util.function.Supplier;
 
 /**
- * 创造模式物品栏
- *
  * @author Erhai-lake
  */
 public class ModCreativeModeTab {

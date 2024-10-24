@@ -2,10 +2,7 @@ package top.elake.elakechemical.registers.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.Utils;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 
 /**
@@ -20,32 +17,12 @@ public class Elements {
     };
 
     /**
-     * Item
-     */
-    public static final DeferredRegister.Items ITEMS = DeferredRegister
-            .createItems(ElakeChemical.MODID);
-
-    /**
      * 注册
-     *
-     * @param eventBus 事件总线
      */
-    public static void register(IEventBus eventBus) {
+    public static void register() {
         for (String element : ELEMENTS_ITEM_ARR) {
-            registerElement(element);
+            ModCreativeModeTab.addElement(Utils.registerItem(element, new Item.Properties()
+                    .rarity(Rarity.EPIC)));
         }
-        ITEMS.register(eventBus);
-    }
-
-    /**
-     * 注册单个元素物品
-     *
-     * @param name 物品名称
-     */
-    private static void registerElement(String name) {
-        DeferredItem<Item> item = ITEMS.registerItem(name, Item::new, new Item.Properties()
-                .rarity(Rarity.EPIC)
-        );
-        ModCreativeModeTab.addElement(item);
     }
 }
