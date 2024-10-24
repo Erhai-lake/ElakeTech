@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ABA",
+        " C ",
+        " C "
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:flint"
+        },
+        "B": {
+            "item": "elake_chemical:grass_string"
+        },
+        "C": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "elake_chemical:flint_pickaxe"
+    }
+}

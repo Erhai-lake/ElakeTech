@@ -1,6 +1,5 @@
 {
     "values": [
-        "elake_chemical:test_block",
-        "elake_chemical:test_block_entity"
+        "elake_chemical:test_block"
     ]
 }
