@@ -15,6 +15,7 @@ import top.elake.elakechemical.registers.item.Sundries;
 @EventBusSubscriber(modid = ElakeChemical.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ItemColor {
     private static ItemColors ITEMCOLOR = null;
+
     @SubscribeEvent
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         ITEMCOLOR = event.getItemColors();
