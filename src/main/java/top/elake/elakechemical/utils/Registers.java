@@ -30,12 +30,13 @@ public class Registers {
     /**
      * 注册物品
      *
-     * @param name           名称
+     * @param name       名称
      * @param properties 物品属性
      * @return 物品句柄
      */
     public static DeferredItem<Item> registerItem(String name, Item.Properties properties) {
-        return ITEMS.register(name, () -> new Item(properties));
+        DeferredItem<Item> item = ITEMS.register(name, () -> new Item(properties));
+        return item;
     }
 
     /**
@@ -50,7 +51,7 @@ public class Registers {
     /**
      * 注册方块
      *
-     * @param name            名称
+     * @param name       名称
      * @param properties 方块属性
      * @return 方块句柄
      */
@@ -61,7 +62,7 @@ public class Registers {
     /**
      * 注册方块物品
      *
-     * @param name           名称
+     * @param name       名称
      * @param properties 物品属性
      * @return 物品句柄
      */

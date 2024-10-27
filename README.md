@@ -106,5 +106,9 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 
 <details open>
 <summary>点击展开或收起</summary>
+[如写](https://docs.neoforged.net/docs/resources/client/models/)
 
+```java
+@EventBusSubscriber(modid = ElakeChemical.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+```
 </details>
