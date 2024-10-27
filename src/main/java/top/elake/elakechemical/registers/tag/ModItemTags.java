@@ -15,7 +15,7 @@ public class ModItemTags {
      * @param name 标签名
      */
     private static TagKey<Item> neoforgeTag(String name) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("neoforge", name));
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
     }
 
     public static class Items {

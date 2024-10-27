@@ -2,11 +2,11 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "AB",
-		" C"
+        " C"
     ],
     "key": {
         "A": {
-            "item": "minecraft:flint"
+            "tag": "c:flint"
         },
         "B": {
             "item": "elake_chemical:grass_string"
