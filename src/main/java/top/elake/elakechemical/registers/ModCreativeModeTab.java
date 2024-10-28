@@ -35,6 +35,10 @@ public class ModCreativeModeTab {
      */
     private static final List<DeferredItem<? extends Item>> REGISTERED_SUNDRIES = new ArrayList<>();
     /**
+     * 材料
+     */
+    private static final List<DeferredItem<? extends Item>> MATERIALS_SUNDRIES = new ArrayList<>();
+    /**
      * 创造模式物品栏注册
      */
     private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
@@ -79,6 +83,16 @@ public class ModCreativeModeTab {
                     .displayItems((params, output) -> REGISTERED_SUNDRIES.forEach(output::accept))
                     .build()
     );
+    /**
+     * 材料创造模式标签页
+     */
+    private static final Supplier<CreativeModeTab> MATERIALS = CREATIVE_MODE_TABS.register("materials",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".sundries"))
+                    .icon(() -> new ItemStack(MATERIALS_SUNDRIES.get(0).asItem()))
+                    .displayItems((params, output) -> MATERIALS_SUNDRIES.forEach(output::accept))
+                    .build()
+    );
 
     /**
      * 添加全部
@@ -119,6 +133,16 @@ public class ModCreativeModeTab {
      */
     public static void addSubItems(DeferredItem<? extends Item> item) {
         REGISTERED_SUNDRIES.add(item);
+        addAll(item);
+    }
+
+    /**
+     * 添加材料
+     *
+     * @param item 物品
+     */
+    public static void addMaterials(DeferredItem<? extends Item> item) {
+        MATERIALS_SUNDRIES.add(item);
         addAll(item);
     }
 

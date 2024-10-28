@@ -1,7 +1,6 @@
 package top.elake.elakechemical.utils;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -35,8 +34,7 @@ public class Registers {
      * @return 物品句柄
      */
     public static DeferredItem<Item> registerItem(String name, Item.Properties properties) {
-        DeferredItem<Item> item = ITEMS.register(name, () -> new Item(properties));
-        return item;
+        return ITEMS.register(name, () -> new Item(properties));
     }
 
     /**
@@ -77,5 +75,25 @@ public class Registers {
      */
     public static void registerBlocks(IEventBus event) {
         BLOCKS.register(event);
+    }
+
+    /**
+     * 注册工具
+     *
+     * @param name       名称
+     * @param type       类型: Sword/Pickaxe/Axe/Shovel/Hoe
+     * @param tier       等级
+     * @param properties 工具属性
+     * @return 工具句柄
+     */
+    public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties) {
+        return switch (type) {
+            case "Sword" -> ITEMS.register(name, () -> new SwordItem(tier, properties));
+            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeItem(tier, properties));
+            case "Axe" -> ITEMS.register(name, () -> new AxeItem(tier, properties));
+            case "Shovel" -> ITEMS.register(name, () -> new ShovelItem(tier, properties));
+            case "Hoe" -> ITEMS.register(name, () -> new HoeItem(tier, properties));
+            default -> throw new IllegalArgumentException("错误的类型");
+        };
     }
 }

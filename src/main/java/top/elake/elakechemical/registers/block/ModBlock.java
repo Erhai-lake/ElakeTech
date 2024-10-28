@@ -5,7 +5,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.block.custom.Test;
@@ -32,7 +31,9 @@ public class ModBlock {
             )
     );
 
-    // 酒精灯
+    /**
+     * 酒精灯
+     */
     public static final DeferredBlock<Block> ALCOHOL_LAMP = Registers.registerBlock("alcohol_lamp",
             () -> new AlcoholLamp(BlockBehaviour.Properties
                     .ofFullCopy(Blocks.GLASS)

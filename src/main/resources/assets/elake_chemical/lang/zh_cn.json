@@ -3,6 +3,7 @@
     "itemGroup.elake_chemical.element": "洱海化学 - 元素",
     "itemGroup.elake_chemical.tool": "ElakeChemical - 工具",
     "itemGroup.elake_chemical.sundries": "ElakeChemical - 杂项",
+    "itemGroup.elake_chemical.materials": "ElakeChemical - 材料",
 
     "block.elake_chemical.test_block": "测试方块",
 
@@ -138,6 +139,7 @@
     "item.elake_chemical.flint_handaxe":"燧石手斧",
     "item.elake_chemical.flint_shovel":"燧石锹",
     "item.elake_chemical.flint_hoe":"燧石锄",
+    "item.elake_chemical.stone_hammer":"石锤",
 
     "item.elake_chemical.grass_fiber": "杂草",
     "item.elake_chemical.grass_string": "草绳"

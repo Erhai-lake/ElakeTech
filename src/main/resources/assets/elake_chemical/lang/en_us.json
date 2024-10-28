@@ -3,6 +3,7 @@
     "itemGroup.elake_chemical.element": "ElakeChemical - Elements",
     "itemGroup.elake_chemical.tool": "ElakeChemical - Tool",
     "itemGroup.elake_chemical.sundries": "ElakeChemical - Sundries",
+    "itemGroup.elake_chemical.materials": "ElakeChemical - Materials",
 
     "block.elake_chemical.test_block": "Test Block",
 
@@ -138,6 +139,7 @@
     "item.elake_chemical.flint_handaxe":"Flint HandAxe",
     "item.elake_chemical.flint_shovel":"Flint Shovel",
     "item.elake_chemical.flint_hoe":"Flint Hoe",
+    "item.elake_chemical.stone_hammer":"Stone Hammer",
 
     "item.elake_chemical.grass_fiber": "Grass Fiber",
     "item.elake_chemical.grass_string": "Grass String"

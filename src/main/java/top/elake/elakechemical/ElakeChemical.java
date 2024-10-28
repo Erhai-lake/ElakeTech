@@ -9,7 +9,8 @@ import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.ChemicalAppliances;
 import top.elake.elakechemical.registers.item.Elements;
 import top.elake.elakechemical.registers.item.Sundries;
-import top.elake.elakechemical.registers.tool.Flint;
+import top.elake.elakechemical.registers.tool.Hammer;
+import top.elake.elakechemical.registers.tool.tier.Flint;
 import top.elake.elakechemical.utils.Registers;
 
 /**
@@ -34,8 +35,12 @@ public class ElakeChemical {
         Sundries.register();
         // 方块
         ModBlock.register();
+        // 燧石工具
+        Flint.register();
         // 化学工具
         ChemicalAppliances.register();
+        // 锤子
+        Hammer.register();
 
         // 注册物品
         Registers.registerItems(event);
@@ -47,7 +52,5 @@ public class ElakeChemical {
         NoDiggingWood.register(NeoForge.EVENT_BUS);
         // 注册创造模式物品栏
         ModCreativeModeTab.register(event);
-        // 注册燧石工具
-        Flint.register(event);
     }
 }
