@@ -142,5 +142,10 @@
     "item.elake_chemical.stone_hammer":"Stone Hammer",
 
     "item.elake_chemical.grass_fiber": "Grass Fiber",
-    "item.elake_chemical.grass_string": "Grass String"
+    "item.elake_chemical.grass_string": "Grass String",
+
+    "item.elake_chemical.copper_plate": "Copper Plate",
+    "item.elake_chemical.copper_wire": "Copper Wire",
+    "item.elake_chemical.simple_copper_single_solenoid": "Simple Copper Single Solenoid",
+    "item.elake_chemical.graphite": "Graphite"
 }
