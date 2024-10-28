@@ -32,12 +32,14 @@ public class ModBlock {
             )
     );
 
+    // 酒精灯
     public static final DeferredBlock<Block> ALCOHOL_LAMP = Registers.registerBlock("alcohol_lamp",
             () -> new AlcoholLamp(BlockBehaviour.Properties
                     .ofFullCopy(Blocks.GLASS)
                     .strength(0.3F)
                     .sound(SoundType.GLASS)
-            ));
+            )
+    );
 
     /**
      * 注册

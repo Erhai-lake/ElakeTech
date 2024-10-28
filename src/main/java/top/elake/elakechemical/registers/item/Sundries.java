@@ -19,5 +19,4 @@ public class Sundries {
     }
 
     public static final DeferredItem<Item> TEST_INGOT = Registers.registerItem("test_ingot", new Item.Properties());
-
 }

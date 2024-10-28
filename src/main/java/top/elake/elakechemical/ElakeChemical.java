@@ -6,6 +6,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import top.elake.elakechemical.event.NoDiggingWood;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.block.ModBlock;
+import top.elake.elakechemical.registers.item.ChemicalAppliances;
 import top.elake.elakechemical.registers.item.Elements;
 import top.elake.elakechemical.registers.item.Sundries;
 import top.elake.elakechemical.registers.tool.Flint;
@@ -33,6 +34,8 @@ public class ElakeChemical {
         Sundries.register();
         // 方块
         ModBlock.register();
+        // 化学工具
+        ChemicalAppliances.register();
 
         // 注册物品
         Registers.registerItems(event);
