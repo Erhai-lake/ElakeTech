@@ -1,20 +1,23 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " AA",
-        " BA",
-        "B  "
+        " A ",
+        "BCB",
+        " A "
     ],
     "key": {
         "A": {
-            "tag": "c:cobblestones"
+            "tag": "minecraft:wooden_pressure_plates"
         },
         "B": {
+            "tag": "c:plates/copper"
+        },
+        "C": {
             "tag": "c:rods/wooden"
         }
     },
     "result": {
         "count": 1,
-        "id": "elake_chemical:stone_hammer"
+        "id": "elake_chemical:copper_spool"
     }
 }
