@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:smelting",
+    "cookingtime": 500,
+    "experience": 0.2,
+    "ingredient": {
+        "item": "minecraft:coal"
+    },
+    "result": {
+        "id": "elake_chemical:graphite"
+    }
+}

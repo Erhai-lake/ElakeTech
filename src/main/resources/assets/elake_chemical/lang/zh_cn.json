@@ -142,5 +142,10 @@
     "item.elake_chemical.stone_hammer":"石锤",
 
     "item.elake_chemical.grass_fiber": "杂草",
-    "item.elake_chemical.grass_string": "草绳"
+    "item.elake_chemical.grass_string": "草绳",
+
+    "item.elake_chemical.copper_plate": "铜板",
+    "item.elake_chemical.copper_wire": "铜线",
+    "item.elake_chemical.simple_copper_single_solenoid": "简易单匝线圈",
+    "item.elake_chemical.graphite": "石墨"
 }
