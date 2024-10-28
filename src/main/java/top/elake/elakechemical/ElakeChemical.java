@@ -12,7 +12,7 @@ import top.elake.elakechemical.registers.tool.Flint;
 import top.elake.elakechemical.utils.Registers;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 @Mod(ElakeChemical.MODID)
 public class ElakeChemical {

@@ -2,11 +2,11 @@ package top.elake.elakechemical.registers.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import top.elake.elakechemical.utils.Registers;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
+import top.elake.elakechemical.utils.Registers;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class Elements {
     /**

@@ -10,7 +10,7 @@ import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.item.Sundries;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 @EventBusSubscriber(modid = ElakeChemical.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ItemColor {

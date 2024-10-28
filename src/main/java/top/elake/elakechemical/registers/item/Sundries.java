@@ -6,7 +6,7 @@ import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.utils.Registers;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class Sundries {
     /**

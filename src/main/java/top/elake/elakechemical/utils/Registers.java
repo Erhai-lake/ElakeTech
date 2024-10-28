@@ -12,7 +12,7 @@ import top.elake.elakechemical.ElakeChemical;
 import java.util.function.Supplier;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class Registers {
     /**
