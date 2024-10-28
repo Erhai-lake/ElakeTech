@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " AA",
+        " BA",
+        "B  "
+    ],
+    "key": {
+        "A": {
+            "tag": "c:cobblestones"
+        },
+        "B": {
+            "tag": "c:rods/wooden"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "elake_chemical:stone_hammer"
+    }
+}
