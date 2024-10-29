@@ -1,7 +1,6 @@
 package top.elake.elakechemical.client;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataProvider;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -15,8 +14,10 @@ import top.elake.elakechemical.ElakeChemical;
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        DataGenerator generator = event.getGenerator();
-        PackOutput output = generator.getPackOutput();
-        new Translation(output);
+        // 语言文件
+        event.getGenerator().addProvider(
+                event.includeClient(),
+                (DataProvider.Factory<Translation>) Translation::new
+        );
     }
 }
