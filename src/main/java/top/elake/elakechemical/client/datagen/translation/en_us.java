@@ -28,5 +28,13 @@ public class en_us extends LanguageProvider {
         add(Materials.GRASS_FIBER.get(), "Grass Fiber");
         // 草绳
         add(Materials.GRASS_STRING.get(), "Grass String");
+        // 铜板
+        add(Materials.COPPER_PLATE.get(), "Copper Plate");
+        // 铜线
+        add(Materials.COPPER_WIRE.get(), "Copper Wire");
+        // 铜简易单闸线圈
+        add(Materials.SIMPLE_COPPER_SINGLE_SOLENOID.get(), "Simple Copper Single Solenoid");
+        // 石墨
+        add(Materials.GRAPHITE.get(), "Graphite");
     }
 }

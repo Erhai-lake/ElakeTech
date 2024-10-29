@@ -28,5 +28,13 @@ public class zh_cn extends LanguageProvider {
         add(Materials.GRASS_FIBER.get(), "草纤维");
         // 草绳
         add(Materials.GRASS_STRING.get(), "草绳");
+        // 铜板
+        add(Materials.COPPER_PLATE.get(), "铜板");
+        // 铜线
+        add(Materials.COPPER_WIRE.get(), "铜线");
+        // 铜简易单闸线圈
+        add(Materials.SIMPLE_COPPER_SINGLE_SOLENOID.get(), "铜简易单闸线圈");
+        // 石墨
+        add(Materials.GRAPHITE.get(), "石墨");
     }
 }
