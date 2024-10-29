@@ -1,4 +1,4 @@
-package top.elake.elakechemical.client.DataGenerators.Translation;
+package top.elake.elakechemical.client.dataGenerators.translation;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
