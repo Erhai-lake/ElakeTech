@@ -1,4 +1,4 @@
-package top.elake.elakechemical.client;
+package top.elake.elakechemical.client.DataGenerators.Translation;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
@@ -8,8 +8,8 @@ import top.elake.elakechemical.registers.item.Sundries;
 /**
  * @author Erhai-lake
  */
-public class Translation extends LanguageProvider {
-    public Translation(PackOutput output) {
+public class en_us extends LanguageProvider {
+    public en_us(PackOutput output) {
         super(output, ElakeChemical.MODID, "en_us");
     }
 
