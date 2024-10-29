@@ -7,6 +7,7 @@ import top.elake.elakechemical.ElakeChemical;
 /**
  * @author Erhai-lake
  */
+@SuppressWarnings("AlibabaClassNamingShouldBeCamel")
 public class en_us extends LanguageProvider {
     public en_us(PackOutput output) {
         super(output, ElakeChemical.MODID, "en_us");

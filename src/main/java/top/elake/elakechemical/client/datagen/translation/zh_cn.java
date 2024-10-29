@@ -7,6 +7,7 @@ import top.elake.elakechemical.ElakeChemical;
 /**
  * @author Erhai-lake
  */
+@SuppressWarnings("AlibabaClassNamingShouldBeCamel")
 public class zh_cn extends LanguageProvider {
     public zh_cn(PackOutput output) {
         super(output, ElakeChemical.MODID, "zh_cn");
