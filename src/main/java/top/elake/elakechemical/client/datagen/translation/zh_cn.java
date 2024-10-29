@@ -7,6 +7,8 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.item.Materials;
+import top.elake.elakechemical.registers.tool.Hammer;
+import top.elake.elakechemical.registers.tool.tier.Flint;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -36,5 +38,19 @@ public class zh_cn extends LanguageProvider {
         add(Materials.SIMPLE_COPPER_SINGLE_SOLENOID.get(), "铜简易单闸线圈");
         // 石墨
         add(Materials.GRAPHITE.get(), "石墨");
+        // 燧石剑
+        add(Flint.FLINT_SWORD.get(), "燧石剑");
+        // 燧石镐
+        add(Flint.FLINT_PICKAXE.get(), "燧石镐");
+        // 燧石斧
+        add(Flint.FLINT_AXE.get(), "燧石斧");
+        // 燧石手斧
+        add(Flint.FLINT_HANDAXE.get(), "燧石手斧");
+        // 燧石锹
+        add(Flint.FLINT_SHOVEL.get(), "燧石锹");
+        // 燧石锄
+        add(Flint.FLINT_HOE.get(), "燧石锄");
+        // 石锤
+        add(Hammer.STONE_HAMMER.get(), "石锤");
     }
 }

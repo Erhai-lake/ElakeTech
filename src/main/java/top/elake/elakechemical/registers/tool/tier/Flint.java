@@ -7,43 +7,21 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.SimpleTier;
+import net.neoforged.neoforge.registries.DeferredItem;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.tag.ModItemTags;
 import top.elake.elakechemical.utils.Registers;
 
 /**
- * @author Qi-Month
+ * @author Erhai-lake
  */
 public class Flint {
     /**
-     * 注册
+     * 剑
      */
-    public static void register() {
-        // 剑
-        ModCreativeModeTab.addTools(Registers.registerTool("flint_sword", "Sword", FLINT_TIER, new Item.Properties()
-                .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
-        ));
-        // 镐
-        ModCreativeModeTab.addTools(Registers.registerTool("flint_pickaxe", "Pickaxe", FLINT_TIER, new Item.Properties()
-                .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f))
-        ));
-        // 斧
-        ModCreativeModeTab.addTools(Registers.registerTool("flint_axe", "Axe", FLINT_TIER, new Item.Properties()
-                .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
-        ));
-        // 手斧
-        ModCreativeModeTab.addTools(Registers.registerTool("flint_handaxe", "Axe", FLINT_HANDAXE_TIER, new Item.Properties()
-                .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2))
-        ));
-        // 锹
-        ModCreativeModeTab.addTools(Registers.registerTool("flint_shovel", "Shovel", FLINT_TIER, new Item.Properties()
-                .attributes(ShovelItem.createAttributes(FLINT_TIER, 1.5f, -3))
-        ));
-        // 锄
-        ModCreativeModeTab.addTools(Registers.registerTool("flint_hoe", "Hoe", FLINT_TIER, new Item.Properties()
-                .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
-        ));
-    }
+    public static final DeferredItem<Item> FLINT_SWORD = Registers.registerTool("flint_sword", "Sword", FLINT_TIER, new Item.Properties()
+            .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
+    );
 
     /**
      * 燧石镐可以破坏的方块(继承原版木质工具Tag)
@@ -74,4 +52,52 @@ public class Flint {
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
+    /**
+     * 镐
+     */
+    public static final DeferredItem<Item> FLINT_PICKAXE = Registers.registerTool("flint_pickaxe", "Pickaxe", FLINT_TIER, new Item.Properties()
+            .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f))
+    );
+    /**
+     * 斧
+     */
+    public static final DeferredItem<Item> FLINT_AXE = Registers.registerTool("flint_axe", "Axe", FLINT_TIER, new Item.Properties()
+            .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
+    );
+    /**
+     * 手斧
+     */
+    public static final DeferredItem<Item> FLINT_HANDAXE = Registers.registerTool("flint_handaxe", "Axe", FLINT_HANDAXE_TIER, new Item.Properties()
+            .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2))
+    );
+    /**
+     * 楸
+     */
+    public static final DeferredItem<Item> FLINT_SHOVEL = Registers.registerTool("flint_shovel", "Hoe", FLINT_TIER, new Item.Properties()
+            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
+    );
+    /**
+     * 锄
+     */
+    public static final DeferredItem<Item> FLINT_HOE = Registers.registerTool("flint_hoe", "Hoe", FLINT_TIER, new Item.Properties()
+            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
+    );
+
+    /**
+     * 注册
+     */
+    public static void register() {
+        // 剑
+        ModCreativeModeTab.addTools(FLINT_SWORD);
+        // 镐
+        ModCreativeModeTab.addTools(FLINT_PICKAXE);
+        // 斧
+        ModCreativeModeTab.addTools(FLINT_AXE);
+        // 手斧
+        ModCreativeModeTab.addTools(FLINT_HANDAXE);
+        // 锹
+        ModCreativeModeTab.addTools(FLINT_SHOVEL);
+        // 锄
+        ModCreativeModeTab.addTools(FLINT_HOE);
+    }
 }

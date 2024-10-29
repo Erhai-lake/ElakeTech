@@ -12,17 +12,4 @@
 
     "elake_chemical.patchouli.book.name": "EC手册",
     "elake_chemical.patchouli.book.landing": "EC完整参考指南$(br2)(开发中内容,实际内容请以正式上线为准)",
-
-    "item.elake_chemical.flint_sword":"燧石剑",
-    "item.elake_chemical.flint_pickaxe":"燧石搞",
-    "item.elake_chemical.flint_axe":"燧石斧",
-    "item.elake_chemical.flint_handaxe":"燧石手斧",
-    "item.elake_chemical.flint_shovel":"燧石锹",
-    "item.elake_chemical.flint_hoe":"燧石锄",
-    "item.elake_chemical.stone_hammer":"石锤",
-
-    "item.elake_chemical.copper_plate": "铜板",
-    "item.elake_chemical.copper_wire": "铜线",
-    "item.elake_chemical.simple_copper_single_solenoid": "简易单匝线圈",
-    "item.elake_chemical.graphite": "石墨"
 }

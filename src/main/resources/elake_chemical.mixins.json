@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "top.elake.mixin",
+  "package": "top.elake.elakechemical.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "elake_chemical.refmap.json",
   "mixins": [

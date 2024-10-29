@@ -1,8 +1,9 @@
 package top.elake.elakechemical.registers.tool;
 
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tiers;
+import net.neoforged.neoforge.registries.DeferredItem;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.utils.Registers;
 
@@ -11,12 +12,17 @@ import top.elake.elakechemical.utils.Registers;
  */
 public class Hammer {
     /**
+     * 石锤
+     */
+    public static final DeferredItem<Item> STONE_HAMMER = Registers.registerTool("stone_hammer", "Hoe", Tiers.STONE, new Item.Properties()
+            .attributes(HoeItem.createAttributes(Tiers.STONE, 1, -2))
+    );
+
+    /**
      * 注册
      */
     public static void register() {
-        // 镐
-        ModCreativeModeTab.addTools(Registers.registerTool("stone_hammer", "Pickaxe", Tiers.STONE, new Item.Properties()
-                .attributes(PickaxeItem.createAttributes(Tiers.STONE, 5, -3))
-        ));
+        // 石锤
+        ModCreativeModeTab.addTools(STONE_HAMMER);
     }
 }
