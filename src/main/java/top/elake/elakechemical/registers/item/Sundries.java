@@ -9,10 +9,7 @@ import top.elake.elakechemical.utils.Registers;
  * @author Erhai-lake Qi-Month
  */
 public class Sundries {
-    public static final DeferredItem<Item> TEST = Registers.registerItem("test", new Item.Properties());
-
     public static final DeferredItem<Item> TEST_INGOT = Registers.registerItem("test_ingot", new Item.Properties());
-
     /**
      * 注册
      */
@@ -20,7 +17,5 @@ public class Sundries {
         ModCreativeModeTab.addSubItems(Registers.registerItem("grass_fiber", new Item.Properties()));
         ModCreativeModeTab.addSubItems(Registers.registerItem("grass_string", new Item.Properties()));
         ModCreativeModeTab.addSubItems(TEST_INGOT);
-
-        ModCreativeModeTab.addSubItems(TEST);
     }
 }
