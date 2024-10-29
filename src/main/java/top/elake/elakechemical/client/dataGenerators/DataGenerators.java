@@ -1,4 +1,4 @@
-package top.elake.elakechemical.client.DataGenerators;
+package top.elake.elakechemical.client.dataGenerators;
 
 import net.minecraft.data.DataProvider;
 import net.neoforged.api.distmarker.Dist;
@@ -6,7 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elakechemical.ElakeChemical;
-import top.elake.elakechemical.client.DataGenerators.Translation.en_us;
+import top.elake.elakechemical.client.dataGenerators.translation.en_us;
 
 /**
  * @author Erhai-lake
