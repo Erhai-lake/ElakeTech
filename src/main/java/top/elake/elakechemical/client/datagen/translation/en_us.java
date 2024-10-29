@@ -9,7 +9,7 @@ import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.item.Materials;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 @SuppressWarnings("AlibabaClassNamingShouldBeCamel")
 public class en_us extends LanguageProvider {
