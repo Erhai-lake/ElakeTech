@@ -17,6 +17,24 @@ import top.elake.elakechemical.utils.Registers;
  */
 public class Flint {
     /**
+     * 注册
+     */
+    public static void register() {
+        // 剑
+        ModCreativeModeTab.addTools(FLINT_SWORD);
+        // 镐
+        ModCreativeModeTab.addTools(FLINT_PICKAXE);
+        // 斧
+        ModCreativeModeTab.addTools(FLINT_AXE);
+        // 手斧
+        ModCreativeModeTab.addTools(FLINT_HANDAXE);
+        // 锹
+        ModCreativeModeTab.addTools(FLINT_SHOVEL);
+        // 锄
+        ModCreativeModeTab.addTools(FLINT_HOE);
+    }
+
+    /**
      * 燧石镐可以破坏的方块(继承原版木质工具Tag)
      */
     public static final TagKey<Block> INCORRECT_FOR_FLINT_TOOL = TagKey
@@ -81,22 +99,4 @@ public class Flint {
     public static final DeferredItem<Item> FLINT_HOE = Registers.registerTool("flint_hoe", "Hoe", FLINT_TIER, new Item.Properties()
             .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
     );
-
-    /**
-     * 注册
-     */
-    public static void register() {
-        // 剑
-        ModCreativeModeTab.addTools(FLINT_SWORD);
-        // 镐
-        ModCreativeModeTab.addTools(FLINT_PICKAXE);
-        // 斧
-        ModCreativeModeTab.addTools(FLINT_AXE);
-        // 手斧
-        ModCreativeModeTab.addTools(FLINT_HANDAXE);
-        // 锹
-        ModCreativeModeTab.addTools(FLINT_SHOVEL);
-        // 锄
-        ModCreativeModeTab.addTools(FLINT_HOE);
-    }
 }
