@@ -7,7 +7,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import top.elake.elakechemical.ElakeChemical;
-import top.elake.elakechemical.registers.item.Sundries;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -20,7 +19,7 @@ public class ItemColor {
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         ITEMCOLOR = event.getItemColors();
 
-        registerColorsForItem(Sundries.TEST_INGOT.toStack(), 0, 0xff0000ff);
+//        registerColorsForItem(Sundries.TEST_INGOT.toStack(), 0, 0xff0000ff);
     }
 
     private static void registerColorsForItem(ItemStack itemStack, Object... colors) {

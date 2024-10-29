@@ -21,23 +21,23 @@ public class ModCreativeModeTab {
     /**
      * 全部
      */
-    private static final List<DeferredItem<? extends Item>> REGISTERED_ALL = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> REGISTERED_ALL = new ArrayList<>();
     /**
      * 元素
      */
-    private static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> REGISTERED_ELEMENTS = new ArrayList<>();
     /**
      * 工具
      */
-    private static final List<DeferredItem<? extends Item>> REGISTERED_TOOLS = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> REGISTERED_TOOLS = new ArrayList<>();
     /**
      * 杂项
      */
-    private static final List<DeferredItem<? extends Item>> REGISTERED_SUNDRIES = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> REGISTERED_SUNDRIES = new ArrayList<>();
     /**
      * 材料
      */
-    private static final List<DeferredItem<? extends Item>> MATERIALS_SUNDRIES = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> MATERIALS_SUNDRIES = new ArrayList<>();
     /**
      * 创造模式物品栏注册
      */
@@ -99,7 +99,6 @@ public class ModCreativeModeTab {
      *
      * @param item 物品
      */
-
     public static void addAll(DeferredItem<? extends Item> item) {
         REGISTERED_ALL.add(item);
     }
@@ -109,7 +108,6 @@ public class ModCreativeModeTab {
      *
      * @param item 物品
      */
-
     public static void addElement(DeferredItem<? extends Item> item) {
         REGISTERED_ELEMENTS.add(item);
         addAll(item);
@@ -120,7 +118,6 @@ public class ModCreativeModeTab {
      *
      * @param item 物品
      */
-
     public static void addTools(DeferredItem<? extends Item> item) {
         REGISTERED_TOOLS.add(item);
         addAll(item);
