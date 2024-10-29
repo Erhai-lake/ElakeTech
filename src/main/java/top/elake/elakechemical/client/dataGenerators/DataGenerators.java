@@ -7,6 +7,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.client.dataGenerators.translation.en_us;
+import top.elake.elakechemical.client.dataGenerators.translation.zh_cn;
 
 /**
  * @author Erhai-lake
@@ -19,6 +20,10 @@ public class DataGenerators {
         event.getGenerator().addProvider(
                 event.includeClient(),
                 (DataProvider.Factory<en_us>) en_us::new
+        );
+        event.getGenerator().addProvider(
+                event.includeClient(),
+                (DataProvider.Factory<zh_cn>) zh_cn::new
         );
     }
 }

@@ -8,13 +8,13 @@ import top.elake.elakechemical.registers.item.Sundries;
 /**
  * @author Erhai-lake
  */
-public class en_us extends LanguageProvider {
-    public en_us(PackOutput output) {
-        super(output, ElakeChemical.MODID, "en_us");
+public class zh_cn extends LanguageProvider {
+    public zh_cn(PackOutput output) {
+        super(output, ElakeChemical.MODID, "zh_cn");
     }
 
     @Override
     protected void addTranslations() {
-        add(Sundries.TEST.get(), "test");
+        add(Sundries.TEST.get(), "测试");
     }
 }
