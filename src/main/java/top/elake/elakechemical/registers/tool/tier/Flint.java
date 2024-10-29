@@ -17,13 +17,6 @@ import top.elake.elakechemical.utils.Registers;
  */
 public class Flint {
     /**
-     * 剑
-     */
-    public static final DeferredItem<Item> FLINT_SWORD = Registers.registerTool("flint_sword", "Sword", FLINT_TIER, new Item.Properties()
-            .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
-    );
-
-    /**
      * 燧石镐可以破坏的方块(继承原版木质工具Tag)
      */
     public static final TagKey<Block> INCORRECT_FOR_FLINT_TOOL = TagKey
@@ -51,6 +44,12 @@ public class Flint {
             1,
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
+    );
+    /**
+     * 剑
+     */
+    public static final DeferredItem<Item> FLINT_SWORD = Registers.registerTool("flint_sword", "Sword", FLINT_TIER, new Item.Properties()
+            .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
     );
     /**
      * 镐
