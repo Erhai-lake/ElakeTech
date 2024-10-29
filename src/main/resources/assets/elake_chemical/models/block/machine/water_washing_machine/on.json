@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "0": "elake_chemical:block/machine/water_washing_machine/front",
+        "2": "elake_chemical:block/machine/water_washing_machine/top",
+        "3": "elake_chemical:block/machine/water_washing_machine/east",
+        "4": "elake_chemical:block/machine/water_washing_machine/down",
+        "5": "elake_chemical:block/machine/water_washing_machine/back",
+        "particle": "elake_chemical:block/machine/water_washing_machine/front"
+    },
+    "elements": [
+        {
+            "from": [0, 0, 0],
+            "to": [16, 16, 16],
+            "faces": {
+                "north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                "east": {"uv": [0, 0, 16, 16], "texture": "#3"},
+                "south": {"uv": [0, 0, 16, 16], "texture": "#5"},
+                "west": {"uv": [0, 0, 16, 16], "texture": "#3"},
+                "up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+                "down": {"uv": [0, 0, 16, 16], "texture": "#4"}
+            }
+        }
+    ]
+}
