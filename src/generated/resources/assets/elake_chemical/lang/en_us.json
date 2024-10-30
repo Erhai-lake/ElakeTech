@@ -133,6 +133,7 @@
   "item.elake_chemical.zn": "zn",
   "item.elake_chemical.zr": "zr",
   "itemGroup.elake_chemical.all": "ElakeChemical - All",
+  "itemGroup.elake_chemical.chemical_appliances": "ElakeChemical - Chemical Appliances",
   "itemGroup.elake_chemical.element": "ElakeChemical - Elements",
   "itemGroup.elake_chemical.materials": "ElakeChemical - Materials",
   "itemGroup.elake_chemical.sundries": "ElakeChemical - Sundries",

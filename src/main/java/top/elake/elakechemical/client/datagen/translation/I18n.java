@@ -17,6 +17,7 @@ public class I18n {
         I18n.addLang("itemGroup", "tool", "ElakeChemical - Tool", "洱海化学 - 工具");
         I18n.addLang("itemGroup", "sundries", "ElakeChemical - Sundries", "洱海化学 - 杂项");
         I18n.addLang("itemGroup", "materials", "ElakeChemical - Materials", "洱海化学 - 材料");
+        I18n.addLang("itemGroup", "chemical_appliances", "ElakeChemical - Chemical Appliances", "洱海化学 - 化学用具");
         // 画
         I18n.addLang("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
         I18n.addLang("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");

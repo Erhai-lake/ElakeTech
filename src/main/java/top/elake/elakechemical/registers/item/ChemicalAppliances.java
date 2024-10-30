@@ -12,6 +12,6 @@ public class ChemicalAppliances {
      * 注册
      */
     public static void register() {
-        ModCreativeModeTab.addSubItems(Registers.registerItem("asbestos_net", new Item.Properties()));
+        ModCreativeModeTab.addChemicalAppliances(Registers.registerItem("asbestos_net", new Item.Properties()));
     }
 }

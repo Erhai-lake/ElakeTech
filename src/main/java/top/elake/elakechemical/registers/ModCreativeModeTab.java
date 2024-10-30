@@ -37,7 +37,11 @@ public class ModCreativeModeTab {
     /**
      * 材料
      */
-    public static final List<DeferredItem<? extends Item>> MATERIALS_SUNDRIES = new ArrayList<>();
+    public static final List<DeferredItem<? extends Item>> REGISTERED_MATERIALS = new ArrayList<>();
+    /**
+     *化学用具
+     */
+    public static final List<DeferredItem<? extends Item>> REGISTERED_CHEMICAL_APPLIANCES = new ArrayList<>();
     /**
      * 创造模式物品栏注册
      */
@@ -89,8 +93,18 @@ public class ModCreativeModeTab {
     private static final Supplier<CreativeModeTab> MATERIALS = CREATIVE_MODE_TABS.register("materials",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".sundries"))
-                    .icon(() -> new ItemStack(MATERIALS_SUNDRIES.get(0).asItem()))
-                    .displayItems((params, output) -> MATERIALS_SUNDRIES.forEach(output::accept))
+                    .icon(() -> new ItemStack(REGISTERED_MATERIALS.get(0).asItem()))
+                    .displayItems((params, output) -> REGISTERED_MATERIALS.forEach(output::accept))
+                    .build()
+    );
+    /**
+     * 化学用具创造模式标签页
+     */
+    private static final Supplier<CreativeModeTab> CHEMICAL_APPLIANCES = CREATIVE_MODE_TABS.register("chemical_appliances",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".chemical_appliances"))
+                    .icon(() -> new ItemStack(REGISTERED_CHEMICAL_APPLIANCES.get(0).asItem()))
+                    .displayItems((params, output) -> REGISTERED_CHEMICAL_APPLIANCES.forEach(output::accept))
                     .build()
     );
 
@@ -139,7 +153,17 @@ public class ModCreativeModeTab {
      * @param item 物品
      */
     public static void addMaterials(DeferredItem<? extends Item> item) {
-        MATERIALS_SUNDRIES.add(item);
+        REGISTERED_MATERIALS.add(item);
+        addAll(item);
+    }
+
+    /**
+     * 添加化学用具
+     *
+     * @param item 物品
+     */
+    public static void addChemicalAppliances(DeferredItem<? extends Item> item) {
+        REGISTERED_CHEMICAL_APPLIANCES.add(item);
         addAll(item);
     }
 
