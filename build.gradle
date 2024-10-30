@@ -107,6 +107,8 @@ dependencies {
     implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
     implementation("curse.maven:rhinp-416294:${rhinp_file_id}")
     implementation("curse.maven:rhinp-585406:${probejs_file_id}")
+    // GeckoLib
+    implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
     // Patchouli
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
