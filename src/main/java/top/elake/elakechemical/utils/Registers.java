@@ -96,7 +96,7 @@ public class Registers {
             case "Axe" -> ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties));
             case "Shovel" -> ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties));
             case "Hoe" -> ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties));
-            default -> throw new IllegalArgumentException("错误的类型");
+            default -> throw new IllegalArgumentException("Error Type");
         };
     }
 }
