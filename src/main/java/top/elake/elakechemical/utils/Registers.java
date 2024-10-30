@@ -89,7 +89,7 @@ public class Registers {
     public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties) {
         return switch (type) {
             case "Sword" -> ITEMS.register(name, () -> new SwordItem(tier, properties));
-            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeItem(tier, properties).getCraftingRemainingItem());
+            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeItem(tier, properties));
             case "Axe" -> ITEMS.register(name, () -> new AxeItem(tier, properties));
             case "Shovel" -> ITEMS.register(name, () -> new ShovelItem(tier, properties));
             case "Hoe" -> ITEMS.register(name, () -> new HoeItem(tier, properties));

@@ -1,15 +1,13 @@
 package top.elake.elakechemical.registers.tool;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import org.checkerframework.checker.units.qual.A;
 import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
-import top.elake.elakechemical.utils.Registers;
-
-import java.util.function.Supplier;
 
 /**
  * @author Erhai-lake
@@ -25,7 +23,9 @@ public class Hammer {
 //            .attributes(HoeItem.createAttributes(Tiers.STONE, 1, -2))
 //    );
 
-    public static final DeferredItem<Item> STONE_HAMMER = ITEMS.register("stone_hammer", Aaa::new);
+    public static final DeferredItem<Item> STONE_HAMMER = ITEMS.register("stone_hammer", () -> new DamageToolCrafting(Tiers.STONE, new Item.Properties()
+            .attributes(PickaxeItem.createAttributes(Tiers.STONE, 1, -2)))
+    );
 
     /**
      * 注册
