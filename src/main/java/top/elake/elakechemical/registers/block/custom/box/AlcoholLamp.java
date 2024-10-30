@@ -12,11 +12,9 @@ public class AlcoholLamp extends Block {
         super(properties);
     }
 
-    private static final VoxelShape SHAPE = Block
-            .box(5d, 0d, 5d, 11d, 5d, 11d);
-
+    // 获取方块的碰撞箱需要重写VoxelShape#getShape方法
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPE;
+        return Block.box(5d, 0d, 5d, 11d, 5d, 11d);
     }
 }
