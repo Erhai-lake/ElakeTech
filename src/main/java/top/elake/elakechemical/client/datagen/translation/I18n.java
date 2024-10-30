@@ -47,15 +47,15 @@ public class I18n {
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addLang(String type, String name, String nameEn, String nameZh) {
+    public static void addLang(String type, String itemID, String EN_US, String ZH_CN) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
-            newList.add(ElakeChemical.MODID + "." + name);
+            newList.add(ElakeChemical.MODID + "." + itemID);
         } else {
-            newList.add(type + "." + ElakeChemical.MODID + "." + name);
+            newList.add(type + "." + ElakeChemical.MODID + "." + itemID);
         }
-        newList.add(nameEn);
-        newList.add(nameZh);
+        newList.add(EN_US);
+        newList.add(ZH_CN);
         LIST.add(newList);
     }
 }

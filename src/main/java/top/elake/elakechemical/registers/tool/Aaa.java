@@ -14,7 +14,9 @@ public class Aaa extends PickaxeItem {
     }
 
     @Override
-    public @NotNull ItemStack getCraftingRemainingItem(@NotNull ItemStack stack){
-        return new ItemStack(this);
+    public @NotNull ItemStack getCraftingRemainingItem(@NotNull ItemStack stack) {
+        int damageValue = stack.getDamageValue();
+        stack.setDamageValue(damageValue + 1);
+        return stack;
     }
 }

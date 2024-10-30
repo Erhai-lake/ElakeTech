@@ -16,10 +16,10 @@ public class NoDiggingWood {
     /**
      * 注册事件
      *
-     * @param eventBus 事件总线
+     * @param event 事件总线
      */
-    public static void register(IEventBus eventBus) {
-        eventBus.register(new NoDiggingWood());
+    public static void register(IEventBus event) {
+        event.register(new NoDiggingWood());
     }
 
     /**
