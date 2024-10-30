@@ -44,7 +44,7 @@ public class ElakeChemical {
         // 化学工具
         ChemicalAppliances.register();
         // 锤子
-        Hammer.register();
+        Hammer.register(event);
 
         // 注册物品
         Registers.registerItems(event);
