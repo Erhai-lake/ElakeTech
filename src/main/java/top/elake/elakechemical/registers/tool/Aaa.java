@@ -6,7 +6,7 @@ import net.minecraft.world.item.Tiers;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class Aaa extends PickaxeItem {
     public Aaa() {
