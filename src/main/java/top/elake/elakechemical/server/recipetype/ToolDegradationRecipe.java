@@ -21,13 +21,6 @@ import java.util.function.Supplier;
  * @author Erhai-lake
  */
 public class ToolDegradationRecipe implements Recipe<ToolDegradationInput> {
-    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES =
-            DeferredRegister.create(Registries.RECIPE_TYPE, ElakeChemical.MODID);
-    public static final Supplier<RecipeType<ToolDegradationRecipe>> RIGHT_CLICK_BLOCK =
-            RECIPE_TYPES.register(
-                    "right_click_block",
-                    () -> RecipeType.<ToolDegradationRecipe>simple(ResourceLocation.fromNamespaceAndPath(ElakeChemical.MODID, "right_click_block"))
-            );
     private final BlockState inputState;
     private final Ingredient inputItem;
     private final ItemStack result;
@@ -101,6 +94,15 @@ public class ToolDegradationRecipe implements Recipe<ToolDegradationInput> {
     public @NotNull ItemStack assemble(@NotNull ToolDegradationInput input, HolderLookup.@NotNull Provider registries) {
         return this.result.copy();
     }
+
+    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES =
+            DeferredRegister.create(Registries.RECIPE_TYPE, ElakeChemical.MODID);
+
+    public static final Supplier<RecipeType<ToolDegradationRecipe>> RIGHT_CLICK_BLOCK =
+            RECIPE_TYPES.register(
+                    "right_click_block",
+                    () -> RecipeType.<ToolDegradationRecipe>simple(ResourceLocation.fromNamespaceAndPath(ElakeChemical.MODID, "right_click_block"))
+            );
 
     @Override
     public @NotNull RecipeType<?> getType() {
