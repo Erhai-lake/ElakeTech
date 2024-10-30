@@ -1,6 +1,8 @@
 package top.elake.elakechemical.utils;
 
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -88,11 +90,11 @@ public class Registers {
      */
     public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties) {
         return switch (type) {
-            case "Sword" -> ITEMS.register(name, () -> new SwordItem(tier, properties));
-            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeItem(tier, properties));
-            case "Axe" -> ITEMS.register(name, () -> new AxeItem(tier, properties));
-            case "Shovel" -> ITEMS.register(name, () -> new ShovelItem(tier, properties));
-            case "Hoe" -> ITEMS.register(name, () -> new HoeItem(tier, properties));
+            case "Sword" -> ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties));
+            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties));
+            case "Axe" -> ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties));
+            case "Shovel" -> ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties));
+            case "Hoe" -> ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties));
             default -> throw new IllegalArgumentException("错误的类型");
         };
     }

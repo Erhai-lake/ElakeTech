@@ -1,16 +1,16 @@
-package top.elake.elakechemical.registers.tool;
+package top.elake.elakechemical.utils;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * @author Erhai-lake Qi-Month
+ * @author Erhai-lake
  */
-public class DamageToolCrafting extends PickaxeItem {
-    public DamageToolCrafting(Tier tier, Properties properties) {
+public class SwordDamageToolCrafting extends SwordItem {
+    public SwordDamageToolCrafting(Tier tier, Properties properties) {
         super(tier, properties);
     }
 
