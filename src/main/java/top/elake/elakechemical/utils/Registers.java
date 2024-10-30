@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.utils.tooldamege.*;
 
 import java.util.function.Supplier;
 

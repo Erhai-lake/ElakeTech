@@ -1,4 +1,4 @@
-package top.elake.elakechemical.utils;
+package top.elake.elakechemical.utils.tooldamege;
 
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;

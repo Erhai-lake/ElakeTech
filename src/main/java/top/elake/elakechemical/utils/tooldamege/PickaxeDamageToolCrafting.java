@@ -1,16 +1,16 @@
-package top.elake.elakechemical.utils;
+package top.elake.elakechemical.utils.tooldamege;
 
-import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tier;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Erhai-lake Qi-Month
  */
-public class HoeDamageToolCrafting extends HoeItem {
-    public HoeDamageToolCrafting(Tier tier, Properties properties) {
+public class PickaxeDamageToolCrafting extends PickaxeItem {
+    public PickaxeDamageToolCrafting(Tier tier, Properties properties) {
         super(tier, properties);
     }
 
