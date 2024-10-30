@@ -1,8 +1,9 @@
-package top.elake.elakechemical.client.datagen.translation;
+package top.elake.elakechemical.client.datagen.translation.language;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import top.elake.elakechemical.ElakeChemical;
+import top.elake.elakechemical.client.datagen.translation.I18n;
 
 import java.util.List;
 

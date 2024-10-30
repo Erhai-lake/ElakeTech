@@ -6,8 +6,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elakechemical.ElakeChemical;
-import top.elake.elakechemical.client.datagen.translation.en_us;
-import top.elake.elakechemical.client.datagen.translation.zh_cn;
+import top.elake.elakechemical.client.datagen.translation.language.en_us;
+import top.elake.elakechemical.client.datagen.translation.language.zh_cn;
 
 /**
  * @author Erhai-lake
