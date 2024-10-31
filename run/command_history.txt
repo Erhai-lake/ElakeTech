@@ -1,0 +1,50 @@
+/time set day
+/time set noon
+/time set night
+/time set day
+/kjs
+/kubejs
+/kjs
+/kjs hand
+/give Dev minecraft:painting[entity_data={id:"minecraft:painting",variant:"elake_chemical:periodic_table_of_chemical_elements"}]
+/time set day
+/kjs hand
+/give Dev minecraft:painting[entity_data={id:"minecraft:painting",variant:"elake_chemical:periodic_table_of_chemical_elements"}]
+/time set day
+/give Dev minecraft:painting[entity_data={id:"minecraft:painting",variant:"elake_chemical:periodic_table_of__elemens"}]
+/give Dev minecraft:painting[entity_data={id:"minecraft:painting",variant:"elake_chemical:periodic_table_of_elemens"}]
+/give Dev minecraft:painting[entity_data={id:"minecraft:painting",variant:"elake_chemical.periodic_table_of_elements"}]
+/
+/time set day
+/give Dev minecraft:painting[entity_data={id:"minecraft:painting",variant:"elake_chemical:periodic_table_of_elements"}]
+/give Dev minecraft:stone[entity_data={id:"minecraft:painting",variant:"elake_chemical:periodic_table_of_elements"}]
+/
+/give Dev minecraft:painting[entity_data={id:"minecraft:stone",variant:"elake_chemical:periodic_table_of_elements"}]
+/
+/kubejs reload
+/time set day
+/weather clear
+/time set day
+/effect give Dev minecraft:night_vision infinite
+/time set day
+/weather clear
+/weather clear 99999999999999999999999999999999999999999999999999
+/difficulty peaceful
+/kubejs hand
+/time set day
+/give Dev minecraft:command_block
+/gamerule commandBlockOutput false
+/give Dev elake_chemical:test_ingot
+/probejs disable
+/time set day
+/weather clear
+/weather clear 99999999999999999999999999999999999999999999999999999999999999999999999999999d
+/kill @e[name=!Dev]
+/clear Dev
+/
+/give Dev elake_chemical:stone_hammer[damage=20]
+/give Dev elake_chemical:stone_hammer[damage=131]
+/give Dev elake_chemical:stone_hammer[damage=132]
+/give Dev elake_chemical:stone_hammer[damage=131]
+/give Dev elake_chemical:stone_hammer[damage=129]
+/give Dev elake_chemical:stone_hammer[damage=100]

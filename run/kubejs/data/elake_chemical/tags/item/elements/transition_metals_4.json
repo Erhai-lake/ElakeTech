@@ -1,0 +1,14 @@
+{
+    "values": [
+        "elake_chemical:lr",
+        "elake_chemical:rf",
+        "elake_chemical:db",
+        "elake_chemical:sg",
+        "elake_chemical:bh",
+        "elake_chemical:hs",
+        "elake_chemical:mt",
+        "elake_chemical:ds",
+        "elake_chemical:rg",
+        "elake_chemical:cn"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "AB",
+        "CC"
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:flint"
+        },
+        "B": {
+            "tag": "minecraft:logs"
+        },
+        "C": {
+            "tag": "minecraft:planks"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "minecraft:crafting_table"
+    }
+}

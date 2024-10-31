@@ -112,7 +112,8 @@ gradle-app.setting
 **/build/
 
 # Common working directory
-run/
+run/logs/
+run/crash-reports/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
@@ -120,4 +121,4 @@ run/
 # VS Code
 .vscode/
 
-/src/generated/resources/.cache
+/src/generated/resources/.cache/

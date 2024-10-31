@@ -1,0 +1,4 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"minecraft:leather_boots","components":{"minecraft:enchantments":{"levels":{"minecraft:frost_walker":2}}}},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]
