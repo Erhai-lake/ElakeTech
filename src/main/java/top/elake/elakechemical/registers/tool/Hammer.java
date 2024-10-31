@@ -16,7 +16,7 @@ public class Hammer {
      * 石锤
      */
     public static final DeferredItem<Item> STONE_HAMMER = Registers.registerTool("stone_hammer", "Pickaxe", Tiers.STONE, new Item.Properties()
-            .attributes(PickaxeItem.createAttributes(Tiers.STONE, 1, -2)), 20
+            .attributes(PickaxeItem.createAttributes(Tiers.STONE, 5, -2)), 20
     );
 
     /**
