@@ -1,17 +1,13 @@
 package top.elake.elakechemical.registers.tool.tier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import top.elake.elakechemical.ElakeChemical;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
 import top.elake.elakechemical.registers.tag.ModItemTags;
 import top.elake.elakechemical.utils.Registers;
@@ -71,36 +67,36 @@ public class Flint {
      * 剑
      */
     public static final DeferredItem<Item> FLINT_SWORD = Registers.registerTool("flint_sword", "Sword", FLINT_TIER, new Item.Properties()
-            .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f))
+            .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f)), 0
     );
     /**
      * 镐
      */
     public static final DeferredItem<Item> FLINT_PICKAXE = Registers.registerTool("flint_pickaxe", "Pickaxe", FLINT_TIER, new Item.Properties()
-            .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f))
+            .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f)), 0
     );
     /**
      * 斧
      */
     public static final DeferredItem<Item> FLINT_AXE = Registers.registerTool("flint_axe", "Axe", FLINT_TIER, new Item.Properties()
-            .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2))
+            .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2)), 0
     );
     /**
      * 手斧
      */
     public static final DeferredItem<Item> FLINT_HANDAXE = Registers.registerTool("flint_handaxe", "Axe", FLINT_HANDAXE_TIER, new Item.Properties()
-            .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2))
+            .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2)), 0
     );
     /**
      * 楸
      */
     public static final DeferredItem<Item> FLINT_SHOVEL = Registers.registerTool("flint_shovel", "Hoe", FLINT_TIER, new Item.Properties()
-            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
+            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
     );
     /**
      * 锄
      */
     public static final DeferredItem<Item> FLINT_HOE = Registers.registerTool("flint_hoe", "Hoe", FLINT_TIER, new Item.Properties()
-            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2))
+            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
     );
 }

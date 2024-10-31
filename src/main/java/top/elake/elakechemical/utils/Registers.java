@@ -89,13 +89,13 @@ public class Registers {
      * @param properties 工具属性
      * @return 工具句柄
      */
-    public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties) {
+    public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties, int subtractingDamage) {
         return switch (type) {
-            case "Sword" -> ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties));
-            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties));
-            case "Axe" -> ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties));
-            case "Shovel" -> ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties));
-            case "Hoe" -> ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties));
+            case "Sword" -> ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, subtractingDamage));
+            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties, subtractingDamage));
+            case "Axe" -> ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties, subtractingDamage));
+            case "Shovel" -> ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties, subtractingDamage));
+            case "Hoe" -> ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties, subtractingDamage));
             default -> throw new IllegalArgumentException("Error Type");
         };
     }
