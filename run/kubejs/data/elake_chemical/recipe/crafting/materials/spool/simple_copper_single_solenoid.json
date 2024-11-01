@@ -2,22 +2,22 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         " A ",
-        "BAB",
-        " C "
+        "BCB",
+        " A "
     ],
     "key": {
         "A": {
-            "tag": "c:flint"
+            "tag": "minecraft:wooden_pressure_plates"
         },
         "B": {
-            "item": "elake_chemical:grass_string"
+            "tag": "c:plates/copper"
         },
         "C": {
-            "item": "minecraft:stick"
+            "tag": "c:rods/wooden"
         }
     },
     "result": {
         "count": 1,
-        "id": "elake_chemical:flint_sword"
+        "id": "elake_chemical:easy_copper_coil"
     }
 }

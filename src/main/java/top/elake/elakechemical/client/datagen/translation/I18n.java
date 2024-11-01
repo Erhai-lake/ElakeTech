@@ -34,7 +34,8 @@ public class I18n {
         addLang("item", "copper_plate", "Copper Plate", "铜板");
         addLang("item", "copper_wire", "Copper Wire", "铜线");
         addLang("item", "easy_copper_coil", "Easy Copper Coil", "简易铜线圈");
-        addLang("item", "graphite", "Graphite", "石墨");
+        addLang("item", "graphite_ingot", "Graphite", "石墨");
+        addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
         // 工具
         addLang("item", "flint_sword", "Flint Sword", "燧石剑");
         addLang("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");

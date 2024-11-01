@@ -2,19 +2,19 @@
 	"type": "minecraft:block",
 	"pools": [
 		{
-			"bonus_rolls": 0.0,
-			"conditions": [
-				{
-					"condition": "minecraft:survives_explosion"
-				}
-			],
+			"rolls": 1,
+			"bonus_rolls": 0,
 			"entries": [
 				{
 					"type": "minecraft:item",
 					"name": "elake_chemical:test_block"
 				}
 			],
-			"rolls": 1.0
+			"conditions": [
+				{
+					"condition": "minecraft:survives_explosion"
+				}
+			]
 		}
 	]
 }

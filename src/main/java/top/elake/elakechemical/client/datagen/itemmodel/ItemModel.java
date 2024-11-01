@@ -28,7 +28,9 @@ public class ItemModel {
         // 简易铜线圈
         addItemModels("easy_copper_coil", "item/materials/alone/copper/easy_copper_coil");
         // 石墨
-        addItemModels("graphite", "item/materials/graphite");
+        addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot");
+        // 石墨板
+        addItemModels("graphite_plate", "item/materials/alone/graphite/plate");
 
         // 工具
         // 燧石剑

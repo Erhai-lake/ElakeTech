@@ -32,7 +32,11 @@ public class Materials {
     /**
      * 石墨
      */
-    public static final DeferredItem<Item> GRAPHITE = Registers.registerItem("graphite", new Item.Properties());
+    public static final DeferredItem<Item> GRAPHITE_INGOT = Registers.registerItem("graphite_ingot", new Item.Properties());
+    /**
+     * 石墨板
+     */
+    public static final DeferredItem<Item> GRAPHITE_PLATE = Registers.registerItem("graphite_plate", new Item.Properties());
 
     /**
      * 注册
@@ -49,6 +53,8 @@ public class Materials {
         // 铜简易单闸线圈
         ModCreativeModeTab.addSubItems(EASY_COPPER_COIL);
         // 石墨
-        ModCreativeModeTab.addSubItems(GRAPHITE);
+        ModCreativeModeTab.addSubItems(GRAPHITE_INGOT);
+        // 石墨板
+        ModCreativeModeTab.addSubItems(GRAPHITE_PLATE);
     }
 }
