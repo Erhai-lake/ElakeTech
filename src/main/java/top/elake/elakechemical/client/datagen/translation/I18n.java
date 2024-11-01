@@ -47,6 +47,7 @@ public class I18n {
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
+    @SuppressWarnings("AlibabaLowerCamelCaseVariableNaming")
     public static void addLang(String type, String itemID, String EN_US, String ZH_CN) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
