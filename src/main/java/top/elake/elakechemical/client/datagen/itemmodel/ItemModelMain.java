@@ -20,10 +20,8 @@ public class ItemModelMain extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (List<String> item : ItemModel.LIST) {
-            magicIngotModel(item.get(0), item.get(2));
+            magicIngotModel(item.get(0), item.get(1));
         }
-
-        this.magicIngotModel("asa", "item/element/ac");
     }
 
     public void magicIngotModel(String namespace, String texture) {
