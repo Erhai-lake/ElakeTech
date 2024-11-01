@@ -1,6 +1,0 @@
-{
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "elake_chemical:item/materials/alone/copper/easy_copper_coil"
-	}
-}

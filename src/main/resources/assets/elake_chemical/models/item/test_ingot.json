@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:item/generated",
-    "textures": {
-        "layer0": "elake_chemical:item/materials/ingot",
-        "layer1": "elake_chemical:item/materials/sheet"
-    }
-}
