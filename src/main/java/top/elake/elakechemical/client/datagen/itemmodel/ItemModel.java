@@ -10,6 +10,8 @@ import java.util.List;
  */
 public class ItemModel {
     public static void registers() {
+        // 书
+        addItemModels("book", "item/book");
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {
             addItemModels(element, "item/element/" + element);

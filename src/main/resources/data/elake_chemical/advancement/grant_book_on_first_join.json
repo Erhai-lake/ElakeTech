@@ -1,0 +1,12 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "loot": [
+            "elake_chemical:grant_book_on_first_join"
+        ]
+    }
+}
