@@ -28,7 +28,7 @@ public class Materials {
     /**
      * 铜简易单闸线圈
      */
-    public static final DeferredItem<Item> SIMPLE_COPPER_SINGLE_SOLENOID = Registers.registerItem("simple_copper_single_solenoid", new Item.Properties());
+    public static final DeferredItem<Item> EASY_COPPER_COIL = Registers.registerItem("easy_copper_coil", new Item.Properties());
     /**
      * 石墨
      */
@@ -47,7 +47,7 @@ public class Materials {
         // 铜线
         ModCreativeModeTab.addSubItems(COPPER_WIRE);
         // 铜简易单闸线圈
-        ModCreativeModeTab.addSubItems(SIMPLE_COPPER_SINGLE_SOLENOID);
+        ModCreativeModeTab.addSubItems(EASY_COPPER_COIL);
         // 石墨
         ModCreativeModeTab.addSubItems(GRAPHITE);
     }

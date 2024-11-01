@@ -33,7 +33,7 @@ public class I18n {
         I18n.addLang("item", "grass_string", "Grass String", "草绳");
         I18n.addLang("item", "copper_plate", "Copper Plate", "铜板");
         I18n.addLang("item", "copper_wire", "Copper Wire", "铜线");
-        I18n.addLang("item", "simple_copper_single_solenoid", "Simple Copper Single Solenoid", "铜简易单闸线圈");
+        I18n.addLang("item", "easy_copper_coil", "Easy Copper Coil", "简易铜线圈");
         I18n.addLang("item", "graphite", "Graphite", "石墨");
         // 工具
         I18n.addLang("item", "flint_sword", "Flint Sword", "燧石剑");
