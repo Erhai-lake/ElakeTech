@@ -114,6 +114,16 @@ gradle-app.setting
 # Common working directory
 run/logs/
 run/crash-reports/
+run/screenshots/
+run/servers.dat
+run/servers.dat_old
+run/local
+run/downloads
+run/options.txt
+run/usercache.json
+run/usernamecache.json
+run/.probe
+/run/resourcepacks
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar

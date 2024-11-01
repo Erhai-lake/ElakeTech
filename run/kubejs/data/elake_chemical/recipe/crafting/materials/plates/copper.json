@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"tag": "c:ingots/copper"
+		},
+		{
+			"item": "elake_chemical:stone_hammer"
+		}
+	],
+	"result": {
+		"id": "elake_chemical:copper_plate",
+		"count": 1
+	}
+}
