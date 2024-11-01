@@ -3,6 +3,7 @@ package top.elake.elakechemical;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
+import top.elake.elakechemical.client.datagen.itemmodel.ItemModel;
 import top.elake.elakechemical.client.datagen.translation.I18n;
 import top.elake.elakechemical.event.NoDiggingWood;
 import top.elake.elakechemical.registers.ModCreativeModeTab;
@@ -51,8 +52,11 @@ public class ElakeChemical {
         // 注册方块
         Registers.registerBlocks(event);
 
+        //数据生成器
         // i18n
         I18n.registers();
+        // 物品模型
+        ItemModel.registers();
 
         // 注册非空手掘木
         NoDiggingWood.register(NeoForge.EVENT_BUS);
