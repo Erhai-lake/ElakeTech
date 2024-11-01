@@ -1,7 +1,7 @@
 package top.elake.elakechemical.registers.item;
 
 /**
- * @author Erhai-lake Qi-Month
+ * @author Erhai-lake
  */
 public class Sundries {
     /**
