@@ -60,6 +60,7 @@
 			"minecraft:ore_redstone",
 			"minecraft:ore_redstone_lower",
 			"minecraft:ore_diamond",
+			"minecraft:ore_diamond_medium",
 			"minecraft:ore_diamond_large",
 			"minecraft:ore_diamond_buried",
 			"minecraft:ore_lapis",
@@ -69,9 +70,9 @@
 			"minecraft:disk_sand",
 			"minecraft:disk_clay",
 			"minecraft:disk_gravel",
+			"minecraft:ore_emerald",
 			"elake_chemical:ore_graphite",
-			"elake_chemical:ore_graphite_small",
-			"minecraft:ore_emerald"
+			"elake_chemical:ore_graphite_small"
 		],
 		[
 			"minecraft:ore_infested"

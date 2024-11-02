@@ -64,6 +64,7 @@
 			"minecraft:ore_redstone",
 			"minecraft:ore_redstone_lower",
 			"minecraft:ore_diamond",
+			"minecraft:ore_diamond_medium",
 			"minecraft:ore_diamond_large",
 			"minecraft:ore_diamond_buried",
 			"minecraft:ore_lapis",
@@ -71,7 +72,9 @@
 			"minecraft:ore_copper",
 			"minecraft:underwater_magma",
 			"minecraft:disk_grass",
-			"minecraft:disk_clay"
+			"minecraft:disk_clay",
+			"elake_chemical:ore_graphite",
+			"elake_chemical:ore_graphite_small"
 		],
 		[],
 		[
@@ -134,7 +137,7 @@
 				"type": "minecraft:skeleton",
 				"maxCount": 4,
 				"minCount": 4,
-				"weight": 100
+				"weight": 70
 			},
 			{
 				"type": "minecraft:creeper",
@@ -165,6 +168,12 @@
 				"maxCount": 1,
 				"minCount": 1,
 				"weight": 1
+			},
+			{
+				"type": "minecraft:bogged",
+				"maxCount": 4,
+				"minCount": 4,
+				"weight": 30
 			}
 		],
 		"underground_water_creature": [
