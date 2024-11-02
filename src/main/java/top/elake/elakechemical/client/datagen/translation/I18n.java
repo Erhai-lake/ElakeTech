@@ -47,6 +47,7 @@ public class I18n {
         // 矿石
         addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
         addLang("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
+        addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

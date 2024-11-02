@@ -13,18 +13,20 @@
 								{
 									"condition": "minecraft:match_tool",
 									"predicate": {
-										"enchantments": [
-											{
-												"enchantment": "minecraft:silk_touch",
-												"levels": {
-													"min": 1
+										"predicates": {
+											"minecraft:enchantments": [
+												{
+													"enchantments": "minecraft:silk_touch",
+													"levels": {
+														"min": 1
+													}
 												}
-											}
-										]
+											]
+										}
 									}
 								}
 							],
-							"name": "elake_chemical:graphite_ore"
+							"name": "elake_chemical:deepslate_graphite_ore"
 						},
 						{
 							"type": "minecraft:item",
@@ -45,5 +47,6 @@
 			],
 			"rolls": 1.0
 		}
-	]
+	],
+	"random_sequence": "minecraft:blocks/iron_ore"
 }

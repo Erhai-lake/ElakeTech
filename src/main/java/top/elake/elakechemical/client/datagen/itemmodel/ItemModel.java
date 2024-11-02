@@ -31,6 +31,8 @@ public class ItemModel {
         addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot");
         // 石墨板
         addItemModels("graphite_plate", "item/materials/alone/graphite/plate");
+        // 粗石磨
+        addItemModels("raw_graphite", "item/materials/alone/graphite/ore");
 
         //  工具
         // 燧石剑
