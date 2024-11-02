@@ -34,7 +34,7 @@ public class ItemModel {
         // 粗石磨
         addItemModels("raw_graphite", "item/materials/alone/graphite/ore");
 
-        //  工具
+        // 工具
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword");
         // 燧石镐
