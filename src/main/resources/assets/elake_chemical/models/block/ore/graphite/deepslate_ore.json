@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"all": "elake_chemical:block/metal/ore/graphite/deepslate"
+	}
+}

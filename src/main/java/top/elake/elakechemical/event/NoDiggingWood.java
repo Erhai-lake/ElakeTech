@@ -1,5 +1,6 @@
 package top.elake.elakechemical.event;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
@@ -33,10 +34,8 @@ public class NoDiggingWood {
         Block block = event.getLevel().getBlockState(event.getPos()).getBlock();
         ItemStack heldItem = player.getMainHandItem();
 
-        // 判断方块是否为木头(Tag)
-        if ((block.defaultBlockState().is(BlockTags.LOGS))
-                // 如果玩家没有使用斧头，则取消破坏方块(并且有添加创造模式判断)
-                && (!player.getAbilities().instabuild) && !(heldItem.getItem() instanceof AxeItem)) {
+        // 判断方块是否为木头(Tag)如果玩家没有使用斧头，则取消破坏方块(并且有添加创造模式判断)
+        if ((block.defaultBlockState().is(BlockTags.LOGS)) && (!player.getAbilities().instabuild) && !(heldItem.getItem() instanceof AxeItem)) {
             event.setCanceled(true);
         }
     }

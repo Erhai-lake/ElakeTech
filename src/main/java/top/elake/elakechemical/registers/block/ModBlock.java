@@ -43,12 +43,38 @@ public class ModBlock {
     );
 
     /**
+     * 矿石
+     */
+    /**
+     * 石墨
+     */
+    public static final DeferredBlock<Block> GRAPHITE_ORE = Registers.registerBlock("graphite_ore",
+            () -> new Block(BlockBehaviour.Properties
+                    .ofFullCopy(Blocks.IRON_ORE)
+                    .sound(SoundType.STONE)
+            )
+    );
+    public static final DeferredBlock<Block> DEEPSLATE_GRAPHITE_ORE = Registers.registerBlock("deepslate_graphite_ore",
+            () -> new Block(BlockBehaviour.Properties
+                    .ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)
+                    .sound(SoundType.DEEPSLATE)
+            )
+    );
+
+    /**
      * 注册
      */
     public static void register() {
-        // 测试方块
+        // 物品
         ModCreativeModeTab.addAll(Registers.registerBlockItem("test_block", TEST_BLOCK, new Item.Properties()));
         ModCreativeModeTab.addAll(Registers.registerBlockItem("alcohol_lamp", ALCOHOL_LAMP, new Item.Properties()));
+        /**
+         * 矿石
+         */
+        // 石墨
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("graphite_ore", GRAPHITE_ORE, new Item.Properties()));
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_graphite_ore", DEEPSLATE_GRAPHITE_ORE, new Item.Properties()));
+
         // 测试方块(实体)
         ModCreativeModeTab.addAll(Registers.registerBlockItem("test_block_entity",
                 Registers.registerBlock("test_block_entity",

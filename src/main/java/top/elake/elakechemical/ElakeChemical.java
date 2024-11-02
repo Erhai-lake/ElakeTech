@@ -11,7 +11,6 @@ import top.elake.elakechemical.registers.block.ModBlock;
 import top.elake.elakechemical.registers.item.ChemicalAppliances;
 import top.elake.elakechemical.registers.item.Elements;
 import top.elake.elakechemical.registers.item.Materials;
-import top.elake.elakechemical.registers.item.Sundries;
 import top.elake.elakechemical.registers.tool.Hammer;
 import top.elake.elakechemical.registers.tool.tier.Flint;
 import top.elake.elakechemical.utils.Registers;
@@ -34,8 +33,6 @@ public class ElakeChemical {
     public ElakeChemical(IEventBus event) {
         // 元素
         Elements.register();
-        // 杂项
-        Sundries.register();
         // 材料
         Materials.register();
         // 方块

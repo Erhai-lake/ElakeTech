@@ -44,6 +44,9 @@ public class I18n {
         addLang("item", "flint_shovel", "Flint Shovel", "燧石锹");
         addLang("item", "flint_hoe", "Flint Hoe", "燧石锄");
         addLang("item", "stone_hammer", "Stone Hammer", "石锤");
+        // 矿石
+        addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
+        addLang("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

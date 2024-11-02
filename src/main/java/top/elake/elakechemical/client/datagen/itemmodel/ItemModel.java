@@ -32,7 +32,7 @@ public class ItemModel {
         // 石墨板
         addItemModels("graphite_plate", "item/materials/alone/graphite/plate");
 
-        // 工具
+        //  工具
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword");
         // 燧石镐
@@ -47,6 +47,8 @@ public class ItemModel {
         addItemModels("flint_hoe", "item/tool/flint/hoe");
         // 石锤
         addItemModels("stone_hammer", "item/tool/hammer/stone");
+        // 剪线钳
+        addItemModels("wirecutter", "item/tool/wire_cutter/wire_cutter");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

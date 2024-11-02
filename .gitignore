@@ -131,4 +131,5 @@ run/.probe
 # VS Code
 .vscode/
 
-/src/generated/resources/.cache/
+# temp
+/src/generated
