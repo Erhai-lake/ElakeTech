@@ -24,7 +24,7 @@
 									}
 								}
 							],
-							"name": "new_create:graphite_ore"
+							"name": "elake_chemical:graphite_ore"
 						},
 						{
 							"type": "minecraft:item",
