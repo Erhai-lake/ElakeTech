@@ -1,3 +1,3 @@
 StartupEvents.registry("item", (event) => {
-        event.create("subatomic_ingot")
+    event.create("subatomic_ingot")
 })

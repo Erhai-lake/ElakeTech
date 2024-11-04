@@ -15,7 +15,6 @@ public class I18n {
         addLang("itemGroup", "all", "ElakeChemical - All", "洱海化学 - 全部");
         addLang("itemGroup", "element", "ElakeChemical - Elements", "洱海化学 - 元素");
         addLang("itemGroup", "tool", "ElakeChemical - Tool", "洱海化学 - 工具");
-        addLang("itemGroup", "sundries", "ElakeChemical - Sundries", "洱海化学 - 杂项");
         addLang("itemGroup", "materials", "ElakeChemical - Materials", "洱海化学 - 材料");
         addLang("itemGroup", "chemical_appliances", "ElakeChemical - Chemical Appliances", "洱海化学 - 化学用具");
         // 画
@@ -34,20 +33,20 @@ public class I18n {
         addLang("item", "copper_plate", "Copper Plate", "铜板");
         addLang("item", "copper_wire", "Copper Wire", "铜线");
         addLang("item", "easy_copper_coil", "Easy Copper Coil", "简易铜线圈");
-        addLang("item", "graphite_ingot", "Graphite", "石墨");
+        addLang("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
         addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
         // 工具
         addLang("item", "flint_sword", "Flint Sword", "燧石剑");
         addLang("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
         addLang("item", "flint_axe", "Flint Axe", "燧石斧");
-        addLang("item", "flint_handaxe", "Flint Handaxe", "燧石手斧");
+        addLang("item", "flint_handaxe", "Flint Hand Axe", "燧石手斧");
         addLang("item", "flint_shovel", "Flint Shovel", "燧石锹");
         addLang("item", "flint_hoe", "Flint Hoe", "燧石锄");
         addLang("item", "stone_hammer", "Stone Hammer", "石锤");
         // 矿石
+        addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
         addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
         addLang("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
-        addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

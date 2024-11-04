@@ -78,16 +78,6 @@ public class ModCreativeModeTab {
                     .build()
     );
     /**
-     * 杂物创造模式标签页
-     */
-    private static final Supplier<CreativeModeTab> SUNDRIES = CREATIVE_MODE_TABS.register("sundries",
-            () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + ElakeChemical.MODID + ".sundries"))
-                    .icon(() -> new ItemStack(REGISTERED_SUNDRIES.get(0).asItem()))
-                    .displayItems((params, output) -> REGISTERED_SUNDRIES.forEach(output::accept))
-                    .build()
-    );
-    /**
      * 材料创造模式标签页
      */
     private static final Supplier<CreativeModeTab> MATERIALS = CREATIVE_MODE_TABS.register("materials",
@@ -134,16 +124,6 @@ public class ModCreativeModeTab {
      */
     public static void addTools(DeferredItem<? extends Item> item) {
         REGISTERED_TOOLS.add(item);
-        addAll(item);
-    }
-
-    /**
-     * 添加杂项
-     *
-     * @param item 物品
-     */
-    public static void addSubItems(DeferredItem<? extends Item> item) {
-        REGISTERED_SUNDRIES.add(item);
         addAll(item);
     }
 

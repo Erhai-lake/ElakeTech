@@ -88,7 +88,7 @@ public class Flint {
             .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2)), 0
     );
     /**
-     * 楸
+     * 锹
      */
     public static final DeferredItem<Item> FLINT_SHOVEL = Registers.registerTool("flint_shovel", "Hoe", FLINT_TIER, new Item.Properties()
             .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0

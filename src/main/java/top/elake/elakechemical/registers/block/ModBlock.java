@@ -48,13 +48,11 @@ public class ModBlock {
     public static final DeferredBlock<Block> GRAPHITE_ORE = Registers.registerBlock("graphite_ore",
             () -> new Block(BlockBehaviour.Properties
                     .ofFullCopy(Blocks.IRON_ORE)
-                    .sound(SoundType.STONE)
             )
     );
     public static final DeferredBlock<Block> DEEPSLATE_GRAPHITE_ORE = Registers.registerBlock("deepslate_graphite_ore",
             () -> new Block(BlockBehaviour.Properties
                     .ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)
-                    .sound(SoundType.DEEPSLATE)
             )
     );
 
