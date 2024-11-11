@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class ItemModel {
     public static void registers() {
@@ -49,16 +49,14 @@ public class ItemModel {
         addItemModels("flint_hoe", "item/tool/flint/hoe");
         // 石锤
         addItemModels("stone_hammer", "item/tool/hammer/stone");
-        // 剪线钳
-        addItemModels("wirecutter", "item/tool/wire_cutter/wire_cutter");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addItemModels(String namespace, String texture) {
+    public static void addItemModels(String namespace, String path) {
         List<String> newList = new ArrayList<>();
         newList.add(namespace);
-        newList.add(texture);
+        newList.add(path);
         LIST.add(newList);
     }
 }

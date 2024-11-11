@@ -13,8 +13,8 @@ import java.util.List;
  * @author Erhai-lake
  */
 public class ItemModelMain extends ItemModelProvider {
-    public ItemModelMain(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, ElakeChemical.MODID, existingFileHelper);
+    public ItemModelMain(PackOutput output, ExistingFileHelper helper) {
+        super(output, ElakeChemical.MODID, helper);
     }
 
     @Override

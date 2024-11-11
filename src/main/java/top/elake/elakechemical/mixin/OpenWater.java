@@ -6,6 +6,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+/**
+ * @author Qi-Month
+ */
 @Mixin(FishingHook.class)
 public class OpenWater {
     @Inject(method = {"isOpenWaterFishing", "calculateOpenWater"}, at = @At("RETURN"), cancellable = true)

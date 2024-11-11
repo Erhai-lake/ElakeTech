@@ -1,7 +1,7 @@
 {
   "minecraft": {
     "item_storage.show_name_amount": 5,
-    "furnace": true,
+    "furnace": false,
     "harvest_tool.show_unbreakable": false,
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
@@ -64,7 +64,7 @@
     "distance": false,
     "block_face": false,
     "coordinates": false,
-    "registry_name": "OFF",
+    "registry_name": "ADVANCED_TOOLTIPS",
     "block_properties": false,
     "mod_name": true
   }

@@ -20,18 +20,10 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         ExistingFileHelper efh = event.getExistingFileHelper();
         // 语言文件
-        event.getGenerator().addProvider(
-                event.includeClient(),
-                (DataProvider.Factory<en_us>) en_us::new
-        );
-        event.getGenerator().addProvider(
-                event.includeClient(),
-                (DataProvider.Factory<zh_cn>) zh_cn::new
-        );
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<en_us>) en_us::new);
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<zh_cn>) zh_cn::new);
         // 物品模型
-        event.getGenerator().addProvider(
-                event.includeClient(),
-                (DataProvider.Factory<ItemModelMain>) pOutput -> new ItemModelMain(pOutput, efh)
-        );
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ItemModelMain>)
+                output -> new ItemModelMain(output, efh));
     }
 }

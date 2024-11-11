@@ -47,20 +47,20 @@ public class Materials {
      */
     public static void register() {
         // 草纤维
-        ModCreativeModeTab.addSubItems(GRASS_FIBER);
+        ModCreativeModeTab.addMaterials(GRASS_FIBER);
         // 草绳
-        ModCreativeModeTab.addSubItems(GRASS_STRING);
+        ModCreativeModeTab.addMaterials(GRASS_STRING);
         // 铜板
-        ModCreativeModeTab.addSubItems(COPPER_PLATE);
+        ModCreativeModeTab.addMaterials(COPPER_PLATE);
         // 铜线
-        ModCreativeModeTab.addSubItems(COPPER_WIRE);
+        ModCreativeModeTab.addMaterials(COPPER_WIRE);
         // 铜简易单闸线圈
-        ModCreativeModeTab.addSubItems(EASY_COPPER_COIL);
+        ModCreativeModeTab.addMaterials(EASY_COPPER_COIL);
         // 石墨
-        ModCreativeModeTab.addSubItems(GRAPHITE_INGOT);
+        ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 粗石墨
-        ModCreativeModeTab.addSubItems(RAW_GRAPHITE);
+        ModCreativeModeTab.addMaterials(RAW_GRAPHITE);
         // 石墨板
-        ModCreativeModeTab.addSubItems(GRAPHITE_PLATE);
+        ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
     }
 }
