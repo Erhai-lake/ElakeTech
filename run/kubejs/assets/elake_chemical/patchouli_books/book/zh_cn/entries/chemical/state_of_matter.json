@@ -1,6 +1,6 @@
 {
     "name": "物质的状态",
-    "category": "elake_chemical:cognition",
+    "category": "elake_tech:cognition",
     "icon": "minecraft:writable_book",
     "pages": [
         {
@@ -14,7 +14,7 @@
         {
             "type":"patchouli:image",
             "images": [
-                "elake_chemical:textures/gui/entries/state_of_matter_zh_cn.png"
+                "elake_tech:textures/gui/entries/state_of_matter_zh_cn.png"
             ],
             "border": true,
             "text": "Phase Change Diagram of Matter"

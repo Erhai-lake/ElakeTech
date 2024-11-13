@@ -63,7 +63,7 @@
     },
     "done": true
   },
-  "elake_chemical:grant_book_on_first_join": {
+  "elake_tech:grant_book_on_first_join": {
     "criteria": {
       "tick": "2024-11-01 18:34:18 +0800"
     },
@@ -10060,6 +10060,12 @@
     "criteria": {
       "has_glass": "2024-11-01 18:34:24 +0800",
       "has_the_recipe": "2024-11-01 18:34:24 +0800"
+    },
+    "done": true
+  },
+  "elake_chemical:grant_book_on_first_join": {
+    "criteria": {
+      "tick": "2024-11-14 02:01:05 +0800"
     },
     "done": true
   },

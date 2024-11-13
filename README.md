@@ -1,4 +1,4 @@
-# ElakeChemical
+# ElakeTech
 
 > [!WARNING]
 >
@@ -92,12 +92,12 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
         "#minecraft:incorrect_for_diamond_tool"
     ],
     "remove": [
-        "#elake_chemical:needs_custom_tool"
+        "#elake_tech:needs_custom_tool"
     ]
 }
 ```
 
-这个的意思是,继承`minecraft:incorrect_for_diamond_tool`,但是从中去除了`elake_chemical:needs_custom_tool`
+这个的意思是,继承`minecraft:incorrect_for_diamond_tool`,但是从中去除了`elake_tech:needs_custom_tool`
 
 > [!NOTE]
 > 

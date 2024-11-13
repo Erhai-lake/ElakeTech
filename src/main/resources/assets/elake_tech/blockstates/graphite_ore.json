@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": {
+			"model": "elake_tech:block/ore/graphite/ore"
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
     "values": [
-        "elake_chemical:graphite_ore",
-        "elake_chemical:deepslate_graphite_ore"
+        "elake_tech:graphite_ore",
+        "elake_tech:deepslate_graphite_ore"
     ]
 }

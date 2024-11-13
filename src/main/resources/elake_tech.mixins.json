@@ -1,0 +1,15 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "top.elake.elaketech.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "refmap": "elake_tech.refmap.json",
+    "mixins": [
+        "OpenWater"
+    ],
+    "client": [
+    ],
+    "injectors": {
+        "defaultRequire": 1
+  }
+}

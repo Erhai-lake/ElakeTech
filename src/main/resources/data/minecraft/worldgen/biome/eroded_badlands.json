@@ -74,8 +74,8 @@
 			"minecraft:disk_sand",
 			"minecraft:disk_clay",
 			"minecraft:disk_gravel",
-			"elake_chemical:ore_graphite",
-			"elake_chemical:ore_graphite_small"
+			"elake_tech:ore_graphite",
+			"elake_tech:ore_graphite_small"
 		],
 		[],
 		[

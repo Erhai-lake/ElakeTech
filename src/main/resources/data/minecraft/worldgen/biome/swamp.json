@@ -72,8 +72,8 @@
 			"minecraft:ore_copper",
 			"minecraft:underwater_magma",
 			"minecraft:disk_clay",
-			"elake_chemical:ore_graphite",
-			"elake_chemical:ore_graphite_small"
+			"elake_tech:ore_graphite",
+			"elake_tech:ore_graphite_small"
 		],
 		[],
 		[

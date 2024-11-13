@@ -2,14 +2,14 @@
   "bookGuiScale": 4,
   "clickedVisualize": false,
   "bookData": {
-    "elake_chemical:book": {
+    "elake_tech:book": {
       "viewedEntries": [
-        "elake_chemical:test/test_entry",
-        "elake_chemical:awareness/awarenesss",
-        "elake_chemical:chemical/chemssicals",
-        "elake_chemical:chemical/chemical",
-        "elake_chemical:chemical/basic_cognition",
-        "elake_chemical:chemical/state_of_matter"
+        "elake_tech:test/test_entry",
+        "elake_tech:awareness/awarenesss",
+        "elake_tech:chemical/chemssicals",
+        "elake_tech:chemical/chemical",
+        "elake_tech:chemical/basic_cognition",
+        "elake_tech:chemical/state_of_matter"
       ],
       "bookmarks": [],
       "completedManualQuests": []
