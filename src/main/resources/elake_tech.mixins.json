@@ -5,11 +5,11 @@
     "compatibilityLevel": "JAVA_8",
     "refmap": "elake_tech.refmap.json",
     "mixins": [
-        "OpenWater"
+        "OpenWaterFishingHook"
     ],
     "client": [
     ],
     "injectors": {
         "defaultRequire": 1
-  }
+    }
 }

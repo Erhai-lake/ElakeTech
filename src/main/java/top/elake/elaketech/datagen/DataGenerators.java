@@ -1,4 +1,4 @@
-package top.elake.elaketech.client.datagen;
+package top.elake.elaketech.datagen;
 
 import net.minecraft.data.DataProvider;
 import net.neoforged.api.distmarker.Dist;
@@ -7,9 +7,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.client.datagen.itemmodel.ItemModelMain;
-import top.elake.elaketech.client.datagen.translation.language.en_us;
-import top.elake.elaketech.client.datagen.translation.language.zh_cn;
+import top.elake.elaketech.datagen.model.item.ItemModelMain;
+import top.elake.elaketech.datagen.translation.language.en_us;
+import top.elake.elaketech.datagen.translation.language.zh_cn;
 
 /**
  * @author Erhai-lake

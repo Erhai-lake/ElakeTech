@@ -1,4 +1,4 @@
-package top.elake.elaketech.client.datagen.itemmodel;
+package top.elake.elaketech.datagen.model.item;
 
 import top.elake.elaketech.registers.item.Elements;
 

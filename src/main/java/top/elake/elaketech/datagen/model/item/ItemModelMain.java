@@ -1,4 +1,4 @@
-package top.elake.elaketech.client.datagen.itemmodel;
+package top.elake.elaketech.datagen.model.item;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
