@@ -10069,5 +10069,29 @@
     },
     "done": true
   },
+  "immersiveengineering:tools/tools_root": {
+    "criteria": {
+      "has_item": "2024-11-14 15:42:26 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:main/craft_workbench": {
+    "criteria": {
+      "has_item": "2024-11-14 15:42:26 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/conveyor_basic": {
+    "criteria": {
+      "has_leather": "2024-11-15 01:02:13 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/powerpack": {
+    "criteria": {
+      "has_leather": "2024-11-15 01:02:13 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

@@ -1,1 +1,2 @@
 /effect give Dev minecraft:night_vision infinite
+/summon lightning_bolt ~ ~ ~

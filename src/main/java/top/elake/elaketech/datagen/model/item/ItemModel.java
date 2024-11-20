@@ -47,8 +47,6 @@ public class ItemModel {
         addItemModels("flint_shovel", "item/tool/flint/shovel");
         // 燧石锄头
         addItemModels("flint_hoe", "item/tool/flint/hoe");
-        // 石锤
-        addItemModels("stone_hammer", "item/tool/hammer/stone");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

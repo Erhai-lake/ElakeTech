@@ -156,3 +156,10 @@ idea {
         downloadJavadoc = true
     }
 }
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "utf-8"
+}
+tasks.withType(Javadoc).configureEach {
+    options.encoding = "utf-8"
+}

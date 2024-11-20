@@ -11,7 +11,6 @@ import top.elake.elaketech.registers.block.ModBlock;
 import top.elake.elaketech.registers.item.ChemicalAppliances;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
-import top.elake.elaketech.registers.tool.Hammer;
 import top.elake.elaketech.registers.tool.tier.Flint;
 import top.elake.elaketech.utils.Registers;
 
@@ -41,8 +40,6 @@ public class ElakeTech {
         Flint.register();
         // 化学工具
         ChemicalAppliances.register();
-        // 锤子
-        Hammer.register(event);
 
         // 注册物品
         Registers.registerItems(event);

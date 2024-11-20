@@ -42,7 +42,6 @@ public class I18n {
         addLang("item", "flint_handaxe", "Flint Hand Axe", "燧石手斧");
         addLang("item", "flint_shovel", "Flint Shovel", "燧石锹");
         addLang("item", "flint_hoe", "Flint Hoe", "燧石锄");
-        addLang("item", "stone_hammer", "Stone Hammer", "石锤");
         // 矿石
         addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
         addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
