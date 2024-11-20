@@ -10093,5 +10093,11 @@
     },
     "done": true
   },
+  "immersiveengineering:recipes/misc/crafting/toolbox": {
+    "criteria": {
+      "has_red_dye": "2024-11-20 16:18:59 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }
