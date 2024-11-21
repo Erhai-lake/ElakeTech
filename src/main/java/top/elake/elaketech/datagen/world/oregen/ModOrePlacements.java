@@ -20,14 +20,14 @@ import java.util.List;
 public class ModOrePlacements {
     public static final ResourceKey<PlacedFeature> ORE_GRAPHITE = createKey("ore_graphite");
 
-    public static void bootstrap(BootstrapContext<PlacedFeature> pContext) {
-        HolderGetter<ConfiguredFeature<?, ?>> holdergetter = pContext.lookup(Registries.CONFIGURED_FEATURE);
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
         // 添加到placed_feature中(HeightRangePlacement:生成的最低高度和最高的高度)
         // 石墨
         Holder<ConfiguredFeature<?, ?>> oreGraphiteHolder = holdergetter.getOrThrow(ModOreFeatures.ORE_GRAPHITE);
         PlacementUtils.register(
-                pContext, ORE_GRAPHITE, oreGraphiteHolder, commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(72)))
+                context, ORE_GRAPHITE, oreGraphiteHolder, commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(72)))
         );
     }
 
@@ -46,12 +46,12 @@ public class ModOrePlacements {
     /**
      * 常见矿物
      *
-     * @param pCount 计数
+     * @param count 计数
      * @param pHeightRange 生成范围
      * @return 列表
      */
-    private static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
-        return orePlacement(CountPlacement.of(pCount), pHeightRange);
+    private static List<PlacementModifier> commonOrePlacement(int count, PlacementModifier pHeightRange) {
+        return orePlacement(CountPlacement.of(count), pHeightRange);
     }
 
     /**
@@ -65,7 +65,7 @@ public class ModOrePlacements {
         return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
     }
 
-    public static ResourceKey<PlacedFeature> createKey(String pKey) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, pKey));
+    public static ResourceKey<PlacedFeature> createKey(String key) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, key));
     }
 }

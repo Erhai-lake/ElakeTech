@@ -41,7 +41,7 @@ public class ModOreFeatures {
         FeatureUtils.register(pContext, ORE_GRAPHITE, Feature.ORE, new OreConfiguration(list, 12));
     }
 
-    public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String pName) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, pName));
+    public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, name));
     }
 }
