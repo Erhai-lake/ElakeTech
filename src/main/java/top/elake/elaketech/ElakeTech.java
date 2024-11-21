@@ -8,6 +8,7 @@ import top.elake.elaketech.datagen.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.registers.ModCreativeModeTab;
 import top.elake.elaketech.registers.block.ModBlock;
+import top.elake.elaketech.registers.block.Org;
 import top.elake.elaketech.registers.item.ChemicalAppliances;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
@@ -36,6 +37,8 @@ public class ElakeTech {
         Materials.register();
         // 方块
         ModBlock.register();
+        // 矿物
+        Org.register();
         // 燧石工具
         Flint.register();
         // 化学工具

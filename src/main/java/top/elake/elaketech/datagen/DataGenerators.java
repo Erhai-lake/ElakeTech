@@ -10,6 +10,7 @@ import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.datagen.model.item.ItemModelMain;
 import top.elake.elaketech.datagen.translation.language.en_us;
 import top.elake.elaketech.datagen.translation.language.zh_cn;
+import top.elake.elaketech.datagen.world.oregen.ModWorldGen;
 
 /**
  * @author Erhai-lake
@@ -19,11 +20,15 @@ public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         ExistingFileHelper efh = event.getExistingFileHelper();
+        var lp = event.getLookupProvider();
         // 语言文件
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<en_us>) en_us::new);
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<zh_cn>) zh_cn::new);
         // 物品模型
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ItemModelMain>)
                 output -> new ItemModelMain(output, efh));
+        // 矿物生成
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModWorldGen>)
+                Output -> new ModWorldGen(Output, lp));
     }
 }
