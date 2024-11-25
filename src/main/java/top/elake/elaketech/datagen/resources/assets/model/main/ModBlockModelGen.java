@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * @author Erhai-lake
  */
-public class BlockModelGen extends BlockModelProvider {
-    public BlockModelGen(PackOutput output, ExistingFileHelper helper) {
+public class ModBlockModelGen extends BlockModelProvider {
+    public ModBlockModelGen(PackOutput output, ExistingFileHelper helper) {
         super(output, ElakeTech.MODID, helper);
     }
 

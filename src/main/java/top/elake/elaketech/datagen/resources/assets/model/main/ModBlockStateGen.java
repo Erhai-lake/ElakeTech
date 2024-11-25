@@ -15,8 +15,8 @@ import java.util.function.Supplier;
 /**
  * @author Erhai-lake
  */
-public class BlockStateGen extends BlockStateProvider {
-    public BlockStateGen(PackOutput output, ExistingFileHelper helper) {
+public class ModBlockStateGen extends BlockStateProvider {
+    public ModBlockStateGen(PackOutput output, ExistingFileHelper helper) {
         super(output, ElakeTech.MODID, helper);
     }
 

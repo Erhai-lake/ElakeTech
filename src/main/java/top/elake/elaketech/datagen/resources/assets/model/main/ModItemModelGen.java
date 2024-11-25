@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * @author Erhai-lake
  */
-public class ItemModelGen extends ItemModelProvider {
-    public ItemModelGen(PackOutput output, ExistingFileHelper helper) {
+public class ModItemModelGen extends ItemModelProvider {
+    public ModItemModelGen(PackOutput output, ExistingFileHelper helper) {
         super(output, ElakeTech.MODID, helper);
     }
 
