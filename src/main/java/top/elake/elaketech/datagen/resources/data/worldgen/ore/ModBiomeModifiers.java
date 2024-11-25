@@ -1,4 +1,4 @@
-package top.elake.elaketech.datagen.world.oregen;
+package top.elake.elaketech.datagen.resources.data.worldgen.ore;
 
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -29,7 +29,6 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ModOrePlacements.ORE_GRAPHITE)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

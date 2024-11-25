@@ -11,7 +11,7 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
-    // For Jei
+    // JEI
     maven {
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
@@ -20,7 +20,7 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
-    // For Jade
+    // Jade
     maven {
         name = "CurseMaven"
         url = "https://www.cursemaven.com"
@@ -28,14 +28,14 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    // For KubeJS
+    // KubeJS
     maven {
         url = "https://maven.saps.dev/minecraft"
         content {
             includeGroup "dev.latvian.mods"
         }
     }
-    // For Patchouli
+    // Patchouli
     maven {
         url = 'https://maven.blamejared.com'
     }

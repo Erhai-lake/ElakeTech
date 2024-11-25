@@ -1,4 +1,4 @@
-package top.elake.elaketech.datagen.world.oregen;
+package top.elake.elaketech.datagen.resources.data.worldgen.ore;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
@@ -31,22 +31,21 @@ public class ModOrePlacements {
         );
     }
 
-
     /**
      * 矿石放置
      *
-     * @param pCountPlacement 计数放置
-     * @param pHeightRange 生成范围
+     * @param countPlacement 计数放置
+     * @param heightRange    生成范围
      * @return 列表
      */
-    private static List<PlacementModifier> orePlacement(PlacementModifier pCountPlacement, PlacementModifier pHeightRange) {
-        return List.of(pCountPlacement, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
+    private static List<PlacementModifier> orePlacement(PlacementModifier countPlacement, PlacementModifier heightRange) {
+        return List.of(countPlacement, InSquarePlacement.spread(), heightRange, BiomeFilter.biome());
     }
 
     /**
      * 常见矿物
      *
-     * @param count 计数
+     * @param count        计数
      * @param pHeightRange 生成范围
      * @return 列表
      */
@@ -57,12 +56,12 @@ public class ModOrePlacements {
     /**
      * 稀有矿物
      *
-     * @param pChance 机会
-     * @param pHeightRange 生成范围
+     * @param chance      机会
+     * @param heightRange 生成范围
      * @return 列表
      */
-    private static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRange) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
+    private static List<PlacementModifier> rareOrePlacement(int chance, PlacementModifier heightRange) {
+        return orePlacement(RarityFilter.onAverageOnceEvery(chance), heightRange);
     }
 
     public static ResourceKey<PlacedFeature> createKey(String key) {

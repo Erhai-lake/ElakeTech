@@ -1,4 +1,4 @@
-package top.elake.elaketech.datagen.world.oregen;
+package top.elake.elaketech.datagen.resources.data.worldgen.ore;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;

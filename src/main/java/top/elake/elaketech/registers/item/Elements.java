@@ -15,8 +15,9 @@ public class Elements {
     public static void register() {
         for (String element : ELEMENTS_ITEM_ARR) {
             ModCreativeModeTab.addElement(Registers.registerItem(element, new Item.Properties()
-                    .rarity(Rarity.EPIC)
-            ));
+                            .rarity(Rarity.EPIC)
+                    )
+            );
         }
     }
 
