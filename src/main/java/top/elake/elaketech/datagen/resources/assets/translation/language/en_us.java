@@ -1,9 +1,9 @@
-package top.elake.elaketech.datagen.translation.language;
+package top.elake.elaketech.datagen.resources.assets.translation.language;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.translation.I18n;
+import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 
 import java.util.List;
 

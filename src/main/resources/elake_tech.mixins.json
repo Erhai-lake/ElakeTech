@@ -8,6 +8,7 @@
         "OpenWaterFishingHook"
     ],
     "client": [
+        "GameOptionsMixin"
     ],
     "injectors": {
         "defaultRequire": 1

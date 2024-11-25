@@ -7,10 +7,10 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.model.item.ItemModelMain;
-import top.elake.elaketech.datagen.translation.language.en_us;
-import top.elake.elaketech.datagen.translation.language.zh_cn;
-import top.elake.elaketech.datagen.world.oregen.ModWorldGen;
+import top.elake.elaketech.datagen.resources.assets.model.item.ItemModelMain;
+import top.elake.elaketech.datagen.resources.assets.translation.language.en_us;
+import top.elake.elaketech.datagen.resources.assets.translation.language.zh_cn;
+import top.elake.elaketech.datagen.resources.data.worldgen.ore.ModWorldGen;
 
 /**
  * @author Erhai-lake
@@ -29,6 +29,6 @@ public class DataGenerators {
                 output -> new ItemModelMain(output, efh));
         // 矿物生成
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModWorldGen>)
-                Output -> new ModWorldGen(Output, lp));
+                output -> new ModWorldGen(output, lp));
     }
 }
