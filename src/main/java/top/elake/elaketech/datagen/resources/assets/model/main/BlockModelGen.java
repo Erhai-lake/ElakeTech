@@ -6,7 +6,7 @@ import net.neoforged.neoforge.client.model.generators.BlockModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.resources.assets.model.BlockModel;
+import top.elake.elaketech.datagen.resources.assets.model.ModBlockModel;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class BlockModelGen extends BlockModelProvider {
 
     @Override
     protected void registerModels() {
-        for (List<String> item : BlockModel.LIST) {
+        for (List<String> item : ModBlockModel.LIST) {
             blockModelGen(item.get(0), item.get(1), item.get(2));
         }
     }

@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 /**
  * @author Erhai-lake
  */
-public class BlockState {
+public class ModBlockState {
     public static void registers() {
         // 石墨矿
         addBlockState("graphite_ore", Org.GRAPHITE_ORE, "block/metal/ore/graphite/ore");

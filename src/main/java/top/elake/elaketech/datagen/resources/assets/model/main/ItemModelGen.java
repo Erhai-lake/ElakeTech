@@ -6,7 +6,7 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.resources.assets.model.ItemModel;
+import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class ItemModelGen extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (List<String> item : ItemModel.LIST) {
+        for (List<String> item : ModItemModel.LIST) {
             itemModelGen(item.get(0), item.get(1), item.get(2));
         }
     }

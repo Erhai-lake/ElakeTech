@@ -8,14 +8,14 @@ import java.util.List;
 /**
  * @author Erhai-lake
  */
-public class ItemModel {
+public class ModItemModel {
     public static void registers() {
-        // 书
-        addItemModels("book", "item/book", "Item");
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {
             addItemModels(element, "item/element/" + element, "Item");
         }
+        // 书
+        addItemModels("book", "item/book", "Item");
         // 材料
         // 草纤维
         addItemModels("grass_fiber", "item/materials/grass_fiber", "Item");
@@ -53,7 +53,6 @@ public class ItemModel {
         // 酒精灯
         addItemModels("alcohol_lamp", "block/chemical_appliances/alcohol_lamp", "BlockItem");
     }
-
     public static final List<List<String>> LIST = new ArrayList<>();
 
     public static void addItemModels(String namespace, String path, String type) {

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author Erhai-lake
  */
-public class BlockModel {
+public class ModBlockModel {
     public static void registers() {
         // 石墨矿
         addBlockModels("graphite_ore", "block/metal/ore/graphite/ore", "Block");

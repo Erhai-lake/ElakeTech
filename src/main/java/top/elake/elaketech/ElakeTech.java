@@ -3,9 +3,9 @@ package top.elake.elaketech;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
-import top.elake.elaketech.datagen.resources.assets.model.BlockModel;
-import top.elake.elaketech.datagen.resources.assets.model.BlockState;
-import top.elake.elaketech.datagen.resources.assets.model.ItemModel;
+import top.elake.elaketech.datagen.resources.assets.model.ModBlockModel;
+import top.elake.elaketech.datagen.resources.assets.model.ModBlockState;
+import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
 import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.registers.ModCreativeModeTab;
@@ -55,11 +55,11 @@ public class ElakeTech {
         // i18n
         I18n.registers();
         // 物品模型
-        ItemModel.registers();
+        ModItemModel.registers();
         // 方块
-        BlockModel.registers();
+        ModBlockModel.registers();
         // 方块状态
-        BlockState.registers();
+        ModBlockState.registers();
 
         // 注册非空手掘木
         NoDiggingWood.register(NeoForge.EVENT_BUS);

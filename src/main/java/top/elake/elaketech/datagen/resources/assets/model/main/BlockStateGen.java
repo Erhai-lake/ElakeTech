@@ -8,7 +8,7 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.resources.assets.model.BlockState;
+import top.elake.elaketech.datagen.resources.assets.model.ModBlockState;
 
 import java.util.function.Supplier;
 
@@ -22,7 +22,7 @@ public class BlockStateGen extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        for (BlockState.BlockStateList item : BlockState.LIST) {
+        for (ModBlockState.BlockStateList item : ModBlockState.LIST) {
             blockStateGen(item.namespace() ,item.blockSupplier(), item.path());
         }
     }
