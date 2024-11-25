@@ -2,8 +2,10 @@ package top.elake.elaketech.datagen.resources.assets.model.main;
 
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.datagen.resources.assets.model.BlockState;
@@ -20,12 +22,13 @@ public class BlockStateGen extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        for (Supplier<Block> item : BlockState.LIST) {
-            blockStateGen(item);
+        for (BlockState.BlockStateList item : BlockState.LIST) {
+            blockStateGen(item.namespace() ,item.blockSupplier(), item.path());
         }
     }
 
-    public void blockStateGen(Supplier<Block> block) {
-        this.simpleBlockWithItem(block.get(), cubeAll(block.get()));
+    public void blockStateGen(String namespace, Supplier<Block> block, String path) {
+        ModelFile model = models().cubeAll(namespace, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path));
+        this.simpleBlockWithItem(block.get(), model);
     }
 }

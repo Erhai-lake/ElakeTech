@@ -13,14 +13,17 @@ import java.util.function.Supplier;
 public class BlockState {
     public static void registers() {
         // 石墨矿
-        addBlockState(Org.GRAPHITE_ORE);
+        addBlockState("graphite_ore", Org.GRAPHITE_ORE, "block/metal/ore/graphite/ore");
         // 深层石墨矿
-        addBlockState(Org.DEEPSLATE_GRAPHITE_ORE);
+        addBlockState("deepslate_graphite_ore", Org.DEEPSLATE_GRAPHITE_ORE, "block/metal/ore/graphite/deepslate");
     }
 
-    public static final List<Supplier<Block>> LIST = new ArrayList<>();
+    public static final List<BlockStateList> LIST = new ArrayList<>();
 
-    public static void addBlockState(Supplier<Block> block) {
-        LIST.add(block);
+    public static void addBlockState(String namespace, Supplier<Block> block, String path) {
+        LIST.add(new BlockStateList(namespace, block, path));
+    }
+
+    public record BlockStateList(String namespace, Supplier<Block> blockSupplier, String path) {
     }
 }
