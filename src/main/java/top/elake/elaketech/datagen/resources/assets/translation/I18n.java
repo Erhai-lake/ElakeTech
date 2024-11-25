@@ -12,12 +12,12 @@ import java.util.List;
 public class I18n {
     public static void registers() {
         // 标签页
-        addLang("itemGroup", "all", "ElakeTech - All", "洱海化学 - 全部");
-        addLang("itemGroup", "element", "ElakeTech - Elements", "洱海化学 - 元素");
-        addLang("itemGroup", "tool", "ElakeTech - Tool", "洱海化学 - 工具");
-        addLang("itemGroup", "materials", "ElakeTech - Materials", "洱海化学 - 材料");
-        addLang("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海化学 - 化学用具");
-        addLang("itemGroup", "sundries", "ElakeTech - Sundries", "洱海化学 - 杂项");
+        addLang("itemGroup", "all", "ElakeTech - All", "洱海科技 - 全部");
+        addLang("itemGroup", "element", "ElakeTech - Elements", "洱海科技 - 元素");
+        addLang("itemGroup", "tool", "ElakeTech - Tool", "洱海科技 - 工具");
+        addLang("itemGroup", "materials", "ElakeTech - Materials", "洱海科技 - 材料");
+        addLang("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海科技 - 化学用具");
+        addLang("itemGroup", "sundries", "ElakeTech - Sundries", "洱海科技 - 杂项");
         // 画
         addLang("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
         addLang("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");
