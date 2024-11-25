@@ -46,6 +46,10 @@ public class I18n {
         addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
         addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
         addLang("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
+        // 化学用具
+        addLang("item", "asbestos_net", "Asbestos Net", "石棉网");
+        //方块
+        addLang("block", "alcohol_lamp", "Alcohol Lamp", "酒精灯");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

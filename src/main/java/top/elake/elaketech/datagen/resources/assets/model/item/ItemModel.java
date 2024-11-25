@@ -33,7 +33,6 @@ public class ItemModel {
         addItemModels("graphite_plate", "item/materials/alone/graphite/plate");
         // 粗石磨
         addItemModels("raw_graphite", "item/materials/alone/graphite/ore");
-
         // 工具
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword");
@@ -47,6 +46,12 @@ public class ItemModel {
         addItemModels("flint_shovel", "item/tool/flint/shovel");
         // 燧石锄头
         addItemModels("flint_hoe", "item/tool/flint/hoe");
+        // 化学用具
+        // 石棉网
+        addItemModels("asbestos_net", "item/chemical_appliances/asbestos_net");
+        //方块
+        // 酒精灯
+//        addItemModels("alcohol_lamp", "item/chemical_appliances/alcohol_lamp");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();
