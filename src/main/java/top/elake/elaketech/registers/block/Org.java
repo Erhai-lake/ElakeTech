@@ -8,6 +8,9 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import top.elake.elaketech.registers.ModCreativeModeTab;
 import top.elake.elaketech.utils.Registers;
 
+/**
+ * @author Erhai-lake
+ */
 public class Org {
     /**
      * 石墨矿石
