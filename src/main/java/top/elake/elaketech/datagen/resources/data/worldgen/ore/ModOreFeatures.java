@@ -25,7 +25,7 @@ public class ModOreFeatures {
      */
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_GRAPHITE = createKey("graphite");
 
-    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> pContext) {
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         // 替换规则
         // 石墨替换石头
         RuleTest stoneOreReplaceRuleGraphite = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -38,7 +38,7 @@ public class ModOreFeatures {
 
         // 创建规则(size:矿物的大小,取值为0到64的闭区间)
         // 创建石墨
-        FeatureUtils.register(pContext, ORE_GRAPHITE, Feature.ORE, new OreConfiguration(list, 12));
+        FeatureUtils.register(context, ORE_GRAPHITE, Feature.ORE, new OreConfiguration(list, 12));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {

@@ -17,6 +17,7 @@ public class I18n {
         addLang("itemGroup", "tool", "ElakeTech - Tool", "洱海化学 - 工具");
         addLang("itemGroup", "materials", "ElakeTech - Materials", "洱海化学 - 材料");
         addLang("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海化学 - 化学用具");
+        addLang("itemGroup", "sundries", "ElakeTech - Sundries", "洱海化学 - 杂项");
         // 画
         addLang("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
         addLang("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");
@@ -55,12 +56,12 @@ public class I18n {
     public static final List<List<String>> LIST = new ArrayList<>();
 
     @SuppressWarnings("AlibabaLowerCamelCaseVariableNaming")
-    public static void addLang(String type, String itemID, String EN_US, String ZH_CN) {
+    public static void addLang(String type, String id, String EN_US, String ZH_CN) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
-            newList.add(ElakeTech.MODID + "." + itemID);
+            newList.add(ElakeTech.MODID + "." + id);
         } else {
-            newList.add(type + "." + ElakeTech.MODID + "." + itemID);
+            newList.add(type + "." + ElakeTech.MODID + "." + id);
         }
         newList.add(EN_US);
         newList.add(ZH_CN);
