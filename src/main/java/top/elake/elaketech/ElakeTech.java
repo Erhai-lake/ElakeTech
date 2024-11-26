@@ -13,7 +13,7 @@ import top.elake.elaketech.registers.block.ChemicalAppliances;
 import top.elake.elaketech.registers.block.Org;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
-import top.elake.elaketech.registers.tool.tier.Flint;
+import top.elake.elaketech.registers.tool.Flint;
 import top.elake.elaketech.utils.Registers;
 
 /**

@@ -1,4 +1,4 @@
-package top.elake.elaketech.registers.tool.tier;
+package top.elake.elaketech.registers.tool;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
