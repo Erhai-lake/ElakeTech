@@ -1,9 +1,38 @@
 ﻿{
-	"pack": {
-		"pack_format": 34,
-		"description": "Elake Tech Resources"
-	},
-	"filter": {
-
-	}
+    "pack": {
+        "pack_format": 34,
+        "description": "Elake Tech Resources"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "recipe/crafting_table.json"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/furnace.json"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/wooden_axe.json"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/wooden_hoe.json"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/wooden_pickaxe.json"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/wooden_shovel.json"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/wooden_sword.json"
+            }
+        ]
+    }
 }
