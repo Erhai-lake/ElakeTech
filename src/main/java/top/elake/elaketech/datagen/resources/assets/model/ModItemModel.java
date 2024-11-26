@@ -21,12 +21,6 @@ public class ModItemModel {
         addItemModels("grass_fiber", "item/materials/grass_fiber", "Item");
         // 草绳
         addItemModels("grass_string", "item/materials/grass_string", "Item");
-        // 铜板
-        addItemModels("copper_plate", "item/materials/alone/copper/plate", "Item");
-        // 铜线
-        addItemModels("copper_wire", "item/materials/alone/copper/wire", "Item");
-        // 简易铜线圈
-        addItemModels("easy_copper_coil", "item/materials/alone/copper/easy_copper_coil", "Item");
         // 石墨
         addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot", "Item");
         // 石墨板

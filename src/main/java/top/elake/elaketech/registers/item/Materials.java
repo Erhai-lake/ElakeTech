@@ -18,18 +18,6 @@ public class Materials {
      */
     public static final DeferredItem<Item> GRASS_STRING = Registers.registerItem("grass_string", new Item.Properties());
     /**
-     * 铜板
-     */
-    public static final DeferredItem<Item> COPPER_PLATE = Registers.registerItem("copper_plate", new Item.Properties());
-    /**
-     * 铜线
-     */
-    public static final DeferredItem<Item> COPPER_WIRE = Registers.registerItem("copper_wire", new Item.Properties());
-    /**
-     * 铜简易单闸线圈
-     */
-    public static final DeferredItem<Item> EASY_COPPER_COIL = Registers.registerItem("easy_copper_coil", new Item.Properties());
-    /**
      * 石墨
      */
     public static final DeferredItem<Item> GRAPHITE_INGOT = Registers.registerItem("graphite_ingot", new Item.Properties());
@@ -50,12 +38,6 @@ public class Materials {
         ModCreativeModeTab.addMaterials(GRASS_FIBER);
         // 草绳
         ModCreativeModeTab.addMaterials(GRASS_STRING);
-        // 铜板
-        ModCreativeModeTab.addMaterials(COPPER_PLATE);
-        // 铜线
-        ModCreativeModeTab.addMaterials(COPPER_WIRE);
-        // 铜简易单闸线圈
-        ModCreativeModeTab.addMaterials(EASY_COPPER_COIL);
         // 石墨
         ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 粗石墨

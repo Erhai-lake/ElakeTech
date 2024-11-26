@@ -31,9 +31,6 @@ public class I18n {
         // 材料
         addLang("item", "grass_fiber", "Grass Fiber", "草纤维");
         addLang("item", "grass_string", "Grass String", "草绳");
-        addLang("item", "copper_plate", "Copper Plate", "铜板");
-        addLang("item", "copper_wire", "Copper Wire", "铜线");
-        addLang("item", "easy_copper_coil", "Easy Copper Coil", "简易铜线圈");
         addLang("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
         addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
         // 工具
