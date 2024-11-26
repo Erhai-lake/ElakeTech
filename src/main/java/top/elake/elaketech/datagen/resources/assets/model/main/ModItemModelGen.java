@@ -25,15 +25,15 @@ public class ModItemModelGen extends ItemModelProvider {
         }
     }
 
-    public void itemModelGen(String namespace, String path, String type) {
+    public void itemModelGen(String file, String path, String type) {
         switch (type) {
             case "Item":
-                this.getBuilder(namespace)
+                this.getBuilder(file)
                         .parent(new ModelFile.UncheckedModelFile("minecraft:item/generated"))
                         .texture("layer0", ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path));
                 break;
             case "BlockItem":
-                this.getBuilder(namespace)
+                this.getBuilder(file)
                         .parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path)));
                 break;
             default:

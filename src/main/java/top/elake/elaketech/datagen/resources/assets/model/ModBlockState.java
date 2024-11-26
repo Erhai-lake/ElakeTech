@@ -20,10 +20,10 @@ public class ModBlockState {
 
     public static final List<BlockStateList> LIST = new ArrayList<>();
 
-    public static void addBlockState(String namespace, Supplier<Block> block, String path) {
-        LIST.add(new BlockStateList(namespace, block, path));
+    public static void addBlockState(String file, Supplier<Block> block, String path) {
+        LIST.add(new BlockStateList(file, block, path));
     }
 
-    public record BlockStateList(String namespace, Supplier<Block> blockSupplier, String path) {
+    public record BlockStateList(String file, Supplier<Block> blockSupplier, String path) {
     }
 }

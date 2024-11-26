@@ -23,7 +23,7 @@ public class ModBlockStateGen extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (ModBlockState.BlockStateList item : ModBlockState.LIST) {
-            blockStateGen(item.namespace() ,item.blockSupplier(), item.path());
+            blockStateGen(item.file() ,item.blockSupplier(), item.path());
         }
     }
 

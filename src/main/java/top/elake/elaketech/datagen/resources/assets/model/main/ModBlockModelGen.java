@@ -25,8 +25,8 @@ public class ModBlockModelGen extends BlockModelProvider {
         }
     }
 
-    public void blockModelGen(String namespace, String path, String type) {
-        this.getBuilder(namespace)
+    public void blockModelGen(String file, String path, String type) {
+        this.getBuilder(file)
                 .parent(new ModelFile.UncheckedModelFile("minecraft:block/cube_all"))
                 .texture("all", ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path));
     }

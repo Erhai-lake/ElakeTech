@@ -55,9 +55,9 @@ public class ModItemModel {
     }
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addItemModels(String namespace, String path, String type) {
+    public static void addItemModels(String file, String path, String type) {
         List<String> newList = new ArrayList<>();
-        newList.add(namespace);
+        newList.add(file);
         newList.add(path);
         newList.add(type);
         LIST.add(newList);
