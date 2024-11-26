@@ -10099,25 +10099,31 @@
     },
     "done": true
   },
-  "immersiveengineering:multiblocks/mb_improvedblastfurnace": {
+  "immersiveengineering:recipes/misc/crafting/alloybrick_from_slab": {
     "criteria": {
-      "form_multiblock": "2024-11-26 13:13:00 +0800"
+      "has_alloybrick": "2024-11-26 13:09:12 +0800"
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/cokebrick_from_slab": {
+  "immersiveengineering:recipes/misc/crafting/alloybrick_to_slab": {
     "criteria": {
-      "has_cokebrick": "2024-11-26 13:10:17 +0800"
-    },
-    "done": true
-  },
-  "immersiveengineering:main/mb_cokeoven": {
-    "criteria": {
-      "form_multiblock": "2024-11-26 13:10:45 +0800"
+      "has_alloybrick": "2024-11-26 13:09:12 +0800"
     },
     "done": true
   },
   "immersiveengineering:recipes/misc/crafting/blastbrick_from_slab": {
+    "criteria": {
+      "has_blastbrick": "2024-11-26 13:09:16 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/blastbrick_reinforced": {
+    "criteria": {
+      "has_blastbrick": "2024-11-26 13:09:16 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/blastbrick_to_slab": {
     "criteria": {
       "has_blastbrick": "2024-11-26 13:09:16 +0800"
     },
@@ -10129,15 +10135,9 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/alloybrick_from_slab": {
+  "immersiveengineering:recipes/misc/crafting/blastbrick_reinforced_to_slab": {
     "criteria": {
-      "has_alloybrick": "2024-11-26 13:09:12 +0800"
-    },
-    "done": true
-  },
-  "immersiveengineering:recipes/misc/crafting/blastbrick_reinforced": {
-    "criteria": {
-      "has_blastbrick": "2024-11-26 13:09:16 +0800"
+      "has_blastbrick_reinforced": "2024-11-26 13:09:17 +0800"
     },
     "done": true
   },
@@ -10147,15 +10147,15 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/alloybrick_to_slab": {
+  "immersiveengineering:recipes/misc/crafting/cokebrick_from_slab": {
     "criteria": {
-      "has_alloybrick": "2024-11-26 13:09:12 +0800"
+      "has_cokebrick": "2024-11-26 13:10:17 +0800"
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/blastbrick_reinforced_to_slab": {
+  "immersiveengineering:recipes/misc/crafting/cokebrick_to_slab": {
     "criteria": {
-      "has_blastbrick_reinforced": "2024-11-26 13:09:17 +0800"
+      "has_cokebrick": "2024-11-26 13:10:17 +0800"
     },
     "done": true
   },
@@ -10165,15 +10165,15 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/blastbrick_to_slab": {
-    "criteria": {
-      "has_blastbrick": "2024-11-26 13:09:16 +0800"
-    },
-    "done": true
-  },
   "immersiveengineering:main/craft_hammer": {
     "criteria": {
       "has_item": "2024-11-26 13:10:23 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:main/mb_cokeoven": {
+    "criteria": {
+      "form_multiblock": "2024-11-26 13:10:45 +0800"
     },
     "done": true
   },
@@ -10183,9 +10183,9 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/cokebrick_to_slab": {
+  "immersiveengineering:multiblocks/mb_improvedblastfurnace": {
     "criteria": {
-      "has_cokebrick": "2024-11-26 13:10:17 +0800"
+      "form_multiblock": "2024-11-26 13:13:00 +0800"
     },
     "done": true
   },

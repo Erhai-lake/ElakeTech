@@ -1,3 +1,6 @@
 {
-	"values": []
+	"values": [
+		"immersiveengineering:ingot_hop_graphite",
+		"elake_tech:graphite_ingot"
+	]
 }
