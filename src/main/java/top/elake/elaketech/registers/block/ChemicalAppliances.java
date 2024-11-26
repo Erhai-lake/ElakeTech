@@ -13,7 +13,7 @@ import top.elake.elaketech.utils.Registers;
 /**
  * @author Erhai-lake Qi-Month
  */
-public class ModBlock {
+public class ChemicalAppliances {
     /**
      * 酒精灯
      */
