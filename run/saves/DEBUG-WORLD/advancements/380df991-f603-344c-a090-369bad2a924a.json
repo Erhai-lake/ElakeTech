@@ -10063,12 +10063,6 @@
     },
     "done": true
   },
-  "elake_chemical:grant_book_on_first_join": {
-    "criteria": {
-      "tick": "2024-11-14 02:01:05 +0800"
-    },
-    "done": true
-  },
   "immersiveengineering:tools/tools_root": {
     "criteria": {
       "has_item": "2024-11-14 15:42:26 +0800"
