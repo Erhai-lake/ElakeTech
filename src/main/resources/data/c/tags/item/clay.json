@@ -1,5 +1,6 @@
 {
     "values": [
-        "minecraft:clay_ball"
+        "minecraft:clay_ball",
+        "elake_tech:refractory_clay_ball"
     ]
 }
