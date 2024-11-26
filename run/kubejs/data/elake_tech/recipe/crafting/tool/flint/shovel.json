@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "A",
+        "B",
+        "C"
+    ],
+    "key": {
+        "A": {
+            "tag": "c:flint"
+        },
+        "B": {
+            "item": "elake_tech:grass_string"
+        },
+        "C": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "elake_tech:flint_shovel"
+    }
+}

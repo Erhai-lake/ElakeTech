@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:book"
+        },
+        {
+            "tag": "elake_tech:elements/all"
+        }
+    ],
+    "result": {
+        "components": {
+            "patchouli:book": "elake_tech:book"
+        },
+        "id": "patchouli:guide_book",
+        "count": 1
+    }
+}

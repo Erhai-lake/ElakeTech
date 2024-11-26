@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:blasting",
+    "cookingtime": 300,
+    "experience": 0,
+    "ingredient": {
+        "item": "minecraft:coal"
+    },
+    "result": {
+        "id": "elake_tech:graphite"
+    }
+}

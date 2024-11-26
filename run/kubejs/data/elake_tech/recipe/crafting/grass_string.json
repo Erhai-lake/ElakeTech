@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "elake_tech:grass_fiber"
+        },
+        {
+            "item": "elake_tech:grass_fiber"
+        },
+        {
+            "item": "elake_tech:grass_fiber"
+        }
+    ],
+    "result": {
+        "id": "elake_tech:grass_string",
+        "count": 1
+    }
+}
