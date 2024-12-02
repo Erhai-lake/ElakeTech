@@ -15,7 +15,7 @@ import top.elake.elaketech.datagen.resources.assets.translation.language.zh_cn;
 import top.elake.elaketech.datagen.resources.data.worldgen.ore.ModWorldGen;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 @EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DataGenerators {

@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class ModWorldGen extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()

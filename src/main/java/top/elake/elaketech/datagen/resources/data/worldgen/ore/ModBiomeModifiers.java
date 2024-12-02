@@ -13,7 +13,7 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import top.elake.elaketech.ElakeTech;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class ModBiomeModifiers {
     /**

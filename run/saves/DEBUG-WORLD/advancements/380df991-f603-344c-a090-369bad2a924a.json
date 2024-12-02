@@ -10183,5 +10183,11 @@
     },
     "done": true
   },
+  "immersiveengineering:recipes/misc/crafting/grit_sand": {
+    "criteria": {
+      "has_gravel": "2024-12-03 00:04:03 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

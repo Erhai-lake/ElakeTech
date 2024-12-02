@@ -12,12 +12,12 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.registers.block.Org;
+import top.elake.elaketech.registers.block.Ore;
 
 import java.util.List;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class ModOreFeatures {
     /**
@@ -32,8 +32,8 @@ public class ModOreFeatures {
         // 石墨替换深板岩
         RuleTest deepSlateOreReplaceRuleGraphite = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         List<OreConfiguration.TargetBlockState> list = List.of(
-                OreConfiguration.target(stoneOreReplaceRuleGraphite, Org.GRAPHITE_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepSlateOreReplaceRuleGraphite, Org.DEEPSLATE_GRAPHITE_ORE.get().defaultBlockState())
+                OreConfiguration.target(stoneOreReplaceRuleGraphite, Ore.GRAPHITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepSlateOreReplaceRuleGraphite, Ore.DEEPSLATE_GRAPHITE_ORE.get().defaultBlockState())
         );
 
         // 创建规则(size:矿物的大小,取值为0到64的闭区间)

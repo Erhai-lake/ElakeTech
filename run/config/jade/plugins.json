@@ -60,7 +60,7 @@
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,
-    "block_states": false,
+    "block_states": true,
     "distance": false,
     "block_face": false,
     "coordinates": false,

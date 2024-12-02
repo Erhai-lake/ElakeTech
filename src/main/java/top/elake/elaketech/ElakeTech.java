@@ -10,7 +10,7 @@ import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.registers.ModCreativeModeTab;
 import top.elake.elaketech.registers.block.ChemicalAppliances;
-import top.elake.elaketech.registers.block.Org;
+import top.elake.elaketech.registers.block.Ore;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
 import top.elake.elaketech.registers.tool.Flint;
@@ -39,7 +39,7 @@ public class ElakeTech {
         // 方块
         ChemicalAppliances.register();
         // 矿物
-        Org.register();
+        Ore.register();
         // 燧石工具
         Flint.register();
         // 化学工具

@@ -2,8 +2,8 @@
     "render_type": "translucent",
     "texture_size": [32, 32],
     "textures": {
-        "0": "elake_tech:item/chemical_appliances/alcohol_lamp",
-        "particle": "elake_tech:item/chemical_appliances/alcohol_lamp"
+        "0": "elake_tech:block/chemical_appliances/alcohol_lamp",
+        "particle": "elake_tech:block/chemical_appliances/alcohol_lamp"
     },
     "elements": [
         {

@@ -123,7 +123,6 @@ run/options.txt
 run/usercache.json
 run/usernamecache.json
 run/.probe
-/run/resourcepacks
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar

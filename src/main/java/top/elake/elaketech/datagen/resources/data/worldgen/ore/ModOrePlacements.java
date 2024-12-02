@@ -15,7 +15,7 @@ import top.elake.elaketech.ElakeTech;
 import java.util.List;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class ModOrePlacements {
     public static final ResourceKey<PlacedFeature> ORE_GRAPHITE = createKey("ore_graphite");
