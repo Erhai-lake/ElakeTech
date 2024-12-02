@@ -37,7 +37,7 @@ public class ModItemModel {
         // 燧石斧
         addItemModels("flint_axe", "item/tool/flint/axe", "Item");
         // 燧石手斧
-        addItemModels("flint_handaxe", "item/tool/flint/handaxe", "Item");
+        addItemModels("flint_hatchet", "item/tool/flint/hatchet", "Item");
         // 燧石锄
         addItemModels("flint_shovel", "item/tool/flint/shovel", "Item");
         // 燧石锄头
