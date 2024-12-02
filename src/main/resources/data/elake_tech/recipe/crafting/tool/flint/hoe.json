@@ -7,7 +7,7 @@
     ],
     "key": {
         "A": {
-            "tag": "c:flint"
+            "item": "minecraft:flint"
         },
         "B": {
             "item": "elake_tech:grass_string"
