@@ -3,3 +3,6 @@
 /tp ~ ~ ~
 /advancement grant @a everything
 /difficulty peaceful
+/gamerule commandBlockOutput false
+/give Dev minecraft:command_block
+/fill -2 -61 8 -2 -61 8 minecraft:short_grass
