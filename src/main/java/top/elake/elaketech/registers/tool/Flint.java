@@ -25,7 +25,7 @@ public class Flint {
         // 斧
         ModCreativeModeTab.addTools(FLINT_AXE);
         // 手斧
-        ModCreativeModeTab.addTools(FLINT_HANDAXE);
+        ModCreativeModeTab.addTools(FLINT_HATCHET);
         // 锹
         ModCreativeModeTab.addTools(FLINT_SHOVEL);
         // 锄
@@ -59,7 +59,7 @@ public class Flint {
     /**
      * 燧石手斧等级
      */
-    public static final Tier FLINT_HANDAXE_TIER = new SimpleTier(
+    public static final Tier FLINT_HATCHET_TIER = new SimpleTier(
             Tiers.WOOD.getIncorrectBlocksForDrops(),
             2,
             1.5F,
@@ -99,8 +99,8 @@ public class Flint {
     /**
      * 手斧
      */
-    public static final DeferredItem<Item> FLINT_HANDAXE = Registers.registerTool("flint_handaxe", "Axe", FLINT_HANDAXE_TIER, new Item.Properties()
-            .attributes(AxeItem.createAttributes(FLINT_HANDAXE_TIER, 1, -2)), 0
+    public static final DeferredItem<Item> FLINT_HATCHET = Registers.registerTool("flint_hatchet", "Axe", FLINT_HATCHET_TIER, new Item.Properties()
+            .attributes(AxeItem.createAttributes(FLINT_HATCHET_TIER, 1, -2)), 0
     );
 
     /**

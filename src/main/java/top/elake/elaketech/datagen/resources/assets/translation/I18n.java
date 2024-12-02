@@ -38,7 +38,7 @@ public class I18n {
         addLang("item", "flint_sword", "Flint Sword", "燧石剑");
         addLang("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
         addLang("item", "flint_axe", "Flint Axe", "燧石斧");
-        addLang("item", "flint_handaxe", "Flint Hand Axe", "燧石手斧");
+        addLang("item", "flint_hatchet", "Flint Hand Axe", "燧石手斧");
         addLang("item", "flint_shovel", "Flint Shovel", "燧石锹");
         addLang("item", "flint_hoe", "Flint Hoe", "燧石锄");
         // 矿石
