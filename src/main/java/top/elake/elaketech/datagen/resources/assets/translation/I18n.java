@@ -34,6 +34,7 @@ public class I18n {
         addLang("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
         addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
         // 工具
+        addLang("item", "flint_knife", "Flint Knife", "燧石小刀");
         addLang("item", "flint_sword", "Flint Sword", "燧石剑");
         addLang("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
         addLang("item", "flint_axe", "Flint Axe", "燧石斧");
