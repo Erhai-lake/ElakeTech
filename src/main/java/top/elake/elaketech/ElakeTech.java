@@ -37,7 +37,7 @@ public class ElakeTech {
         Elements.register();
         // 材料
         Materials.register();
-        // 化学用具(方块
+        // 化学用具(方块)
         ChemicalAppliances.register();
         // 矿物
         Ore.register();
@@ -45,7 +45,7 @@ public class ElakeTech {
         CommonBlock.registers();
         // 燧石工具
         Flint.register();
-        // 化学工具(物品
+        // 化学工具(物品)
         top.elake.elaketech.registers.item.ChemicalAppliances.register();
 
         // 注册物品
