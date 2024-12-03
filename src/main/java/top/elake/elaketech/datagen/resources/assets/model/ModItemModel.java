@@ -29,7 +29,7 @@ public class ModItemModel {
         addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
         // 工具
         // 燧石小刀
-        addItemModels("flint_sword", "item/tool/flint/sword", "Item");
+        addItemModels("flint_knife", "item/tool/flint/knife", "Item");
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword", "Item");
         // 燧石镐

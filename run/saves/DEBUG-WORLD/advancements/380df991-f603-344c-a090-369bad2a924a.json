@@ -671,13 +671,25 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/bricks": {
+  "minecraft:recipes/building_blocks/clay": {
     "criteria": {
-      "has_brick": "2024-12-03 03:55:41 +0800"
+      "has_clay_ball": "2024-12-03 03:53:49 +0800"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/clay": {
+  "immersiveengineering:recipes/misc/crafting/hempcrete": {
+    "criteria": {
+      "has_clay": "2024-12-03 03:53:49 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/concrete": {
+    "criteria": {
+      "has_clay": "2024-12-03 03:53:49 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/brick": {
     "criteria": {
       "has_clay_ball": "2024-12-03 03:53:49 +0800"
     },
@@ -689,9 +701,15 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/hempcrete": {
+  "immersiveengineering:recipes/misc/crafting/alloybrick_to_slab": {
     "criteria": {
-      "has_clay": "2024-12-03 03:53:49 +0800"
+      "has_alloybrick": "2024-12-03 03:55:13 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bricks": {
+    "criteria": {
+      "has_brick": "2024-12-03 03:55:41 +0800"
     },
     "done": true
   },
@@ -707,33 +725,315 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/alloybrick_to_slab": {
-    "criteria": {
-      "has_alloybrick": "2024-12-03 03:55:13 +0800"
-    },
-    "done": true
-  },
-  "immersiveengineering:recipes/misc/crafting/concrete": {
-    "criteria": {
-      "has_clay": "2024-12-03 03:53:49 +0800"
-    },
-    "done": true
-  },
   "immersiveengineering:recipes/misc/crafting/alloybrick": {
     "criteria": {
       "has_brick": "2024-12-03 03:55:41 +0800"
     },
     "done": true
   },
-  "minecraft:recipes/misc/brick": {
-    "criteria": {
-      "has_clay_ball": "2024-12-03 03:53:49 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/flower_pot": {
     "criteria": {
       "has_brick": "2024-12-03 03:55:41 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/netherite_ingot_from_netherite_block": {
+    "criteria": {
+      "has_netherite_block": "2024-12-03 18:39:45 +0800"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_beacon": {
+    "criteria": {
+      "beacon": "2024-12-03 18:43:48 +0800"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_full_beacon": {
+    "criteria": {
+      "beacon": "2024-12-03 18:43:48 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_leggings": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/plate_iron_hammering": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_chestplate": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bucket": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_helmet": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/minecart": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_hoe": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/drillhead_iron": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/connector_hv": {
+    "criteria": {
+      "has_aluminum_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "iron": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/shears": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/stick_iron": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chain": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/iron_block": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smithing_table": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/toolbox": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_sword": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_pickaxe": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/shield": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/hopper": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/iron_bars": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_boots": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lantern": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_shovel": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/coil_mv": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/hammer": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/coil_lv": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/screwdriver": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_trapdoor": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/component_iron": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_axe": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/wirecutter": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/connector_hv_relay": {
+    "criteria": {
+      "has_aluminum_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_door": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
+    "criteria": {
+      "has_iron_ingot": "2024-12-03 18:44:58 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_iron_block": {
+    "criteria": {
+      "has_raw_iron": "2024-12-03 18:45:29 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_smelting_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2024-12-03 18:45:29 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_blasting_raw_iron": {
+    "criteria": {
+      "has_raw_iron": "2024-12-03 18:45:29 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2024-12-03 19:02:47 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2024-12-03 19:02:46 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/glass": {
+    "criteria": {
+      "has_smelts_to_glass": "2024-12-03 19:04:39 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2024-12-03 19:02:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_blue_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2024-12-03 19:02:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blue_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2024-12-03 19:02:41 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lime_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2024-12-03 19:02:44 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone": {
+    "criteria": {
+      "has_sand": "2024-12-03 19:04:39 +0800"
     },
     "done": true
   },

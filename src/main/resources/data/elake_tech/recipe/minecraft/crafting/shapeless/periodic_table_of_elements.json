@@ -9,13 +9,13 @@
         }
     ],
     "result": {
+        "id": "minecraft:painting",
         "components": {
             "minecraft:entity_data": {
                 "id": "minecraft:painting",
                 "variant": "elake_tech:periodic_table_of_elements"
             }
         },
-        "id": "minecraft:painting",
         "count": 1
     }
 }
