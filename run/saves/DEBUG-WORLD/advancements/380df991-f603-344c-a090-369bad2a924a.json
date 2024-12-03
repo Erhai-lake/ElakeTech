@@ -671,13 +671,25 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/bricks": {
+  "minecraft:recipes/building_blocks/clay": {
     "criteria": {
-      "has_brick": "2024-12-03 03:55:41 +0800"
+      "has_clay_ball": "2024-12-03 03:53:49 +0800"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/clay": {
+  "immersiveengineering:recipes/misc/crafting/hempcrete": {
+    "criteria": {
+      "has_clay": "2024-12-03 03:53:49 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/concrete": {
+    "criteria": {
+      "has_clay": "2024-12-03 03:53:49 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/brick": {
     "criteria": {
       "has_clay_ball": "2024-12-03 03:53:49 +0800"
     },
@@ -689,9 +701,15 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/hempcrete": {
+  "immersiveengineering:recipes/misc/crafting/alloybrick_to_slab": {
     "criteria": {
-      "has_clay": "2024-12-03 03:53:49 +0800"
+      "has_alloybrick": "2024-12-03 03:55:13 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bricks": {
+    "criteria": {
+      "has_brick": "2024-12-03 03:55:41 +0800"
     },
     "done": true
   },
@@ -707,33 +725,27 @@
     },
     "done": true
   },
-  "immersiveengineering:recipes/misc/crafting/alloybrick_to_slab": {
-    "criteria": {
-      "has_alloybrick": "2024-12-03 03:55:13 +0800"
-    },
-    "done": true
-  },
-  "immersiveengineering:recipes/misc/crafting/concrete": {
-    "criteria": {
-      "has_clay": "2024-12-03 03:53:49 +0800"
-    },
-    "done": true
-  },
   "immersiveengineering:recipes/misc/crafting/alloybrick": {
     "criteria": {
       "has_brick": "2024-12-03 03:55:41 +0800"
     },
     "done": true
   },
-  "minecraft:recipes/misc/brick": {
-    "criteria": {
-      "has_clay_ball": "2024-12-03 03:53:49 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/flower_pot": {
     "criteria": {
       "has_brick": "2024-12-03 03:55:41 +0800"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_beacon": {
+    "criteria": {
+      "beacon": "2024-12-03 18:38:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:nether/create_full_beacon": {
+    "criteria": {
+      "beacon": "2024-12-03 18:38:42 +0800"
     },
     "done": true
   },

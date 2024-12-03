@@ -49,7 +49,7 @@ public class Flint {
      */
     public static final Tier FLINT_KNIFE_TIER = new SimpleTier(
             Tiers.WOOD.getIncorrectBlocksForDrops(),
-            7,
+            20,
             1.5F,
             1,
             0,
