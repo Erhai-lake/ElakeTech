@@ -26,21 +26,21 @@
                                     }
                                 }
                             ],
-                            "name": "elake_tech:deepslate_graphite_ore"
+                            "name": "elake_tech:kaolin"
                         },
                         {
                             "type": "minecraft:item",
                             "functions": [
                                 {
-                                    "enchantment": "minecraft:fortune",
-                                    "formula": "minecraft:ore_drops",
-                                    "function": "minecraft:apply_bonus"
+                                    "add": false,
+                                    "count": 2.0,
+                                    "function": "minecraft:set_count"
                                 },
                                 {
                                     "function": "minecraft:explosion_decay"
                                 }
                             ],
-                            "name": "elake_tech:raw_graphite"
+                            "name": "elake_tech:kaolinite"
                         }
                     ]
                 }
@@ -48,5 +48,5 @@
             "rolls": 1.0
         }
     ],
-    "random_sequence": "minecraft:blocks/iron_ore"
+    "random_sequence": "minecraft:blocks/clay"
 }

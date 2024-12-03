@@ -1,6 +1,11 @@
 {
 	"values": [
 		"elake_tech:graphite_ore",
-		"elake_tech:deepslate_graphite_ore"
+		"elake_tech:deepslate_graphite_ore",
+		"elake_tech:quartz_ore",
+		"elake_tech:deepslate_quartz_ore",
+		"elake_tech:dolostone",
+		"elake_tech:kaolin",
+		"elake_tech:refractory_bricks"
 	]
 }

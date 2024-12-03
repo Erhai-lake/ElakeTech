@@ -1,5 +1,9 @@
 {
     "values": [
-        "elake_tech:graphite_plate"
+        "#c:plates/graphite",
+        {
+            "id": "#forge:plates",
+            "required": false
+        }
     ]
 }

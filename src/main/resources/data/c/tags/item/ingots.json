@@ -1,6 +1,11 @@
 {
-	"values": [
-		"immersiveengineering:ingot_hop_graphite",
-		"elake_tech:graphite_ingot"
-	]
+    "values": [
+        "#c:ingots/tin",
+        "#c:ingots/bronze",
+        "#c:ingots/graphite",
+        {
+            "id": "#forge:ingots",
+            "required": false
+        }
+    ]
 }

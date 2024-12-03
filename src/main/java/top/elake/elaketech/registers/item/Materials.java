@@ -31,6 +31,27 @@ public class Materials {
     public static final DeferredItem<Item> GRAPHITE_PLATE = Registers.registerItem("graphite_plate", new Item.Properties());
     /**
      * 青铜锭
+     * 粉碎白云岩
+     */
+    public static final DeferredItem<Item> FRAGMENT_DOLOMITE = Registers.registerItem("fragment_dolomite", new Item.Properties());
+    /**
+     * 高岭土
+     */
+    public static final DeferredItem<Item> KAOLINITE = Registers.registerItem("kaolinite", new Item.Properties());
+    /**
+     * 耐火砖
+     */
+    public static final DeferredItem<Item> REFRACTORY_BRICK = Registers.registerItem("refractory_brick", new Item.Properties());
+    /**
+     * 潮湿耐火砖
+     */
+    public static final DeferredItem<Item> WET_REFRACTORY_BRICK = Registers.registerItem("wet_refractory_brick", new Item.Properties());
+    /**
+     * 耐火黏土
+     */
+    public static final DeferredItem<Item> REFRACTORY_CLAY_BALL = Registers.registerItem("refractory_clay_ball", new Item.Properties());
+    /**
+     * 青铜
      */
     public static final DeferredItem<Item> BRONZE_INGOT = Registers.registerItem("bronze_ingot", new Item.Properties());
     /**
@@ -54,6 +75,16 @@ public class Materials {
         ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
         // 青铜锭
         ModCreativeModeTab.addMaterials(BRONZE_INGOT);
+        // 粉碎白云岩
+        ModCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
+        // 高岭土
+        ModCreativeModeTab.addMaterials(KAOLINITE);
+        // 耐火砖
+        ModCreativeModeTab.addMaterials(REFRACTORY_BRICK);
+        // 潮湿耐火砖
+        ModCreativeModeTab.addMaterials(WET_REFRACTORY_BRICK);
+        // 耐火黏土
+        ModCreativeModeTab.addMaterials(REFRACTORY_CLAY_BALL);
         // 锡锭
         ModCreativeModeTab.addMaterials(TIN_INGOT);
     }

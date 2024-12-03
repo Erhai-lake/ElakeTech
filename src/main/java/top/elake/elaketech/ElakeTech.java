@@ -10,6 +10,7 @@ import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.registers.ModCreativeModeTab;
 import top.elake.elaketech.registers.block.ChemicalAppliances;
+import top.elake.elaketech.registers.block.CommonBlock;
 import top.elake.elaketech.registers.block.Ore;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
@@ -36,13 +37,15 @@ public class ElakeTech {
         Elements.register();
         // 材料
         Materials.register();
-        // 方块
+        // 化学用具(方块
         ChemicalAppliances.register();
         // 矿物
         Ore.register();
+        // 方块
+        CommonBlock.registers();
         // 燧石工具
         Flint.register();
-        // 化学工具
+        // 化学工具(物品
         top.elake.elaketech.registers.item.ChemicalAppliances.register();
 
         // 注册物品

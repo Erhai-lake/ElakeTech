@@ -31,6 +31,19 @@ public class ModItemModel {
         addItemModels("bronze_ingot", "item/materials/color/ingot", "Item");
         // 锡锭
         addItemModels("tin_ingot", "item/materials/color/ingot", "Item");
+        // 粗石磨
+        addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
+        // 粉碎白云岩
+        addItemModels("fragment_dolomite", "item/materials/fragment_dolomite", "Item");
+        // 高岭土
+        addItemModels("kaolinite", "item/materials/kaolinite", "Item");
+        // 耐火砖
+        addItemModels("refractory_brick", "item/materials/refractory_brick", "Item");
+        // 潮湿耐火砖
+        addItemModels("wet_refractory_brick", "item/materials/wet_refractory_brick", "Item");
+        // 耐火粘土球
+        addItemModels("refractory_clay_ball", "item/materials/refractory_clay_ball", "Item");
+
         // 工具
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword", "Item");
@@ -44,6 +57,7 @@ public class ModItemModel {
         addItemModels("flint_shovel", "item/tool/flint/shovel", "Item");
         // 燧石锄头
         addItemModels("flint_hoe", "item/tool/flint/hoe", "Item");
+
         // 化学用具
         // 石棉网
         addItemModels("asbestos_net", "item/chemical_appliances/asbestos_net", "Item");
@@ -51,12 +65,13 @@ public class ModItemModel {
         // 酒精灯
         addItemModels("alcohol_lamp", "block/chemical_appliances/alcohol_lamp", "BlockItem");
     }
+
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addItemModels(String file, String path, String type) {
+    public static void addItemModels(String file, String texture, String type) {
         List<String> newList = new ArrayList<>();
         newList.add(file);
-        newList.add(path);
+        newList.add(texture);
         newList.add(type);
         LIST.add(newList);
     }
