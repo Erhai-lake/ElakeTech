@@ -31,10 +31,11 @@ public class I18n {
         // 材料
         addLang("item", "grass_fiber", "Grass Fiber", "草纤维");
         addLang("item", "grass_string", "Grass String", "草绳");
+        addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
         addLang("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
         addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
+        addLang("item", "bronze_ingot", "Bronze Ingot", "青铜锭");
         // 工具
-        addLang("item", "flint_knife", "Flint Knife", "燧石小刀");
         addLang("item", "flint_sword", "Flint Sword", "燧石剑");
         addLang("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
         addLang("item", "flint_axe", "Flint Axe", "燧石斧");
@@ -42,7 +43,6 @@ public class I18n {
         addLang("item", "flint_shovel", "Flint Shovel", "燧石锹");
         addLang("item", "flint_hoe", "Flint Hoe", "燧石锄");
         // 矿石
-        addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
         addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
         addLang("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
         // 化学用具

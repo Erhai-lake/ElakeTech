@@ -8,3 +8,5 @@
 /fill -2 -61 8 -2 -61 8 minecraft:short_grass
 /clear
 /kill @e[type=item]
+/clone
+/clear

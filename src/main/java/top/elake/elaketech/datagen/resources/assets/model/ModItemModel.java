@@ -21,15 +21,15 @@ public class ModItemModel {
         addItemModels("grass_fiber", "item/materials/grass_fiber", "Item");
         // 草绳
         addItemModels("grass_string", "item/materials/grass_string", "Item");
+        // 粗石磨
+        addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
         // 石墨
         addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot", "Item");
         // 石墨板
         addItemModels("graphite_plate", "item/materials/alone/graphite/plate", "Item");
-        // 粗石磨
-        addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
+        // 青铜
+        addItemModels("bronze_ingot", "item/materials/color/ingot", "Item");
         // 工具
-        // 燧石小刀
-        addItemModels("flint_knife", "item/tool/flint/knife", "Item");
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword", "Item");
         // 燧石镐

@@ -35,22 +35,6 @@
                             "chance": 0.1
                         }
                     ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "elake_tech:grass_fiber",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:match_tool",
-                            "predicate": {
-                                "items": "elake_tech:flint_knife"
-                            }
-                        },
-                        {
-                            "condition": "minecraft:random_chance",
-                            "chance": 0.7
-                        }
-                    ]
                 }
             ]
         }

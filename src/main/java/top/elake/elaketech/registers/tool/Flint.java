@@ -16,8 +16,6 @@ public class Flint {
      * 注册
      */
     public static void register() {
-        // 小刀
-        ModCreativeModeTab.addTools(FLINT_KNIFE);
         // 剑
         ModCreativeModeTab.addTools(FLINT_SWORD);
         // 镐
@@ -45,18 +43,6 @@ public class Flint {
     );
 
     /**
-     * 燧石小刀等级
-     */
-    public static final Tier FLINT_KNIFE_TIER = new SimpleTier(
-            Tiers.WOOD.getIncorrectBlocksForDrops(),
-            20,
-            1.5F,
-            1,
-            0,
-            () -> Ingredient.of(ModItemTags.Items.FLINT)
-    );
-
-    /**
      * 燧石手斧等级
      */
     public static final Tier FLINT_HATCHET_TIER = new SimpleTier(
@@ -66,13 +52,6 @@ public class Flint {
             1,
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
-    );
-
-    /**
-     * 小刀
-     */
-    public static final DeferredItem<Item> FLINT_KNIFE = Registers.registerTool("flint_knife", "Sword", FLINT_KNIFE_TIER, new Item.Properties()
-            .attributes(SwordItem.createAttributes(FLINT_KNIFE_TIER, 2, -2)), 0
     );
 
     /**
@@ -106,7 +85,7 @@ public class Flint {
     /**
      * 锹
      */
-    public static final DeferredItem<Item> FLINT_SHOVEL = Registers.registerTool("flint_shovel", "Hoe", FLINT_TIER, new Item.Properties()
+    public static final DeferredItem<Item> FLINT_SHOVEL = Registers.registerTool("flint_shovel", "Shovel", FLINT_TIER, new Item.Properties()
             .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
     );
 

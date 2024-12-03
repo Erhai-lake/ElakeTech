@@ -78,7 +78,7 @@ public class Registers {
      */
     public static void registerBlocks(IEventBus event) {
         BLOCKS.register(event);
-    }   
+    }
 
     /**
      * 注册工具

@@ -7,22 +7,30 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import top.elake.elaketech.ElakeTech;
+import top.elake.elaketech.registers.item.Materials;
 
 /**
  * @author Erhai-lake Qi-Month
  */
 @EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ItemColor {
-    private static ItemColors ITEMCOLOR = null;
+    private static ItemColors ITEM_COLOR = null;
 
     @SubscribeEvent
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
-        ITEMCOLOR = event.getItemColors();
-        // registerColorsForItem(Sundries.TEST_INGOT.toStack(), 0, 0xff0000ff);
+        ITEM_COLOR = event.getItemColors();
+        // 青铜
+        registerColorsForItem(Materials.BRONZE_INGOT.toStack(), 0, 0xffcd853f);
     }
 
+    /**
+     * 注册物品颜色
+     *
+     * @param itemStack 物品
+     * @param colors 颜色0*ARGB
+     */
     private static void registerColorsForItem(ItemStack itemStack, Object... colors) {
-        if (ITEMCOLOR == null) {
+        if (ITEM_COLOR == null) {
             throw new IllegalArgumentException("初始化未完成");
         }
         if (colors.length % 2 != 0) {
@@ -31,7 +39,7 @@ public class ItemColor {
         for (int i = 0; i < colors.length; i += 2) {
             int tintIndex = (Integer) colors[i];
             int colorValue = (Integer) colors[i + 1];
-            ITEMCOLOR.register((stack, tint) -> {
+            ITEM_COLOR.register((stack, tint) -> {
                 if (tint == tintIndex) {
                     return colorValue;
                 }
