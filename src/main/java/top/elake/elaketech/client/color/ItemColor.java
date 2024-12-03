@@ -20,7 +20,7 @@ public class ItemColor {
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         ITEM_COLOR = event.getItemColors();
         // 青铜锭
-        registerColorsForItem(Materials.BRONZE_INGOT.toStack(), 0, 0xffcd853f);
+        registerColorsForItem(Materials.BRONZE_INGOT.toStack(), 0, 0xffd2691e);
         // 锡锭
         registerColorsForItem(Materials.TIN_INGOT.toStack(), 0, 0xfff5f5f5);
     }
