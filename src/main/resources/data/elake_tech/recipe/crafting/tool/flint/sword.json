@@ -10,7 +10,7 @@
             "item": "minecraft:flint"
         },
         "B": {
-            "item": "elake_tech:grass_string"
+            "tag": "c:strings"
         },
         "C": {
             "item": "minecraft:stick"
