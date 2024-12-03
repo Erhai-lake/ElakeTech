@@ -22,7 +22,7 @@ public class Materials {
      */
     public static final DeferredItem<Item> RAW_GRAPHITE = Registers.registerItem("raw_graphite", new Item.Properties());
     /**
-     * 石墨
+     * 石墨锭
      */
     public static final DeferredItem<Item> GRAPHITE_INGOT = Registers.registerItem("graphite_ingot", new Item.Properties());
     /**
@@ -30,9 +30,13 @@ public class Materials {
      */
     public static final DeferredItem<Item> GRAPHITE_PLATE = Registers.registerItem("graphite_plate", new Item.Properties());
     /**
-     * 青铜
+     * 青铜锭
      */
     public static final DeferredItem<Item> BRONZE_INGOT = Registers.registerItem("bronze_ingot", new Item.Properties());
+    /**
+     * 锡锭
+     */
+    public static final DeferredItem<Item> TIN_INGOT = Registers.registerItem("tin_ingot", new Item.Properties());
 
     /**
      * 注册
@@ -48,7 +52,9 @@ public class Materials {
         ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 石墨板
         ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
-        // 青铜
+        // 青铜锭
         ModCreativeModeTab.addMaterials(BRONZE_INGOT);
+        // 锡锭
+        ModCreativeModeTab.addMaterials(TIN_INGOT);
     }
 }

@@ -27,8 +27,10 @@ public class ModItemModel {
         addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot", "Item");
         // 石墨板
         addItemModels("graphite_plate", "item/materials/alone/graphite/plate", "Item");
-        // 青铜
+        // 青铜锭
         addItemModels("bronze_ingot", "item/materials/color/ingot", "Item");
+        // 锡锭
+        addItemModels("tin_ingot", "item/materials/color/ingot", "Item");
         // 工具
         // 燧石剑
         addItemModels("flint_sword", "item/tool/flint/sword", "Item");
