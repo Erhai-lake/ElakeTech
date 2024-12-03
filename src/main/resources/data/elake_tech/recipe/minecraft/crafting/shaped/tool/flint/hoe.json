@@ -2,11 +2,12 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "AB",
+        " C",
         " C"
     ],
     "key": {
         "A": {
-            "item": "minecraft:flint"
+            "tag": "c:flint"
         },
         "B": {
             "tag": "c:strings"
@@ -17,6 +18,6 @@
     },
     "result": {
         "count": 1,
-        "id": "elake_tech:flint_hatchet"
+        "id": "elake_tech:flint_hoe"
     }
 }

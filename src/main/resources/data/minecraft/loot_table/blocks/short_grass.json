@@ -6,6 +6,18 @@
             "entries": [
                 {
                     "type": "minecraft:item",
+                    "name": "minecraft:short_grass",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "items": "minecraft:shears"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
                     "name": "minecraft:wheat_seeds",
                     "conditions": [
                         {
@@ -13,19 +25,30 @@
                             "chance": 0.125
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
+                },
                 {
                     "type": "minecraft:item",
                     "name": "elake_tech:grass_fiber",
                     "conditions": [
                         {
                             "condition": "minecraft:random_chance",
-                            "chance": 0.3
+                            "chance": 0.1
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "elake_tech:grass_fiber",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "items": "elake_tech:flint_knife"
+                            }
+                        },
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.7
                         }
                     ]
                 }

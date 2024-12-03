@@ -9,10 +9,10 @@
         }
     ],
     "result": {
+        "id": "patchouli:guide_book",
         "components": {
             "patchouli:book": "elake_tech:book"
         },
-        "id": "patchouli:guide_book",
         "count": 1
     }
 }

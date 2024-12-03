@@ -1,18 +1,21 @@
 {
     "type": "minecraft:crafting_shaped",
-    "key": {
-        "A": {
-            "tag": "minecraft:stone_crafting_materials"
-        },
-        "B": {
-            "item": "minecraft:clay"
-        }
-    },
     "pattern": [
         "AAA",
         "A A",
-        "BBB"
+        "BCB"
     ],
+    "key": {
+        "A": {
+            "tag": "c:cobblestones"
+        },
+        "B": {
+            "item": "minecraft:clay"
+        },
+        "C": {
+            "item": "minecraft:clay_ball"
+        }
+    },
     "result": {
         "count": 1,
         "id": "minecraft:furnace"
