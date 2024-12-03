@@ -3,22 +3,8 @@
 /tp ~ ~ ~
 /advancement grant @a everything
 /difficulty peaceful
-/weather clear 99999999999999d
-/effect give @a minecraft:night_vision infinite
-/advancement grant @a everything
-/give @a elake_tech:grass_fiber
-/fill -190 71 220
-/fill -190 71 220 -184 71 214 minecraft:short_grass
-/fill -105 64 267
-/fill -105 64 267 -110 63 263 minecraft:short_grass
 /gamerule commandBlockOutput false
 /give Dev minecraft:command_block
 /fill -2 -61 8 -2 -61 8 minecraft:short_grass
-/fill -105 63 267
-/fill -105 63 267 -110 63 263 minecraft:short_grass
-/difficulty hard
 /clear
-/fill -2 53 46
-/fill -2 53 46 -11 52 37 air
-/fill -2 53 46 -11 54 37 air
-/fill -2 53 46 -11 56 37 air
+/kill @e[type=item]
