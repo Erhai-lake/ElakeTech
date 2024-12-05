@@ -9,9 +9,10 @@ import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
 import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.registers.ModCreativeModeTab;
-import top.elake.elaketech.registers.block.ChemicalAppliances;
+import top.elake.elaketech.registers.block.ChemicalAppliancesBlock;
 import top.elake.elaketech.registers.block.CommonBlock;
 import top.elake.elaketech.registers.block.Ore;
+import top.elake.elaketech.registers.item.ChemicalAppliancesItem;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
 import top.elake.elaketech.registers.tool.Flint;
@@ -38,7 +39,7 @@ public class ElakeTech {
         // 材料
         Materials.register();
         // 化学用具(方块)
-        ChemicalAppliances.register();
+        ChemicalAppliancesBlock.register();
         // 矿物
         Ore.register();
         // 方块
@@ -46,7 +47,7 @@ public class ElakeTech {
         // 燧石工具
         Flint.register();
         // 化学工具(物品)
-        top.elake.elaketech.registers.item.ChemicalAppliances.register();
+        ChemicalAppliancesItem.register();
 
         // 注册物品
         Registers.registerItems(event);
@@ -54,7 +55,7 @@ public class ElakeTech {
         Registers.registerBlocks(event);
 
         //数据生成器
-        // i18n
+        // I18n
         I18n.registers();
         // 物品模型
         ModItemModel.registers();

@@ -7,7 +7,7 @@ import top.elake.elaketech.utils.Registers;
 /**
  * @author Qi-Month
  */
-public class ChemicalAppliances {
+public class ChemicalAppliancesItem {
     /**
      * 注册
      */

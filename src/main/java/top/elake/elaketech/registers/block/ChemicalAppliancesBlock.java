@@ -13,7 +13,7 @@ import top.elake.elaketech.utils.Registers;
 /**
  * @author Erhai-lake Qi-Month
  */
-public class ChemicalAppliances {
+public class ChemicalAppliancesBlock {
     /**
      * 酒精灯
      */
@@ -22,8 +22,7 @@ public class ChemicalAppliances {
                     .ofFullCopy(Blocks.GLASS)
                     .strength(0.3F)
                     .sound(SoundType.GLASS)
-            )
-    );
+            ));
 
     /**
      * 注册
