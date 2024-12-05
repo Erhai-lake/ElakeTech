@@ -25,10 +25,6 @@ public class ChemicalAppliances {
             )
     );
 
-    public static final DeferredBlock<Block> AAA = Registers.registerBlock("aaa",
-            () -> new AlcoholLamp(BlockBehaviour.Properties.of().requiresCorrectToolForDrops())
-    );
-
     /**
      * 注册
      */

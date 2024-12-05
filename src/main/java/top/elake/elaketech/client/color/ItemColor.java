@@ -29,16 +29,18 @@ public class ItemColor {
      * 注册物品颜色
      *
      * @param stack 物品
-     * @param colors 颜色0*ARGB
+     * @param colors 图层索引, 颜色0*ARGB
      */
+    @SuppressWarnings("deprecation")
     private static void registerColorsForItem(ItemStack stack, Object... colors) {
         if (ITEM_COLOR == null) {
             throw new IllegalArgumentException("Initialization not completed");
         }
-        if (colors.length % 2 != 0) {
+        int length = 2;
+        if (colors.length % length != 0) {
             throw new IllegalArgumentException("Color parameters must occur in pairs: layer index, color value");
         }
-        for (int i = 0; i < colors.length; i += 2) {
+        for (int i = 0; i < colors.length; i += length) {
             int tintIndex = (Integer) colors[i];
             int colorValue = (Integer) colors[i + 1];
             ITEM_COLOR.register((itemStack, tint) -> {
