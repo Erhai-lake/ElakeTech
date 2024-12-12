@@ -1,7 +1,6 @@
 package top.elake.elaketech.client.color;
 
 import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;

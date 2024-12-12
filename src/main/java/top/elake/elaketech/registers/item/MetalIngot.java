@@ -1,7 +1,6 @@
 package top.elake.elaketech.registers.item;
 
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.registries.DeferredItem;
 import top.elake.elaketech.registers.ModCreativeModeTab;
 import top.elake.elaketech.utils.Registers;
