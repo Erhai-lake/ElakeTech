@@ -15,6 +15,7 @@ import top.elake.elaketech.registers.block.Ore;
 import top.elake.elaketech.registers.item.ChemicalAppliancesItem;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
+import top.elake.elaketech.registers.item.MetalIngot;
 import top.elake.elaketech.registers.tool.Flint;
 import top.elake.elaketech.utils.Registers;
 
@@ -42,6 +43,7 @@ public class ElakeTech {
         ChemicalAppliancesBlock.register();
         // 矿物
         Ore.register();
+        MetalIngot.register();
         // 方块
         CommonBlock.registers();
         // 燧石工具

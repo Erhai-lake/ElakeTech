@@ -18,8 +18,8 @@ public class I18n {
         }
 
         // 金属锭
-        for (String ingot : MetalIngot.INGOT_REGISTERS) {
-            addLang("item", ingot, ingot + " Ingot", ingot + "锭");
+        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
+            addLang("item", ingot.en() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
         }
 
         // 标签页
@@ -42,8 +42,6 @@ public class I18n {
         addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
         addLang("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
         addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
-        addLang("item", "bronze_ingot", "Bronze Ingot", "青铜锭");
-        addLang("item", "tin_ingot", "Tin Ingot", "锡锭");
         addLang("item", "fragment_dolomite", "Fragment Dolomite", "粉碎白云岩");
         addLang("item", "kaolinite", "Kaolinite", "高岭土");
         addLang("item", "refractory_brick", "Refractory Brick", "耐火砖");

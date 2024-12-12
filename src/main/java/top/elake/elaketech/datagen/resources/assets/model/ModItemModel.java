@@ -1,6 +1,7 @@
 package top.elake.elaketech.datagen.resources.assets.model;
 
 import top.elake.elaketech.registers.item.Elements;
+import top.elake.elaketech.registers.item.MetalIngot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,11 @@ public class ModItemModel {
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {
             addItemModels(element, "item/element/" + element, "Item");
+        }
+
+        // 金属锭
+        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
+            addItemModels(ingot.en() + "_ingot", "item/materials/color/ingot", "Item");
         }
         // 书
         addItemModels("book", "item/book", "Item");
@@ -27,10 +33,6 @@ public class ModItemModel {
         addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot", "Item");
         // 石墨板
         addItemModels("graphite_plate", "item/materials/alone/graphite/plate", "Item");
-        // 青铜锭
-        addItemModels("bronze_ingot", "item/materials/color/ingot", "Item");
-        // 锡锭
-        addItemModels("tin_ingot", "item/materials/color/ingot", "Item");
         // 粗石磨
         addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
         // 粉碎白云岩

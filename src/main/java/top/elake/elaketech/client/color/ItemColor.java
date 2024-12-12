@@ -1,13 +1,14 @@
 package top.elake.elaketech.client.color;
 
 import net.minecraft.client.color.item.ItemColors;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.registers.item.Materials;
+import top.elake.elaketech.registers.item.MetalIngot;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -19,16 +20,16 @@ public class ItemColor {
     @SubscribeEvent
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         ITEM_COLOR = event.getItemColors();
-        // 青铜锭
-        registerColorsForItem(Materials.BRONZE_INGOT.toStack(), 0, 0xffd2691e);
-        // 锡锭
-        registerColorsForItem(Materials.TIN_INGOT.toStack(), 0, 0xfff5f5f5);
+        // 金属锭
+        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
+            registerColorsForItem(ingot.item().toStack(), 0, ingot.color());
+        }
     }
 
     /**
      * 注册物品颜色
      *
-     * @param stack 物品
+     * @param stack   物品
      * @param colors 图层索引, 颜色0*ARGB
      */
     @SuppressWarnings("deprecation")
