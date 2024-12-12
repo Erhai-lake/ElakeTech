@@ -19,7 +19,7 @@ public class I18n {
 
         // 金属锭
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
-            addLang("item", ingot.en() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
+            addLang("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
         }
 
         // 标签页
