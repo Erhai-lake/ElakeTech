@@ -10,3 +10,8 @@
 /kill @e[type=item]
 /clone
 /clear
+/probejs enable
+/probejs dump
+/probejs disable
+/probejs enable
+/probejs disable

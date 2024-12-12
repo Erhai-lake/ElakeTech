@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class ModItemModel {
     public static void registers() {
@@ -17,8 +17,8 @@ public class ModItemModel {
         }
 
         // 金属锭
-        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
-            addItemModels(ingot.en() + "_ingot", "item/materials/color/ingot", "Item");
+        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
+            addItemModels(ingot.id() + "_ingot", "item/materials/color/ingot", "Item");
         }
         // 书
         addItemModels("book", "item/book", "Item");

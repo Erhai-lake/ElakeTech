@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Erhai-lake
+ * @author Erhai-lake Qi-Month
  */
 public class I18n {
     public static void registers() {
@@ -18,7 +18,7 @@ public class I18n {
         }
 
         // 金属锭
-        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
+        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             addLang("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
         }
 

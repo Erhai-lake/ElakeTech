@@ -20,7 +20,7 @@ public class ItemColor {
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         ITEM_COLOR = event.getItemColors();
         // 金属锭
-        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_ARR) {
+        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             registerColorsForItem(ingot.item().toStack(), 0, ingot.color());
         }
     }
