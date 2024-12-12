@@ -2,6 +2,7 @@ package top.elake.elaketech.datagen.resources.assets.translation;
 
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.registers.item.Elements;
+import top.elake.elaketech.registers.item.MetalIngot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,11 @@ public class I18n {
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {
             addLang("item", element, element, element);
+        }
+
+        // 金属锭
+        for (String ingot : MetalIngot.INGOT_REGISTERS) {
+            addLang("item", ingot, ingot + " Ingot", ingot + "锭");
         }
 
         // 标签页

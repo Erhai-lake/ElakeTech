@@ -51,15 +51,6 @@ public class Materials {
      */
     public static final DeferredItem<Item> REFRACTORY_CLAY_BALL = Registers.registerItem("refractory_clay_ball", new Item.Properties());
     /**
-     * 青铜
-     */
-    public static final DeferredItem<Item> BRONZE_INGOT = Registers.registerItem("bronze_ingot", new Item.Properties());
-    /**
-     * 锡锭
-     */
-    public static final DeferredItem<Item> TIN_INGOT = Registers.registerItem("tin_ingot", new Item.Properties());
-
-    /**
      * 注册
      */
     public static void register() {
@@ -73,8 +64,7 @@ public class Materials {
         ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 石墨板
         ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
-        // 青铜锭
-        ModCreativeModeTab.addMaterials(BRONZE_INGOT);
+
         // 粉碎白云岩
         ModCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
         // 高岭土
@@ -85,7 +75,5 @@ public class Materials {
         ModCreativeModeTab.addMaterials(WET_REFRACTORY_BRICK);
         // 耐火黏土
         ModCreativeModeTab.addMaterials(REFRACTORY_CLAY_BALL);
-        // 锡锭
-        ModCreativeModeTab.addMaterials(TIN_INGOT);
     }
 }
