@@ -21,7 +21,7 @@ public class MetalIngot {
     }
 
     public static void addItem(String id, String en, String cn, int color) {
-        DeferredItem<Item> item = Registers.registerItem(id + "_ingot", new Item.Properties().);
+        DeferredItem<Item> item = Registers.registerItem(id + "_ingot", new Item.Properties());
         ModCreativeModeTab.addMaterials(item);
         INGOT_ITEM_ARR.add(new IngotItem(id, en, cn, item, color));
     }
