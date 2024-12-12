@@ -16,11 +16,11 @@ public class MetalIngot {
      * 注册
      */
     public static void register() {
-        addItem("bronze", "青铜", "0xffd2691e");
-        addItem("tin", "锡", "0xfff5f5f5");
+        addItem("bronze", "青铜", 0xffd2691e);
+        addItem("tin", "锡", 0xfff5f5f5);
     }
 
-    public static void addItem(String en, String cn, String color) {
+    public static void addItem(String en, String cn, int color) {
         DeferredItem<Item> item = Registers.registerItem(en + "_ingot", new Item.Properties());
         ModCreativeModeTab.addMaterials(item);
         INGOT_ITEM_ARR.add(new IngotItem(en, cn, item, color));
@@ -28,6 +28,6 @@ public class MetalIngot {
 
     public static final List<IngotItem> INGOT_ITEM_ARR = new ArrayList<>();
 
-    public record IngotItem(String en, String cn, DeferredItem<Item> item, String color) {
+    public record IngotItem(String en, String cn, DeferredItem<Item> item, int color) {
     }
 }
