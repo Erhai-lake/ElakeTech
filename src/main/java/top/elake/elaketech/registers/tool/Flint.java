@@ -34,8 +34,8 @@ public class Flint {
      * 燧石工具等级
      */
     public static final Tier FLINT_TIER = new SimpleTier(
-            Tiers.WOOD.getIncorrectBlocksForDrops(),
-            10,
+            Tiers.STONE.getIncorrectBlocksForDrops(),
+            60,
             3F,
             1,
             0,
@@ -46,8 +46,8 @@ public class Flint {
      * 燧石手斧等级
      */
     public static final Tier FLINT_HATCHET_TIER = new SimpleTier(
-            Tiers.WOOD.getIncorrectBlocksForDrops(),
-            2,
+            Tiers.STONE.getIncorrectBlocksForDrops(),
+            40,
             1.5F,
             1,
             0,

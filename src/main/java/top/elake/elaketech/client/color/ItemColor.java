@@ -8,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.registers.item.MetalIngot;
+import top.elake.elaketech.registers.tool.Bronze;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -23,12 +24,19 @@ public class ItemColor {
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             registerColorsForItem(ingot.item().toStack(), 0, ingot.color());
         }
+
+        // 青铜工具
+        registerColorsForItem(Bronze.BRONZE_SHOVEL.toStack(), 0, 0xFFFF8C00);
+        registerColorsForItem(Bronze.BRONZE_PICKAXE.toStack(), 0, 0xFFFF8C00);
+        registerColorsForItem(Bronze.BRONZE_AXE.toStack(), 0, 0xFFFF8C00);
+        registerColorsForItem(Bronze.BRONZE_SHOVEL.toStack(), 0, 0xFFFF8C00);
+        registerColorsForItem(Bronze.BRONZE_HOE.toStack(), 0, 0xFFFF8C00);
     }
 
     /**
      * 注册物品颜色
      *
-     * @param stack   物品
+     * @param stack  物品
      * @param colors 图层索引, 颜色0*ARGB
      */
     @SuppressWarnings("deprecation")

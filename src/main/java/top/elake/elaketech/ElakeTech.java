@@ -6,6 +6,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import top.elake.elaketech.datagen.resources.assets.model.ModBlockModel;
 import top.elake.elaketech.datagen.resources.assets.model.ModBlockState;
 import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
+import top.elake.elaketech.datagen.resources.assets.model.ModToolItemModel;
 import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.registers.ModCreativeModeTab;
@@ -16,6 +17,7 @@ import top.elake.elaketech.registers.item.ChemicalAppliancesItem;
 import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.Materials;
 import top.elake.elaketech.registers.item.MetalIngot;
+import top.elake.elaketech.registers.tool.Bronze;
 import top.elake.elaketech.registers.tool.Flint;
 import top.elake.elaketech.utils.Registers;
 
@@ -46,8 +48,6 @@ public class ElakeTech {
         MetalIngot.register();
         // 方块
         CommonBlock.registers();
-        // 燧石工具
-        Flint.register();
         // 化学工具(物品)
         ChemicalAppliancesItem.register();
 
@@ -56,11 +56,18 @@ public class ElakeTech {
         // 注册方块
         Registers.registerBlocks(event);
 
+        // 燧石工具
+        Flint.register();
+        // 青铜工具
+        Bronze.register();
+
         //数据生成器
         // I18n
         I18n.registers();
         // 物品模型
         ModItemModel.registers();
+        // 工具模型
+        ModToolItemModel.registers();
         // 方块
         ModBlockModel.registers();
         // 方块状态
