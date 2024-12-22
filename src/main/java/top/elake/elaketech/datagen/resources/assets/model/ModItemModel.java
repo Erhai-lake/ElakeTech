@@ -4,6 +4,7 @@ import top.elake.elaketech.registers.item.Elements;
 import top.elake.elaketech.registers.item.MetalIngot;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,68 +14,68 @@ public class ModItemModel {
     public static void registers() {
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {
-            addItemModels(element, "item/element/" + element, "Item");
+            addItemModels("Item", element, "item/element/" + element);
         }
 
         // 金属锭
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
-            addItemModels(ingot.id() + "_ingot", "item/materials/color/ingot", "Item");
+            addItemModels("Item", ingot.id() + "_ingot", "item/materials/color/ingot");
         }
         // 书
-        addItemModels("book", "item/book", "Item");
+        addItemModels("Item", "book", "item/book");
         // 材料
         // 草纤维
-        addItemModels("grass_fiber", "item/materials/grass_fiber", "Item");
+        addItemModels("Item", "grass_fiber", "item/materials/grass_fiber");
         // 草绳
-        addItemModels("grass_string", "item/materials/grass_string", "Item");
+        addItemModels("Item", "grass_string", "item/materials/grass_string");
         // 粗石磨
-        addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
+        addItemModels("Item", "raw_graphite", "item/materials/alone/graphite/ore");
         // 石墨
-        addItemModels("graphite_ingot", "item/materials/alone/graphite/ingot", "Item");
+        addItemModels("Item", "graphite_ingot", "item/materials/alone/graphite/ingot");
         // 石墨板
-        addItemModels("graphite_plate", "item/materials/alone/graphite/plate", "Item");
+        addItemModels("Item", "graphite_plate", "item/materials/alone/graphite/plate");
         // 粗石磨
-        addItemModels("raw_graphite", "item/materials/alone/graphite/ore", "Item");
+        addItemModels("Item", "raw_graphite", "item/materials/alone/graphite/ore");
         // 粉碎白云岩
-        addItemModels("fragment_dolomite", "item/materials/fragment_dolomite", "Item");
+        addItemModels("Item", "fragment_dolomite", "item/materials/fragment_dolomite");
         // 高岭土
-        addItemModels("kaolinite", "item/materials/kaolinite", "Item");
+        addItemModels("Item", "kaolinite", "item/materials/kaolinite");
         // 耐火砖
-        addItemModels("refractory_brick", "item/materials/refractory_brick", "Item");
+        addItemModels("Item", "refractory_brick", "item/materials/refractory_brick");
         // 潮湿耐火砖
-        addItemModels("wet_refractory_brick", "item/materials/wet_refractory_brick", "Item");
+        addItemModels("Item", "wet_refractory_brick", "item/materials/wet_refractory_brick");
         // 耐火粘土球
-        addItemModels("refractory_clay_ball", "item/materials/refractory_clay_ball", "Item");
+        addItemModels("Item", "refractory_clay_ball", "item/materials/refractory_clay_ball");
 
         // 工具
         // 燧石剑
-        addItemModels("flint_sword", "item/tool/flint/sword", "Item");
+        addItemModels("Item", "flint_sword", "item/tool/flint/sword");
         // 燧石镐
-        addItemModels("flint_pickaxe", "item/tool/flint/pickaxe", "Item");
+        addItemModels("Item", "flint_pickaxe", "item/tool/flint/pickaxe");
         // 燧石斧
-        addItemModels("flint_axe", "item/tool/flint/axe", "Item");
+        addItemModels("Item", "flint_axe", "item/tool/flint/axe");
         // 燧石手斧
-        addItemModels("flint_hatchet", "item/tool/flint/hatchet", "Item");
+        addItemModels("Item", "flint_hatchet", "item/tool/flint/hatchet");
         // 燧石锄
-        addItemModels("flint_shovel", "item/tool/flint/shovel", "Item");
+        addItemModels("Item", "flint_shovel", "item/tool/flint/shovel");
         // 燧石锄头
-        addItemModels("flint_hoe", "item/tool/flint/hoe", "Item");
+        addItemModels("Item", "flint_hoe", "item/tool/flint/hoe");
 
         // 化学用具
         // 石棉网
-        addItemModels("asbestos_net", "item/chemical_appliances/asbestos_net", "Item");
+        addItemModels("Item", "asbestos_net", "item/chemical_appliances/asbestos_net");
         // 方块
         // 酒精灯
-        addItemModels("alcohol_lamp", "block/chemical_appliances/alcohol_lamp", "BlockItem");
+        addItemModels("BlockItem", "alcohol_lamp", "block/chemical_appliances/alcohol_lamp");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addItemModels(String file, String texture, String type) {
+    public static void addItemModels(String type, String file, String... texture) {
         List<String> newList = new ArrayList<>();
-        newList.add(file);
-        newList.add(texture);
         newList.add(type);
+        newList.add(file);
+        newList.addAll(Arrays.asList(texture));
         LIST.add(newList);
     }
 }

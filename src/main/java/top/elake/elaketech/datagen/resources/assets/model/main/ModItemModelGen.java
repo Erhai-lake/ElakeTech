@@ -21,20 +21,20 @@ public class ModItemModelGen extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (List<String> item : ModItemModel.LIST) {
-            itemModelGen(item.get(0), item.get(1), item.get(2));
+            itemModelGen(item.get(0), item.get(1), item.subList(2, item.size()).toArray(new String[0]));
         }
     }
 
-    public void itemModelGen(String file, String path, String type) {
+    public void itemModelGen(String type, String file, String... path) {
         switch (type) {
             case "Item":
-                this.getBuilder(file)
-                        .parent(new ModelFile.UncheckedModelFile("minecraft:item/generated"))
-                        .texture("layer0", ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path));
+                this.getBuilder(file).parent(new ModelFile.UncheckedModelFile("minecraft:item/generated"));
+                for (int i = 0; i < path.length; i++) {
+                    this.getBuilder(file).texture("layer" + i, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path[i]));
+                }
                 break;
             case "BlockItem":
-                this.getBuilder(file)
-                        .parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path)));
+                this.getBuilder(file).parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path[0])));
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + type);
