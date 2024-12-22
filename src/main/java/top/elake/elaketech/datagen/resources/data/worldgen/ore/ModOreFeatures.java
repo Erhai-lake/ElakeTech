@@ -12,7 +12,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.registers.block.Ore;
+import top.elake.elaketech.register.block.Ore;
 
 import java.util.List;
 

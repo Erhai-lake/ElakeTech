@@ -1,12 +1,12 @@
-package top.elake.elaketech.registers.block;
+package top.elake.elaketech.register.block;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import top.elake.elaketech.registers.ModCreativeModeTab;
-import top.elake.elaketech.utils.Registers;
+import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.util.Registers;
 
 /**
  * @author Erhai-lake Qi-Month

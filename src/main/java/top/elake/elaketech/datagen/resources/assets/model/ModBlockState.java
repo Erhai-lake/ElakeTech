@@ -1,8 +1,8 @@
 package top.elake.elaketech.datagen.resources.assets.model;
 
 import net.minecraft.world.level.block.Block;
-import top.elake.elaketech.registers.block.CommonBlock;
-import top.elake.elaketech.registers.block.Ore;
+import top.elake.elaketech.register.block.CommonBlock;
+import top.elake.elaketech.register.block.Ore;
 
 import java.util.ArrayList;
 import java.util.List;

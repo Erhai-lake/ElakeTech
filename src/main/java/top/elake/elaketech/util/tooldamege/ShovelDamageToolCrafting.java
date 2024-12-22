@@ -1,4 +1,4 @@
-package top.elake.elaketech.utils.tooldamege;
+package top.elake.elaketech.util.tooldamege;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -10,17 +10,17 @@ import org.jetbrains.annotations.NotNull;
  * @author Erhai-lake
  */
 public class ShovelDamageToolCrafting extends ShovelItem {
-    private final int SUBTRACTING_DAMAGE;
+    private final int CRAFTING_SUBTRACTING_DAMAGE;
 
-    public ShovelDamageToolCrafting(Tier tier, Properties properties, int subtractingDamage) {
+    public ShovelDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
         super(tier, properties);
         // 要减去的耐久
-        SUBTRACTING_DAMAGE = subtractingDamage;
+        CRAFTING_SUBTRACTING_DAMAGE = craftingSubtractingDamage;
     }
 
     @Override
     public @NotNull ItemStack getCraftingRemainingItem(@NotNull ItemStack stack) {
-        if (SUBTRACTING_DAMAGE == 0) {
+        if (CRAFTING_SUBTRACTING_DAMAGE == 0) {
             return stack;
         }
         // 获取最大耐久
@@ -30,7 +30,7 @@ public class ShovelDamageToolCrafting extends ShovelItem {
         // 计算剩余耐久
         int remainingDurability = maxDamage - currentDamage;
         // 计算合成后的耐久
-        int synthesisDamage = remainingDurability - SUBTRACTING_DAMAGE;
+        int synthesisDamage = remainingDurability - CRAFTING_SUBTRACTING_DAMAGE;
         // 计算合成后的损失值
         int newDamage = maxDamage - synthesisDamage;
         if (synthesisDamage <= 0) {

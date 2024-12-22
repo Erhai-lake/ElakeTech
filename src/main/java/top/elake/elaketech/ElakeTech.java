@@ -9,17 +9,17 @@ import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
 import top.elake.elaketech.datagen.resources.assets.model.ModToolItemModel;
 import top.elake.elaketech.datagen.resources.assets.translation.I18n;
 import top.elake.elaketech.event.NoDiggingWood;
-import top.elake.elaketech.registers.ModCreativeModeTab;
-import top.elake.elaketech.registers.block.ChemicalAppliancesBlock;
-import top.elake.elaketech.registers.block.CommonBlock;
-import top.elake.elaketech.registers.block.Ore;
-import top.elake.elaketech.registers.item.ChemicalAppliancesItem;
-import top.elake.elaketech.registers.item.Elements;
-import top.elake.elaketech.registers.item.Materials;
-import top.elake.elaketech.registers.item.MetalIngot;
-import top.elake.elaketech.registers.tool.Bronze;
-import top.elake.elaketech.registers.tool.Flint;
-import top.elake.elaketech.utils.Registers;
+import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.register.block.ChemicalAppliancesBlock;
+import top.elake.elaketech.register.block.CommonBlock;
+import top.elake.elaketech.register.block.Ore;
+import top.elake.elaketech.register.item.ChemicalAppliancesItem;
+import top.elake.elaketech.register.item.Elements;
+import top.elake.elaketech.register.item.Materials;
+import top.elake.elaketech.register.item.MetalIngot;
+import top.elake.elaketech.register.tool.Bronze;
+import top.elake.elaketech.register.tool.Flint;
+import top.elake.elaketech.util.Registers;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -37,6 +37,8 @@ public class ElakeTech {
      * @param event 事件总线
      */
     public ElakeTech(IEventBus event) {
+        // 创造模式物品栏
+        ModCreativeModeTab.register(event);
         // 元素
         Elements.register();
         // 材料
@@ -73,9 +75,7 @@ public class ElakeTech {
         // 方块状态
         ModBlockState.registers();
 
-        // 注册非空手掘木
+        // 非空手掘木
         NoDiggingWood.register(NeoForge.EVENT_BUS);
-        // 注册创造模式物品栏
-        ModCreativeModeTab.register(event);
     }
 }

@@ -1,4 +1,4 @@
-package top.elake.elaketech.registers;
+package top.elake.elaketech.register;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

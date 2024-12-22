@@ -1,7 +1,7 @@
 package top.elake.elaketech.datagen.resources.assets.model;
 
-import top.elake.elaketech.registers.item.Elements;
-import top.elake.elaketech.registers.item.MetalIngot;
+import top.elake.elaketech.register.item.Elements;
+import top.elake.elaketech.register.item.MetalIngot;
 
 import java.util.ArrayList;
 import java.util.Arrays;

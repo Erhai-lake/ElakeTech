@@ -1,9 +1,9 @@
-package top.elake.elaketech.registers.item;
+package top.elake.elaketech.register.item;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.registers.ModCreativeModeTab;
-import top.elake.elaketech.utils.Registers;
+import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.util.Registers;
 
 /**
  * @author Erhai-lake

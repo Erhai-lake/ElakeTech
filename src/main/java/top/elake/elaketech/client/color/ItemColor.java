@@ -7,8 +7,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.registers.item.MetalIngot;
-import top.elake.elaketech.registers.tool.Bronze;
+import top.elake.elaketech.register.item.MetalIngot;
+import top.elake.elaketech.register.tool.Bronze;
 
 /**
  * @author Erhai-lake Qi-Month

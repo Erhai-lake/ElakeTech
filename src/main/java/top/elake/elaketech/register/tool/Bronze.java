@@ -1,13 +1,13 @@
-package top.elake.elaketech.registers.tool;
+package top.elake.elaketech.register.tool;
 
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.registers.ModCreativeModeTab;
-import top.elake.elaketech.registers.tag.ModItemTags;
-import top.elake.elaketech.utils.Registers;
+import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.tag.ModItemTags;
+import top.elake.elaketech.util.Registers;
 
 /**
  * @author Qi-Month

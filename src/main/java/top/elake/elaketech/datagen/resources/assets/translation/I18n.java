@@ -1,8 +1,8 @@
 package top.elake.elaketech.datagen.resources.assets.translation;
 
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.registers.item.Elements;
-import top.elake.elaketech.registers.item.MetalIngot;
+import top.elake.elaketech.register.item.Elements;
+import top.elake.elaketech.register.item.MetalIngot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,15 +75,15 @@ public class I18n {
     public static final List<List<String>> LIST = new ArrayList<>();
 
     @SuppressWarnings("AlibabaLowerCamelCaseVariableNaming")
-    public static void addLang(String type, String id, String EN_US, String ZH_CN) {
+    public static void addLang(String type, String id, String EN, String ZH) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
             newList.add(ElakeTech.MODID + "." + id);
         } else {
             newList.add(type + "." + ElakeTech.MODID + "." + id);
         }
-        newList.add(EN_US);
-        newList.add(ZH_CN);
+        newList.add(EN);
+        newList.add(ZH);
         LIST.add(newList);
     }
 }
