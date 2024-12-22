@@ -7,6 +7,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
+import top.elake.elaketech.datagen.resources.assets.model.ModToolItemModel;
 
 import java.util.List;
 
@@ -21,6 +22,10 @@ public class ModItemModelGen extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (List<String> item : ModItemModel.LIST) {
+            itemModelGen(item.get(0), item.get(1), item.subList(2, item.size()).toArray(new String[0]));
+        }
+        // 工具
+        for (List<String> item : ModToolItemModel.LIST) {
             itemModelGen(item.get(0), item.get(1), item.subList(2, item.size()).toArray(new String[0]));
         }
     }

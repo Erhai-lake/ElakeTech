@@ -26,7 +26,7 @@ public class ItemColor {
         }
 
         // 青铜工具
-        registerColorsForItem(Bronze.BRONZE_SHOVEL.toStack(), 0, 0xFFFF8C00);
+        registerColorsForItem(Bronze.BRONZE_SWORD.toStack(), 0, 0xFFFF8C00);
         registerColorsForItem(Bronze.BRONZE_PICKAXE.toStack(), 0, 0xFFFF8C00);
         registerColorsForItem(Bronze.BRONZE_AXE.toStack(), 0, 0xFFFF8C00);
         registerColorsForItem(Bronze.BRONZE_SHOVEL.toStack(), 0, 0xFFFF8C00);

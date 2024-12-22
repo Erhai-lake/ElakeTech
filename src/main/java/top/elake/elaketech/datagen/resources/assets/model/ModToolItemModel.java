@@ -23,15 +23,15 @@ public class ModToolItemModel {
         addToolItemModel("Item","flint_hoe", "item/tool/flint/hoe");
 
         // 青铜剑
-        addToolItemModel("Item","bronze_sword", "item/tool/color/sword", "item/tool/color/handle");
+        addToolItemModel("Item","bronze_sword", "item/tool/color/sword/head", "item/tool/color/sword/handle");
         // 青铜镐
-        addToolItemModel("Item","bronze_pickaxe", "item/tool/color/pickaxe", "item/tool/color/handle");
+        addToolItemModel("Item","bronze_pickaxe", "item/tool/color/pickaxe/head", "item/tool/color/pickaxe/handle");
         // 青铜斧
-        addToolItemModel("Item","bronze_axe", "item/tool/color/axe", "item/tool/color/handle");
+        addToolItemModel("Item","bronze_axe", "item/tool/color/axe/head", "item/tool/color/axe/handle");
         // 青铜锄
-        addToolItemModel("Item","bronze_shovel", "item/tool/color/shovel", "item/tool/color/handle");
+        addToolItemModel("Item","bronze_shovel", "item/tool/color/shovel/head", "item/tool/color/shovel/handle");
         // 青铜锄头
-        addToolItemModel("Item","bronze_hoe", "item/tool/color/hoe", "item/tool/color/handle");
+        addToolItemModel("Item","bronze_hoe", "item/tool/color/hoe/head", "item/tool/color/hoe/handle");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();
