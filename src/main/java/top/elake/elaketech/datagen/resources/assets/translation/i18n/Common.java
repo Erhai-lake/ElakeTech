@@ -1,4 +1,4 @@
-package top.elake.elaketech.datagen.resources.assets.translation;
+package top.elake.elaketech.datagen.resources.assets.translation.i18n;
 
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Elements;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @author Erhai-lake Qi-Month
  */
-public class I18n {
+public class Common {
     public static void registers() {
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {

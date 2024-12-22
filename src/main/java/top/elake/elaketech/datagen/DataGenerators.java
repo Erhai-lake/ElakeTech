@@ -9,8 +9,8 @@ import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.datagen.resources.assets.model.main.ModBlockModelGen;
 import top.elake.elaketech.datagen.resources.assets.model.main.ModBlockStateGen;
 import top.elake.elaketech.datagen.resources.assets.model.main.ModItemModelGen;
-import top.elake.elaketech.datagen.resources.assets.translation.language.en_us;
-import top.elake.elaketech.datagen.resources.assets.translation.language.zh_cn;
+import top.elake.elaketech.datagen.resources.assets.translation.i18n.language.ZH;
+import top.elake.elaketech.datagen.resources.assets.translation.i18n.language.EN;
 import top.elake.elaketech.datagen.resources.data.worldgen.ore.ModWorldGen;
 
 /**
@@ -21,8 +21,8 @@ public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         // 语言文件
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<en_us>) en_us::new);
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<zh_cn>) zh_cn::new);
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ZH>) ZH::new);
         // 物品模型
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModItemModelGen>)
                 output -> new ModItemModelGen(output, event.getExistingFileHelper()));

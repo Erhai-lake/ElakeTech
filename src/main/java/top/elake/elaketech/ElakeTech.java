@@ -7,7 +7,7 @@ import top.elake.elaketech.datagen.resources.assets.model.ModBlockModel;
 import top.elake.elaketech.datagen.resources.assets.model.ModBlockState;
 import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
 import top.elake.elaketech.datagen.resources.assets.model.ModToolItemModel;
-import top.elake.elaketech.datagen.resources.assets.translation.I18n;
+import top.elake.elaketech.datagen.resources.assets.translation.i18n.Common;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.block.ChemicalAppliancesBlock;
@@ -64,8 +64,8 @@ public class ElakeTech {
         Bronze.register();
 
         //数据生成器
-        // I18n
-        I18n.registers();
+        // Common
+        Common.registers();
         // 物品模型
         ModItemModel.registers();
         // 工具模型
