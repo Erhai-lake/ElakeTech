@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import top.elake.elaketech.register.ETCreativeModeTab;
+import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -32,8 +32,8 @@ public class CommonBlock {
      * 注册
      */
     public static void registers() {
-        ETCreativeModeTab.addAll(Registers.registerBlockItem("dolostone", DOLOSTONE, new Item.Properties()));
-        ETCreativeModeTab.addAll(Registers.registerBlockItem("kaolin", KAOLIN, new Item.Properties()));
-        ETCreativeModeTab.addAll(Registers.registerBlockItem("refractory_bricks", REFRACTORY_BRICKS, new Item.Properties()));
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("dolostone", DOLOSTONE, new Item.Properties()));
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("kaolin", KAOLIN, new Item.Properties()));
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("refractory_bricks", REFRACTORY_BRICKS, new Item.Properties()));
     }
 }

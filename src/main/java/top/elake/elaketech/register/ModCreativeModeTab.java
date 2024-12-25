@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 /**
  * @author Erhai-lake
  */
-public class ETCreativeModeTab {
+public class ModCreativeModeTab {
     /**
      * 全部
      */

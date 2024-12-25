@@ -2,7 +2,7 @@ package top.elake.elaketech.register.item;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.register.ETCreativeModeTab;
+import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -30,7 +30,6 @@ public class Materials {
      */
     public static final DeferredItem<Item> GRAPHITE_PLATE = Registers.registerItem("graphite_plate", new Item.Properties());
     /**
-     * 青铜锭
      * 粉碎白云岩
      */
     public static final DeferredItem<Item> FRAGMENT_DOLOMITE = Registers.registerItem("fragment_dolomite", new Item.Properties());
@@ -55,25 +54,25 @@ public class Materials {
      */
     public static void register() {
         // 草纤维
-        ETCreativeModeTab.addMaterials(GRASS_FIBER);
+        ModCreativeModeTab.addMaterials(GRASS_FIBER);
         // 草绳
-        ETCreativeModeTab.addMaterials(GRASS_STRING);
+        ModCreativeModeTab.addMaterials(GRASS_STRING);
         // 粗石墨
-        ETCreativeModeTab.addMaterials(RAW_GRAPHITE);
+        ModCreativeModeTab.addMaterials(RAW_GRAPHITE);
         // 石墨
-        ETCreativeModeTab.addMaterials(GRAPHITE_INGOT);
+        ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 石墨板
-        ETCreativeModeTab.addMaterials(GRAPHITE_PLATE);
+        ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
 
         // 粉碎白云岩
-        ETCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
+        ModCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
         // 高岭土
-        ETCreativeModeTab.addMaterials(KAOLINITE);
+        ModCreativeModeTab.addMaterials(KAOLINITE);
         // 耐火砖
-        ETCreativeModeTab.addMaterials(REFRACTORY_BRICK);
+        ModCreativeModeTab.addMaterials(REFRACTORY_BRICK);
         // 潮湿耐火砖
-        ETCreativeModeTab.addMaterials(WET_REFRACTORY_BRICK);
+        ModCreativeModeTab.addMaterials(WET_REFRACTORY_BRICK);
         // 耐火黏土
-        ETCreativeModeTab.addMaterials(REFRACTORY_CLAY_BALL);
+        ModCreativeModeTab.addMaterials(REFRACTORY_CLAY_BALL);
     }
 }

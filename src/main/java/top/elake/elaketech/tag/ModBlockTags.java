@@ -1,4 +1,4 @@
 package top.elake.elaketech.tag;
 
-public class ETBlockTags {
+public class ModBlockTags {
 }

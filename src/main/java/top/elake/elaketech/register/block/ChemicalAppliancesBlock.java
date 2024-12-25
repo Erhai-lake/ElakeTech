@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import top.elake.elaketech.register.ETCreativeModeTab;
+import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.block.custom.box.AlcoholLamp;
 import top.elake.elaketech.util.Registers;
 
@@ -29,6 +29,6 @@ public class ChemicalAppliancesBlock {
      */
     public static void register() {
         // 物品
-        ETCreativeModeTab.addAll(Registers.registerBlockItem("alcohol_lamp", ALCOHOL_LAMP, new Item.Properties()));
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("alcohol_lamp", ALCOHOL_LAMP, new Item.Properties()));
     }
 }

@@ -4,8 +4,8 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.register.ETCreativeModeTab;
-import top.elake.elaketech.tag.ETItemTags;
+import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.tag.ModItemTags;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -17,17 +17,17 @@ public class Flint {
      */
     public static void register() {
         // 剑
-        ETCreativeModeTab.addTools(FLINT_SWORD);
+        ModCreativeModeTab.addTools(FLINT_SWORD);
         // 镐
-        ETCreativeModeTab.addTools(FLINT_PICKAXE);
+        ModCreativeModeTab.addTools(FLINT_PICKAXE);
         // 斧
-        ETCreativeModeTab.addTools(FLINT_AXE);
+        ModCreativeModeTab.addTools(FLINT_AXE);
         // 手斧
-        ETCreativeModeTab.addTools(FLINT_HATCHET);
+        ModCreativeModeTab.addTools(FLINT_HATCHET);
         // 锹
-        ETCreativeModeTab.addTools(FLINT_SHOVEL);
+        ModCreativeModeTab.addTools(FLINT_SHOVEL);
         // 锄
-        ETCreativeModeTab.addTools(FLINT_HOE);
+        ModCreativeModeTab.addTools(FLINT_HOE);
     }
 
     /**
@@ -39,7 +39,7 @@ public class Flint {
             3F,
             1,
             0,
-            () -> Ingredient.of(ETItemTags.Items.FLINT)
+            () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
 
     /**
@@ -51,7 +51,7 @@ public class Flint {
             1.5F,
             1,
             0,
-            () -> Ingredient.of(ETItemTags.Items.FLINT)
+            () -> Ingredient.of(ModItemTags.Items.FLINT)
     );
 
     /**
