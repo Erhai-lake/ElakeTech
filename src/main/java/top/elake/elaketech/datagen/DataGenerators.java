@@ -28,6 +28,8 @@ public class DataGenerators {
     @SubscribeEvent
 
     public static void gatherData(GatherDataEvent event) {
+        ExistingFileHelper efh = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lp = event.getLookupProvider();
         // 语言文件
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ZH>) ZH::new);
@@ -45,7 +47,7 @@ public class DataGenerators {
                 output -> new ModWorldGen(output, event.getLookupProvider()));
         // 方块标签
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ETBlockTags>)
-                output -> new ETBlockTags(output, lp, ElakeTech.MODID, efh)
+                output -> new ETBlockTags(output, lp, efh)
         );
     }
 }
