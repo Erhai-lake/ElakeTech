@@ -26,7 +26,6 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        ExistingFileHelper efh = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lp = event.getLookupProvider();
         // Language Files
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
@@ -44,10 +43,12 @@ public class DataGenerators {
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModWorldGen>)
                 output -> new ModWorldGen(output, event.getLookupProvider()));
         // Block Tags
+        ExistingFileHelper efhBlock = event.getExistingFileHelper();
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
-                output -> new ModBlockTagsGen(output, lp, efh));
+                output -> new ModBlockTagsGen(output, lp, efhBlock));
         // Item Tags
-        // TODO event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
-        // TODO         output -> new ModItemTagsGen(output, lp, efh));
+        ExistingFileHelper efhItem = event.getExistingFileHelper();
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
+                output -> new ModItemTagsGen(output, lp, efhItem));
     }
 }
