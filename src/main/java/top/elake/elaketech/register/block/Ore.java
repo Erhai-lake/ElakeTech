@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.register.ETCreativeModeTab;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -32,11 +32,11 @@ public class Ore {
      */
     public static void register() {
         // 石墨
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("graphite_ore", GRAPHITE_ORE, new Item.Properties()));
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_graphite_ore", DEEPSLATE_GRAPHITE_ORE, new Item.Properties()));
+        ETCreativeModeTab.addAll(Registers.registerBlockItem("graphite_ore", GRAPHITE_ORE, new Item.Properties()));
+        ETCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_graphite_ore", DEEPSLATE_GRAPHITE_ORE, new Item.Properties()));
 
         // 石英
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("quartz_ore", QUARTZ_ORE, new Item.Properties()));
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_quartz_ore", DEEPSLATE_QUARTZ_ORE, new Item.Properties()));
+        ETCreativeModeTab.addAll(Registers.registerBlockItem("quartz_ore", QUARTZ_ORE, new Item.Properties()));
+        ETCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_quartz_ore", DEEPSLATE_QUARTZ_ORE, new Item.Properties()));
     }
 }

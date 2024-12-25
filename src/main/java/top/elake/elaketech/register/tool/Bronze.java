@@ -1,12 +1,11 @@
 package top.elake.elaketech.register.tool;
 
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.register.ModCreativeModeTab;
-import top.elake.elaketech.tag.ModItemTags;
+import top.elake.elaketech.register.ETCreativeModeTab;
+import top.elake.elaketech.tag.ETItemTags;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -18,15 +17,15 @@ public class Bronze {
      */
     public static void register() {
         // 剑
-        ModCreativeModeTab.addTools(BRONZE_SWORD);
+        ETCreativeModeTab.addTools(BRONZE_SWORD);
         // 镐
-        ModCreativeModeTab.addTools(BRONZE_PICKAXE);
+        ETCreativeModeTab.addTools(BRONZE_PICKAXE);
         // 斧
-        ModCreativeModeTab.addTools(BRONZE_AXE);
+        ETCreativeModeTab.addTools(BRONZE_AXE);
         // 锹
-        ModCreativeModeTab.addTools(BRONZE_SHOVEL);
+        ETCreativeModeTab.addTools(BRONZE_SHOVEL);
         // 锄
-        ModCreativeModeTab.addTools(BRONZE_HOE);
+        ETCreativeModeTab.addTools(BRONZE_HOE);
     }
 
     /**
@@ -38,7 +37,7 @@ public class Bronze {
             6F,
             1,
             0,
-            () -> Ingredient.of(ModItemTags.Items.BRONZE)
+            () -> Ingredient.of(ETItemTags.Items.BRONZE)
     );
 
     /**

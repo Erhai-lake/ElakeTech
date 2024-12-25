@@ -34,7 +34,7 @@ public class Common {
         addLang("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");
         // 书
         addLang(null, "patchouli.book.name", "EC Manual", "EC手册");
-        addLang(null, "patchouli.book.landing", "EC Complete Reference Guide$(br2)(Content under development, please refer to the official release for actual content)", "EC完整参考指南$(br2)(开发中内容,实际内容请以正式上线为准)");
+        addLang(null, "patchouli.book.landing", "EC Complete Reference Guide", "EC完整参考指南");
 
         // 材料
         addLang("item", "grass_fiber", "Grass Fiber", "草纤维");

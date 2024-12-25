@@ -2,7 +2,7 @@ package top.elake.elaketech.register.item;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.register.ETCreativeModeTab;
 import top.elake.elaketech.util.Registers;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class MetalIngot {
      */
     public static void addIngot(String id, String en, String cn, int color) {
         DeferredItem<Item> item = Registers.registerItem(id + "_ingot", new Item.Properties());
-        ModCreativeModeTab.addMaterials(item);
+        ETCreativeModeTab.addMaterials(item);
         INGOT_ITEM_GROUP.add(new IngotItem(id, en, cn, item, color));
     }
 

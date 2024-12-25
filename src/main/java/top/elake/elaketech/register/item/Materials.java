@@ -2,7 +2,7 @@ package top.elake.elaketech.register.item;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.register.ETCreativeModeTab;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -55,25 +55,25 @@ public class Materials {
      */
     public static void register() {
         // 草纤维
-        ModCreativeModeTab.addMaterials(GRASS_FIBER);
+        ETCreativeModeTab.addMaterials(GRASS_FIBER);
         // 草绳
-        ModCreativeModeTab.addMaterials(GRASS_STRING);
+        ETCreativeModeTab.addMaterials(GRASS_STRING);
         // 粗石墨
-        ModCreativeModeTab.addMaterials(RAW_GRAPHITE);
+        ETCreativeModeTab.addMaterials(RAW_GRAPHITE);
         // 石墨
-        ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
+        ETCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 石墨板
-        ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
+        ETCreativeModeTab.addMaterials(GRAPHITE_PLATE);
 
         // 粉碎白云岩
-        ModCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
+        ETCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
         // 高岭土
-        ModCreativeModeTab.addMaterials(KAOLINITE);
+        ETCreativeModeTab.addMaterials(KAOLINITE);
         // 耐火砖
-        ModCreativeModeTab.addMaterials(REFRACTORY_BRICK);
+        ETCreativeModeTab.addMaterials(REFRACTORY_BRICK);
         // 潮湿耐火砖
-        ModCreativeModeTab.addMaterials(WET_REFRACTORY_BRICK);
+        ETCreativeModeTab.addMaterials(WET_REFRACTORY_BRICK);
         // 耐火黏土
-        ModCreativeModeTab.addMaterials(REFRACTORY_CLAY_BALL);
+        ETCreativeModeTab.addMaterials(REFRACTORY_CLAY_BALL);
     }
 }

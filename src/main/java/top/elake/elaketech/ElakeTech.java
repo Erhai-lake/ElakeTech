@@ -9,7 +9,7 @@ import top.elake.elaketech.datagen.resources.assets.model.ModItemModel;
 import top.elake.elaketech.datagen.resources.assets.model.ModToolItemModel;
 import top.elake.elaketech.datagen.resources.assets.translation.i18n.Common;
 import top.elake.elaketech.event.NoDiggingWood;
-import top.elake.elaketech.register.ModCreativeModeTab;
+import top.elake.elaketech.register.ETCreativeModeTab;
 import top.elake.elaketech.register.block.ChemicalAppliancesBlock;
 import top.elake.elaketech.register.block.CommonBlock;
 import top.elake.elaketech.register.block.Ore;
@@ -38,7 +38,7 @@ public class ElakeTech {
      */
     public ElakeTech(IEventBus event) {
         // 创造模式物品栏
-        ModCreativeModeTab.register(event);
+        ETCreativeModeTab.register(event);
         // 元素
         Elements.register();
         // 材料

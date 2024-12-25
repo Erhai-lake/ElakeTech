@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 /**
  * @author Qi-Month
  */
-public class ModItemTags {
+public class ETItemTags {
     /**
      * 获取neoforge的tag
      *
