@@ -28,25 +28,25 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         ExistingFileHelper efh = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lp = event.getLookupProvider();
-        // 语言文件
+        // Language Files
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ZH>) ZH::new);
-        // 物品模型
+        // Item Models
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModItemModelGen>)
                 output -> new ModItemModelGen(output, event.getExistingFileHelper()));
-        // 方块模型
+        // Block Models
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModBlockModelGen>)
                 output -> new ModBlockModelGen(output, event.getExistingFileHelper()));
-        // 方块状态
+        // Block States
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModBlockStateGen>)
                 output -> new ModBlockStateGen(output, event.getExistingFileHelper()));
-        // 矿物生成
+        // Ore Generation
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModWorldGen>)
                 output -> new ModWorldGen(output, event.getLookupProvider()));
-        // 方块标签
+        // Block Tags
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
                 output -> new ModBlockTagsGen(output, lp, efh));
-        // 物品标签
+        // Item Tags
         // TODO event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
         // TODO         output -> new ModItemTagsGen(output, lp, efh));
     }
