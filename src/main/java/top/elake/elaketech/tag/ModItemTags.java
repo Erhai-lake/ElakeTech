@@ -4,6 +4,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.core.registries.Registries;
 
 /**
  * @author Qi-Month
@@ -21,5 +22,6 @@ public class ModItemTags {
     public static class Items {
         public static final TagKey<Item> FLINT = getTag("flint");
         public static final TagKey<Item> BRONZE = getTag("ingots/bronze");
+        public static final TagKey<Item> C_INGOTS = getTag("ingots");
     }
 }
