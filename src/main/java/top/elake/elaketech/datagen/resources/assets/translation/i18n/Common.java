@@ -49,12 +49,12 @@ public class Common {
         addLang("item", "wet_refractory_brick", "Wet Refractory Brick", "潮湿耐火砖");
 
         // 工具
-        addLang("item", "flint_sword", "Flint Sword", "燧石剑");
-        addLang("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
-        addLang("item", "flint_axe", "Flint Axe", "燧石斧");
-        addLang("item", "flint_hatchet", "Flint Hatchet", "燧石手斧");
-        addLang("item", "flint_shovel", "Flint Shovel", "燧石锹");
-        addLang("item", "flint_hoe", "Flint Hoe", "燧石锄");
+        addLang("item", "flint_sword", "FlintTool Sword", "燧石剑");
+        addLang("item", "flint_pickaxe", "FlintTool Pickaxe", "燧石镐");
+        addLang("item", "flint_axe", "FlintTool Axe", "燧石斧");
+        addLang("item", "flint_hatchet", "FlintTool Hatchet", "燧石手斧");
+        addLang("item", "flint_shovel", "FlintTool Shovel", "燧石锹");
+        addLang("item", "flint_hoe", "FlintTool Hoe", "燧石锄");
 
         //方块
         addLang("block", "alcohol_lamp", "Alcohol Lamp", "酒精灯");

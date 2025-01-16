@@ -23,7 +23,7 @@ public class Ore {
      * 石英
      */
     public static final DeferredBlock<Block> QUARTZ_ORE = Registers.registerBlock("quartz_ore",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_QUARTZ_ORE)));
     public static final DeferredBlock<Block> DEEPSLATE_QUARTZ_ORE = Registers.registerBlock("deepslate_quartz_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)));
 
@@ -34,7 +34,6 @@ public class Ore {
         // 石墨
         ModCreativeModeTab.addAll(Registers.registerBlockItem("graphite_ore", GRAPHITE_ORE, new Item.Properties()));
         ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_graphite_ore", DEEPSLATE_GRAPHITE_ORE, new Item.Properties()));
-
         // 石英
         ModCreativeModeTab.addAll(Registers.registerBlockItem("quartz_ore", QUARTZ_ORE, new Item.Properties()));
         ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_quartz_ore", DEEPSLATE_QUARTZ_ORE, new Item.Properties()));
