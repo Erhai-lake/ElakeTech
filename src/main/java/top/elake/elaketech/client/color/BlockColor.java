@@ -21,7 +21,7 @@ public class BlockColor {
     }
 
     /**
-     * 注册物品颜色
+     * 注册方块颜色
      *
      * @param stack  物品
      * @param colors 图层索引, 颜色0*ARGB
