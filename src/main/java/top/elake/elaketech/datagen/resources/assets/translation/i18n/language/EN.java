@@ -13,7 +13,7 @@ import java.util.List;
 @SuppressWarnings("AlibabaClassNamingShouldBeCamel")
 public class EN extends LanguageProvider {
     public EN(PackOutput output) {
-        super(output, ElakeTech.MODID, "EN");
+        super(output, ElakeTech.MODID, "en_us");
     }
 
     @Override

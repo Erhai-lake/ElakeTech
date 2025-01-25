@@ -13,7 +13,7 @@ import java.util.List;
 @SuppressWarnings("AlibabaClassNamingShouldBeCamel")
 public class ZH extends LanguageProvider {
     public ZH(PackOutput output) {
-        super(output, ElakeTech.MODID, "ZH");
+        super(output, ElakeTech.MODID, "zh_cn");
     }
 
     @Override
