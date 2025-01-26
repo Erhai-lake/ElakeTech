@@ -1,4 +1,4 @@
-package top.elake.elaketech.datagen.resources.assets.translation.i18n;
+package top.elake.elaketech.datagen.resources.assets.translation;
 
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Elements;
