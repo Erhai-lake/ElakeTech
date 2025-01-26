@@ -8,6 +8,7 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -29,17 +30,22 @@ public class ModItemTagsGen extends ItemTagsProvider {
 
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
-        // 为每个金属创建单独的ingot tag
+        // 燧石
+        this.tag(ModItemTags.Items.FLINT)
+                .add(Items.FLINT);
+        // 为单个锭添加Tags
+        this.tag(ModItemTags.Items.GRAPHITE)
+                .add(Materials.GRAPHITE_INGOT.get());
+        // 为每个金属创建单独的IngotTags
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             TagKey<Item> ingotTag = TagKey.create(Registries.ITEM,
                     ResourceLocation.fromNamespaceAndPath("c", "ingots/" + ingot.id()));
             this.tag(ingotTag)
-                    .add(ingot.item().get())
-                    .add(Materials.GRAPHITE_INGOT.get());
+                    .add(ingot.item().get());
         }
-        // 创建通用的c:ingots, 引用所有单独的ingot tags
+        // 创建通用的c:ingots, 引用所有单独的IngotTags
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
-            this.tag(ModItemTags.Items.C_INGOTS)
+            this.tag(ModItemTags.Items.INGOTS)
                     .addTag(TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "ingots/" + ingot.id())))
                     .add(Materials.GRAPHITE_INGOT.get());
         }
