@@ -11,8 +11,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Qi-Month
  */
-public class CommonStonecuttingRecipes extends RecipeProvider {
-    public CommonStonecuttingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+public class StonecuttingRecipes extends RecipeProvider {
+    public StonecuttingRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
 

@@ -11,6 +11,10 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    // Registrate
+    maven {
+        url "https://maven.ithundxr.dev/snapshots"
+    }
     // JEI
     maven {
         name = "Jared's maven"
@@ -114,6 +118,9 @@ dependencies {
     // Patchouli
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
+    // Registrate
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
 }
 
 tasks.withType(ProcessResources).configureEach {

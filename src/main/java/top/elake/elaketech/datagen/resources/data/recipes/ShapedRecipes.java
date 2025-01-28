@@ -22,8 +22,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Qi-Month
  */
-public class CommonShapedRecipes extends RecipeProvider {
-    public CommonShapedRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+public class ShapedRecipes extends RecipeProvider {
+    public ShapedRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
 

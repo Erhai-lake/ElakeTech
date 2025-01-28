@@ -17,8 +17,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Qi-Month
  */
-public class CommonShapelessRecipes extends RecipeProvider {
-    public CommonShapelessRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+public class ShapelessRecipes extends RecipeProvider {
+    public ShapelessRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
 

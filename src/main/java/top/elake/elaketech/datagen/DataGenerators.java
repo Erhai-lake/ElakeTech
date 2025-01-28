@@ -11,9 +11,9 @@ import top.elake.elaketech.datagen.resources.assets.model.main.ModBlockStateGen;
 import top.elake.elaketech.datagen.resources.assets.model.main.ModItemModelGen;
 import top.elake.elaketech.datagen.resources.assets.translation.language.ZH;
 import top.elake.elaketech.datagen.resources.assets.translation.language.EN;
-import top.elake.elaketech.datagen.resources.data.recipes.CommonShapedRecipes;
-import top.elake.elaketech.datagen.resources.data.recipes.CommonShapelessRecipes;
-import top.elake.elaketech.datagen.resources.data.recipes.CommonStonecuttingRecipes;
+import top.elake.elaketech.datagen.resources.data.recipes.ShapedRecipes;
+import top.elake.elaketech.datagen.resources.data.recipes.ShapelessRecipes;
+import top.elake.elaketech.datagen.resources.data.recipes.StonecuttingRecipes;
 import top.elake.elaketech.datagen.resources.data.tags.ModBlockTagsGen;
 import top.elake.elaketech.datagen.resources.data.tags.ModItemTagsGen;
 import top.elake.elaketech.datagen.resources.data.worldgen.ore.ModWorldGen;
@@ -48,13 +48,13 @@ public class DataGenerators {
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
                 output -> new ModItemTagsGen(output, event.getLookupProvider(), blockTagsProvider.contentsGetter(), event.getExistingFileHelper()));
         // ShapedRecipes
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<CommonShapedRecipes>)
-                output -> new CommonShapedRecipes(output, event.getLookupProvider()));
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ShapedRecipes>)
+                output -> new ShapedRecipes(output, event.getLookupProvider()));
         // ShapelessRecipes
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<CommonShapelessRecipes>)
-                output -> new CommonShapelessRecipes(output, event.getLookupProvider()));
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ShapelessRecipes>)
+                output -> new ShapelessRecipes(output, event.getLookupProvider()));
         // StonecuttingRecipes
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<CommonStonecuttingRecipes>)
-                output -> new CommonStonecuttingRecipes(output, event.getLookupProvider()));
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<StonecuttingRecipes>)
+                output -> new StonecuttingRecipes(output, event.getLookupProvider()));
     }
 }
