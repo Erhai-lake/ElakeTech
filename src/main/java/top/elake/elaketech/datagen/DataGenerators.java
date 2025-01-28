@@ -11,7 +11,9 @@ import top.elake.elaketech.datagen.resources.assets.model.main.ModBlockStateGen;
 import top.elake.elaketech.datagen.resources.assets.model.main.ModItemModelGen;
 import top.elake.elaketech.datagen.resources.assets.translation.language.ZH;
 import top.elake.elaketech.datagen.resources.assets.translation.language.EN;
-import top.elake.elaketech.datagen.resources.data.recipes.minecraft.shaped.tool.*;
+import top.elake.elaketech.datagen.resources.data.recipes.CommonShapedRecipes;
+import top.elake.elaketech.datagen.resources.data.recipes.CommonShapelessRecipes;
+import top.elake.elaketech.datagen.resources.data.recipes.CommonStonecuttingRecipes;
 import top.elake.elaketech.datagen.resources.data.tags.ModBlockTagsGen;
 import top.elake.elaketech.datagen.resources.data.tags.ModItemTagsGen;
 import top.elake.elaketech.datagen.resources.data.worldgen.ore.ModWorldGen;
@@ -45,11 +47,14 @@ public class DataGenerators {
         // Item Tags
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
                 output -> new ModItemTagsGen(output, event.getLookupProvider(), blockTagsProvider.contentsGetter(), event.getExistingFileHelper()));
-        // Flint Tool
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<FlintTool>)
-                output -> new FlintTool(output, event.getLookupProvider()));
-        // Bronze Tool
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<BronzeTool>)
-                output -> new BronzeTool(output, event.getLookupProvider()));
+        // ShapedRecipes
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<CommonShapedRecipes>)
+                output -> new CommonShapedRecipes(output, event.getLookupProvider()));
+        // ShapelessRecipes
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<CommonShapelessRecipes>)
+                output -> new CommonShapelessRecipes(output, event.getLookupProvider()));
+        // StonecuttingRecipes
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<CommonStonecuttingRecipes>)
+                output -> new CommonStonecuttingRecipes(output, event.getLookupProvider()));
     }
 }
