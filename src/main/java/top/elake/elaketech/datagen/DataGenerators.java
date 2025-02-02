@@ -6,15 +6,15 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.resources.assets.model.main.ModBlockModelGen;
-import top.elake.elaketech.datagen.resources.assets.model.main.ModBlockStateGen;
-import top.elake.elaketech.datagen.resources.assets.model.main.ModItemModelGen;
-import top.elake.elaketech.datagen.resources.assets.translation.language.ZH;
-import top.elake.elaketech.datagen.resources.assets.translation.language.EN;
-import top.elake.elaketech.datagen.resources.data.recipes.MainRecipes;
-import top.elake.elaketech.datagen.resources.data.tags.ModBlockTagsGen;
-import top.elake.elaketech.datagen.resources.data.tags.ModItemTagsGen;
-import top.elake.elaketech.datagen.resources.data.worldgen.ore.ModWorldGen;
+import top.elake.elaketech.datagen.assets.model.main.ModBlockModelGen;
+import top.elake.elaketech.datagen.assets.model.main.ModBlockStateGen;
+import top.elake.elaketech.datagen.assets.model.main.ModItemModelGen;
+import top.elake.elaketech.datagen.assets.translation.language.ZH;
+import top.elake.elaketech.datagen.assets.translation.language.EN;
+import top.elake.elaketech.datagen.data.recipes.MainRecipes;
+import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
+import top.elake.elaketech.datagen.data.tags.ModItemTagsGen;
+import top.elake.elaketech.datagen.data.worldgen.ore.ModWorldGen;
 
 
 /**
