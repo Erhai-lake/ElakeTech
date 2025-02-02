@@ -791,5 +791,41 @@
     },
     "done": true
   },
+  "immersiveengineering:recipes/misc/crafting/blastbrick_from_slab": {
+    "criteria": {
+      "has_blastbrick": "2024-12-23 00:07:56 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/blastbrick_reinforced": {
+    "criteria": {
+      "has_blastbrick": "2024-12-23 00:07:56 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/blastbrick_to_slab": {
+    "criteria": {
+      "has_blastbrick": "2024-12-23 00:07:56 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/stonecutting/materials/graphite_ingot": {
+    "criteria": {
+      "has_raw_graphite": "2025-02-02 19:39:17 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/quartz": {
+    "criteria": {
+      "has_nether_quartz_ore": "2025-02-02 19:39:26 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/quartz_from_blasting": {
+    "criteria": {
+      "has_nether_quartz_ore": "2025-02-02 19:39:26 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

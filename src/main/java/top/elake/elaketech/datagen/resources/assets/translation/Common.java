@@ -14,68 +14,74 @@ public class Common {
     public static void registers() {
         // 元素
         for (String element : Elements.ELEMENTS_ITEM_ARR) {
-            addLang("item", element, element, element);
+            addLanguage("item", element, element, element);
         }
 
         // 金属锭
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
-            addLang("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
+            addLanguage("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
         }
 
         // 标签页
-        addLang("itemGroup", "all", "ElakeTech - All", "洱海科技 - 全部");
-        addLang("itemGroup", "element", "ElakeTech - Elements", "洱海科技 - 元素");
-        addLang("itemGroup", "tool", "ElakeTech - Tool", "洱海科技 - 工具");
-        addLang("itemGroup", "materials", "ElakeTech - Material", "洱海科技 - 材料");
-        addLang("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海科技 - 化学用具");
-        addLang("itemGroup", "sundries", "ElakeTech - Sundries", "洱海科技 - 杂项");
+        addLanguage("itemGroup", "all", "ElakeTech - All", "洱海科技 - 全部");
+        addLanguage("itemGroup", "element", "ElakeTech - Elements", "洱海科技 - 元素");
+        addLanguage("itemGroup", "tool", "ElakeTech - Tool", "洱海科技 - 工具");
+        addLanguage("itemGroup", "materials", "ElakeTech - Material", "洱海科技 - 材料");
+        addLanguage("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海科技 - 化学用具");
+        addLanguage("itemGroup", "sundries", "ElakeTech - Sundries", "洱海科技 - 杂项");
         // 画
-        addLang("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
-        addLang("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");
+        addLanguage("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
+        addLanguage("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");
         // 书
-        addLang(null, "patchouli.book.name", "EC Manual", "EC手册");
-        addLang(null, "patchouli.book.landing", "EC Complete Reference Guide", "EC完整参考指南");
+        addLanguage(null, "patchouli.book.name", "EC Manual", "EC手册");
+        addLanguage(null, "patchouli.book.landing", "EC Complete Reference Guide", "EC完整参考指南");
 
         // 材料
-        addLang("item", "grass_fiber", "Grass Fiber", "草纤维");
-        addLang("item", "grass_string", "Grass String", "草绳");
-        addLang("item", "raw_graphite", "Raw Graphite", "粗石墨");
-        addLang("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
-        addLang("item", "graphite_plate", "Graphite Plate", "石墨板");
-        addLang("item", "fragment_dolomite", "Fragment Dolomite", "粉碎白云岩");
-        addLang("item", "kaolinite", "Kaolinite", "高岭土");
-        addLang("item", "refractory_brick", "Refractory Brick", "耐火砖");
-        addLang("item", "refractory_clay_ball", "Refractory Clay Ball", "耐火黏土球");
-        addLang("item", "wet_refractory_brick", "Wet Refractory Brick", "潮湿耐火砖");
+        addLanguage("item", "grass_fiber", "Grass Fiber", "草纤维");
+        addLanguage("item", "grass_string", "Grass String", "草绳");
+        addLanguage("item", "raw_graphite", "Raw Graphite", "粗石墨");
+        addLanguage("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
+        addLanguage("item", "graphite_plate", "Graphite Plate", "石墨板");
+        addLanguage("item", "fragment_dolomite", "Fragment Dolomite", "粉碎白云岩");
+        addLanguage("item", "kaolinite", "Kaolinite", "高岭土");
+        addLanguage("item", "refractory_brick", "Refractory Brick", "耐火砖");
+        addLanguage("item", "refractory_clay_ball", "Refractory Clay Ball", "耐火黏土球");
+        addLanguage("item", "wet_refractory_brick", "Wet Refractory Brick", "潮湿耐火砖");
 
         // 工具
-        addLang("item", "flint_sword", "FlintTool Sword", "燧石剑");
-        addLang("item", "flint_pickaxe", "FlintTool Pickaxe", "燧石镐");
-        addLang("item", "flint_axe", "FlintTool Axe", "燧石斧");
-        addLang("item", "flint_hatchet", "FlintTool Hatchet", "燧石手斧");
-        addLang("item", "flint_shovel", "FlintTool Shovel", "燧石锹");
-        addLang("item", "flint_hoe", "FlintTool Hoe", "燧石锄");
+        addLanguage("item", "flint_sword", "Flint Sword", "燧石剑");
+        addLanguage("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
+        addLanguage("item", "flint_axe", "Flint Axe", "燧石斧");
+        addLanguage("item", "flint_hatchet", "Flint Hatchet", "燧石手斧");
+        addLanguage("item", "flint_shovel", "Flint Shovel", "燧石锹");
+        addLanguage("item", "flint_hoe", "Flint Hoe", "燧石锄");
+
+        addLanguage("item", "bronze_sword", "Bronze Sword", "青铜剑");
+        addLanguage("item", "bronze_pickaxe", "Bronze Pickaxe", "青铜镐");
+        addLanguage("item", "bronze_axe", "Bronze Axe", "青铜斧");
+        addLanguage("item", "bronze_shovel", "Bronze Shovel", "青铜锹");
+        addLanguage("item", "bronze_hoe", "Bronze Hoe", "青铜锄");
 
         //方块
-        addLang("block", "alcohol_lamp", "Alcohol Lamp", "酒精灯");
-        addLang("block", "dolostone", "Dolostone", "白云岩");
-        addLang("block", "kaolin", "Kaolin", "高岭土");
-        addLang("block", "refractory_bricks", "Refractory Bricks", "耐火砖块");
+        addLanguage("block", "alcohol_lamp", "Alcohol Lamp", "酒精灯");
+        addLanguage("block", "dolostone", "Dolostone", "白云岩");
+        addLanguage("block", "kaolin", "Kaolin", "高岭土");
+        addLanguage("block", "refractory_bricks", "Refractory Bricks", "耐火砖块");
 
         // 矿石
-        addLang("block", "graphite_ore", "Graphite Ore", "石墨矿石");
-        addLang("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
-        addLang("block", "quartz_ore", "Quartz Ore", "石英矿");
-        addLang("block", "deepslate_quartz_ore", "Deepslate Quartz Ore", "深层石英矿");
+        addLanguage("block", "graphite_ore", "Graphite Ore", "石墨矿石");
+        addLanguage("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
+        addLanguage("block", "quartz_ore", "Quartz Ore", "石英矿");
+        addLanguage("block", "deepslate_quartz_ore", "Deepslate Quartz Ore", "深层石英矿");
 
         // 化学用具
-        addLang("item", "asbestos_net", "Asbestos Net", "石棉网");
+        addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
     @SuppressWarnings("AlibabaLowerCamelCaseVariableNaming")
-    public static void addLang(String type, String id, String EN, String ZH) {
+    public static void addLanguage(String type, String id, String EN, String ZH) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
             newList.add(ElakeTech.MODID + "." + id);

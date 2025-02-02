@@ -15,3 +15,4 @@
 /probejs disable
 /probejs enable
 /probejs disable
+/give Dev minecraft:crafting_table
