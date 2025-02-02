@@ -26,7 +26,7 @@ public class Common {
         addLang("itemGroup", "all", "ElakeTech - All", "洱海科技 - 全部");
         addLang("itemGroup", "element", "ElakeTech - Elements", "洱海科技 - 元素");
         addLang("itemGroup", "tool", "ElakeTech - Tool", "洱海科技 - 工具");
-        addLang("itemGroup", "materials", "ElakeTech - Materials", "洱海科技 - 材料");
+        addLang("itemGroup", "materials", "ElakeTech - Material", "洱海科技 - 材料");
         addLang("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海科技 - 化学用具");
         addLang("itemGroup", "sundries", "ElakeTech - Sundries", "洱海科技 - 杂项");
         // 画

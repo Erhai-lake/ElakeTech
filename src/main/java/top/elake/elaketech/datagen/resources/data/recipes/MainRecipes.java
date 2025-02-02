@@ -9,7 +9,8 @@ import top.elake.elaketech.datagen.resources.data.recipes.shaped.WorkBench;
 import top.elake.elaketech.datagen.resources.data.recipes.shaped.tool.BronzeTool;
 import top.elake.elaketech.datagen.resources.data.recipes.shaped.tool.CommonTool;
 import top.elake.elaketech.datagen.resources.data.recipes.shaped.tool.FlintTool;
-import top.elake.elaketech.datagen.resources.data.recipes.shapeless.Materials;
+import top.elake.elaketech.datagen.resources.data.recipes.shapeless.CommonMaterial;
+import top.elake.elaketech.datagen.resources.data.recipes.stonecutting.Material;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -30,6 +31,8 @@ public class MainRecipes extends RecipeProvider {
         CommonTool.generateRecipes(output);
         WorkBench.generateRecipes(output);
         // Shapeless
-        Materials.generateRecipes(output);
+        CommonMaterial.generateRecipes(output);
+        // Stonecutting
+        Material.generateRecipes(output);
     }
 }
