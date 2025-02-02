@@ -827,5 +827,185 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2025-02-02 21:25:42 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
+    "criteria": {
+      "has_grass_fiber": "2025-02-02 22:07:29 +0800"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2025-02-02 22:20:46 +0800"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "apple": "2025-02-02 22:20:46 +0800"
+    },
+    "done": false
+  },
+  "minecraft:recipes/combat/leather_helmet": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_leggings": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_chestplate": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/conveyor_basic": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/leather_horse_armor": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/item_frame": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_boots": {
+    "criteria": {
+      "has_leather": "2025-02-02 22:24:43 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/flint/hatchet": {
+    "criteria": {
+      "has_flint": "2025-02-02 22:24:50 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/flint/hoe": {
+    "criteria": {
+      "has_flint": "2025-02-02 22:24:50 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/flint/sword": {
+    "criteria": {
+      "has_flint": "2025-02-02 22:24:50 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/flint/axe": {
+    "criteria": {
+      "has_flint": "2025-02-02 22:24:50 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/flint/pickaxe": {
+    "criteria": {
+      "has_flint": "2025-02-02 22:24:50 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/flint/shovel": {
+    "criteria": {
+      "has_flint": "2025-02-02 22:24:50 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/axe": {
+    "criteria": {
+      "has_bronze": "2025-02-02 22:25:04 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/shovel": {
+    "criteria": {
+      "has_bronze": "2025-02-02 22:25:04 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/hoe": {
+    "criteria": {
+      "has_bronze": "2025-02-02 22:25:04 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/pickaxe": {
+    "criteria": {
+      "has_bronze": "2025-02-02 22:25:04 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/sword": {
+    "criteria": {
+      "has_bronze": "2025-02-02 22:25:04 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

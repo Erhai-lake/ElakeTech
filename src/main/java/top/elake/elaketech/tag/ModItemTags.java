@@ -4,7 +4,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.core.registries.Registries;
 
 /**
  * @author Qi-Month
@@ -15,14 +14,14 @@ public class ModItemTags {
      *
      * @param tag 标签名
      */
-    private static TagKey<Item> getTag(String tag) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", tag));
+    private static TagKey<Item> getTag(String namespace, String tag) {
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
     public static class Items {
-        public static final TagKey<Item> FLINT = getTag("flint");
-        public static final TagKey<Item> INGOTS = getTag("ingots");
-        public static final TagKey<Item> BRONZE = getTag("ingots/bronze");
-        public static final TagKey<Item> GRAPHITE = getTag("ingots/graphite");
+        public static final TagKey<Item> FLINT = getTag("c", "flint");
+        public static final TagKey<Item> INGOTS = getTag("c", "ingots");
+        public static final TagKey<Item> BRONZE = getTag("c", "ingots/bronze");
+        public static final TagKey<Item> GRAPHITE = getTag("c", "ingots/graphite");
     }
 }

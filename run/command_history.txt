@@ -16,3 +16,4 @@
 /probejs enable
 /probejs disable
 /give Dev minecraft:crafting_table
+/kjs hand

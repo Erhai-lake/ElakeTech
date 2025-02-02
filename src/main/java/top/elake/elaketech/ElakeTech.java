@@ -9,6 +9,7 @@ import top.elake.elaketech.datagen.assets.model.ModItemModel;
 import top.elake.elaketech.datagen.assets.model.ModToolItemModel;
 import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.NoDiggingWood;
+import top.elake.elaketech.event.RightClickGetGrassFiber;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.block.ChemicalAppliancesBlock;
 import top.elake.elaketech.register.block.CommonBlock;
@@ -77,5 +78,7 @@ public class ElakeTech {
 
         // 非空手掘木
         NoDiggingWood.register(NeoForge.EVENT_BUS);
+        // 右键获取杂草
+        RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
     }
 }

@@ -37,7 +37,7 @@ public class NoDiggingWood {
         Player player = event.getEntity();
         ItemStack tool = player.getMainHandItem();
 
-        // 判断是否为#木头或#木板
+        // 判断是否为#木头或#木板以及工作台
         boolean isWoodOrPlank = blockState.is(BlockTags.LOGS) || blockState.is(BlockTags.PLANKS) || blockState.is(Blocks.CRAFTING_TABLE);
         // 判断玩家是否处于创造模式
         boolean isCreativeMode = player.getAbilities().instabuild;
