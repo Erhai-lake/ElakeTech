@@ -34,6 +34,7 @@ public class RightClickGetGrassFiber {
      */
     @SubscribeEvent
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        Player player = event.getEntity();
         Level level = event.getLevel();
         BlockPos blockPos = event.getPos();
         BlockState blockState = level.getBlockState(blockPos);
@@ -48,7 +49,7 @@ public class RightClickGetGrassFiber {
 
         if (isCanGetGrassFiber) {
             // 右键动画(草方块没有)
-            event.getEntity().swing(event.getHand(), true);
+            player.swing(event.getHand(), true);
 
             // 如果触发的对象不是草方块, 则替换为空气
             if (!blockState.is(Blocks.GRASS_BLOCK)) {
