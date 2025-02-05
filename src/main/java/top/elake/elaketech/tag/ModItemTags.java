@@ -10,7 +10,7 @@ import net.minecraft.world.item.Item;
  */
 public class ModItemTags {
     /**
-     * 定义定义Tags
+     * 定义Tags
      *
      * @param namespace 命名空间
      * @param tag       标签名
