@@ -23,8 +23,10 @@ public class ModBlockTagsGen extends BlockTagsProvider {
 
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
+        // 用铲子挖掘
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(CommonBlock.KAOLIN.get());
+        // 可获取杂草的方块
         this.tag(ModBlockTags.Blocks.GET_GRASS_FIBER)
                 .add(Blocks.GRASS_BLOCK)
                 .add(Blocks.SHORT_GRASS)

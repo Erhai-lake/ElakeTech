@@ -10,18 +10,20 @@ import net.minecraft.world.item.Item;
  */
 public class ModItemTags {
     /**
-     * 获取neoforge的tag
+     * 定义定义Tags
      *
-     * @param tag 标签名
+     * @param namespace 命名空间
+     * @param tag       标签名
      */
-    private static TagKey<Item> getTag(String namespace, String tag) {
+    public static TagKey<Item> createItemTag(String namespace, String tag) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
     public static class Items {
-        public static final TagKey<Item> FLINT = getTag("c", "flint");
-        public static final TagKey<Item> INGOTS = getTag("c", "ingots");
-        public static final TagKey<Item> BRONZE = getTag("c", "ingots/bronze");
-        public static final TagKey<Item> GRAPHITE = getTag("c", "ingots/graphite");
+        public static final TagKey<Item> FLINT = createItemTag("c", "flint");
+
+        public static final TagKey<Item> INGOTS = createItemTag("c", "ingots");
+        public static final TagKey<Item> BRONZE = createItemTag("c", "ingots/bronze");
+        public static final TagKey<Item> GRAPHITE = createItemTag("c", "ingots/graphite");
     }
 }

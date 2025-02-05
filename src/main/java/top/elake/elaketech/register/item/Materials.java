@@ -49,6 +49,7 @@ public class Materials {
      * 耐火黏土
      */
     public static final DeferredItem<Item> REFRACTORY_CLAY_BALL = Registers.registerItem("refractory_clay_ball", new Item.Properties());
+
     /**
      * 注册
      */
