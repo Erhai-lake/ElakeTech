@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  */
 @Mixin(FishingHook.class)
 public class OpenWaterFishingHook {
-    @Inject(method = {"isOpenWaterFishing", "calculateOpenWater"}, at = @At("RETURN"), cancellable = true)
+    @Inject(method = { "isOpenWaterFishing", "calculateOpenWater" }, at = @At("RETURN"), cancellable = true)
     public void openWater(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(true);
     }

@@ -11,15 +11,16 @@ import top.elake.elaketech.ElakeTech;
  */
 public class ModBlockTags {
     /**
-     * 获取neoforge的tag
+     * 定义定义Tags
      *
-     * @param tag 标签名
+     * @param namespace 命名空间
+     * @param tag       标签名
      */
-    private static TagKey<Block> getTag(String namespace, String tag) {
+    public static TagKey<Block> createBlockTag(String namespace, String tag) {
         return BlockTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
     public static class Blocks {
-        public static final TagKey<Block> GET_GRASS_FIBER = getTag(ElakeTech.MODID, "get_grass_fiber");
+        public static final TagKey<Block> GET_GRASS_FIBER = createBlockTag(ElakeTech.MODID, "get_grass_fiber");
     }
 }
