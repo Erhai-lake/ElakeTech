@@ -76,6 +76,12 @@ public class Common {
 
         // 化学用具
         addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");
+
+        // Tooltip
+        addLanguage("tooltip", "grass_fiber", "R-Click grass has a chance to obtain", "右键草有几率获得");
+
+        // JEI Info
+        addLanguage("jei.info", "grass_fiber", "R-Click grass has a chance to obtain", "右键草有几率获得");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

@@ -1,10 +1,12 @@
 package top.elake.elaketech.event;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
@@ -45,17 +47,24 @@ public class RightClickGetGrassFiber {
             return;
         }
 
+        // 只能空手
+        if (!player.getMainHandItem().isEmpty()) {
+            return;
+        }
+
         // 可以触发的方块
         boolean isCanGetGrassFiber = blockState.is(ModBlockTags.Blocks.GET_GRASS_FIBER);
 
         if (isCanGetGrassFiber) {
-            // 右键动画(草方块没有)
-            player.swing(event.getHand(), true);
-
-            // 如果触发的对象不是草方块, 则替换为空气
-            if (!blockState.is(Blocks.GRASS_BLOCK)) {
-                level.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
+            // 生成破坏粒子效果
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.levelEvent(2001, blockPos, Block.getId(blockState));
             }
+
+            // 替换成空气
+            level.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
+            // 右键动画
+            player.swing(event.getHand(), true);
 
             // 生成物品
             if (new Random().nextDouble() < 0.3) {

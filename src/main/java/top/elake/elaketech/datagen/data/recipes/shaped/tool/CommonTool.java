@@ -16,7 +16,7 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
 public class CommonTool {
     public static void generateRecipes(RecipeOutput fileOutput) {
         String common = "crafting/shaped/tool/";
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, IEItems.Tools.HAMMER)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, IEItems.Tools.HAMMER)
                 .pattern(" AB")
                 .pattern(" CA")
                 .pattern("C  ")

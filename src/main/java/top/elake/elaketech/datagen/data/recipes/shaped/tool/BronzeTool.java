@@ -18,7 +18,7 @@ public class BronzeTool {
     public static void generateRecipes(RecipeOutput fileOutput) {
         // 青铜
         String bronze = "crafting/shaped/tool/bronze/";
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Bronze.BRONZE_SWORD)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_SWORD)
                 .pattern("A")
                 .pattern("A")
                 .pattern("B")
@@ -27,7 +27,7 @@ public class BronzeTool {
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE))
                 .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "sword"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Bronze.BRONZE_PICKAXE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_PICKAXE)
                 .pattern("AAA")
                 .pattern(" B ")
                 .pattern(" B ")
@@ -36,7 +36,7 @@ public class BronzeTool {
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE))
                 .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "pickaxe"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Bronze.BRONZE_AXE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_AXE)
                 .pattern("AA")
                 .pattern("AB")
                 .pattern(" B")
@@ -45,7 +45,7 @@ public class BronzeTool {
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE))
                 .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "axe"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Bronze.BRONZE_SHOVEL)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_SHOVEL)
                 .pattern("A")
                 .pattern("B")
                 .pattern("B")
@@ -54,7 +54,7 @@ public class BronzeTool {
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE))
                 .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "shovel"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Bronze.BRONZE_HOE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_HOE)
                 .pattern("AA")
                 .pattern(" B")
                 .pattern(" B")

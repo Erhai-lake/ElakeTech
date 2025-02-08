@@ -11,6 +11,7 @@
 ## 随便写些文档
 
 ### 怎么自定义工具挖掘
+
 <details open>
 <summary>点击展开或收起</summary>
 
@@ -46,14 +47,14 @@ public static final TagKey<Block> NEEDS_CUSTOM_TOOL = TagKey
 
 ```java
 public static final TagKey<Block> NEEDS_CUSTOM_TOOL = TagKey
-        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeChemical.ModID, "needs_custom_tool"));
+        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeTech.ModID, "needs_custom_tool"));
 ```
 
 定义这个工具不能挖掘的方块
 
 ```java
 public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
-        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeChemical.ModID, "incorrect_for_custom_tool"));
+        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeTech.ModID, "incorrect_for_custom_tool"));
 ```
 
 然后新建`Tag`,目录在`src/main/resources/data/${modid}/tags/block`下
@@ -98,7 +99,7 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 这个的意思是,继承`minecraft:incorrect_for_diamond_tool`,但是从中去除了`elake_tech:needs_custom_tool`
 
 > [!NOTE]
-> 
+>
 > 定义了`Tier`的工具不可以单独设置耐久, `Tier`设置的耐久是多少那工具就是多少, 除非定义一个新的`Tier`不然耐久都是固定的耐久
 
 </details>
@@ -109,7 +110,8 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 <summary>点击展开或收起</summary>
 [如写](https://docs.neoforged.net/docs/resources/client/models/)
 
-```java
-@EventBusSubscriber(modid = ElakeChemical.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 ```
+@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+```
+
 </details>

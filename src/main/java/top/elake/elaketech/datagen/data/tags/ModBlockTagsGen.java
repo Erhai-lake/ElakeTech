@@ -28,7 +28,6 @@ public class ModBlockTagsGen extends BlockTagsProvider {
                 .add(CommonBlock.KAOLIN.get());
         // 可获取杂草的方块
         this.tag(ModBlockTags.Blocks.GET_GRASS_FIBER)
-                .add(Blocks.GRASS_BLOCK)
                 .add(Blocks.SHORT_GRASS)
                 .add(Blocks.TALL_GRASS);
     }

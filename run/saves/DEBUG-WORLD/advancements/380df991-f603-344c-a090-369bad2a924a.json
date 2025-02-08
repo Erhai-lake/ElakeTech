@@ -941,69 +941,51 @@
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/flint/hatchet": {
+  "minecraft:recipes/building_blocks/glass": {
     "criteria": {
-      "has_flint": "2025-02-02 22:24:50 +0800"
+      "has_smelts_to_glass": "2025-02-09 01:55:52 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/flint/hoe": {
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/sword": {
     "criteria": {
-      "has_flint": "2025-02-02 22:24:50 +0800"
+      "has_flint": "2025-02-09 01:55:57 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/flint/sword": {
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/hoe": {
     "criteria": {
-      "has_flint": "2025-02-02 22:24:50 +0800"
+      "has_flint": "2025-02-09 01:55:57 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/flint/axe": {
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/shovel": {
     "criteria": {
-      "has_flint": "2025-02-02 22:24:50 +0800"
+      "has_flint": "2025-02-09 01:55:57 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/flint/pickaxe": {
+  "minecraft:recipes/building_blocks/sandstone": {
     "criteria": {
-      "has_flint": "2025-02-02 22:24:50 +0800"
+      "has_sand": "2025-02-09 01:55:52 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/flint/shovel": {
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/pickaxe": {
     "criteria": {
-      "has_flint": "2025-02-02 22:24:50 +0800"
+      "has_flint": "2025-02-09 01:55:57 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/axe": {
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/axe": {
     "criteria": {
-      "has_bronze": "2025-02-02 22:25:04 +0800"
+      "has_flint": "2025-02-09 01:55:57 +0800"
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/shovel": {
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/hatchet": {
     "criteria": {
-      "has_bronze": "2025-02-02 22:25:04 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/hoe": {
-    "criteria": {
-      "has_bronze": "2025-02-02 22:25:04 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/pickaxe": {
-    "criteria": {
-      "has_bronze": "2025-02-02 22:25:04 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/crafting/shaped/tool/bronze/sword": {
-    "criteria": {
-      "has_bronze": "2025-02-02 22:25:04 +0800"
+      "has_flint": "2025-02-09 01:55:57 +0800"
     },
     "done": true
   },

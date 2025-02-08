@@ -3,6 +3,7 @@ package top.elake.elaketech;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
+import top.elake.elaketech.client.ModTooltip;
 import top.elake.elaketech.datagen.assets.model.ModBlockModel;
 import top.elake.elaketech.datagen.assets.model.ModBlockState;
 import top.elake.elaketech.datagen.assets.model.ModItemModel;
@@ -80,5 +81,7 @@ public class ElakeTech {
         NoDiggingWood.register(NeoForge.EVENT_BUS);
         // 右键获取杂草
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
+        // Tooltip
+        ModTooltip.register(NeoForge.EVENT_BUS);
     }
 }
