@@ -15,7 +15,7 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
  * @author Qi-Month
  */
 public class FlintTool {
-    public static void generateRecipes(RecipeOutput fileOutput) {
+    public static void generateRecipes(RecipeOutput output) {
         String flint = "crafting/shaped/tool/flint/";
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_SWORD)
                 .pattern(" A ")
@@ -25,7 +25,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "sword"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "sword"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_PICKAXE)
                 .pattern("ABA")
@@ -35,7 +35,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "pickaxe"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "pickaxe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_AXE)
                 .pattern("AB")
@@ -45,7 +45,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "axe"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "axe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_HATCHET)
                 .pattern("AB")
@@ -54,7 +54,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "hatchet"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "hatchet"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_SHOVEL)
                 .pattern("A")
@@ -64,7 +64,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "shovel"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "shovel"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_HOE)
                 .pattern("AB")
@@ -74,6 +74,6 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "hoe"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "hoe"));
     }
 }

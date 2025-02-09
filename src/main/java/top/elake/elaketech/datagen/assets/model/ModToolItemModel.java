@@ -38,7 +38,7 @@ public class ModToolItemModel {
 
     public static void addToolItemModel(String file, String... textures) {
         List<String> newList = new ArrayList<>();
-        newList.add("Item");
+        newList.add("Tool");
         newList.add(file);
         newList.addAll(Arrays.asList(textures));
         LIST.add(newList);

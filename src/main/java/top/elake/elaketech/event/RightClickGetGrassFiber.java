@@ -70,7 +70,7 @@ public class RightClickGetGrassFiber {
             if (new Random().nextDouble() < 0.3) {
                 BlockPos spawnPos = blockPos.above();
                 ItemStack itemStack = new ItemStack(Materials.GRASS_FIBER.get());
-                ItemEntity itemEntity = new ItemEntity(level, spawnPos.getX() + 0.5, spawnPos.getY() + 0.5, spawnPos.getZ() + 0.5, itemStack);
+                ItemEntity itemEntity = new ItemEntity(level, spawnPos.getX() + 0.5, spawnPos.getY() - 0.5, spawnPos.getZ() + 0.5, itemStack);
 
                 // 防止物品乱飞
                 itemEntity.setDeltaMovement(0, 0, 0);

@@ -165,7 +165,9 @@ idea {
         downloadJavadoc = true
     }
 }
-
+tasks.processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
 tasks.withType(JavaCompile).configureEach {
     options.encoding = "utf-8"
 }

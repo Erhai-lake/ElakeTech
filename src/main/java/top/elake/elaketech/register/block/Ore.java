@@ -13,6 +13,13 @@ import top.elake.elaketech.util.Registers;
  */
 public class Ore {
     /**
+     * 锡
+     */
+    public static final DeferredBlock<Block> TIN_ORE = Registers.registerBlock("tin_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)));
+    public static final DeferredBlock<Block> DEEPSLATE_TIN_ORE = Registers.registerBlock("deepslate_tin_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)));
+    /**
      * 石墨
      */
     public static final DeferredBlock<Block> GRAPHITE_ORE = Registers.registerBlock("graphite_ore",
@@ -31,6 +38,9 @@ public class Ore {
      * 注册
      */
     public static void register() {
+        // 锡
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("tin_ore", TIN_ORE, new Item.Properties()));
+        ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_tin_ore", DEEPSLATE_TIN_ORE, new Item.Properties()));
         // 石墨
         ModCreativeModeTab.addAll(Registers.registerBlockItem("graphite_ore", GRAPHITE_ORE, new Item.Properties()));
         ModCreativeModeTab.addAll(Registers.registerBlockItem("deepslate_graphite_ore", DEEPSLATE_GRAPHITE_ORE, new Item.Properties()));

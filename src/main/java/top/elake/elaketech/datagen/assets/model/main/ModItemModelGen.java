@@ -41,6 +41,12 @@ public class ModItemModelGen extends ItemModelProvider {
             case "BlockItem":
                 this.getBuilder(file).parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path[0])));
                 break;
+            case "Tool":
+                this.getBuilder(file).parent(new ModelFile.UncheckedModelFile("minecraft:item/handheld"));
+                for (int i = 0; i < path.length; i++) {
+                    this.getBuilder(file).texture("layer" + i, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, path[i]));
+                }
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + type);
         }

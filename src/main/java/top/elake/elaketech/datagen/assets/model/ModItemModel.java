@@ -47,6 +47,9 @@ public class ModItemModel {
         // 耐火粘土球
         addItemModel("Item", "refractory_clay_ball", "item/materials/refractory_clay_ball");
 
+        // 金属板
+        addItemModel("Item", "iron_plate", "item/materials/color/plate");
+
         // 化学用具
         // 石棉网
         addItemModel("Item", "asbestos_net", "item/chemical_appliances/asbestos_net");

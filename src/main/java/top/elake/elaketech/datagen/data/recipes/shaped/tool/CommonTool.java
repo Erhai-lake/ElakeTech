@@ -14,7 +14,7 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
  * @author Qi-Month
  */
 public class CommonTool {
-    public static void generateRecipes(RecipeOutput fileOutput) {
+    public static void generateRecipes(RecipeOutput output) {
         String common = "crafting/shaped/tool/";
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, IEItems.Tools.HAMMER)
                 .pattern(" AB")
@@ -24,6 +24,6 @@ public class CommonTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_copper_ingots", has(Tags.Items.INGOTS_COPPER))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "hammer"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "hammer"));
     }
 }

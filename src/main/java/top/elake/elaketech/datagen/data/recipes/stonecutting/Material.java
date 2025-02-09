@@ -14,11 +14,11 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
  * @author Qi-Month
  */
 public class Material {
-    public static void generateRecipes(RecipeOutput fileOutput) {
-        String materials = "crafting/stonecutting/materials/";
+    public static void generateRecipes(RecipeOutput output) {
+        String materials = "stonecutting/materials/";
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Materials.RAW_GRAPHITE), RecipeCategory.MISC, Materials.GRAPHITE_INGOT)
                 .unlockedBy("has_raw_graphite", has(Materials.RAW_GRAPHITE))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, materials + "graphite_ingot"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, materials + "graphite_ingot"));
     }
 }

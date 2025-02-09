@@ -15,10 +15,7 @@ import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.block.ChemicalAppliancesBlock;
 import top.elake.elaketech.register.block.CommonBlock;
 import top.elake.elaketech.register.block.Ore;
-import top.elake.elaketech.register.item.ChemicalAppliancesItem;
-import top.elake.elaketech.register.item.Elements;
-import top.elake.elaketech.register.item.Materials;
-import top.elake.elaketech.register.item.MetalIngot;
+import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.Bronze;
 import top.elake.elaketech.register.tool.Flint;
 import top.elake.elaketech.util.Registers;
@@ -45,6 +42,8 @@ public class ElakeTech {
         Elements.register();
         // 材料
         Materials.register();
+        // 金属板
+        MetalPlate.register();
         // 化学用具(方块)
         ChemicalAppliancesBlock.register();
         // 矿物
@@ -66,7 +65,7 @@ public class ElakeTech {
         Bronze.register();
 
         //数据生成器
-        // Common
+        // CommonBlastingMaterial
         Common.registers();
         // 物品模型
         ModItemModel.registers();
@@ -77,7 +76,7 @@ public class ElakeTech {
         // 方块状态
         ModBlockState.registers();
 
-        // 非空手掘木
+        // 非空手挖掘木头
         NoDiggingWood.register(NeoForge.EVENT_BUS);
         // 右键获取杂草
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);

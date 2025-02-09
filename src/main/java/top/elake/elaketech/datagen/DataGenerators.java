@@ -36,7 +36,7 @@ public class DataGenerators {
         // Block States
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModBlockStateGen>)
                 (output) -> new ModBlockStateGen(output, event.getExistingFileHelper()));
-        // Ore Generation
+        // OreBlasting Generation
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModWorldGen>)
                 (output) -> new ModWorldGen(output, event.getLookupProvider()));
         // Block Tags

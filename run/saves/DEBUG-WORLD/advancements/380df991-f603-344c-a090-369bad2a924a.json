@@ -809,12 +809,6 @@
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/stonecutting/materials/graphite_ingot": {
-    "criteria": {
-      "has_raw_graphite": "2025-02-02 19:39:17 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/quartz": {
     "criteria": {
       "has_nether_quartz_ore": "2025-02-02 19:39:26 +0800"
@@ -947,6 +941,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/sandstone": {
+    "criteria": {
+      "has_sand": "2025-02-09 01:55:52 +0800"
+    },
+    "done": true
+  },
   "elake_tech:recipes/tools/crafting/shaped/tool/flint/sword": {
     "criteria": {
       "has_flint": "2025-02-09 01:55:57 +0800"
@@ -965,12 +965,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/sandstone": {
-    "criteria": {
-      "has_sand": "2025-02-09 01:55:52 +0800"
-    },
-    "done": true
-  },
   "elake_tech:recipes/tools/crafting/shaped/tool/flint/pickaxe": {
     "criteria": {
       "has_flint": "2025-02-09 01:55:57 +0800"
@@ -986,6 +980,54 @@
   "elake_tech:recipes/tools/crafting/shaped/tool/flint/hatchet": {
     "criteria": {
       "has_flint": "2025-02-09 01:55:57 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shapeless/common/wet_refractory_brick": {
+    "criteria": {
+      "has_fire_clay": "2025-02-09 18:15:48 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/smelting/materials/smelting/refractory_brick": {
+    "criteria": {
+      "has_wet_refractory_brick": "2025-02-09 19:57:40 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/smelting/materials/blasting/refractory_brick": {
+    "criteria": {
+      "has_wet_refractory_brick": "2025-02-09 19:57:40 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/building_blocks/crafting/shaped/materials/refractory_bricks": {
+    "criteria": {
+      "has_fire_brick": "2025-02-09 20:08:05 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shapeless/common/refractory_clay_ball": {
+    "criteria": {
+      "has_clay_ball": "2025-02-09 20:32:45 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/radiator": {
+    "criteria": {
+      "has_water_bucket": "2025-02-09 20:33:03 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/cauldron": {
+    "criteria": {
+      "has_water_bucket": "2025-02-09 20:33:03 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/jerrycan": {
+    "criteria": {
+      "has_bucket": "2025-02-09 20:33:11 +0800"
     },
     "done": true
   },

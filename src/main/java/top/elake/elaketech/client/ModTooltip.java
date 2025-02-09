@@ -6,6 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Materials;
 
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class ModTooltip {
     }
 
     public static void initTooltips() {
-        addTooltip(Materials.GRASS_FIBER, "tooltip.elake_tech.grass_fiber");
+        addTooltip(Materials.WET_REFRACTORY_BRICK, "wet_refractory_brick");
     }
 
     /**
@@ -46,14 +47,14 @@ public class ModTooltip {
     }
 
     /**
-     * @param itme item
+     * @param itme  item
      * @param event Tooltip 事件
      */
     public static void addTooltipToItem(ItemStack itme, ItemTooltipEvent event) {
         Item item = itme.getItem();
         for (Map.Entry<Supplier<Item>, String> entry : TOOLTIP_MAP.entrySet()) {
             if (entry.getKey().get() == item) {
-                event.getToolTip().add(Component.translatable(entry.getValue()));
+                event.getToolTip().add(Component.translatable("tooltip." + ElakeTech.MODID + "." + entry.getValue()));
             }
         }
     }

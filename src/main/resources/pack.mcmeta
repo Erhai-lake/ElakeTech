@@ -1,6 +1,6 @@
-﻿{
+{
     "pack": {
-        "pack_format": 34,
-        "description": "Elake Tech Resources"
+        "description": "Elake Tech Resources",
+		"pack_format": 34
     }
 }

@@ -33,8 +33,8 @@ public class Common {
         addLanguage("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
         addLanguage("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");
         // 书
-        addLanguage(null, "patchouli.book.name", "EC Manual", "EC手册");
-        addLanguage(null, "patchouli.book.landing", "EC Complete Reference Guide", "EC完整参考指南");
+        addLanguage(null, "patchouli.book.name", "E-T Manual", "E-T手册");
+        addLanguage(null, "patchouli.book.landing", "E-T Complete Reference Guide", "E-T完整参考指南");
 
         // 材料
         addLanguage("item", "grass_fiber", "Grass Fiber", "草纤维");
@@ -47,6 +47,9 @@ public class Common {
         addLanguage("item", "refractory_brick", "Refractory Brick", "耐火砖");
         addLanguage("item", "refractory_clay_ball", "Refractory Clay Ball", "耐火黏土球");
         addLanguage("item", "wet_refractory_brick", "Wet Refractory Brick", "潮湿耐火砖");
+
+        // 金属板
+        addLanguage("item", "iron_plate", "Iron Plate", "铁板");
 
         // 工具
         addLanguage("item", "flint_sword", "Flint Sword", "燧石剑");
@@ -69,16 +72,16 @@ public class Common {
         addLanguage("block", "refractory_bricks", "Refractory Bricks", "耐火砖块");
 
         // 矿石
-        addLanguage("block", "graphite_ore", "Graphite Ore", "石墨矿石");
-        addLanguage("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
-        addLanguage("block", "quartz_ore", "Quartz Ore", "石英矿");
-        addLanguage("block", "deepslate_quartz_ore", "Deepslate Quartz Ore", "深层石英矿");
+        addLanguage("block", "graphite_ore", "Graphite OreBlasting", "石墨矿石");
+        addLanguage("block", "deepslate_graphite_ore", "Deepslate Graphite OreBlasting", "深层石墨矿石");
+        addLanguage("block", "quartz_ore", "Quartz OreBlasting", "石英矿");
+        addLanguage("block", "deepslate_quartz_ore", "Deepslate Quartz OreBlasting", "深层石英矿");
 
         // 化学用具
         addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");
 
         // Tooltip
-        addLanguage("tooltip", "grass_fiber", "R-Click grass has a chance to obtain", "右键草有几率获得");
+        addLanguage("tooltip", "wet_refractory_brick", "Pinch your", "捏捏你的");
 
         // JEI Info
         addLanguage("jei.info", "grass_fiber", "R-Click grass has a chance to obtain", "右键草有几率获得");

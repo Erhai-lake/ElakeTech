@@ -16,8 +16,9 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
  * @author Qi-Month
  */
 public class WorkBench {
-    public static void generateRecipes(RecipeOutput fileOutput) {
+    public static void generateRecipes(RecipeOutput output) {
         String workbench = "crafting/shaped/workbench/";
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CRAFTING_TABLE)
                 .pattern("AB")
                 .pattern("CC")
@@ -25,7 +26,7 @@ public class WorkBench {
                 .define('B', ItemTags.LOGS)
                 .define('C', ItemTags.PLANKS)
                 .unlockedBy("has_logs", has(ItemTags.LOGS))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, workbench + "crafting_table"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, workbench + "crafting_table"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.FURNACE)
                 .pattern("AAA")
@@ -35,6 +36,6 @@ public class WorkBench {
                 .define('B', Items.CLAY_BALL)
                 .define('C', Items.CLAY)
                 .unlockedBy("has_cobblestones", has(Tags.Items.COBBLESTONES))
-                .save(fileOutput, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, workbench + "furnace"));
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, workbench + "furnace"));
     }
 }
