@@ -28,12 +28,12 @@ public class Info implements IModPlugin {
     @Override
     public void registerRecipes(@NotNull IRecipeRegistration registry) {
         this.registry = registry;
-        addInfo(new ItemStack(Materials.GRASS_FIBER.get()), "jei.info.elake_tech.grass_fiber");
+        addInfo(new ItemStack(Materials.GRASS_FIBER.get()), "grass_fiber");
     }
 
     public void addInfo(ItemStack item, String key) {
         if (registry != null) {
-            registry.addIngredientInfo(item, VanillaTypes.ITEM_STACK, Component.translatable(key));
+            registry.addIngredientInfo(item, VanillaTypes.ITEM_STACK, Component.translatable("jei.info" + ElakeTech.MODID + "." + key));
         }
     }
 }

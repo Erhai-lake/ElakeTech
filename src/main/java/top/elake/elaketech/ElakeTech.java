@@ -43,7 +43,6 @@ public class ElakeTech {
         // 材料
         Materials.register();
         // 金属板
-        MetalPlate.register();
         // 化学用具(方块)
         ChemicalAppliancesBlock.register();
         // 矿物

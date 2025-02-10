@@ -49,7 +49,6 @@ public class Common {
         addLanguage("item", "wet_refractory_brick", "Wet Refractory Brick", "潮湿耐火砖");
 
         // 金属板
-        addLanguage("item", "iron_plate", "Iron Plate", "铁板");
 
         // 工具
         addLanguage("item", "flint_sword", "Flint Sword", "燧石剑");

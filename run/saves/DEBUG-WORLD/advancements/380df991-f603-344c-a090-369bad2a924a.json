@@ -1031,5 +1031,89 @@
     },
     "done": true
   },
+  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/axe": {
+    "criteria": {
+      "has_bronze": "2025-02-10 17:39:57 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/shovel": {
+    "criteria": {
+      "has_bronze": "2025-02-10 17:39:57 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/hoe": {
+    "criteria": {
+      "has_bronze": "2025-02-10 17:39:57 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/pickaxe": {
+    "criteria": {
+      "has_bronze": "2025-02-10 17:39:57 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/sword": {
+    "criteria": {
+      "has_bronze": "2025-02-10 17:39:57 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brick_wall": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/smoking/clinker_brick": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_stairs": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_slab_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_stairs_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/clinker_brick_sill": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_slab": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brick_wall_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/clinker_brick_quoin": {
+    "criteria": {
+      "has_bricks": "2025-02-10 19:48:18 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

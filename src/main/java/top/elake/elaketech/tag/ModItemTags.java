@@ -20,6 +20,7 @@ public class ModItemTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> CLAY_BALL = createItemTag("c", "clay_ball");
         public static final TagKey<Item> FLINT = createItemTag("c", "flint");
 
         public static final TagKey<Item> INGOTS = createItemTag("c", "ingots");

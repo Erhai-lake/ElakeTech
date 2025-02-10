@@ -9,7 +9,6 @@ import java.util.List;
 public class ModBlockModel {
     public static void registers() {
         // 锡矿
-        addBlockModels("tin_ore", "block/ore/tin/ore", "Block");
         // 石墨矿
         addBlockModels("graphite_ore", "block/ore/graphite/ore", "Block");
         // 深层石墨矿

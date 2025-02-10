@@ -48,7 +48,6 @@ public class ModItemModel {
         addItemModel("Item", "refractory_clay_ball", "item/materials/refractory_clay_ball");
 
         // 金属板
-        addItemModel("Item", "iron_plate", "item/materials/color/plate");
 
         // 化学用具
         // 石棉网

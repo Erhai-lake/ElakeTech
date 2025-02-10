@@ -10,6 +10,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -31,18 +32,21 @@ public class ModItemTagsGen extends ItemTagsProvider {
 
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
+        // 板砖
+        this.tag(Tags.Items.BRICKS)
+                .add(Items.BRICK)
+                .add(Materials.WET_REFRACTORY_BRICK.get())
+                .add(Materials.REFRACTORY_BRICK.get());
+        // 黏土球
+        this.tag(ModItemTags.Items.CLAY_BALL)
+                .add(Items.CLAY_BALL)
+                .add(Materials.REFRACTORY_CLAY_BALL.get());
         // 燧石
         this.tag(ModItemTags.Items.FLINT)
                 .add(Items.FLINT);
         // 为单个锭添加Tags
         this.tag(ModItemTags.Items.GRAPHITE)
                 .add(Materials.GRAPHITE_INGOT.get());
-        // 金属板
-        this.tag(ModItemTags.Items.PLATES)
-                .add(MetalPlate.IRON_PLATE.get());
-        // 铁板
-        this.tag(ModItemTags.Items.IRON_PLATE)
-                .add(MetalPlate.IRON_PLATE.get());
         // 为每个金属创建单独的IngotTags
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             TagKey<Item> ingotTag = TagKey.create(Registries.ITEM,
@@ -53,6 +57,7 @@ public class ModItemTagsGen extends ItemTagsProvider {
         // 创建通用的c:ingots, 引用所有单独的IngotTags
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             this.tag(ModItemTags.Items.INGOTS)
+                    .addTag(Tags.Items.BRICKS)
                     .addTag(TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "ingots/" + ingot.id())))
                     .add(Materials.GRAPHITE_INGOT.get());
         }
