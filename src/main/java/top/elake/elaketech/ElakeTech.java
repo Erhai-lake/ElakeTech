@@ -90,6 +90,8 @@ public class ElakeTech {
         Machine.ITEMS.register(event);
         ModBlockEntity.BLOCK_ENTITIES.register(event);
         ModMenuType.MENU_TYPES.register(event);
+
+        event.addListener(this::registerCapabilities);
     }
 
     private void registerCapabilities(RegisterCapabilitiesEvent event) {

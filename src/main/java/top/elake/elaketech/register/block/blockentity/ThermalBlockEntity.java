@@ -149,7 +149,6 @@ public class ThermalBlockEntity extends BlockEntity implements BlockEntityTicker
         if (stack.isEmpty()) {
             return 0;
         }
-
         if (stack.is(Blocks.COAL_BLOCK.asItem())) {
             return 16000;
         } else if (stack.is(Items.COAL)) {
