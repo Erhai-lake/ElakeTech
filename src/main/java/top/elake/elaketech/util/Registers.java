@@ -20,14 +20,14 @@ public class Registers {
     /**
      * Item
      */
-    private static final DeferredRegister.Items ITEMS = DeferredRegister
-            .createItems(ElakeTech.MODID);
+    private static final DeferredRegister.Items ITEMS =
+            DeferredRegister.createItems(ElakeTech.MODID);
 
     /**
      * Block
      */
-    private static final DeferredRegister.Blocks BLOCKS = DeferredRegister
-            .createBlocks(ElakeTech.MODID);
+    private static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(ElakeTech.MODID);
 
     /**
      * 注册物品
@@ -91,11 +91,16 @@ public class Registers {
      */
     public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
         return switch (type) {
-            case "Sword" -> ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Pickaxe" -> ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Axe" -> ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Shovel" -> ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Hoe" -> ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+            case "Sword" ->
+                    ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+            case "Pickaxe" ->
+                    ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+            case "Axe" ->
+                    ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+            case "Shovel" ->
+                    ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+            case "Hoe" ->
+                    ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
             default -> throw new IllegalArgumentException("Error Type");
         };
     }

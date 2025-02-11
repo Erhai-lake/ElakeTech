@@ -23,6 +23,8 @@ public class ModBlockTagsGen extends BlockTagsProvider {
 
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
+        // 用镐子挖
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         // 用铲子挖掘
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(CommonBlock.KAOLIN.get());

@@ -1115,5 +1115,53 @@
     },
     "done": true
   },
+  "elake_tech:main/main": {
+    "criteria": {
+      "entered_overworld": "2025-02-10 20:36:18 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/strip_lv": {
+    "criteria": {
+      "has_copper_coil": "2025-02-12 02:24:35 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/coil_lv": {
+    "criteria": {
+      "has_wirecoil_copper": "2025-02-12 02:24:35 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/breaker_switch": {
+    "criteria": {
+      "has_wirecoil_copper": "2025-02-12 02:24:35 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/wirecoil_copper_ins": {
+    "criteria": {
+      "has_item": "2025-02-12 02:24:35 +0800"
+    },
+    "done": true
+  },
+  "immersiveengineering:main/connect_wire": {
+    "criteria": {
+      "code_trigger": "2025-02-12 02:24:58 +0800"
+    },
+    "done": true
+  },
+  "mekanism:root": {
+    "criteria": {
+      "automatic": "2025-02-12 02:28:44 +0800"
+    },
+    "done": true
+  },
+  "mekanism:configurator": {
+    "criteria": {
+      "configurator": "2025-02-12 02:31:03 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

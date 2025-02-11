@@ -57,6 +57,13 @@
     "entity": true,
     "entity_variant": true
   },
+  "mekanism": {
+    "chemical": true,
+    "remove_builtin": true,
+    "fluid": true,
+    "energy": true,
+    "tooltip_renderer": true
+  },
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,

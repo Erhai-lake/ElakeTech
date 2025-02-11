@@ -22,6 +22,10 @@ public class Common {
             addLanguage("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
         }
 
+        // 进度
+        addLanguage("advancements", "main.root.description", "Welcome to the Elake Tech", "欢迎来到洱海科技");
+        addLanguage("advancements", "main.root.title", "Elake Tech", "洱海科技");
+
         // 标签页
         addLanguage("itemGroup", "all", "ElakeTech - All", "洱海科技 - 全部");
         addLanguage("itemGroup", "element", "ElakeTech - Elements", "洱海科技 - 元素");

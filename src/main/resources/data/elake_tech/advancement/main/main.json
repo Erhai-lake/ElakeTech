@@ -1,0 +1,31 @@
+{
+    "criteria": {
+        "entered_overworld": {
+            "conditions": {
+                "to": "minecraft:overworld"
+            },
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "announce_to_chat": false,
+        "background": "elake_tech:textures/gui/advancements/main.png",
+        "description": {
+            "translate": "advancements.elake_tech.main.root.description"
+        },
+        "icon": {
+            "count": 1,
+            "id": "elake_tech:flint_pickaxe"
+        },
+        "show_toast": false,
+        "title": {
+            "translate": "advancements.elake_tech.main.root.title"
+        }
+    },
+    "requirements": [
+        [
+            "entered_overworld"
+        ]
+    ],
+    "sends_telemetry_event": true
+}

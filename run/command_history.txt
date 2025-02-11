@@ -17,3 +17,4 @@
 /probejs disable
 /give Dev minecraft:crafting_table
 /kjs hand
+/give Dev elake_tech:thermal_power

@@ -2,6 +2,8 @@ package top.elake.elaketech;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import top.elake.elaketech.client.ModTooltip;
 import top.elake.elaketech.datagen.assets.model.ModBlockModel;
@@ -12,9 +14,9 @@ import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.NoDiggingWood;
 import top.elake.elaketech.event.RightClickGetGrassFiber;
 import top.elake.elaketech.register.ModCreativeModeTab;
-import top.elake.elaketech.register.block.ChemicalAppliancesBlock;
-import top.elake.elaketech.register.block.CommonBlock;
-import top.elake.elaketech.register.block.Ore;
+import top.elake.elaketech.register.ModMenuType;
+import top.elake.elaketech.register.block.*;
+import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.Bronze;
 import top.elake.elaketech.register.tool.Flint;
@@ -81,5 +83,20 @@ public class ElakeTech {
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
         // Tooltip
         ModTooltip.register(NeoForge.EVENT_BUS);
+
+
+        // test
+        Machine.BLOCKS.register(event);
+        Machine.ITEMS.register(event);
+        ModBlockEntity.BLOCK_ENTITIES.register(event);
+        ModMenuType.MENU_TYPES.register(event);
+    }
+
+    private void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(
+                Capabilities.EnergyStorage.BLOCK,
+                ModBlockEntity.THERMAL_POWER.get(),
+                ThermalBlockEntity::getEnergyStorage
+        );
     }
 }
