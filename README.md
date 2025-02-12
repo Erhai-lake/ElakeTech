@@ -115,3 +115,11 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 ```
 
 </details>
+
+## **致谢名单**
+
+* **神恩✘晓月**
+* **ฅ呜喵ฅ**
+* **Prizowo**
+* **啊哈**
+* **小胡闹**

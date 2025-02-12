@@ -1,5 +1,6 @@
 package top.elake.elaketech.client.menu;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -24,15 +25,16 @@ public class ThermalMenu extends AbstractContainerMenu {
         this.blockEntity = (ThermalBlockEntity) entity;
         this.data = data;
 
+
         addSlot(new SlotItemHandler(blockEntity.getItemHandler(), 0, 80, 35));
 
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 9; col++) {
+        for(int row = 0; row < 3; row++) {
+            for(int col = 0; col < 9; col++) {
                 addSlot(new Slot(inventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
             }
         }
 
-        for (int col = 0; col < 9; col++) {
+        for(int col = 0; col < 9; col++) {
             addSlot(new Slot(inventory, col, 8 + col * 18, 142));
         }
 
@@ -40,9 +42,25 @@ public class ThermalMenu extends AbstractContainerMenu {
     }
 
     public ThermalMenu(int containerId, Inventory inventory, FriendlyByteBuf extraData) {
-        this(containerId, inventory,
-                inventory.player.level().getBlockEntity(extraData.readBlockPos()),
-                new SimpleContainerData(4));
+        super(ModMenuType.THERMAL_MENU.get(), containerId);
+        BlockPos pos = extraData.readBlockPos();
+        BlockEntity entity = inventory.player.level().getBlockEntity(pos);
+        this.blockEntity = (ThermalBlockEntity) entity;
+        this.data = ((ThermalBlockEntity) entity).getContainerData();
+
+        addSlot(new SlotItemHandler(blockEntity.getItemHandler(), 0, 80, 35));
+
+        for(int row = 0; row < 3; row++) {
+            for(int col = 0; col < 9; col++) {
+                addSlot(new Slot(inventory, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
+            }
+        }
+
+        for(int col = 0; col < 9; col++) {
+            addSlot(new Slot(inventory, col, 8 + col * 18, 142));
+        }
+
+        addDataSlots(data);
     }
 
     @Override

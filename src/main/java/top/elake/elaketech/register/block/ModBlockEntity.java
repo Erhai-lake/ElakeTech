@@ -16,7 +16,7 @@ public class ModBlockEntity {
             DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, ElakeTech.MODID);
 
     public static final Supplier<BlockEntityType<ThermalBlockEntity>> THERMAL_POWER = BLOCK_ENTITIES.register("thermal",
-            () -> BlockEntityType.Builder.<ThermalBlockEntity>of(
+            () -> BlockEntityType.Builder.of(
                     (pos, state) -> new ThermalBlockEntity(ModBlockEntity.THERMAL_POWER.get(), pos, state),
                     Machine.THERMAL_POWER.get()
             ).build(null));

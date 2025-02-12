@@ -26,13 +26,11 @@ public record OpenGeneratorScreenPacket(BlockPos pos) implements CustomPacketPay
     public static final Type<OpenGeneratorScreenPacket> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, "open_generator_screen"));
 
     public static final StreamCodec<FriendlyByteBuf, OpenGeneratorScreenPacket> STREAM_CODEC = StreamCodec.composite(
-            StreamCodec.of(
-                    (buf, pos) -> {
+            StreamCodec.of((buf, pos) -> {
                         buf.writeInt(pos.getX());
                         buf.writeInt(pos.getY());
                         buf.writeInt(pos.getZ());
-                    },
-                    buf -> new BlockPos(buf.readInt(), buf.readInt(), buf.readInt())
+                    }, (buf) -> new BlockPos(buf.readInt(), buf.readInt(), buf.readInt())
             ),
             OpenGeneratorScreenPacket::pos,
             OpenGeneratorScreenPacket::new
@@ -46,7 +44,7 @@ public record OpenGeneratorScreenPacket(BlockPos pos) implements CustomPacketPay
                     MenuProvider containerProvider = new MenuProvider() {
                         @Override
                         public @NotNull Component getDisplayName() {
-                            return Component.translatable("screen." + ElakeTech.MODID + ".thermal");
+                            return Component.translatable("gui." + ElakeTech.MODID + ".thermal");
                         }
 
                         @Override
