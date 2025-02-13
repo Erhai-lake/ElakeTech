@@ -24,7 +24,6 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import top.elake.elaketech.network.OpenGeneratorScreenPacket;
-import top.elake.elaketech.register.block.Machine;
 import top.elake.elaketech.register.block.ModBlockEntity;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 
@@ -95,8 +94,8 @@ public class RegistersThermalBlockEntity extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
         return type == ModBlockEntity.THERMAL_POWER.get() ?
-                (level1, pos, state1, blockEntity) -> ((ThermalBlockEntity) blockEntity).tick(level1, pos, state1, (ThermalBlockEntity) blockEntity) :
-                null;
+                (level1, pos, state1, blockEntity) -> ((ThermalBlockEntity) blockEntity)
+                        .tick(level1, pos, state1, (ThermalBlockEntity) blockEntity) : null;
     }
 
     @Override

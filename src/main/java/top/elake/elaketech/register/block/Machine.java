@@ -4,6 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -25,7 +26,7 @@ public class Machine {
 
     public static final Supplier<Block> THERMAL_POWER = BLOCKS.register("thermal_power",
             () -> new RegistersThermalBlockEntity(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.METAL)
+                    .sound(SoundType.LANTERN)
                     .strength(3.0f)
                     .requiresCorrectToolForDrops()));
 

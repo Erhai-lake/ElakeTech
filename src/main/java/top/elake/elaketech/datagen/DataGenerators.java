@@ -11,7 +11,7 @@ import top.elake.elaketech.datagen.assets.model.main.ModBlockStateGen;
 import top.elake.elaketech.datagen.assets.model.main.ModItemModelGen;
 import top.elake.elaketech.datagen.assets.translation.language.ZH;
 import top.elake.elaketech.datagen.assets.translation.language.EN;
-import top.elake.elaketech.datagen.data.recipes.MainRecipes;
+import top.elake.elaketech.datagen.data.recipes.ModRecipesGen;
 import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
 import top.elake.elaketech.datagen.data.tags.ModItemTagsGen;
 import top.elake.elaketech.datagen.data.worldgen.ore.ModWorldGen;
@@ -46,7 +46,7 @@ public class DataGenerators {
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
                 (output) -> new ModItemTagsGen(output, event.getLookupProvider(), blockTagsProvider.contentsGetter(), event.getExistingFileHelper()));
         // MainRecipes
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<MainRecipes>)
-                (output) -> new MainRecipes(output, event.getLookupProvider()));
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModRecipesGen>)
+                (output) -> new ModRecipesGen(output, event.getLookupProvider()));
     }
 }
