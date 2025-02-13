@@ -39,7 +39,7 @@ public class Bronze {
             6F,
             1,
             0,
-            () -> Ingredient.of(ModItemTags.Items.BRONZE)
+            () -> Ingredient.of(ModItemTags.Items.BRONZE_INGOT)
     );
 
     /**

@@ -17,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Materials;
 import top.elake.elaketech.register.item.MetalIngot;
-import top.elake.elaketech.register.item.MetalPlate;
 import top.elake.elaketech.tag.ModItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -45,7 +44,7 @@ public class ModItemTagsGen extends ItemTagsProvider {
         this.tag(ModItemTags.Items.FLINT)
                 .add(Items.FLINT);
         // 为单个锭添加Tags
-        this.tag(ModItemTags.Items.GRAPHITE)
+        this.tag(ModItemTags.Items.GRAPHITE_INGOT)
                 .add(Materials.GRAPHITE_INGOT.get());
         // 为每个金属创建单独的IngotTags
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {

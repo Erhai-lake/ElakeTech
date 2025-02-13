@@ -33,7 +33,7 @@ public class Info implements IModPlugin {
 
     public void addInfo(ItemStack item, String key) {
         if (registry != null) {
-            registry.addIngredientInfo(item, VanillaTypes.ITEM_STACK, Component.translatable("jei.info" + ElakeTech.MODID + "." + key));
+            registry.addIngredientInfo(item, VanillaTypes.ITEM_STACK, Component.translatable("jei.info." + ElakeTech.MODID + "." + key));
         }
     }
 }

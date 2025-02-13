@@ -24,8 +24,9 @@ public class ModItemTags {
         public static final TagKey<Item> FLINT = createItemTag("c", "flint");
 
         public static final TagKey<Item> INGOTS = createItemTag("c", "ingots");
-        public static final TagKey<Item> BRONZE = createItemTag("c", "ingots/bronze");
-        public static final TagKey<Item> GRAPHITE = createItemTag("c", "ingots/graphite");
+        public static final TagKey<Item> TIN_INGOT = createItemTag("c", "ingots/tin");
+        public static final TagKey<Item> BRONZE_INGOT = createItemTag("c", "ingots/bronze");
+        public static final TagKey<Item> GRAPHITE_INGOT = createItemTag("c", "ingots/graphite");
 
         public static final TagKey<Item> PLATES = createItemTag("c", "plates");
         public static final TagKey<Item> IRON_PLATE = createItemTag("c", "plates/iron");

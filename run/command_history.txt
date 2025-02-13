@@ -21,3 +21,4 @@
 /time set midnight
 /difficulty -
 /difficulty peaceful
+/give Dev elake_tech:tin_ingot

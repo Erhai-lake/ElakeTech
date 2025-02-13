@@ -2,6 +2,7 @@ package top.elake.elaketech.datagen.assets.model;
 
 import top.elake.elaketech.register.item.Elements;
 import top.elake.elaketech.register.item.MetalIngot;
+import top.elake.elaketech.register.item.MetalOreItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,11 @@ public class ModItemModel {
         // 金属锭
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             addItemModel("Item", ingot.id() + "_ingot", "item/materials/color/ingot");
+        }
+
+        // 粗矿
+        for (MetalOreItem.RawMetalOreItem ore : MetalOreItem.RAW_ORE_ITEM_GROUP) {
+            addItemModel("Item", "raw_" + ore.id(), "item/materials/color/raw_ore");
         }
         // 书
         addItemModel("Item", "book", "item/book");

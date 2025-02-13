@@ -2,25 +2,18 @@ package top.elake.elaketech;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.capabilities.*;
 import net.neoforged.neoforge.common.NeoForge;
 import top.elake.elaketech.client.ModTooltip;
-import top.elake.elaketech.datagen.assets.model.ModBlockModel;
-import top.elake.elaketech.datagen.assets.model.ModBlockState;
-import top.elake.elaketech.datagen.assets.model.ModItemModel;
-import top.elake.elaketech.datagen.assets.model.ModToolItemModel;
+import top.elake.elaketech.datagen.assets.model.*;
 import top.elake.elaketech.datagen.assets.translation.Common;
-import top.elake.elaketech.event.NoDiggingWood;
-import top.elake.elaketech.event.RightClickGetGrassFiber;
+import top.elake.elaketech.event.*;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.ModMenuType;
 import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
-import top.elake.elaketech.register.tool.Bronze;
-import top.elake.elaketech.register.tool.Flint;
-import top.elake.elaketech.register.tool.Stone;
+import top.elake.elaketech.register.tool.*;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -45,6 +38,8 @@ public class ElakeTech {
         Elements.register();
         // 材料
         Materials.register();
+        // 粗矿
+        MetalOreItem.register();
         // 金属板
         // 化学用具(方块)
         ChemicalAppliancesBlock.register();
