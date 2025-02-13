@@ -115,8 +115,8 @@ dependencies {
     implementation("curse.maven:probejs-585406:${probejs_file_id}")
     // GeckoLib
     implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
-    // Immersive Engineering
-    implementation("curse.maven:immersive-engineering-231951:${ie_file_id}")
+    // ZeroCore2
+    implementation("curse.maven:zerocore2-247921:${zerocore2_file_id}")
     // Patchouli
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")

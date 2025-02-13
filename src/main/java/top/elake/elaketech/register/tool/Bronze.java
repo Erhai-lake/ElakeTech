@@ -26,6 +26,8 @@ public class Bronze {
         ModCreativeModeTab.addTools(BRONZE_SHOVEL);
         // 锄
         ModCreativeModeTab.addTools(BRONZE_HOE);
+        // 锤
+        ModCreativeModeTab.addTools(BRONZE_HAMMER);
     }
 
     /**
@@ -43,30 +45,36 @@ public class Bronze {
     /**
      * 剑
      */
-    public static final DeferredItem<Item> BRONZE_SWORD = Registers.registerTool("bronze_sword", "Sword", BRONZE_TIER, new Item.Properties()
+    public static final DeferredItem<Item> BRONZE_SWORD = Registers.registerTool("bronze_sword", "sword", BRONZE_TIER, new Item.Properties()
             .attributes(SwordItem.createAttributes(BRONZE_TIER, 3, -2.4f)), 0);
 
     /**
      * 镐
      */
-    public static final DeferredItem<Item> BRONZE_PICKAXE = Registers.registerTool("bronze_pickaxe", "Pickaxe", BRONZE_TIER, new Item.Properties()
+    public static final DeferredItem<Item> BRONZE_PICKAXE = Registers.registerTool("bronze_pickaxe", "pickaxe", BRONZE_TIER, new Item.Properties()
             .attributes(PickaxeItem.createAttributes(BRONZE_TIER, 1, -2.8f)), 0);
 
     /**
      * 斧
      */
-    public static final DeferredItem<Item> BRONZE_AXE = Registers.registerTool("bronze_axe", "Axe", BRONZE_TIER, new Item.Properties()
+    public static final DeferredItem<Item> BRONZE_AXE = Registers.registerTool("bronze_axe", "axe", BRONZE_TIER, new Item.Properties()
             .attributes(AxeItem.createAttributes(BRONZE_TIER, 1, -2)), 0);
 
     /**
      * 锹
      */
-    public static final DeferredItem<Item> BRONZE_SHOVEL = Registers.registerTool("bronze_shovel", "Shovel", BRONZE_TIER, new Item.Properties()
+    public static final DeferredItem<Item> BRONZE_SHOVEL = Registers.registerTool("bronze_shovel", "shovel", BRONZE_TIER, new Item.Properties()
             .attributes(HoeItem.createAttributes(BRONZE_TIER, 1, -2)), 0);
 
     /**
      * 锄
      */
-    public static final DeferredItem<Item> BRONZE_HOE = Registers.registerTool("bronze_hoe", "Hoe", BRONZE_TIER, new Item.Properties()
+    public static final DeferredItem<Item> BRONZE_HOE = Registers.registerTool("bronze_hoe", "hoe", BRONZE_TIER, new Item.Properties()
             .attributes(HoeItem.createAttributes(BRONZE_TIER, 1, -2)), 0);
+
+    /**
+     * 锤
+     */
+    public static final DeferredItem<Item> BRONZE_HAMMER = Registers.registerTool("bronze_hammer", "pickaxe", BRONZE_TIER, new Item.Properties()
+            .attributes(PickaxeItem.createAttributes(BRONZE_TIER, 1, -2)), 0);
 }

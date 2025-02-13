@@ -91,15 +91,15 @@ public class Registers {
      */
     public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
         return switch (type) {
-            case "Sword" ->
+            case "sword" ->
                     ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Pickaxe" ->
+            case "pickaxe" ->
                     ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Axe" ->
+            case "axe" ->
                     ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Shovel" ->
+            case "shovel" ->
                     ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "Hoe" ->
+            case "hoe" ->
                     ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
             default -> throw new IllegalArgumentException("Error Type");
         };

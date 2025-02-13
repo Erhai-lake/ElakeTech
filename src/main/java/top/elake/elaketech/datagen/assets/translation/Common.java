@@ -55,6 +55,8 @@ public class Common {
         // 金属板
 
         // 工具
+        addLanguage("item", "stone_hammer", "Stone Hammer", "石锤");
+
         addLanguage("item", "flint_sword", "Flint Sword", "燧石剑");
         addLanguage("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
         addLanguage("item", "flint_axe", "Flint Axe", "燧石斧");
@@ -67,6 +69,7 @@ public class Common {
         addLanguage("item", "bronze_axe", "Bronze Axe", "青铜斧");
         addLanguage("item", "bronze_shovel", "Bronze Shovel", "青铜锹");
         addLanguage("item", "bronze_hoe", "Bronze Hoe", "青铜锄");
+        addLanguage("item", "bronze_hammer", "Bronze Hammer", "青铜锤");
 
         //方块
         addLanguage("block", "alcohol_lamp", "Alcohol Lamp", "酒精灯");

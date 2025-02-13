@@ -16,7 +16,6 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
  */
 public class BronzeTool {
     public static void generateRecipes(RecipeOutput output) {
-        // 青铜
         String bronze = "crafting/shaped/tool/bronze/";
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_SWORD)
                 .pattern("A")

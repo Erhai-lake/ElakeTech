@@ -20,6 +20,7 @@ import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.Bronze;
 import top.elake.elaketech.register.tool.Flint;
+import top.elake.elaketech.register.tool.Stone;
 import top.elake.elaketech.util.Registers;
 
 /**
@@ -64,6 +65,8 @@ public class ElakeTech {
         Flint.register();
         // 青铜工具
         Bronze.register();
+        // 石头工具
+        Stone.register();
 
         //数据生成器
         // CommonBlastingMaterial
