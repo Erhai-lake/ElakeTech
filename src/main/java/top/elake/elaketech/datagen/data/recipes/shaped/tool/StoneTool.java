@@ -1,29 +1,30 @@
 package top.elake.elaketech.datagen.data.recipes.shaped.tool;
 
-import blusunrize.immersiveengineering.common.register.IEItems;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
+import top.elake.elaketech.register.tool.Stone;
+import top.elake.elaketech.tag.ModItemTags;
 
 import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
 
 /**
  * @author Qi-Month
  */
-public class CommonTool {
+public class StoneTool {
     public static void generateRecipes(RecipeOutput output) {
-        String common = "crafting/shaped/tool/";
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, IEItems.Tools.HAMMER)
-                .pattern(" AB")
-                .pattern(" CA")
-                .pattern("C  ")
-                .define('A', Tags.Items.INGOTS_COPPER)
+        String stone = "crafting/shaped/tool/stone/";
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Stone.STONE_HAMMER)
+                .pattern("AAA")
+                .pattern("BCB")
+                .pattern(" C ")
+                .define('A', Tags.Items.COBBLESTONES)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_copper_ingots", has(Tags.Items.INGOTS_COPPER))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "hammer"));
+                .unlockedBy("has_cobblestone", has(Tags.Items.COBBLESTONES))
+                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, stone + "sword"));
     }
 }

@@ -9,6 +9,8 @@ import java.util.List;
  */
 public class ModToolItemModel {
     public static void registers() {
+        // 石锤
+        addToolItemModel("stone_hammer", "item/tool/color/hammer/head", "item/tool/color/hammer/handle");
         // 燧石剑
         addToolItemModel("flint_sword", "item/tool/flint/sword");
         // 燧石镐
@@ -32,6 +34,8 @@ public class ModToolItemModel {
         addToolItemModel("bronze_shovel", "item/tool/color/shovel/head", "item/tool/color/shovel/handle");
         // 青铜锄头
         addToolItemModel("bronze_hoe", "item/tool/color/hoe/head", "item/tool/color/hoe/handle");
+        // 青铜锤子
+        addToolItemModel("bronze_hammer", "item/tool/color/hammer/head", "item/tool/color/hammer/handle");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();
