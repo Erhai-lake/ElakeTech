@@ -3,7 +3,8 @@ package top.elake.elaketech.datagen.assets.translation;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Elements;
 import top.elake.elaketech.register.item.MetalIngot;
-import top.elake.elaketech.register.item.MetalOreItem;
+import top.elake.elaketech.register.item.OreItem;
+import top.elake.elaketech.register.item.PlateItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +24,13 @@ public class Common {
             addLanguage("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
         }
 
+        // 板材
+        for (PlateItem.PlateItems plate : PlateItem.PLATE_ITEM_GROUP) {
+            addLanguage("item", plate.id() + "_plate", plate.en() + " Plate", plate.cn() + "板");
+        }
+
         // 粗矿
-        for (MetalOreItem.RawMetalOreItem ore : MetalOreItem.RAW_ORE_ITEM_GROUP) {
+        for (OreItem.RawOreItem ore : OreItem.RAW_ORE_ITEM_GROUP) {
             addLanguage("item", "raw_" + ore.id(), "Raw " + ore.en(), "粗" + ore.cn());
         }
 

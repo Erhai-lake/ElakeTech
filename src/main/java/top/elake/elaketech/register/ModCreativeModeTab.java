@@ -18,6 +18,8 @@ import java.util.function.Supplier;
  * @author Erhai-lake
  */
 public class ModCreativeModeTab {
+    public static final String IG = "itemGroup.";
+
     /**
      * 全部
      */
@@ -39,7 +41,7 @@ public class ModCreativeModeTab {
      */
     public static final List<DeferredItem<? extends Item>> REGISTERED_MATERIALS = new ArrayList<>();
     /**
-     *化学用具
+     * 化学用具
      */
     public static final List<DeferredItem<? extends Item>> REGISTERED_CHEMICAL_APPLIANCES = new ArrayList<>();
     /**
@@ -52,7 +54,7 @@ public class ModCreativeModeTab {
      */
     private static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + ElakeTech.MODID + ".all"))
+                    .title(Component.translatable(IG + ElakeTech.MODID + ".all"))
                     .icon(() -> new ItemStack(REGISTERED_ALL.get(0).asItem()))
                     .displayItems((params, output) -> REGISTERED_ALL.forEach(output::accept))
                     .build()
@@ -62,7 +64,7 @@ public class ModCreativeModeTab {
      */
     private static final Supplier<CreativeModeTab> ELEMENT = CREATIVE_MODE_TABS.register("element",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + ElakeTech.MODID + ".element"))
+                    .title(Component.translatable(IG + ElakeTech.MODID + ".element"))
                     .icon(() -> new ItemStack(REGISTERED_ELEMENTS.get(0).asItem()))
                     .displayItems((params, output) -> REGISTERED_ELEMENTS.forEach(output::accept))
                     .build()
@@ -72,7 +74,7 @@ public class ModCreativeModeTab {
      */
     private static final Supplier<CreativeModeTab> TOOL = CREATIVE_MODE_TABS.register("tool",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + ElakeTech.MODID + ".tool"))
+                    .title(Component.translatable(IG + ElakeTech.MODID + ".tool"))
                     .icon(() -> new ItemStack(REGISTERED_TOOLS.get(0).asItem()))
                     .displayItems((params, output) -> REGISTERED_TOOLS.forEach(output::accept))
                     .build()
@@ -82,7 +84,7 @@ public class ModCreativeModeTab {
      */
     private static final Supplier<CreativeModeTab> MATERIALS = CREATIVE_MODE_TABS.register("materials",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + ElakeTech.MODID + ".sundries"))
+                    .title(Component.translatable(IG + ElakeTech.MODID + ".sundries"))
                     .icon(() -> new ItemStack(REGISTERED_MATERIALS.get(0).asItem()))
                     .displayItems((params, output) -> REGISTERED_MATERIALS.forEach(output::accept))
                     .build()
@@ -92,7 +94,7 @@ public class ModCreativeModeTab {
      */
     private static final Supplier<CreativeModeTab> CHEMICAL_APPLIANCES = CREATIVE_MODE_TABS.register("chemical_appliances",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + ElakeTech.MODID + ".chemical_appliances"))
+                    .title(Component.translatable(IG + ElakeTech.MODID + ".chemical_appliances"))
                     .icon(() -> new ItemStack(REGISTERED_CHEMICAL_APPLIANCES.get(0).asItem()))
                     .displayItems((params, output) -> REGISTERED_CHEMICAL_APPLIANCES.forEach(output::accept))
                     .build()
@@ -150,9 +152,9 @@ public class ModCreativeModeTab {
     /**
      * 注册
      *
-     * @param eventBus 事件总线
+     * @param event 事件总线
      */
-    public static void register(IEventBus eventBus) {
-        CREATIVE_MODE_TABS.register(eventBus);
+    public static void register(IEventBus event) {
+        CREATIVE_MODE_TABS.register(event);
     }
 }

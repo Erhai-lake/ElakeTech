@@ -11,12 +11,12 @@ import java.util.List;
 /**
  * @author Qi-Month
  */
-public class MetalOreItem {
+public class PlateItem {
     /**
      * 注册
      */
     public static void register() {
-        addMetalOreItem("tin", "Tin", "锡", 0xFFF5F5F5);
+        addPlateItem("tin", "Tin", "锡", 0xFFF5F5F5);
     }
 
     /**
@@ -27,14 +27,14 @@ public class MetalOreItem {
      * @param cn    简体中文语言
      * @param color 颜色 颜色0*ARGB
      */
-    public static void addMetalOreItem(String id, String en, String cn, int color) {
-        DeferredItem<Item> item = Registers.registerItem("raw_" + id, new Item.Properties());
+    public static void addPlateItem(String id, String en, String cn, int color) {
+        DeferredItem<Item> item = Registers.registerItem(id + "_plate", new Item.Properties());
         ModCreativeModeTab.addMaterials(item);
-        RAW_ORE_ITEM_GROUP.add(new RawMetalOreItem(id, en, cn, item, color));
+        PLATE_ITEM_GROUP.add(new PlateItem.PlateItems(id, en, cn, item, color));
     }
 
-    public static final List<RawMetalOreItem> RAW_ORE_ITEM_GROUP = new ArrayList<>();
+    public static final List<PlateItem.PlateItems> PLATE_ITEM_GROUP = new ArrayList<>();
 
-    public record RawMetalOreItem(String id, String en, String cn, DeferredItem<Item> item, int color) {
+    public record PlateItems(String id, String en, String cn, DeferredItem<Item> item, int color) {
     }
 }

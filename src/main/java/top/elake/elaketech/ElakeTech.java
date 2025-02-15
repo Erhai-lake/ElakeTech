@@ -39,13 +39,16 @@ public class ElakeTech {
         // 材料
         Materials.register();
         // 粗矿
-        MetalOreItem.register();
+        OreItem.register();
+        // 金属锭
+        MetalIngot.register();
+        // 板材
+        PlateItem.register();
         // 金属板
         // 化学用具(方块)
         ChemicalAppliancesBlock.register();
         // 矿物
         Ore.register();
-        MetalIngot.register();
         // 方块
         CommonBlock.registers();
         // 化学工具(物品)
@@ -81,6 +84,8 @@ public class ElakeTech {
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
         // Tooltip
         ModTooltip.register(NeoForge.EVENT_BUS);
+        // 删除配方
+//        RemoveRecipes.register(NeoForge.EVENT_BUS);
 
 
         // test
@@ -93,10 +98,6 @@ public class ElakeTech {
     }
 
     private void registerCapabilities(RegisterCapabilitiesEvent event) {
-        event.registerBlockEntity(
-                Capabilities.EnergyStorage.BLOCK,
-                ModBlockEntity.THERMAL_POWER.get(),
-                ThermalBlockEntity::getEnergyStorage
-        );
+        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModBlockEntity.THERMAL_POWER.get(), ThermalBlockEntity::getEnergyStorage);
     }
 }
