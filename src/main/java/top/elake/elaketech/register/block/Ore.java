@@ -1,8 +1,12 @@
 package top.elake.elaketech.register.block;
 
+import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.builders.BlockBuilder;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.util.Registers;
@@ -12,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 import static net.minecraft.world.level.block.Block.Properties;
+import static top.elake.elaketech.ElakeTech.REGISTRATE;
 
 /**
  * 矿石注册类
@@ -33,7 +38,6 @@ public class Ore {
     public static final DeferredBlock<Block> DEEPSLATE_QUARTZ_ORE;
 
     private static final List<OreInfo> ORES = List.of(
-            // 后两个参数属于可选, 如果不写默认就是下面所定义的默认矿石
             new OreInfo("tin"),
             new OreInfo("graphite"),
             new OreInfo("quartz", Blocks.NETHER_QUARTZ_ORE, Blocks.NETHER_QUARTZ_ORE)
@@ -64,8 +68,29 @@ public class Ore {
         );
     }
 
-    private static DeferredBlock<Block> registerDeepslateOreBlock(String name, Block baseBlock) {
-        return Registers.registerBlock(getDeepslateOreName(name),
+
+    private static BlockEntry<Block> registerDeepslateOreBlock(String name, Block baseBlock, int color) {
+        BlockEntry<Block> registerDeepslateOreBlock =
+                REGISTRATE.block(name, Block::new)
+                        .blockstate((c, p) -> {
+                            p.getVariantBuilder(c.get())
+                                    .forAllStatesExcept((state) -> {
+                                        return ConfiguredModel.builder()
+                                                .modelFile(p.models()
+                                                        .withExistingParent("cube_all", p.modLoc("ore/deepslate_ore"))
+                                                        .texture("particle", p.modLoc("block/metal/ore"))
+                                                        .texture("0", p.modLoc("block/metal/ore"))
+                                                        .texture("1", p.modLoc("minecraft:block/deepslate")))
+                                                .build();
+                                    });
+                        })
+                        .simpleItem()
+                        .color(() -> () -> (state, world, pos, tintIndex) -> color)
+                        .register();
+        return registerDeepslateOreBlock;
+
+
+        Registers.registerBlock(getDeepslateOreName(name),
                 () -> new Block(Properties.ofFullCopy(baseBlock != null ? baseBlock : Blocks.DEEPSLATE_IRON_ORE))
         );
     }

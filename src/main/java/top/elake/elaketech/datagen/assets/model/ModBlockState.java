@@ -1,9 +1,8 @@
 package top.elake.elaketech.datagen.assets.model;
 
 import net.minecraft.world.level.block.Block;
-import top.elake.elaketech.register.TestBlock;
 import top.elake.elaketech.register.block.CommonBlock;
-import top.elake.elaketech.register.block.Ore;
+import top.elake.elaketech.register.block.OreRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,13 +14,13 @@ import java.util.function.Supplier;
 public class ModBlockState {
     public static void registers() {
         // 石墨矿
-        addBlockState("graphite_ore", Ore.GRAPHITE_ORE, "block/ore/graphite/ore");
+        addBlockState("graphite_ore", OreRegistry.GRAPHITE_ORE, "block/ore/graphite/ore");
         // 深层石墨矿
-        addBlockState("deepslate_graphite_ore", Ore.DEEPSLATE_GRAPHITE_ORE, "block/ore/graphite/deepslate");
+        addBlockState("deepslate_graphite_ore", OreRegistry.DEEPSLATE_GRAPHITE_ORE, "block/ore/graphite/deepslate");
         // 石英矿
-        addBlockState("quartz_ore", Ore.QUARTZ_ORE, "block/ore/quartz/ore");
+        addBlockState("quartz_ore", OreRegistry.QUARTZ_ORE, "block/ore/quartz/ore");
         // 深层石英矿
-        addBlockState("deepslate_quartz_ore", Ore.DEEPSLATE_QUARTZ_ORE, "block/ore/quartz/deepslate");
+        addBlockState("deepslate_quartz_ore", OreRegistry.DEEPSLATE_QUARTZ_ORE, "block/ore/quartz/deepslate");
         // 白云岩
         addBlockState("dolostone", CommonBlock.DOLOSTONE, "block/dolostone");
         // 高岭土

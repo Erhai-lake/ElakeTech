@@ -20,12 +20,11 @@ public class TestBlock {
                             return ConfiguredModel.builder()
                                     .modelFile(p.models()
                                             .withExistingParent("cube_all", p.modLoc("test_block"))
-                                            .texture("0", p.modLoc("metal/block")))
+                                            .texture("0", p.modLoc("block/metal/block")))
                                     .build();
                         });
             })
-            .lang("Test Block")
             .simpleItem()
-            .color(() -> () -> (state, world, pos, tintIndex) -> 0xFF808080)
+            .color(() -> () -> (state, world, pos, tintIndex) -> 0xFFFF7C00)
             .register();
 }

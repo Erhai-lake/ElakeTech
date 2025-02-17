@@ -9,7 +9,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.block.CommonBlock;
-import top.elake.elaketech.register.block.Ore;
+import top.elake.elaketech.register.block.OreRegistry;
 import top.elake.elaketech.tag.ModBlockTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,24 +26,24 @@ public class ModBlockTagsGen extends BlockTagsProvider {
     public void addTags(HolderLookup.@NotNull Provider provider) {
         // 石制
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(Ore.TIN_ORE.get())
-                .add(Ore.DEEPSLATE_TIN_ORE.get());
+                .add(OreRegistry.TIN_ORE.get())
+                .add(OreRegistry.DEEPSLATE_TIN_ORE.get());
         //木质
         this.tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
-                .add(Ore.DEEPSLATE_GRAPHITE_ORE.get())
-                .add(Ore.DEEPSLATE_QUARTZ_ORE.get())
+                .add(OreRegistry.DEEPSLATE_GRAPHITE_ORE.get())
+                .add(OreRegistry.DEEPSLATE_QUARTZ_ORE.get())
 
-                .add(Ore.GRAPHITE_ORE.get())
-                .add(Ore.QUARTZ_ORE.get());
+                .add(OreRegistry.GRAPHITE_ORE.get())
+                .add(OreRegistry.QUARTZ_ORE.get());
         // 镐子
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(Ore.DEEPSLATE_GRAPHITE_ORE.get())
-                .add(Ore.DEEPSLATE_QUARTZ_ORE.get())
-                .add(Ore.DEEPSLATE_TIN_ORE.get())
+                .add(OreRegistry.DEEPSLATE_GRAPHITE_ORE.get())
+                .add(OreRegistry.DEEPSLATE_QUARTZ_ORE.get())
+                .add(OreRegistry.DEEPSLATE_TIN_ORE.get())
 
-                .add(Ore.GRAPHITE_ORE.get())
-                .add(Ore.QUARTZ_ORE.get())
-                .add(Ore.TIN_ORE.get());
+                .add(OreRegistry.GRAPHITE_ORE.get())
+                .add(OreRegistry.QUARTZ_ORE.get())
+                .add(OreRegistry.TIN_ORE.get());
         // 铲子挖
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(CommonBlock.KAOLIN.get());

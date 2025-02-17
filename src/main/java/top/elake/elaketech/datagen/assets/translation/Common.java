@@ -99,7 +99,7 @@ public class Common {
         addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");
 
         // Tooltip
-        addLanguage("tooltip", "wet_refractory_brick", "Pinch your", "捏捏你的");
+        addLanguage("tooltip", "wet_refractory_brick", "Pinch your~~", "捏捏你的");
 
         // JEI Info
         addLanguage("jei.info", "grass_fiber", "R-Click grass has a chance to obtain", "右键草有几率获得");
