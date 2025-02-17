@@ -16,7 +16,6 @@ public class ModMenuType {
     public static final DeferredRegister<MenuType<?>> MENU_TYPES =
             DeferredRegister.create(BuiltInRegistries.MENU, ElakeTech.MODID);
 
-    public static final Supplier<MenuType<ThermalMenu>> THERMAL_MENU =
-            MENU_TYPES.register("thermal",
-                    () -> IMenuTypeExtension.create(ThermalMenu::new));
+    public static final Supplier<MenuType<ThermalMenu>> THERMAL_MENU = MENU_TYPES.register("thermal",
+            () -> IMenuTypeExtension.create(ThermalMenu::new));
 }

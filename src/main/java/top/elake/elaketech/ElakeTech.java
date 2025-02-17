@@ -10,6 +10,7 @@ import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.*;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.ModMenuType;
+import top.elake.elaketech.register.TestBlock;
 import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.fluid.Gas;
@@ -35,7 +36,7 @@ public class ElakeTech {
      */
     public ElakeTech(IEventBus event) {
         Gas.register();
-
+        TestBlock.register();
 
         // 创造模式物品栏
         ModCreativeModeTab.register(event);

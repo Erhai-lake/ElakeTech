@@ -1,6 +1,7 @@
 package top.elake.elaketech.datagen.assets.model;
 
 import net.minecraft.world.level.block.Block;
+import top.elake.elaketech.register.TestBlock;
 import top.elake.elaketech.register.block.CommonBlock;
 import top.elake.elaketech.register.block.Ore;
 
@@ -27,6 +28,8 @@ public class ModBlockState {
         addBlockState("kaolin", CommonBlock.KAOLIN, "block/kaolin");
         // 耐火砖块
         addBlockState("refractory_bricks", CommonBlock.REFRACTORY_BRICKS, "block/refractory_bricks");
+
+//        addBlockState("test_block", TestBlock.TEST_BLOCK, "block/metal/block");
     }
 
     public static final List<BlockStateList> LIST = new ArrayList<>();

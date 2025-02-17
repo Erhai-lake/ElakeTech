@@ -22,5 +22,6 @@ public class Gas {
                     .density(1000)
                     .viscosity(1000)
                     .lightLevel(15)
-            ).register();
+            )
+            .register();
 }

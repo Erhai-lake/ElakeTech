@@ -23,6 +23,8 @@ public class ModBlockModel {
         addBlockModels("kaolin", "block/kaolin", "Block");
         // 耐火砖块
         addBlockModels("refractory_bricks", "block/refractory_bricks", "Block");
+
+//        addBlockModels("test_block", "block/metal/block", "Block");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

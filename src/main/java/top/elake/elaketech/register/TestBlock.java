@@ -14,7 +14,12 @@ public class TestBlock {
     public static void register() {
     }
 
-    public static final BlockEntry<Block> RAW_WOLFRAMITE_BLOCK = REGISTRATE.block("test_block", Block::new)
-            .color(() -> () -> ElakeTech.RAW_WOLFRAMITE_BLOCK_COLOR)
+    public static final BlockEntry<Block> TEST_BLOCK = REGISTRATE.block("test_block", Block::new)
+            .blockstate(((ctx, prov) -> {
+                prov.blockTexture()
+                prov.simpleBlock(ctx.getEntry());
+            }))
+            .simpleItem()
+            .color(() -> () -> (state, world, pos, tintIndex) -> 0xFF808080)
             .register();
 }
