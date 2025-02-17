@@ -23,3 +23,5 @@
 /difficulty peaceful
 /give Dev elake_tech:tin_ingot
 /give Dev diamond_block
+/give Dev elake_tech:test_fluid_bucket
+/setblock 2 55 -11 elake_tech:test_fluid

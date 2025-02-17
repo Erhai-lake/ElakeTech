@@ -1,18 +1,18 @@
-package top.elake.elaketech.util.tooldamege;
+package top.elake.elaketech.util.tool;
 
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.Tier;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Erhai-lake
  */
-public class ShovelDamageToolCrafting extends ShovelItem {
+public class AxeDamageToolCrafting extends AxeItem {
     private final int CRAFTING_SUBTRACTING_DAMAGE;
 
-    public ShovelDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
+    public AxeDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
         super(tier, properties);
         // 要减去的耐久
         CRAFTING_SUBTRACTING_DAMAGE = craftingSubtractingDamage;

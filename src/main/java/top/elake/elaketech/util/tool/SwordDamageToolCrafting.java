@@ -1,18 +1,18 @@
-package top.elake.elaketech.util.tooldamege;
+package top.elake.elaketech.util.tool;
 
-import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Erhai-lake
  */
-public class HoeDamageToolCrafting extends HoeItem {
+public class SwordDamageToolCrafting extends SwordItem {
     private final int CRAFTING_SUBTRACTING_DAMAGE;
 
-    public HoeDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
+    public SwordDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
         super(tier, properties);
         // 要减去的耐久
         CRAFTING_SUBTRACTING_DAMAGE = craftingSubtractingDamage;

@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.util.tooldamege.*;
+import top.elake.elaketech.util.tool.*;
 
 import java.util.function.Supplier;
 

@@ -31,7 +31,7 @@ public class WorkBench {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.FURNACE)
                 .pattern("AAA")
                 .pattern("A A")
-                .pattern("BCB")
+                .pattern("CBC")
                 .define('A', Tags.Items.COBBLESTONES)
                 .define('B', Items.CLAY_BALL)
                 .define('C', Items.CLAY)

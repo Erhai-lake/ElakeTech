@@ -12,6 +12,7 @@ import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.ModMenuType;
 import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
+import top.elake.elaketech.register.fluid.Gas;
 import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.*;
 import top.elake.elaketech.server.recipes.remove.ItemRecipes;
@@ -33,6 +34,9 @@ public class ElakeTech {
      * @param event 事件总线
      */
     public ElakeTech(IEventBus event) {
+        Gas.register();
+
+
         // 创造模式物品栏
         ModCreativeModeTab.register(event);
         // 元素

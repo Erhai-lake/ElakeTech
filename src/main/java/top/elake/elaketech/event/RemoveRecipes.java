@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 /**
  * @author Qi-Month
  */
-@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = {Dist.CLIENT, Dist.DEDICATED_SERVER})
+@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = { Dist.CLIENT, Dist.DEDICATED_SERVER })
 public class RemoveRecipes {
     private static final Set<String> MODS_TO_REMOVE = new HashSet<>();
     private static final Set<ResourceLocation> RECIPES_TO_REMOVE = new HashSet<>();
@@ -41,9 +41,9 @@ public class RemoveRecipes {
 
     /**
      * 删除配方ID的配方
-     * 例如: removeRecipe("mekanism:factory/advanced/purifying");
+     * 例如: removeRecipeId("mekanism:factory/advanced/purifying");
      */
-    public static void removeRecipe(String recipeId) {
+    public static void removeRecipeId(String recipeId) {
         RECIPES_TO_REMOVE.add(ResourceLocation.parse(recipeId));
     }
 
