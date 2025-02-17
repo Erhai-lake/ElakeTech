@@ -1,5 +1,6 @@
 package top.elake.elaketech;
 
+import com.tterrag.registrate.Registrate;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.capabilities.*;
@@ -28,6 +29,8 @@ public class ElakeTech {
      * ModID
      */
     public static final String MODID = "elake_tech";
+
+    public static final Registrate REGISTRATE = Registrate.create(MODID);
 
     /**
      * 构造函数
