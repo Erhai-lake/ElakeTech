@@ -725,12 +725,6 @@
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
-    "criteria": {
-      "has_grass_fiber": "2025-02-02 22:07:29 +0800"
-    },
-    "done": true
-  },
   "minecraft:husbandry/root": {
     "criteria": {
       "consumed_item": "2025-02-02 22:20:46 +0800"
@@ -791,105 +785,9 @@
     },
     "done": true
   },
-  "elake_tech:recipes/tools/crafting/shaped/tool/flint/sword": {
-    "criteria": {
-      "has_flint": "2025-02-09 01:55:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/flint/hoe": {
-    "criteria": {
-      "has_flint": "2025-02-09 01:55:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/flint/shovel": {
-    "criteria": {
-      "has_flint": "2025-02-09 01:55:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/flint/pickaxe": {
-    "criteria": {
-      "has_flint": "2025-02-09 01:55:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/flint/axe": {
-    "criteria": {
-      "has_flint": "2025-02-09 01:55:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/flint/hatchet": {
-    "criteria": {
-      "has_flint": "2025-02-09 01:55:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/crafting/shapeless/common/wet_refractory_brick": {
-    "criteria": {
-      "has_fire_clay": "2025-02-09 18:15:48 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/smelting/materials/smelting/refractory_brick": {
-    "criteria": {
-      "has_wet_refractory_brick": "2025-02-09 19:57:40 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/smelting/materials/blasting/refractory_brick": {
-    "criteria": {
-      "has_wet_refractory_brick": "2025-02-09 19:57:40 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/building_blocks/crafting/shaped/materials/refractory_bricks": {
-    "criteria": {
-      "has_fire_brick": "2025-02-09 20:08:05 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/crafting/shapeless/common/refractory_clay_ball": {
-    "criteria": {
-      "has_clay_ball": "2025-02-09 20:32:45 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/brewing/cauldron": {
     "criteria": {
       "has_water_bucket": "2025-02-09 20:33:03 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/axe": {
-    "criteria": {
-      "has_bronze": "2025-02-10 17:39:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/shovel": {
-    "criteria": {
-      "has_bronze": "2025-02-10 17:39:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/hoe": {
-    "criteria": {
-      "has_bronze": "2025-02-10 17:39:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/pickaxe": {
-    "criteria": {
-      "has_bronze": "2025-02-10 17:39:57 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tool/bronze/sword": {
-    "criteria": {
-      "has_bronze": "2025-02-10 17:39:57 +0800"
     },
     "done": true
   },
@@ -1028,12 +926,6 @@
   "minecraft:recipes/building_blocks/stone_stairs": {
     "criteria": {
       "has_stone": "2025-02-13 21:27:53 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/stonecutting/materials/graphite_ingot": {
-    "criteria": {
-      "has_raw_graphite": "2025-02-13 21:28:37 +0800"
     },
     "done": true
   },
