@@ -14,6 +14,7 @@ import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.*;
+import top.elake.elaketech.server.recipes.remove.ItemRecipes;
 import top.elake.elaketech.util.Registers;
 
 import static top.elake.elaketech.event.RemoveRecipes.*;
@@ -96,11 +97,8 @@ public class ElakeTech {
         ModMenuType.MENU_TYPES.register(event);
 
         event.addListener(this::registerCapabilities);
-        
-        // 直接调用移除mek模组配方
-//        removeMod("mekanism");
-//        removeMod("minecraft");
-        removeItemId("minecraft:diamond_block");
+
+        ItemRecipes.removeRecipes();
     }
 
     private void registerCapabilities(RegisterCapabilitiesEvent event) {

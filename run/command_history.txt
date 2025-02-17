@@ -22,3 +22,4 @@
 /difficulty -
 /difficulty peaceful
 /give Dev elake_tech:tin_ingot
+/give Dev diamond_block
