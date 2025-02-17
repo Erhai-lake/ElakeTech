@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 /**
  * @author Qi-Month
  */
-@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = Dist.DEDICATED_SERVER)
+@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = {Dist.CLIENT, Dist.DEDICATED_SERVER})
 public class RemoveRecipes {
     private static final Set<String> MODS_TO_REMOVE = new HashSet<>();
     private static final Set<ResourceLocation> RECIPES_TO_REMOVE = new HashSet<>();
