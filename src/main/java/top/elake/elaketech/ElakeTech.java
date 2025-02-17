@@ -17,8 +17,6 @@ import top.elake.elaketech.register.tool.*;
 import top.elake.elaketech.server.recipes.remove.ItemRecipes;
 import top.elake.elaketech.util.Registers;
 
-import static top.elake.elaketech.event.RemoveRecipes.*;
-
 /**
  * @author Erhai-lake Qi-Month
  */
