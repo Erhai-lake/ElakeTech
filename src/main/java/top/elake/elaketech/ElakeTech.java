@@ -57,7 +57,7 @@ public class ElakeTech {
         // 化学用具(方块)
         ChemicalAppliancesBlock.register();
         // 矿物
-        OreRegistry.register();
+        Ore.register();
         // 方块
         CommonBlock.registers();
         // 化学工具(物品)
