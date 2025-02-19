@@ -28,3 +28,4 @@
 /give Dev elake_tech:test_block
 /setblock 1 56 -19 elake_tech:test_block
 /give Dev elake_tech:test_block
+/give Dev elake_tech:test_fluid_bucket

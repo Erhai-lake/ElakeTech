@@ -1,6 +1,7 @@
 package top.elake.elaketech;
 
 import com.tterrag.registrate.Registrate;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.capabilities.*;
@@ -31,6 +32,11 @@ public class ElakeTech {
     public static final String MODID = "elake_tech";
 
     public static final Registrate REGISTRATE = Registrate.create(MODID);
+
+    public static ResourceLocation loadRes(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
+
 
     /**
      * 构造函数

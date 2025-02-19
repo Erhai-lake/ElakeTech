@@ -14,16 +14,12 @@ public class TestBlock {
     }
 
     public static final BlockEntry<Block> TEST_BLOCK = REGISTRATE.block("test_block", Block::new)
-            .blockstate((c, p) -> {
-                p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> {
-                            return ConfiguredModel.builder()
-                                    .modelFile(p.models()
-                                            .withExistingParent("cube_all", p.modLoc("test_block"))
-                                            .texture("0", p.modLoc("block/metal/block")))
-                                    .build();
-                        });
-            })
+            .blockstate((c, p) -> p.getVariantBuilder(c.get())
+                    .forAllStatesExcept((state) -> ConfiguredModel.builder()
+                            .modelFile(p.models()
+                                    .withExistingParent("cube_all", p.modLoc("test_block"))
+                                    .texture("0", p.modLoc("metal/block")))
+                            .build()))
             .simpleItem()
             .color(() -> () -> (state, world, pos, tintIndex) -> 0xFFFF7C00)
             .register();
