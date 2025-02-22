@@ -4,6 +4,7 @@
         "1": "minecraft:block/stone",
         "particle": "elake_tech:block/metal/ore"
     },
+    "render_type": "cutout",
     "elements": [
         {
             "from": [-0.01, -0.01, -0.01],

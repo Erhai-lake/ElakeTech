@@ -9,11 +9,14 @@ import java.util.List;
  */
 public class ItemRecipes {
     public static void removeRecipes() {
-        // 其它杂物
-        RemoveRecipes.removeItemId("minecraft:bucket");
-        // 工作方块
-        RemoveRecipes.removeItemId("minecraft:crafting_table");
-        RemoveRecipes.removeItemId("minecraft:furnace");
+        List<String> itemGroup = List.of(
+                // 其它杂物
+                "minecraft:bucket",
+                // 工作方块
+                "minecraft:crafting_table",
+                "minecraft:furnace"
+        );
+        itemGroup.forEach(RemoveRecipes::removeItemId);
         // 工具
         List<String> toolGroup = List.of("_sword", "_pickaxe", "_axe", "_shovel", "_hoe");
         toolGroup.forEach((toolType) -> {

@@ -12,10 +12,8 @@ import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.*;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.ModMenuType;
-import top.elake.elaketech.register.TestBlock;
 import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
-import top.elake.elaketech.register.fluid.Gas;
 import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.*;
 import top.elake.elaketech.server.recipes.remove.ItemRecipes;
@@ -26,15 +24,12 @@ import top.elake.elaketech.util.Registers;
  */
 @Mod(ElakeTech.MODID)
 public class ElakeTech {
-    /**
-     * ModID
-     */
     public static final String MODID = "elake_tech";
 
-    public static final Registrate REGISTRATE = Registrate.create(MODID);
+    public static final Registrate REGISTER = Registrate.create(MODID);
 
-    public static ResourceLocation loadRes(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    public static ResourceLocation loadResourceFile(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, String.valueOf(path));
     }
 
 
@@ -44,9 +39,6 @@ public class ElakeTech {
      * @param event 事件总线
      */
     public ElakeTech(IEventBus event) {
-        Gas.register();
-        TestBlock.register();
-
         // 创造模式物品栏
         ModCreativeModeTab.register(event);
         // 元素
@@ -63,7 +55,7 @@ public class ElakeTech {
         // 化学用具(方块)
         ChemicalAppliancesBlock.register();
         // 矿物
-        Ore.register();
+        OreBlock.register();
         // 方块
         CommonBlock.registers();
         // 化学工具(物品)

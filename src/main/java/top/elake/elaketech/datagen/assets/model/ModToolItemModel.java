@@ -40,10 +40,10 @@ public class ModToolItemModel {
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addToolItemModel(String file, String... textures) {
+    public static void addToolItemModel(String output, String... textures) {
         List<String> newList = new ArrayList<>();
         newList.add("Tool");
-        newList.add(file);
+        newList.add(output);
         newList.addAll(Arrays.asList(textures));
         LIST.add(newList);
     }

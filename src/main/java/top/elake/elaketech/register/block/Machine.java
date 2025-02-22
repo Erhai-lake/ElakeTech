@@ -34,6 +34,6 @@ public class Machine {
             () -> new BlockItem(THERMAL_POWER.get(), new Item.Properties()));
 
     public static void registers() {
-        ModCreativeModeTab.addAll((DeferredItem<? extends Item>) THERMAL_POWER_ITEM);
+        ModCreativeModeTab.addAll((DeferredItem<Item>) THERMAL_POWER_ITEM);
     }
 }

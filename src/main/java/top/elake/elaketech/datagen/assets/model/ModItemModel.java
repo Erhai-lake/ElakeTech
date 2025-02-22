@@ -71,9 +71,9 @@ public class ModItemModel {
 
     public static final List<List<String>> LIST = new ArrayList<>();
 
-    public static void addItemModel(String type, String file, String... texture) {
+    public static void addItemModel(String output, String file, String... texture) {
         List<String> newList = new ArrayList<>();
-        newList.add(type);
+        newList.add(output);
         newList.add(file);
         newList.addAll(Arrays.asList(texture));
         LIST.add(newList);

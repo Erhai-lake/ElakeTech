@@ -17,7 +17,7 @@ public class MetalIngot {
      */
     public static void register() {
         addIngot("bronze", "Bronze", "青铜", 0xFFFF8C00);
-        addIngot("tin", "Tin", "锡", 0xFFF5F5F5);
+        addIngot("tin", "Tin", "锡", 0xFFE1FFFF);
     }
 
     /**

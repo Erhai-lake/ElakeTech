@@ -16,7 +16,7 @@ public class OreItem {
      * 注册
      */
     public static void register() {
-        addOreItem("tin", "Tin", "锡", 0xFFF5F5F5);
+        addOreItem("tin", "Tin", "锡", 0xFFE1FFFF);
     }
 
     /**
