@@ -32,8 +32,8 @@ public class ModOreFeatures {
         // 石墨替换深板岩
         RuleTest deepSlateOreReplaceRuleGraphite = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         List<OreConfiguration.TargetBlockState> list = List.of(
-                OreConfiguration.target(stoneOreReplaceRuleGraphite, OreBlock.registerOtherOreBlock("graphite", BlockTags.STONE_ORE_REPLACEABLES).get().defaultBlockState()),
-                OreConfiguration.target(deepSlateOreReplaceRuleGraphite, OreBlock.registerOtherOreBlock("graphite", BlockTags.DEEPSLATE_ORE_REPLACEABLES).get().defaultBlockState())
+                OreConfiguration.target(stoneOreReplaceRuleGraphite, OreBlock.GRAPHITE.get().defaultBlockState()),
+                OreConfiguration.target(deepSlateOreReplaceRuleGraphite, OreBlock.DEEPSLATE_GRAPHITE.get().defaultBlockState())
         );
 
         // 创建规则(size:矿物的大小,取值为0到64的闭区间)

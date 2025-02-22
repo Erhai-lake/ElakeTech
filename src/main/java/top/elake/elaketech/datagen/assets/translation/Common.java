@@ -90,10 +90,10 @@ public class Common {
         addLanguage("block", "refractory_bricks", "Refractory Bricks", "耐火砖块");
 
         // 矿石
-        addLanguage("block", "graphite_ore", "Graphite OreBlock", "石墨矿石");
-        addLanguage("block", "deepslate_graphite_ore", "Deepslate Graphite OreBlock", "深层石墨矿石");
-        addLanguage("block", "quartz_ore", "Quartz OreBlock", "石英矿");
-        addLanguage("block", "deepslate_quartz_ore", "Deepslate Quartz OreBlock", "深层石英矿");
+        addLanguage("block", "graphite_ore", "Graphite Ore", "石墨矿石");
+        addLanguage("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
+        addLanguage("block", "quartz_ore", "Quartz Ore", "石英矿");
+        addLanguage("block", "deepslate_quartz_ore", "Deepslate Quartz Ore", "深层石英矿");
 
         // 化学用具
         addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");

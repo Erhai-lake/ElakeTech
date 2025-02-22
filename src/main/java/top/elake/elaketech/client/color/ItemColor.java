@@ -28,9 +28,8 @@ public class ItemColor {
         }
 
         // 矿石
-        for (OreBlock.ColorRawOreBlock ore : OreBlock.COLOR_ORE_BLOCK) {
-            registerColorsForItem(ore.name().asStack(), 0, ore.color());
-        }
+        registerColorsForItem(OreBlock.TIN.asStack(), 0, 0xFFE1FFFF);
+        registerColorsForItem(OreBlock.DEEPSLATE_TIN.asStack(), 0, 0xFFE1FFFF);
 
         // 石头
         registerColorsForItem(Stone.STONE_HAMMER.toStack(), 0, 0xFF808080);
