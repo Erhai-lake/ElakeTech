@@ -7,7 +7,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.register.block.OreBlock;
 import top.elake.elaketech.register.item.MetalIngot;
 import top.elake.elaketech.register.tool.Bronze;
 import top.elake.elaketech.register.tool.Stone;
@@ -26,10 +25,6 @@ public class ItemColor {
         for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
             registerColorsForItem(ingot.item().toStack(), 0, ingot.color());
         }
-
-        // 矿石
-        registerColorsForItem(OreBlock.TIN.asStack(), 0, 0xFFE1FFFF);
-        registerColorsForItem(OreBlock.DEEPSLATE_TIN.asStack(), 0, 0xFFE1FFFF);
 
         // 石头
         registerColorsForItem(Stone.STONE_HAMMER.toStack(), 0, 0xFF808080);
