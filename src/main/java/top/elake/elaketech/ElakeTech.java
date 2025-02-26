@@ -74,7 +74,6 @@ public class ElakeTech {
         Stone.register();
 
         //数据生成器
-        // CommonBlastingMaterial
         Common.registers();
         // 物品模型
         ModItemModel.registers();
@@ -91,8 +90,6 @@ public class ElakeTech {
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
         // Tooltip
         ModTooltip.register(NeoForge.EVENT_BUS);
-        // 删除配方
-//        RemoveRecipes.register(NeoForge.EVENT_BUS);
 
         // test
         Machine.BLOCKS.register(event);

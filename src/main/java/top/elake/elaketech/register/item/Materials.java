@@ -18,10 +18,6 @@ public class Materials {
      */
     public static final DeferredItem<Item> GRASS_STRING = Registers.registerItem("grass_string", new Item.Properties());
     /**
-     * 粗石磨
-     */
-    public static final DeferredItem<Item> RAW_GRAPHITE = Registers.registerItem("raw_graphite", new Item.Properties());
-    /**
      * 石墨锭
      */
     public static final DeferredItem<Item> GRAPHITE_INGOT = Registers.registerItem("graphite_ingot", new Item.Properties());
@@ -58,13 +54,10 @@ public class Materials {
         ModCreativeModeTab.addMaterials(GRASS_FIBER);
         // 草绳
         ModCreativeModeTab.addMaterials(GRASS_STRING);
-        // 粗石墨
-        ModCreativeModeTab.addMaterials(RAW_GRAPHITE);
         // 石墨
         ModCreativeModeTab.addMaterials(GRAPHITE_INGOT);
         // 石墨板
         ModCreativeModeTab.addMaterials(GRAPHITE_PLATE);
-
         // 粉碎白云岩
         ModCreativeModeTab.addMaterials(FRAGMENT_DOLOMITE);
         // 高岭土

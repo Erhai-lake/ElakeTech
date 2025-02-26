@@ -29,11 +29,6 @@ public class Common {
             addLanguage("item", plate.id() + "_plate", plate.en() + " Plate", plate.cn() + "板");
         }
 
-        // 粗矿
-        for (OreItem.RawOreItem ore : OreItem.RAW_ORE_ITEM_GROUP) {
-            addLanguage("item", "raw_" + ore.id(), "Raw " + ore.en(), "粗" + ore.cn());
-        }
-
         // 进度
         addLanguage("advancements", "main.root.description", "Welcome to the Elake Tech", "欢迎来到洱海科技");
         addLanguage("advancements", "main.root.title", "Elake Tech", "洱海科技");

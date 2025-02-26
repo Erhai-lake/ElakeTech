@@ -1,40 +1,36 @@
 package top.elake.elaketech.register.item;
 
-import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredItem;
-import top.elake.elaketech.register.ModCreativeModeTab;
-import top.elake.elaketech.util.Registers;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.common.Tags;
+import top.elake.elaketech.ElakeTech;
+
 
 /**
  * @author Qi-Month
  */
 public class OreItem {
-    /**
-     * 注册
-     */
+    public static ItemEntry<Item> TIN = registerColorOreItem("tin", "Tin", 0xFFE1FFFF);
+    public static ItemEntry<Item> GRAPHITE = registerOtherOreItem("graphite", "Graphite");
+
+    public static ItemEntry<Item> registerColorOreItem(String id, String name, int color) {
+        return ElakeTech.REGISTER.item("raw_" + id, Item::new)
+                .color(() -> () -> (itemStack, tintIndex) -> color)
+                .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/raw_ore")))
+                .tag(Tags.Items.RAW_MATERIALS)
+                .lang("Raw " + name)
+                .register();
+    }
+
+    public static ItemEntry<Item> registerOtherOreItem(String id, String name) {
+        return ElakeTech.REGISTER.item("raw_" + id, Item::new)
+                .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/ore")))
+                .lang("Raw " + name)
+                .tag(Tags.Items.RAW_MATERIALS)
+                .register();
+    }
+
     public static void register() {
-        addOreItem("tin", "Tin", "锡", 0xFFE1FFFF);
-    }
-
-    /**
-     * 方法声明
-     *
-     * @param id    金属ID
-     * @param en    英文语言
-     * @param cn    简体中文语言
-     * @param color 颜色 颜色0*ARGB
-     */
-    public static void addOreItem(String id, String en, String cn, int color) {
-        DeferredItem<Item> item = Registers.registerItem("raw_" + id, new Item.Properties());
-        ModCreativeModeTab.addMaterials(item);
-        RAW_ORE_ITEM_GROUP.add(new RawOreItem(id, en, cn, item, color));
-    }
-
-    public static final List<RawOreItem> RAW_ORE_ITEM_GROUP = new ArrayList<>();
-
-    public record RawOreItem(String id, String en, String cn, DeferredItem<Item> item, int color) {
     }
 }

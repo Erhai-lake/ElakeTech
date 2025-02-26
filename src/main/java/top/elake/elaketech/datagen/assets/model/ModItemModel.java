@@ -2,7 +2,6 @@ package top.elake.elaketech.datagen.assets.model;
 
 import top.elake.elaketech.register.item.Elements;
 import top.elake.elaketech.register.item.MetalIngot;
-import top.elake.elaketech.register.item.OreItem;
 import top.elake.elaketech.register.item.PlateItem;
 
 import java.util.ArrayList;
@@ -27,11 +26,6 @@ public class ModItemModel {
         // 板材
         for (PlateItem.PlateItems plate : PlateItem.PLATE_ITEM_GROUP) {
             addItemModel("Item", plate.id() + "_plate", "item/materials/color/plate");
-        }
-
-        // 粗矿
-        for (OreItem.RawOreItem ore : OreItem.RAW_ORE_ITEM_GROUP) {
-            addItemModel("Item", "raw_" + ore.id(), "item/materials/color/raw_ore");
         }
         // 书
         addItemModel("Item", "book", "item/book");

@@ -52,7 +52,7 @@ public class ModCreativeModeTab {
     /**
      * 全部物品创造模式标签页
      */
-    private static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all",
+    public static final Supplier<CreativeModeTab> ALL = CREATIVE_MODE_TABS.register("all",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable(IG + ElakeTech.MODID + ".all"))
                     .icon(() -> new ItemStack(REGISTERED_ALL.get(0).asItem()))

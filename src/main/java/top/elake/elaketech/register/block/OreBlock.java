@@ -9,8 +9,6 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 
-import static top.elake.elaketech.ElakeTech.*;
-
 /**
  * 矿石注册
  *
@@ -29,6 +27,7 @@ public class OreBlock {
     public static BlockEntry<Block> QUARTZ = registerOtherOreBlock("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL);
     public static BlockEntry<Block> DEEPSLATE_QUARTZ = registerOtherDeepslateOreBlock("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL);
 
+
     /**
      * 浅层着色矿石
      *
@@ -38,7 +37,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      */
     public static BlockEntry<Block> registerColorOreBlock(String id, String name, int color, TagKey<Block> miningLevel) {
-        return REGISTER.block(id + "_ore", Block::new)
+        return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
                 .tag(Tags.Items.ORES)
@@ -67,7 +66,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      */
     public static BlockEntry<Block> registerColorDeepslateOreBlock(String id, String name, int color, TagKey<Block> miningLevel) {
-        return REGISTER.block("deepslate_" + id + "_ore", Block::new)
+        return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
                 .tag(Tags.Items.ORES)
@@ -95,7 +94,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      */
     public static BlockEntry<Block> registerOtherOreBlock(String id, String name, TagKey<Block> miningLevel) {
-        return REGISTER.block(id + "_ore", Block::new)
+        return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
                 .build()
@@ -122,7 +121,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      */
     public static BlockEntry<Block> registerOtherDeepslateOreBlock(String id, String name, TagKey<Block> miningLevel) {
-        return REGISTER.block("deepslate_" + id + "_ore", Block::new)
+        return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
                 .build()

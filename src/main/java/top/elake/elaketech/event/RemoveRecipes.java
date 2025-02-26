@@ -71,8 +71,7 @@ public class RemoveRecipes {
                 .filter((holder) -> {
                     ResourceLocation id = holder.id();
                     return !MODS_TO_REMOVE.contains(id.getNamespace()) && !RECIPES_TO_REMOVE.contains(id);
-                })
-                .collect(Collectors.toList());
+                }).collect(Collectors.toList());
         recipeManager.replaceRecipes(recipesToKeep);
     }
 }
