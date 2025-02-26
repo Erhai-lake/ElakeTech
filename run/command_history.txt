@@ -32,3 +32,6 @@
 /give Dev elake_tech:graphite_ore
 /give Dev elake_tech:tin_ore
 /give Dev elake_tech:graphite_ore
+/give Dev elake_tech:raw_tin
+/give Dev elake_tech:raw_graphite
+/give Dev elake_tech:rock_flint

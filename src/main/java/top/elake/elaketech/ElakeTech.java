@@ -1,11 +1,16 @@
 package top.elake.elaketech;
 
+import com.tterrag.registrate.AbstractRegistrate;
 import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.capabilities.*;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.client.ModTooltip;
 import top.elake.elaketech.datagen.assets.model.*;
 import top.elake.elaketech.datagen.assets.translation.Common;
