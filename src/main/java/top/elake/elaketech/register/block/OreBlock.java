@@ -49,6 +49,7 @@ public class OreBlock {
      * @param name        英文名
      * @param color       色号
      * @param miningLevel 挖掘等级
+     * @param loot        战利品
      */
     public static BlockEntry<Block> registerColorOreBlock(String id, String name, int color, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
@@ -86,6 +87,7 @@ public class OreBlock {
      * @param name        英文名
      * @param color       色号
      * @param miningLevel 挖掘等级
+     * @param loot        战利品
      */
     public static BlockEntry<Block> registerColorDeepslateOreBlock(String id, String name, int color, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
@@ -121,6 +123,7 @@ public class OreBlock {
      * @param id          金属ID
      * @param name        英文名
      * @param miningLevel 挖掘等级
+     * @param loot        战利品
      */
     public static BlockEntry<Block> registerOtherOreBlock(String id, String name, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
@@ -155,6 +158,7 @@ public class OreBlock {
      * @param id          金属ID
      * @param name        英文名
      * @param miningLevel 挖掘等级
+     * @param loot        战利品
      */
     public static BlockEntry<Block> registerOtherDeepslateOreBlock(String id, String name, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
