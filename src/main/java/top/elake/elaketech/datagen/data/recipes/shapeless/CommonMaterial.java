@@ -20,12 +20,12 @@ public class CommonMaterial {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.FLINT)
                 .requires(Items.GRAVEL, 4)
                 .unlockedBy("has_gravel", has(Items.GRAVEL))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "flint"));
+                .save(output, ElakeTech.loadResource(common + "flint"));
         // 草绳
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Materials.GRASS_STRING)
                 .requires(Materials.GRASS_FIBER, 3)
                 .unlockedBy("has_grass_fiber", has(Materials.GRASS_FIBER))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "grass_string"));
+                .save(output, ElakeTech.loadResource(common + "grass_string"));
         // 耐火黏土球
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Materials.REFRACTORY_CLAY_BALL, 4)
                 .requires(Items.WATER_BUCKET)
@@ -33,11 +33,11 @@ public class CommonMaterial {
                 .requires(Items.QUARTZ)
                 .requires(Materials.KAOLINITE, 2)
                 .unlockedBy("has_clay_ball", has(Items.CLAY_BALL))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "refractory_clay_ball"));
+                .save(output, ElakeTech.loadResource(common + "refractory_clay_ball"));
         // 潮湿耐火砖
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Materials.WET_REFRACTORY_BRICK, 4)
                 .requires(Materials.REFRACTORY_CLAY_BALL, 4)
                 .unlockedBy("has_fire_clay", has(Materials.REFRACTORY_CLAY_BALL))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "wet_refractory_brick"));
+                .save(output, ElakeTech.loadResource(common + "wet_refractory_brick"));
     }
 }

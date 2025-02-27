@@ -26,7 +26,7 @@ public class WorkBench {
                 .define('B', ItemTags.LOGS)
                 .define('C', ItemTags.PLANKS)
                 .unlockedBy("has_logs", has(ItemTags.LOGS))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, workbench + "crafting_table"));
+                .save(output, ElakeTech.loadResource(workbench + "crafting_table"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.FURNACE)
                 .pattern("AAA")
@@ -36,6 +36,6 @@ public class WorkBench {
                 .define('B', Items.CLAY_BALL)
                 .define('C', Items.CLAY)
                 .unlockedBy("has_cobblestones", has(Tags.Items.COBBLESTONES))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, workbench + "furnace"));
+                .save(output, ElakeTech.loadResource(workbench + "furnace"));
     }
 }

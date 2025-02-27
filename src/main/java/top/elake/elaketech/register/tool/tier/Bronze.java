@@ -1,4 +1,4 @@
-package top.elake.elaketech.register.tool;
+package top.elake.elaketech.register.tool.tier;
 
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;

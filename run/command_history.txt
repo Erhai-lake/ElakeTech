@@ -35,3 +35,6 @@
 /give Dev elake_tech:raw_tin
 /give Dev elake_tech:raw_graphite
 /give Dev elake_tech:rock_flint
+/setblock -2 56 -16 elake_tech:rock_flint
+/setblock 0 57 -16 elake_tech:rock_flint
+/give Dev elake_tech:metal_detector

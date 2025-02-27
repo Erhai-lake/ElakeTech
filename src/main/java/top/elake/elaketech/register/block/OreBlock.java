@@ -43,7 +43,6 @@ public class OreBlock {
     public static BlockEntry<Block> QUARTZ = registerOtherOreBlockWithItem("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
     public static BlockEntry<Block> DEEPSLATE_QUARTZ = registerOtherDeepslateOreBlockWithItem("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
 
-
     /**
      * 浅层着色矿石
      *
@@ -68,19 +67,20 @@ public class OreBlock {
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
                         .forAllStatesExcept((state) -> ConfiguredModel.builder()
                                 .modelFile(p.models()
-                                        .getExistingFile(ElakeTech.loadResourceFile("block/ore/ore")))
+                                        .getExistingFile(ElakeTech.loadResource("block/ore/ore")))
                                 .build()))
                 .loot((l, b) -> {
                     HolderLookup.Provider provider = l.getRegistries();
-                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
                     l.add(b, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
                                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                    )
-                            ));
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortune))
+                                            .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
+                                    )));
                 })
                 .lang(name + " Ore")
                 .register();
@@ -110,19 +110,20 @@ public class OreBlock {
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
                         .forAllStatesExcept((state) -> ConfiguredModel.builder()
                                 .modelFile(p.models()
-                                        .getExistingFile(ElakeTech.loadResourceFile("block/ore/deepslate")))
+                                        .getExistingFile(ElakeTech.loadResource("block/ore/deepslate")))
                                 .build()))
                 .loot((l, b) -> {
                     HolderLookup.Provider provider = l.getRegistries();
-                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
                     l.add(b, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
                                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                    )
-                            ));
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortune))
+                                            .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
+                                    )));
                 })
                 .lang("Deepslate " + name + " Ore")
                 .register();
@@ -154,15 +155,16 @@ public class OreBlock {
                                 .build()))
                 .loot((l, b) -> {
                     HolderLookup.Provider provider = l.getRegistries();
-                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
                     l.add(b, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
                                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                    )
-                            ));
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortune))
+                                            .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
+                                    )));
                 })
                 .lang(name + " Ore")
                 .register();
@@ -194,15 +196,16 @@ public class OreBlock {
                                 .build()))
                 .loot((l, b) -> {
                     HolderLookup.Provider provider = l.getRegistries();
-                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
                     l.add(b, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
                                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                    )
-                            ));
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortune))
+                                            .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
+                                    )));
                 })
                 .lang("Deepslate " + name + " Ore")
                 .register();
@@ -226,15 +229,16 @@ public class OreBlock {
                                 .build()))
                 .loot((l, b) -> {
                     HolderLookup.Provider provider = l.getRegistries();
-                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
                     l.add(b, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot)
                                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                    )
-                            ));
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortune))
+                                            .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
+                                    )));
                 })
                 .lang(name + " Ore")
                 .register();
@@ -258,15 +262,16 @@ public class OreBlock {
                                 .build()))
                 .loot((l, b) -> {
                     HolderLookup.Provider provider = l.getRegistries();
-                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
                     l.add(b, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot)
                                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                    )
-                            ));
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortune))
+                                            .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
+                                    )));
                 })
                 .lang("Deepslate " + name + " Ore")
                 .register();

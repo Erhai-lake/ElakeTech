@@ -43,7 +43,7 @@ public class CommonBlock {
             .blockstate((c, p) -> p.getVariantBuilder(c.get())
                     .forAllStatesExcept((state) -> ConfiguredModel.builder()
                             .modelFile(p.models()
-                                    .getExistingFile(ElakeTech.loadResourceFile("block/rock_flint")))
+                                    .getExistingFile(ElakeTech.loadResource("block/rock_flint")))
                             .build()))
             .loot((tb, block) -> tb.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()

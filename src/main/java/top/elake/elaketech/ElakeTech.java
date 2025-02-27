@@ -1,16 +1,11 @@
 package top.elake.elaketech;
 
-import com.tterrag.registrate.AbstractRegistrate;
 import com.tterrag.registrate.Registrate;
-import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.capabilities.*;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.client.ModTooltip;
 import top.elake.elaketech.datagen.assets.model.*;
 import top.elake.elaketech.datagen.assets.translation.Common;
@@ -20,7 +15,10 @@ import top.elake.elaketech.register.ModMenuType;
 import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
-import top.elake.elaketech.register.tool.*;
+import top.elake.elaketech.register.tool.FunctionTool;
+import top.elake.elaketech.register.tool.tier.Bronze;
+import top.elake.elaketech.register.tool.tier.Flint;
+import top.elake.elaketech.register.tool.tier.Stone;
 import top.elake.elaketech.server.recipes.remove.ItemRecipes;
 import top.elake.elaketech.util.Registers;
 
@@ -33,7 +31,7 @@ public class ElakeTech {
 
     public static final Registrate REGISTER = Registrate.create(MODID);
 
-    public static ResourceLocation loadResourceFile(String path) {
+    public static ResourceLocation loadResource(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, String.valueOf(path));
     }
 
@@ -77,6 +75,8 @@ public class ElakeTech {
         Bronze.register();
         // 石头工具
         Stone.register();
+        // 功能性工具
+        FunctionTool.register();
 
         //数据生成器
         Common.registers();

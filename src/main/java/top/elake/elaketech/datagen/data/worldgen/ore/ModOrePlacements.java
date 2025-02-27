@@ -6,7 +6,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
@@ -26,9 +25,7 @@ public class ModOrePlacements {
         // 添加到placed_feature中(HeightRangePlacement:生成的最低高度和最高的高度)
         // 石墨
         Holder<ConfiguredFeature<?, ?>> oreGraphiteHolder = holdergetter.getOrThrow(ModOreFeatures.ORE_GRAPHITE);
-        PlacementUtils.register(
-                context, ORE_GRAPHITE, oreGraphiteHolder, commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(72)))
-        );
+        PlacementUtils.register(context, ORE_GRAPHITE, oreGraphiteHolder, commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(72))));
     }
 
     /**
@@ -45,12 +42,12 @@ public class ModOrePlacements {
     /**
      * 常见矿物
      *
-     * @param count        计数
-     * @param pHeightRange 生成范围
+     * @param count       计数
+     * @param heightRange 生成范围
      * @return 列表
      */
-    private static List<PlacementModifier> commonOrePlacement(int count, PlacementModifier pHeightRange) {
-        return orePlacement(CountPlacement.of(count), pHeightRange);
+    private static List<PlacementModifier> commonOrePlacement(int count, PlacementModifier heightRange) {
+        return orePlacement(CountPlacement.of(count), heightRange);
     }
 
     /**
@@ -65,6 +62,6 @@ public class ModOrePlacements {
     }
 
     public static ResourceKey<PlacedFeature> createKey(String key) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, key));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ElakeTech.loadResource(key));
     }
 }

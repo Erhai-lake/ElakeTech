@@ -1,11 +1,9 @@
 package top.elake.elaketech.register.item;
 
-
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
-
 
 /**
  * @author Qi-Month

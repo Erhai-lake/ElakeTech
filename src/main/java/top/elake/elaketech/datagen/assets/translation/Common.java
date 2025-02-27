@@ -3,7 +3,6 @@ package top.elake.elaketech.datagen.assets.translation;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Elements;
 import top.elake.elaketech.register.item.MetalIngot;
-import top.elake.elaketech.register.item.OreItem;
 import top.elake.elaketech.register.item.PlateItem;
 
 import java.util.ArrayList;
@@ -93,11 +92,16 @@ public class Common {
         // 化学用具
         addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");
 
+        // Info
+        addLanguage("info", "metal_detector", "Ore not found!", "未找到矿石!");
+        addLanguage("info", "metal_detector_2", "[%s, %s, %s] have %s ", "在[%s, %s, %s]找到 %s");
+
         // Tooltip
         addLanguage("tooltip", "wet_refractory_brick", "Pinch your~~", "捏捏你的");
 
         // JEI Info
         addLanguage("jei.info", "grass_fiber", "R-Click grass has a chance to obtain", "右键草有几率获得");
+        addLanguage("jei.info", "flint", "Can be found on the ground\nDig dirt and sand also have a chance to fall", "可以在地上找到\n挖掘泥土和沙子也有几率掉落");
     }
 
     public static final List<List<String>> LIST = new ArrayList<>();

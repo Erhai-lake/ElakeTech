@@ -28,10 +28,11 @@ public class ModBiomeModifiers {
         context.register(ADD_GRAPHITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ModOrePlacements.ORE_GRAPHITE)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, name));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ElakeTech.loadResource(name));
     }
 }

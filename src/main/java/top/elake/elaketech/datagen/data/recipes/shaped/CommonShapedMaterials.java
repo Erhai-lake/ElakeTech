@@ -5,7 +5,6 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.block.CommonBlock;
 import top.elake.elaketech.register.item.Materials;
@@ -25,13 +24,13 @@ public class CommonShapedMaterials {
                 .pattern("AA")
                 .define('A', Materials.REFRACTORY_BRICK)
                 .unlockedBy("has_fire_brick", has(Materials.REFRACTORY_BRICK))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "refractory_bricks"));
+                .save(output, ElakeTech.loadResource(common + "refractory_bricks"));
         // 铁桶
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BUCKET)
                 .pattern("A A")
                 .pattern(" A ")
                 .define('A', ModItemTags.Items.IRON_PLATE)
                 .unlockedBy("has_iron_plate", has(ModItemTags.Items.IRON_PLATE))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, common + "bucket"));
+                .save(output, ElakeTech.loadResource(common + "bucket"));
     }
 }

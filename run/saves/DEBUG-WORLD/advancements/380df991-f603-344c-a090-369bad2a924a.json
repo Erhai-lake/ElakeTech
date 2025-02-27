@@ -1055,5 +1055,41 @@
     },
     "done": true
   },
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/shovel": {
+    "criteria": {
+      "has_flint": "2025-02-27 18:37:22 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/sword": {
+    "criteria": {
+      "has_flint": "2025-02-27 18:37:22 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/pickaxe": {
+    "criteria": {
+      "has_flint": "2025-02-27 18:37:22 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/axe": {
+    "criteria": {
+      "has_flint": "2025-02-27 18:37:22 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/hatchet": {
+    "criteria": {
+      "has_flint": "2025-02-27 18:37:22 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tool/flint/hoe": {
+    "criteria": {
+      "has_flint": "2025-02-27 18:37:22 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

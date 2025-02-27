@@ -72,7 +72,7 @@ public class RightClickGetGrassFiber {
 
             // 生成物品
             double randomValue = new Random().nextDouble();
-            if (randomValue < 0.3) {
+            if (randomValue < 0.35) {
                 BlockPos spawnPos = blockPos.above();
                 ItemStack itemStack = new ItemStack(Materials.GRASS_FIBER.get());
                 ItemEntity itemEntity = new ItemEntity(level, spawnPos.getX() + 0.5, spawnPos.getY() - 0.5, spawnPos.getZ() + 0.5, itemStack);

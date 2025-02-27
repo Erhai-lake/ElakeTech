@@ -5,7 +5,8 @@ import top.elake.elaketech.event.RemoveRecipes;
 import java.util.List;
 
 /**
- * @author Qi-Month Erhai-lake
+ * @author Qi-Month
+ * @author Erhai-lake
  */
 public class ItemRecipes {
     public static void removeRecipes() {

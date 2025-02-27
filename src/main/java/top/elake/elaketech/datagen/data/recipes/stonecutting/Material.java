@@ -3,7 +3,6 @@ package top.elake.elaketech.datagen.data.recipes.stonecutting;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Materials;
@@ -20,6 +19,6 @@ public class Material {
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(OreItem.GRAPHITE), RecipeCategory.MISC, Materials.GRAPHITE_INGOT)
                 .unlockedBy("has_raw_graphite", has(OreItem.GRAPHITE))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, materials + "graphite_ingot"));
+                .save(output, ElakeTech.loadResource(materials + "graphite_ingot"));
     }
 }

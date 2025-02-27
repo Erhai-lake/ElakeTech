@@ -6,7 +6,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.register.tool.Flint;
+import top.elake.elaketech.register.tool.tier.Flint;
 import top.elake.elaketech.tag.ModItemTags;
 
 import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;

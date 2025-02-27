@@ -7,6 +7,7 @@ import mezz.jei.api.constants.VanillaTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Materials;
@@ -29,6 +30,7 @@ public class Info implements IModPlugin {
     public void registerRecipes(@NotNull IRecipeRegistration registry) {
         this.registry = registry;
         addInfo(new ItemStack(Materials.GRASS_FIBER.get()), "grass_fiber");
+        addInfo(new ItemStack(Items.FLINT), "flint");
     }
 
     public void addInfo(ItemStack item, String key) {
