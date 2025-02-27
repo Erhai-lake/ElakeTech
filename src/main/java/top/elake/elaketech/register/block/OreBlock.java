@@ -22,6 +22,8 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.OreItem;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 
 /**
  * 矿石注册
@@ -38,8 +40,8 @@ public class OreBlock {
     public static BlockEntry<Block> DEEPSLATE_TIN = registerColorDeepslateOreBlock("tin", "Tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
     public static BlockEntry<Block> GRAPHITE = registerOtherOreBlock("graphite", "Graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
     public static BlockEntry<Block> DEEPSLATE_GRAPHITE = registerOtherDeepslateOreBlock("graphite", "Graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
-    public static BlockEntry<Block> QUARTZ = registerOtherOreBlock("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
-    public static BlockEntry<Block> DEEPSLATE_QUARTZ = registerOtherDeepslateOreBlock("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+    public static BlockEntry<Block> QUARTZ = registerOtherOreBlockWithItem("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+    public static BlockEntry<Block> DEEPSLATE_QUARTZ = registerOtherDeepslateOreBlockWithItem("quartz", "Quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
 
 
     /**
@@ -68,14 +70,18 @@ public class OreBlock {
                                 .modelFile(p.models()
                                         .getExistingFile(ElakeTech.loadResourceFile("block/ore/ore")))
                                 .build()))
-                .loot((l, b) -> l.add(b, LootTable.lootTable()
-                        .withPool(LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(loot)
-                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                        .apply(ApplyBonusCount.addOreBonusCount((Holder<Enchantment>) Enchantments.FORTUNE))
-                                )
-                        )))
+                .loot((l, b) -> {
+                    HolderLookup.Provider provider = l.getRegistries();
+                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    l.add(b, LootTable.lootTable()
+                            .withPool(LootPool.lootPool()
+                                    .setRolls(ConstantValue.exactly(1))
+                                    .add(LootItem.lootTableItem(loot.get())
+                                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
+                                    )
+                            ));
+                })
                 .lang(name + " Ore")
                 .register();
     }
@@ -106,13 +112,18 @@ public class OreBlock {
                                 .modelFile(p.models()
                                         .getExistingFile(ElakeTech.loadResourceFile("block/ore/deepslate")))
                                 .build()))
-                .loot((l, b) -> l.add(b, LootTable.lootTable()
-                        .withPool(LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(loot)
-                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                        .apply(ApplyBonusCount.addOreBonusCount((Holder<Enchantment>) Enchantments.FORTUNE)))
-                        )))
+                .loot((l, b) -> {
+                    HolderLookup.Provider provider = l.getRegistries();
+                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    l.add(b, LootTable.lootTable()
+                            .withPool(LootPool.lootPool()
+                                    .setRolls(ConstantValue.exactly(1))
+                                    .add(LootItem.lootTableItem(loot.get())
+                                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
+                                    )
+                            ));
+                })
                 .lang("Deepslate " + name + " Ore")
                 .register();
     }
@@ -141,13 +152,18 @@ public class OreBlock {
                                         .cubeAll(id + "ore", p.modLoc("block/ore/" + id + "/ore"))
                                         .texture("0", "block/ore/" + id + "/ore"))
                                 .build()))
-                .loot((l, b) -> l.add(b, LootTable.lootTable()
-                        .withPool(LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(loot)
-                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                        .apply(ApplyBonusCount.addOreBonusCount((Holder<Enchantment>) Enchantments.FORTUNE)))
-                        )))
+                .loot((l, b) -> {
+                    HolderLookup.Provider provider = l.getRegistries();
+                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    l.add(b, LootTable.lootTable()
+                            .withPool(LootPool.lootPool()
+                                    .setRolls(ConstantValue.exactly(1))
+                                    .add(LootItem.lootTableItem(loot.get())
+                                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
+                                    )
+                            ));
+                })
                 .lang(name + " Ore")
                 .register();
     }
@@ -176,13 +192,82 @@ public class OreBlock {
                                         .cubeAll("deepslate_" + id + "_ore", p.modLoc("block/ore/" + id + "/deepslate"))
                                         .texture("0", "block/ore/" + id + "/deepslate"))
                                 .build()))
-                .loot((l, b) -> l.add(b, LootTable.lootTable()
-                        .withPool(LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1))
-                                .add(LootItem.lootTableItem(loot)
-                                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
-                                        .apply(ApplyBonusCount.addOreBonusCount((Holder<Enchantment>) Enchantments.FORTUNE)))
-                        )))
+                .loot((l, b) -> {
+                    HolderLookup.Provider provider = l.getRegistries();
+                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    l.add(b, LootTable.lootTable()
+                            .withPool(LootPool.lootPool()
+                                    .setRolls(ConstantValue.exactly(1))
+                                    .add(LootItem.lootTableItem(loot.get())
+                                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
+                                    )
+                            ));
+                })
+                .lang("Deepslate " + name + " Ore")
+                .register();
+    }
+
+    public static BlockEntry<Block> registerOtherOreBlockWithItem(String id, String name, TagKey<Block> miningLevel, Item loot) {
+        return ElakeTech.REGISTER.block(id + "_ore", Block::new)
+                .item()
+                .tag(Tags.Items.ORES)
+                .build()
+
+                .tag(Tags.Blocks.ORES)
+                .tag(PICKAXE)
+                .tag(miningLevel)
+                .initialProperties(() -> Blocks.IRON_ORE)
+                .blockstate((c, p) -> p.getVariantBuilder(c.get())
+                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
+                                .modelFile(p.models()
+                                        .cubeAll(id + "ore", p.modLoc("block/ore/" + id + "/ore"))
+                                        .texture("0", "block/ore/" + id + "/ore"))
+                                .build()))
+                .loot((l, b) -> {
+                    HolderLookup.Provider provider = l.getRegistries();
+                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    l.add(b, LootTable.lootTable()
+                            .withPool(LootPool.lootPool()
+                                    .setRolls(ConstantValue.exactly(1))
+                                    .add(LootItem.lootTableItem(loot)
+                                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
+                                    )
+                            ));
+                })
+                .lang(name + " Ore")
+                .register();
+    }
+
+    public static BlockEntry<Block> registerOtherDeepslateOreBlockWithItem(String id, String name, TagKey<Block> miningLevel, Item loot) {
+        return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
+                .item()
+                .tag(Tags.Items.ORES)
+                .build()
+
+                .tag(Tags.Blocks.ORES)
+                .tag(PICKAXE)
+                .tag(miningLevel)
+                .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
+                .blockstate((c, p) -> p.getVariantBuilder(c.get())
+                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
+                                .modelFile(p.models()
+                                        .cubeAll("deepslate_" + id + "_ore", p.modLoc("block/ore/" + id + "/deepslate"))
+                                        .texture("0", "block/ore/" + id + "/deepslate"))
+                                .build()))
+                .loot((l, b) -> {
+                    HolderLookup.Provider provider = l.getRegistries();
+                    Holder<Enchantment> fortuneHolder = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
+                    l.add(b, LootTable.lootTable()
+                            .withPool(LootPool.lootPool()
+                                    .setRolls(ConstantValue.exactly(1))
+                                    .add(LootItem.lootTableItem(loot)
+                                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                                            .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
+                                    )
+                            ));
+                })
                 .lang("Deepslate " + name + " Ore")
                 .register();
     }
