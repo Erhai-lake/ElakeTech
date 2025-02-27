@@ -19,6 +19,7 @@ import top.elake.elaketech.register.tool.FunctionTool;
 import top.elake.elaketech.register.tool.tier.Bronze;
 import top.elake.elaketech.register.tool.tier.Flint;
 import top.elake.elaketech.register.tool.tier.Stone;
+import top.elake.elaketech.register.tool.tier.TestTool;
 import top.elake.elaketech.server.recipes.remove.ItemRecipes;
 import top.elake.elaketech.util.Registers;
 
@@ -77,6 +78,8 @@ public class ElakeTech {
         Stone.register();
         // 功能性工具
         FunctionTool.register();
+
+        TestTool.register();
 
         //数据生成器
         Common.registers();

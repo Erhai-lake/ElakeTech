@@ -72,6 +72,7 @@ public class RightClickGetGrassFiber {
 
             // 生成物品
             double randomValue = new Random().nextDouble();
+            // 概率35%
             if (randomValue < 0.35) {
                 BlockPos spawnPos = blockPos.above();
                 ItemStack itemStack = new ItemStack(Materials.GRASS_FIBER.get());

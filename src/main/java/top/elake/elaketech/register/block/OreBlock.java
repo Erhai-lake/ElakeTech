@@ -3,9 +3,11 @@ package top.elake.elaketech.register.block;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -24,6 +26,7 @@ import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.OreItem;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
+import top.elake.elaketech.register.tool.tier.Flint;
 
 /**
  * 矿石注册
@@ -35,6 +38,14 @@ import net.minecraft.core.registries.Registries;
  */
 public class OreBlock {
     static TagKey<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
+
+    static {
+        ElakeTech.REGISTER.defaultCreativeTab("test", (c) -> {
+            c.title(Component.translatable("test"));
+            c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
+            c.build();
+        });
+    }
 
     public static BlockEntry<Block> TIN = registerColorOreBlock("tin", "Tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
     public static BlockEntry<Block> DEEPSLATE_TIN = registerColorDeepslateOreBlock("tin", "Tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
@@ -59,6 +70,7 @@ public class OreBlock {
                 .tag(Tags.Items.ORES)
                 .build()
 
+                .lang(name + " Ore")
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
                 .tag(miningLevel)
@@ -82,7 +94,6 @@ public class OreBlock {
                                             .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
                                     )));
                 })
-                .lang(name + " Ore")
                 .register();
     }
 
@@ -102,6 +113,7 @@ public class OreBlock {
                 .tag(Tags.Items.ORES)
                 .build()
 
+                .lang("Deepslate " + name + " Ore")
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
                 .tag(miningLevel)
@@ -125,7 +137,6 @@ public class OreBlock {
                                             .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
                                     )));
                 })
-                .lang("Deepslate " + name + " Ore")
                 .register();
     }
 
@@ -143,6 +154,7 @@ public class OreBlock {
                 .tag(Tags.Items.ORES)
                 .build()
 
+                .lang(name + " Ore")
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
                 .tag(miningLevel)
@@ -166,7 +178,6 @@ public class OreBlock {
                                             .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
                                     )));
                 })
-                .lang(name + " Ore")
                 .register();
     }
 
@@ -184,6 +195,7 @@ public class OreBlock {
                 .tag(Tags.Items.ORES)
                 .build()
 
+                .lang("Deepslate " + name + " Ore")
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
                 .tag(miningLevel)
@@ -207,7 +219,6 @@ public class OreBlock {
                                             .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
                                     )));
                 })
-                .lang("Deepslate " + name + " Ore")
                 .register();
     }
 
@@ -217,6 +228,7 @@ public class OreBlock {
                 .tag(Tags.Items.ORES)
                 .build()
 
+                .lang(name + " Ore")
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
                 .tag(miningLevel)
@@ -240,7 +252,6 @@ public class OreBlock {
                                             .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
                                     )));
                 })
-                .lang(name + " Ore")
                 .register();
     }
 
@@ -250,6 +261,7 @@ public class OreBlock {
                 .tag(Tags.Items.ORES)
                 .build()
 
+                .lang("Deepslate " + name + " Ore")
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
                 .tag(miningLevel)
@@ -273,7 +285,6 @@ public class OreBlock {
                                             .apply(ApplyBonusCount.addOreBonusCount(silkTouch))
                                     )));
                 })
-                .lang("Deepslate " + name + " Ore")
                 .register();
     }
 

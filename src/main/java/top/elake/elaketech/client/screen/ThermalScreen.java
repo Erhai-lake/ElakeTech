@@ -14,7 +14,7 @@ import top.elake.elaketech.client.menu.ThermalMenu;
  */
 public class ThermalScreen extends AbstractContainerScreen<ThermalMenu> {
     private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, "textures/gui/container/thermal.png");
+            ElakeTech.loadResource("textures/gui/container/thermal.png");
     private static final ResourceLocation MISSING_TEXTURE =
             ResourceLocation.fromNamespaceAndPath("minecraft", "textures/misc/unknown_pack.png");
 

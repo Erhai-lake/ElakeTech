@@ -3,7 +3,6 @@ package top.elake.elaketech.register;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
@@ -78,6 +77,13 @@ public class ModCreativeModeTab {
                     .title(Component.translatable(IG + ElakeTech.MODID + ".tool"))
                     .icon(() -> new ItemStack(REGISTERED_TOOLS.get(0).asItem()))
                     .displayItems((params, output) -> REGISTERED_TOOLS.forEach(output::accept))
+                    .build()
+    );
+
+    private static final Supplier<CreativeModeTab> TEST = CREATIVE_MODE_TABS.register("test",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable(IG + ElakeTech.MODID + ".test"))
+                    .icon(() -> new ItemStack(REGISTERED_TOOLS.get(0).asItem()))
                     .build()
     );
     /**

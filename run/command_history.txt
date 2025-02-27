@@ -38,3 +38,4 @@
 /setblock -2 56 -16 elake_tech:rock_flint
 /setblock 0 57 -16 elake_tech:rock_flint
 /give Dev elake_tech:metal_detector
+/give Dev elake_tech:test_tool
