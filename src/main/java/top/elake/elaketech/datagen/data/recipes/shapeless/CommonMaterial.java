@@ -3,7 +3,6 @@ package top.elake.elaketech.datagen.data.recipes.shapeless;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.Materials;

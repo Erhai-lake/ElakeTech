@@ -3,7 +3,6 @@ package top.elake.elaketech.datagen.data.recipes.shaped;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.block.CommonBlock;

@@ -8,9 +8,10 @@ import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.datagen.data.recipes.blasting.CommonBlastingMaterial;
 import top.elake.elaketech.datagen.data.recipes.shaped.CommonShapedMaterials;
 import top.elake.elaketech.datagen.data.recipes.shaped.WorkBench;
-import top.elake.elaketech.datagen.data.recipes.shaped.tool.BronzeTool;
-import top.elake.elaketech.datagen.data.recipes.shaped.tool.FlintTool;
-import top.elake.elaketech.datagen.data.recipes.shaped.tool.StoneTool;
+import top.elake.elaketech.datagen.data.recipes.shaped.tool.FunctionToolRecipes;
+import top.elake.elaketech.datagen.data.recipes.shaped.tool.tier.BronzeTool;
+import top.elake.elaketech.datagen.data.recipes.shaped.tool.tier.FlintTool;
+import top.elake.elaketech.datagen.data.recipes.shaped.tool.tier.StoneTool;
 import top.elake.elaketech.datagen.data.recipes.shapeless.CommonMaterial;
 import top.elake.elaketech.datagen.data.recipes.blasting.OreBlasting;
 import top.elake.elaketech.datagen.data.recipes.stonecutting.Material;
@@ -33,6 +34,7 @@ public class ModRecipesGen extends RecipeProvider {
         BronzeTool.generateRecipes(output);
         StoneTool.generateRecipes(output);
         WorkBench.generateRecipes(output);
+        FunctionToolRecipes.generateRecipes(output);
         CommonShapedMaterials.generateRecipes(output);
         // Shapeless
         CommonMaterial.generateRecipes(output);

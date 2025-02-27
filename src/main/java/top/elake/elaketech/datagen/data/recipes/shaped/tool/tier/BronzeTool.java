@@ -1,9 +1,8 @@
-package top.elake.elaketech.datagen.data.recipes.shaped.tool;
+package top.elake.elaketech.datagen.data.recipes.shaped.tool.tier;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.tool.tier.Bronze;
@@ -24,7 +23,7 @@ public class BronzeTool {
                 .define('A', ModItemTags.Items.BRONZE_INGOT)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE_INGOT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "sword"));
+                .save(output, ElakeTech.loadResource( bronze + "sword"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_PICKAXE)
                 .pattern("AAA")
@@ -33,7 +32,7 @@ public class BronzeTool {
                 .define('A', ModItemTags.Items.BRONZE_INGOT)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE_INGOT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "pickaxe"));
+                .save(output, ElakeTech.loadResource( bronze + "pickaxe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_AXE)
                 .pattern("AA")
@@ -42,7 +41,7 @@ public class BronzeTool {
                 .define('A', ModItemTags.Items.BRONZE_INGOT)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE_INGOT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "axe"));
+                .save(output, ElakeTech.loadResource( bronze + "axe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_SHOVEL)
                 .pattern("A")
@@ -51,7 +50,7 @@ public class BronzeTool {
                 .define('A', ModItemTags.Items.BRONZE_INGOT)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE_INGOT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "shovel"));
+                .save(output, ElakeTech.loadResource( bronze + "shovel"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_HOE)
                 .pattern("AA")
@@ -60,7 +59,7 @@ public class BronzeTool {
                 .define('A', ModItemTags.Items.BRONZE_INGOT)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE_INGOT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "hoe"));
+                .save(output, ElakeTech.loadResource( bronze + "hoe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Bronze.BRONZE_HAMMER)
                 .pattern("AAA")
@@ -69,6 +68,6 @@ public class BronzeTool {
                 .define('A', ModItemTags.Items.BRONZE_INGOT)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_bronze", has(ModItemTags.Items.BRONZE_INGOT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, bronze + "hammer"));
+                .save(output, ElakeTech.loadResource( bronze + "hammer"));
     }
 }

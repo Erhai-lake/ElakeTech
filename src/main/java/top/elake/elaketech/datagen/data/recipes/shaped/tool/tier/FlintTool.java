@@ -1,9 +1,8 @@
-package top.elake.elaketech.datagen.data.recipes.shaped.tool;
+package top.elake.elaketech.datagen.data.recipes.shaped.tool.tier;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.tool.tier.Flint;
@@ -25,7 +24,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "sword"));
+                .save(output, ElakeTech.loadResource( flint + "sword"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_PICKAXE)
                 .pattern("ABA")
@@ -35,7 +34,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "pickaxe"));
+                .save(output, ElakeTech.loadResource( flint + "pickaxe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_AXE)
                 .pattern("AB")
@@ -45,7 +44,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "axe"));
+                .save(output, ElakeTech.loadResource( flint + "axe"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_HATCHET)
                 .pattern("AB")
@@ -54,7 +53,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "hatchet"));
+                .save(output, ElakeTech.loadResource( flint + "hatchet"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_SHOVEL)
                 .pattern("A")
@@ -64,7 +63,7 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "shovel"));
+                .save(output, ElakeTech.loadResource( flint + "shovel"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Flint.FLINT_HOE)
                 .pattern("AB")
@@ -74,6 +73,6 @@ public class FlintTool {
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
-                .save(output, ResourceLocation.fromNamespaceAndPath(ElakeTech.MODID, flint + "hoe"));
+                .save(output, ElakeTech.loadResource( flint + "hoe"));
     }
 }
