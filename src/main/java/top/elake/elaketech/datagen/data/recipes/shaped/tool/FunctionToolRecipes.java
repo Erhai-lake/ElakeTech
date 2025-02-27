@@ -19,7 +19,7 @@ public class FunctionToolRecipes {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FunctionTool.METAL_DETECTOR)
                 .pattern(" AA")
                 .pattern(" BA")
-                .pattern("B ")
+                .pattern("B  ")
                 .define('A', Tags.Items.INGOTS_IRON)
                 .define('B', Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_iron", has(Tags.Items.INGOTS_IRON))
