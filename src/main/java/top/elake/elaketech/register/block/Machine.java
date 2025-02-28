@@ -1,5 +1,6 @@
 package top.elake.elaketech.register.block;
 
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -19,21 +20,14 @@ import java.util.function.Supplier;
  * @author Qi-Month
  */
 public class Machine {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(BuiltInRegistries.BLOCK, ElakeTech.MODID);
-    public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(BuiltInRegistries.ITEM, ElakeTech.MODID);
-
-    public static final Supplier<Block> THERMAL_POWER = BLOCKS.register("thermal_power",
-            () -> new RegistersThermalBlockEntity(BlockBehaviour.Properties.of()
+    public static final BlockEntry<RegistersThermalBlockEntity> THERMAL_POWER = ElakeTech.REGISTER.block("thermal_power", RegistersThermalBlockEntity::new)
+            .simpleItem()
+            .properties((properties) -> properties
                     .sound(SoundType.LANTERN)
                     .strength(3.0f)
-                    .requiresCorrectToolForDrops()));
-
-    public static final Supplier<Item> THERMAL_POWER_ITEM = ITEMS.register("thermal_power",
-            () -> new BlockItem(THERMAL_POWER.get(), new Item.Properties()));
+                    .requiresCorrectToolForDrops())
+            .register();
 
     public static void registers() {
-        ModCreativeModeTab.addAll((DeferredItem<Item>) THERMAL_POWER_ITEM);
     }
 }

@@ -52,7 +52,7 @@ public class ElakeTech {
         // 粗矿
         OreItem.register();
         // 金属锭
-        MetalIngot.register();
+        IngotItem.register();
         // 板材
         PlateItem.register();
         // 金属板
@@ -100,8 +100,7 @@ public class ElakeTech {
         ModTooltip.register(NeoForge.EVENT_BUS);
 
         // test
-        Machine.BLOCKS.register(event);
-        Machine.ITEMS.register(event);
+        Machine.registers();
         ModBlockEntity.BLOCK_ENTITIES.register(event);
         ModMenuType.MENU_TYPES.register(event);
 

@@ -10,10 +10,9 @@ import top.elake.elaketech.ElakeTech;
  * @author Qi-Month
  */
 public class TestTool {
-    public static final ItemEntry<Item> TEST_TOOL =
-            ElakeTech.REGISTER.item("test_tool", Item::new)
-                    .properties((properties) -> properties.attributes(PickaxeItem.createAttributes(Tiers.STONE, 3, -2.4f)))
-                    .register();
+//    public static final ItemEntry<Item> TEST_TOOL = ElakeTech.REGISTER.item("test_tool", Item::new)
+//            .properties((properties) -> properties.attributes(PickaxeItem.createAttributes(Tiers.STONE, 3, -2.4f)))
+//            .register();
 
     public static void register() {
     }

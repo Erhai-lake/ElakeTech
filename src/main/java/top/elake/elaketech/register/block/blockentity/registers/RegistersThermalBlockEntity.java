@@ -93,9 +93,9 @@ public class RegistersThermalBlockEntity extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
-        return type == ModBlockEntity.THERMAL_POWER.get() ?
-                (level1, pos, state1, blockEntity) -> ((ThermalBlockEntity) blockEntity)
-                        .tick(level1, pos, state1, (ThermalBlockEntity) blockEntity) : null;
+        return type ==
+                ModBlockEntity.THERMAL_POWER.get() ? (level1, pos, state1, blockEntity) -> ((ThermalBlockEntity) blockEntity)
+                .tick(level1, pos, state1, (ThermalBlockEntity) blockEntity) : null;
     }
 
     @Override

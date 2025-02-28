@@ -25,18 +25,21 @@ public class CommonBlock {
     /**
      * 白云岩
      */
-    public static final DeferredBlock<Block> DOLOSTONE = Registers.registerBlock("dolostone",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final BlockEntry<Block> DOLOSTONE = ElakeTech.REGISTER.block("dolostone", Block::new)
+            .properties((properties) -> BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))
+            .register();
     /**
      * 高岭土
      */
-    public static final DeferredBlock<Block> KAOLIN = Registers.registerBlock("kaolin",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
+    public static final BlockEntry<Block> KAOLIN = ElakeTech.REGISTER.block("kaolin", Block::new)
+            .properties((properties) -> BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY))
+            .register();
     /**
      * 耐火砖块
      */
-    public static final DeferredBlock<Block> REFRACTORY_BRICKS = Registers.registerBlock("refractory_bricks",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final BlockEntry<Block> REFRACTORY_BRICKS = ElakeTech.REGISTER.block("refractory_bricks", Block::new)
+            .properties((properties) -> BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS))
+            .register();
 
     public static final BlockEntry<RockFlint> ROCK_FLINT = ElakeTech.REGISTER.block("rock_flint", RockFlint::new)
             .lang("Rock Flint")
@@ -46,19 +49,16 @@ public class CommonBlock {
                                     .getExistingFile(ElakeTech.loadResource("block/rock_flint")))
                             .build()))
             .loot((tb, block) -> tb.add(block, LootTable.lootTable()
-                            .withPool(LootPool.lootPool()
-                                    .setRolls(ConstantValue.exactly(1))
-                                    .add(LootItem.lootTableItem(Items.FLINT)
-                                            .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
-                            )))
-                    .register();
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantValue.exactly(1))
+                            .add(LootItem.lootTableItem(Items.FLINT)
+                                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                    )))
+            .register();
 
     /**
      * 注册
      */
     public static void registers() {
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("dolostone", DOLOSTONE, new Item.Properties()));
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("kaolin", KAOLIN, new Item.Properties()));
-        ModCreativeModeTab.addAll(Registers.registerBlockItem("refractory_bricks", REFRACTORY_BRICKS, new Item.Properties()));
     }
 }

@@ -1,9 +1,11 @@
 package top.elake.elaketech.register.tool.tier;
 
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredItem;
+import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.tag.ModItemTags;
 import top.elake.elaketech.util.Registers;
@@ -45,6 +47,10 @@ public class Bronze {
     /**
      * 剑
      */
+    public static final ItemEntry<Item> BRONZE_SWORD = ElakeTech.REGISTER.item("bronze_sword", Item::new)
+            .properties((properties) -> properties
+                    .attributes(SwordItem.createAttributes(BRONZE_TIER, 3, -2.4f)), 0)
+            .register();
     public static final DeferredItem<Item> BRONZE_SWORD = Registers.registerTool("bronze_sword", "sword", BRONZE_TIER, new Item.Properties()
             .attributes(SwordItem.createAttributes(BRONZE_TIER, 3, -2.4f)), 0);
 

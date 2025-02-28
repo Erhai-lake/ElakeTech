@@ -1,9 +1,6 @@
 package top.elake.elaketech.datagen.assets.translation;
 
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.register.item.Elements;
-import top.elake.elaketech.register.item.MetalIngot;
-import top.elake.elaketech.register.item.PlateItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,21 +10,6 @@ import java.util.List;
  */
 public class Common {
     public static void registers() {
-        // 元素
-        for (String element : Elements.ELEMENTS_ITEM_ARR) {
-            addLanguage("item", element, element, element);
-        }
-
-        // 金属锭
-        for (MetalIngot.IngotItem ingot : MetalIngot.INGOT_ITEM_GROUP) {
-            addLanguage("item", ingot.id() + "_ingot", ingot.en() + " Ingot", ingot.cn() + "锭");
-        }
-
-        // 板材
-        for (PlateItem.PlateItems plate : PlateItem.PLATE_ITEM_GROUP) {
-            addLanguage("item", plate.id() + "_plate", plate.en() + " Plate", plate.cn() + "板");
-        }
-
         // 进度
         addLanguage("advancements", "main.root.description", "Welcome to the Elake Tech", "欢迎来到洱海科技");
         addLanguage("advancements", "main.root.title", "Elake Tech", "洱海科技");
@@ -45,18 +27,6 @@ public class Common {
         // 书
         addLanguage(null, "patchouli.book.name", "E-T Manual", "E-T手册");
         addLanguage(null, "patchouli.book.landing", "E-T Complete Reference Guide", "E-T完整参考指南");
-
-        // 材料
-        addLanguage("item", "grass_fiber", "Grass Fiber", "草纤维");
-        addLanguage("item", "grass_string", "Grass String", "草绳");
-        addLanguage("item", "raw_graphite", "Raw Graphite", "粗石墨");
-        addLanguage("item", "graphite_ingot", "Graphite Ingot", "石墨锭");
-        addLanguage("item", "graphite_plate", "Graphite Plate", "石墨板");
-        addLanguage("item", "fragment_dolomite", "Fragment Dolomite", "粉碎白云岩");
-        addLanguage("item", "kaolinite", "Kaolinite", "高岭土");
-        addLanguage("item", "refractory_brick", "Refractory Brick", "耐火砖");
-        addLanguage("item", "refractory_clay_ball", "Refractory Clay Ball", "耐火黏土球");
-        addLanguage("item", "wet_refractory_brick", "Wet Refractory Brick", "潮湿耐火砖");
 
         // 金属板
 
@@ -82,12 +52,6 @@ public class Common {
         addLanguage("block", "dolostone", "Dolostone", "白云岩");
         addLanguage("block", "kaolin", "Kaolin", "高岭土");
         addLanguage("block", "refractory_bricks", "Refractory Bricks", "耐火砖块");
-
-        // 矿石
-        addLanguage("block", "graphite_ore", "Graphite Ore", "石墨矿石");
-        addLanguage("block", "deepslate_graphite_ore", "Deepslate Graphite Ore", "深层石墨矿石");
-        addLanguage("block", "quartz_ore", "Quartz Ore", "石英矿");
-        addLanguage("block", "deepslate_quartz_ore", "Deepslate Quartz Ore", "深层石英矿");
 
         // 化学用具
         addLanguage("item", "asbestos_net", "Asbestos Net", "石棉网");

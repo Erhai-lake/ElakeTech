@@ -1,5 +1,6 @@
 package top.elake.elaketech.util;
 
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
@@ -20,13 +21,12 @@ public class Registers {
     /**
      * Item
      */
-    private static final DeferredRegister.Items ITEMS =
-            DeferredRegister.createItems(ElakeTech.MODID);
+    private static final ItemEntry<Item> ITEMS = ElakeTech.REGISTER.item();
 
     /**
      * Block
      */
-    private static final DeferredRegister.Blocks BLOCKS =
+    private static final ItemEntry<Block> BLOCKS =
             DeferredRegister.createBlocks(ElakeTech.MODID);
 
     /**
@@ -89,10 +89,11 @@ public class Registers {
      * @param properties 工具属性
      * @return 工具句柄
      */
-    public static DeferredItem<Item> registerTool(String name, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
+    public static DeferredItem<Item> registerTool(String name, int color, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
         return switch (type) {
             case "sword" ->
-                    ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+
+//                    ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage));
             case "pickaxe" ->
                     ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
             case "axe" ->
