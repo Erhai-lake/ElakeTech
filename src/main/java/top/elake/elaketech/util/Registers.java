@@ -1,14 +1,12 @@
 package top.elake.elaketech.util;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.util.tool.*;
 
@@ -19,34 +17,15 @@ import java.util.function.Supplier;
  */
 public class Registers {
     /**
-     * Item
-     */
-    private static final ItemEntry<Item> ITEMS = ElakeTech.REGISTER.item();
-
-    /**
-     * Block
-     */
-    private static final ItemEntry<Block> BLOCKS =
-            DeferredRegister.createBlocks(ElakeTech.MODID);
-
-    /**
      * 注册物品
      *
      * @param name       名称
      * @param properties 物品属性
      * @return 物品句柄
      */
-    public static DeferredItem<Item> registerItem(String name, Item.Properties properties) {
-        return ITEMS.register(name, () -> new Item(properties));
-    }
-
-    /**
-     * 注册物品
-     *
-     * @param event 事件总线
-     */
-    public static void registerItems(IEventBus event) {
-        ITEMS.register(event);
+    public static ItemEntry<Item> registerItem(String name, Item.Properties properties) {
+        return ElakeTech.REGISTER.item(name, p -> new Item(properties))
+                .register();
     }
 
     /**
@@ -56,28 +35,23 @@ public class Registers {
      * @param properties 方块属性
      * @return 方块句柄
      */
-    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> properties) {
-        return BLOCKS.register(name, properties);
+    public static <T extends Block> BlockEntry<T> registerBlock(String name, BlockBehaviour.Properties properties, Supplier<T> factory) {
+        return ElakeTech.REGISTER.block(name, p -> factory.get())
+                .properties(p -> properties)
+                .register();
     }
 
     /**
      * 注册方块物品
      *
      * @param name       名称
+     * @param block      方块
      * @param properties 物品属性
      * @return 物品句柄
      */
-    public static <T extends Block> DeferredItem<Item> registerBlockItem(String name, Supplier<T> block, Item.Properties properties) {
-        return ITEMS.register(name, () -> new BlockItem(block.get(), properties));
-    }
-
-    /**
-     * 注册方块
-     *
-     * @param event 事件总线
-     */
-    public static void registerBlocks(IEventBus event) {
-        BLOCKS.register(event);
+    public static ItemEntry<BlockItem> registerBlockItem(String name, BlockEntry<? extends Block> block, Item.Properties properties) {
+        return ElakeTech.REGISTER.item(name, p -> new BlockItem(block.get(), properties))
+                .register();
     }
 
     /**
@@ -89,19 +63,18 @@ public class Registers {
      * @param properties 工具属性
      * @return 工具句柄
      */
-    public static DeferredItem<Item> registerTool(String name, int color, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
+    public static ItemEntry<? extends Item> registerTool(String name, int color, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
         return switch (type) {
-            case "sword" ->
-
-//                    ITEMS.register(name, () -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "pickaxe" ->
-                    ITEMS.register(name, () -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "axe" ->
-                    ITEMS.register(name, () -> new AxeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "shovel" ->
-                    ITEMS.register(name, () -> new ShovelDamageToolCrafting(tier, properties, craftingSubtractingDamage));
-            case "hoe" ->
-                    ITEMS.register(name, () -> new HoeDamageToolCrafting(tier, properties, craftingSubtractingDamage));
+            case "sword" -> ElakeTech.REGISTER.<SwordDamageToolCrafting>item(name,
+                p -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
+            case "pickaxe" -> ElakeTech.REGISTER.<PickaxeDamageToolCrafting>item(name,
+                p -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
+            case "axe" -> ElakeTech.REGISTER.<AxeDamageToolCrafting>item(name,
+                p -> new AxeDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
+            case "shovel" -> ElakeTech.REGISTER.<ShovelDamageToolCrafting>item(name,
+                p -> new ShovelDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
+            case "hoe" -> ElakeTech.REGISTER.<HoeDamageToolCrafting>item(name,
+                p -> new HoeDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
             default -> throw new IllegalArgumentException("Error Type");
         };
     }

@@ -65,10 +65,10 @@ public class ElakeTech {
         // 化学工具(物品)
         ChemicalAppliancesItem.register();
 
-        // 注册物品
-        Registers.registerItems(event);
-        // 注册方块
-        Registers.registerBlocks(event);
+//        // 注册物品
+//        Registers.registerItems(event);
+//        // 注册方块
+//        Registers.registerBlocks(event);
 
         // 燧石工具
         Flint.register();
