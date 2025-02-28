@@ -2,7 +2,9 @@ package top.elake.elaketech.register.item.custom;
 
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -27,17 +29,34 @@ public class MetalDetector extends Item {
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         ItemStack itemInHand = context.getItemInHand();
-
-        if (!context.getLevel().isClientSide()) {
+        Player player = context.getPlayer();
+        boolean isClientSide = context.getLevel().isClientSide();
+        
+        if (!isClientSide) {
             BlockPos positionClicked = context.getClickedPos();
-            Player player = context.getPlayer();
             boolean foundBlock = false;
+            
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState state = context.getLevel().getBlockState(positionClicked.below(i));
 
                 if (isValuableBlock(state)) {
                     outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
                     foundBlock = true;
+                    
+                    BlockPos playerPos = player.blockPosition();
+                    for(int j = 0; j < 5; j++) {
+                        double offsetX = context.getLevel().getRandom().nextDouble() * 0.5D - 0.25D;
+                        double offsetZ = context.getLevel().getRandom().nextDouble() * 0.5D - 0.25D;
+                        ((ServerLevel)context.getLevel()).sendParticles(
+                            ParticleTypes.GLOW,
+                            playerPos.getX() + 0.5D + offsetX,
+                            playerPos.getY(),
+                            playerPos.getZ() + 0.5D + offsetZ,
+                            1,
+                            0.0D, 0.05D, 0.0D,
+                            0.0D
+                        );
+                    }
                     break;
                 }
             }
