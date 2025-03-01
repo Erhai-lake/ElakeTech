@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Elements {
     static {
-        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.ELEMENTS.get());
+//        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.ELEMENTS);
     }
 
     public static void register() {

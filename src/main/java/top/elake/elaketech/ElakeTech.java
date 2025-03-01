@@ -43,7 +43,7 @@ public class ElakeTech {
      */
     public ElakeTech(IEventBus event) {
         // 创造模式物品栏
-        ModCreativeModeTab.register(event);
+        ModCreativeModeTab.register();
         // 元素
         Elements.register();
         // 材料
