@@ -1,5 +1,6 @@
 package top.elake.elaketech.register.tool.tier;
 
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
@@ -16,18 +17,6 @@ public class Flint {
      * 注册
      */
     public static void register() {
-        // 剑
-        ModCreativeModeTab.addTools(FLINT_SWORD);
-        // 镐
-        ModCreativeModeTab.addTools(FLINT_PICKAXE);
-        // 斧
-        ModCreativeModeTab.addTools(FLINT_AXE);
-        // 手斧
-        ModCreativeModeTab.addTools(FLINT_HATCHET);
-        // 锹
-        ModCreativeModeTab.addTools(FLINT_SHOVEL);
-        // 锄
-        ModCreativeModeTab.addTools(FLINT_HOE);
     }
 
     /**
@@ -57,36 +46,67 @@ public class Flint {
     /**
      * 剑
      */
-    public static final DeferredItem<Item> FLINT_SWORD = Registers.registerTool("flint_sword", "sword", FLINT_TIER, new Item.Properties()
-            .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f)), 0);
-
+    public static final ItemEntry<? extends Item> FLINT_SWORD = Registers.registerAloneTool(
+            "flint_sword",
+            "Flint Sword",
+            "sword",
+            FLINT_TIER,
+            new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f)), 0
+    );
     /**
      * 镐
      */
-    public static final DeferredItem<Item> FLINT_PICKAXE = Registers.registerTool("flint_pickaxe", "pickaxe", FLINT_TIER, new Item.Properties()
-            .attributes(PickaxeItem.createAttributes(FLINT_TIER, 1, -2.8f)), 0);
-
+    public static final ItemEntry<? extends Item> FLINT_PICKAXE = Registers.registerAloneTool(
+            "flint_pickaxe",
+            "Flint Pickaxe",
+            "pickaxe",
+            FLINT_TIER,
+            new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 1, -2.8f)), 0
+    );
     /**
      * 斧
      */
-    public static final DeferredItem<Item> FLINT_AXE = Registers.registerTool("flint_axe", "axe", FLINT_TIER, new Item.Properties()
-            .attributes(AxeItem.createAttributes(FLINT_TIER, 1, -2)), 0);
-
+    public static final ItemEntry<? extends Item> FLINT_AXE = Registers.registerAloneTool(
+            "flint_axe",
+            "Flint Axe",
+            "axe",
+            FLINT_TIER,
+            new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 1, -2)), 0
+    );
     /**
      * 手斧
      */
-    public static final DeferredItem<Item> FLINT_HATCHET = Registers.registerTool("flint_hatchet", "axe", FLINT_HATCHET_TIER, new Item.Properties()
-            .attributes(AxeItem.createAttributes(FLINT_HATCHET_TIER, 1, -2)), 0);
-
+    public static final ItemEntry<? extends Item> FLINT_HATCHET = Registers.registerAloneTool(
+            "flint_hatchet",
+            "Flint Hatchet",
+            "axe",
+            FLINT_TIER,
+            new Item.Properties()
+                    .attributes(AxeItem.createAttributes(FLINT_HATCHET_TIER, 1, -2)), 0
+    );
     /**
      * 锹
      */
-    public static final DeferredItem<Item> FLINT_SHOVEL = Registers.registerTool("flint_shovel", "shovel", FLINT_TIER, new Item.Properties()
-            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0);
-
+    public static final ItemEntry<? extends Item> FLINT_SHOVEL = Registers.registerAloneTool(
+            "flint_shovel",
+            "Flint Shovel",
+            "shovel",
+            FLINT_TIER,
+            new Item.Properties()
+                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
+    );
     /**
      * 锄
      */
-    public static final DeferredItem<Item> FLINT_HOE = Registers.registerTool("flint_hoe", "hoe", FLINT_TIER, new Item.Properties()
-            .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0);
+    public static final ItemEntry<? extends Item> FLINT_HOE = Registers.registerAloneTool(
+            "flint_hoe",
+            "Flint Hoe",
+            "hoe",
+            FLINT_TIER,
+            new Item.Properties()
+                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
+    );
 }

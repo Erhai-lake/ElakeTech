@@ -1,5 +1,6 @@
 package top.elake.elaketech.register;
 
+import com.tterrag.registrate.builders.NoConfigBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,18 +17,20 @@ import java.util.function.Supplier;
  */
 public class ModCreativeModeTab {
     public static final String IG = "itemGroup.";
+
     private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ElakeTech.MODID);
 
     /**
      * 元素
      */
-    public static final Supplier<CreativeModeTab> ELEMENTS = CREATIVE_MODE_TABS.register("elements",
-            () -> CreativeModeTab.builder()
-                    .title(Component.translatable(IG + ElakeTech.MODID + ".elements"))
-                    .icon(() -> new ItemStack(ChemicalAppliancesItem.ASBESTOS_NET.asItem()))
-                    .build()
-    );
+    public static final NoConfigBuilder<CreativeModeTab, CreativeModeTab, String> ELEMENTS = ElakeTech.REGISTER.defaultCreativeTab("elements", "Elements",
+            (c) -> {
+                c.title(Component.translatable(IG + ElakeTech.MODID + ".elements"));
+                c.icon(() -> new ItemStack(ChemicalAppliancesItem.ASBESTOS_NET.asItem()));
+                c.build();
+            });
+
 
     /**
      * 化学用具
@@ -60,6 +63,6 @@ public class ModCreativeModeTab {
     );
 
     public static void register(IEventBus event) {
-        event.register(event);
+        CREATIVE_MODE_TABS.register(event);
     }
 }

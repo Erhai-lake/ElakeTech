@@ -20,16 +20,6 @@ public class ItemColor {
     @SubscribeEvent
     private static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         ITEM_COLOR = event.getItemColors();
-        // 石头
-        registerColorsForItem(Stone.STONE_HAMMER.toStack(), 0, 0xFF808080);
-
-        // 青铜
-        registerColorsForItem(Bronze.BRONZE_SWORD.toStack(), 0, 0xFFFF8C00);
-        registerColorsForItem(Bronze.BRONZE_PICKAXE.toStack(), 0, 0xFFFF8C00);
-        registerColorsForItem(Bronze.BRONZE_AXE.toStack(), 0, 0xFFFF8C00);
-        registerColorsForItem(Bronze.BRONZE_SHOVEL.toStack(), 0, 0xFFFF8C00);
-        registerColorsForItem(Bronze.BRONZE_HOE.toStack(), 0, 0xFFFF8C00);
-        registerColorsForItem(Bronze.BRONZE_HAMMER.toStack(), 0, 0xFFFF8C00);
     }
 
     /**

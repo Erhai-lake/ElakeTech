@@ -1,59 +1,16 @@
 package top.elake.elaketech.util;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
-import com.tterrag.registrate.util.entry.BlockEntry;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.util.tool.*;
 
-import java.util.function.Supplier;
 
 /**
  * @author Erhai-lake
  */
 public class Registers {
-    /**
-     * 注册物品
-     *
-     * @param name       名称
-     * @param properties 物品属性
-     * @return 物品句柄
-     */
-    public static ItemEntry<Item> registerItem(String name, Item.Properties properties) {
-        return ElakeTech.REGISTER.item(name, p -> new Item(properties))
-                .register();
-    }
-
-    /**
-     * 注册方块
-     *
-     * @param name       名称
-     * @param properties 方块属性
-     * @return 方块句柄
-     */
-    public static <T extends Block> BlockEntry<T> registerBlock(String name, BlockBehaviour.Properties properties, Supplier<T> factory) {
-        return ElakeTech.REGISTER.block(name, p -> factory.get())
-                .properties(p -> properties)
-                .register();
-    }
-
-    /**
-     * 注册方块物品
-     *
-     * @param name       名称
-     * @param block      方块
-     * @param properties 物品属性
-     * @return 物品句柄
-     */
-    public static ItemEntry<BlockItem> registerBlockItem(String name, BlockEntry<? extends Block> block, Item.Properties properties) {
-        return ElakeTech.REGISTER.item(name, p -> new BlockItem(block.get(), properties))
-                .register();
-    }
-
     /**
      * 注册工具
      *
@@ -63,18 +20,92 @@ public class Registers {
      * @param properties 工具属性
      * @return 工具句柄
      */
-    public static ItemEntry<? extends Item> registerTool(String name, int color, String type, Tier tier, Item.Properties properties, int craftingSubtractingDamage) {
+    public static ItemEntry<? extends Item> registerAloneTool(String id, String name, String type, Tier tier, Item.Properties properties, int craftingDamage) {
         return switch (type) {
-            case "sword" -> ElakeTech.REGISTER.<SwordDamageToolCrafting>item(name,
-                p -> new SwordDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
-            case "pickaxe" -> ElakeTech.REGISTER.<PickaxeDamageToolCrafting>item(name,
-                p -> new PickaxeDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
-            case "axe" -> ElakeTech.REGISTER.<AxeDamageToolCrafting>item(name,
-                p -> new AxeDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
-            case "shovel" -> ElakeTech.REGISTER.<ShovelDamageToolCrafting>item(name,
-                p -> new ShovelDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
-            case "hoe" -> ElakeTech.REGISTER.<HoeDamageToolCrafting>item(name,
-                p -> new HoeDamageToolCrafting(tier, properties, craftingSubtractingDamage)).register();
+            case "sword" -> ElakeTech.REGISTER.<SwordDamageToolCrafting>item(id,
+                            (p) -> new SwordDamageToolCrafting(tier, properties, craftingDamage))
+                    .lang(name)
+                    .register();
+            case "pickaxe" -> ElakeTech.REGISTER.<PickaxeDamageToolCrafting>item(id,
+                            (p) -> new PickaxeDamageToolCrafting(tier, properties, craftingDamage))
+                    .lang(name)
+                    .register();
+            case "axe" -> ElakeTech.REGISTER.<AxeDamageToolCrafting>item(id,
+                            (p) -> new AxeDamageToolCrafting(tier, properties, craftingDamage))
+                    .lang(name)
+                    .register();
+            case "shovel" -> ElakeTech.REGISTER.<ShovelDamageToolCrafting>item(id,
+                            (p) -> new ShovelDamageToolCrafting(tier, properties, craftingDamage))
+                    .lang(name)
+                    .register();
+            case "hoe" -> ElakeTech.REGISTER.<HoeDamageToolCrafting>item(id,
+                            (p) -> new HoeDamageToolCrafting(tier, properties, craftingDamage))
+                    .lang(name)
+                    .register();
+            case "hammer" -> ElakeTech.REGISTER.<HammerDamageToolCrafting>item(id,
+                            (p) -> new HammerDamageToolCrafting(tier, properties, craftingDamage))
+                    .lang(name)
+                    .register();
+            default -> throw new IllegalArgumentException("Error Type");
+        };
+    }
+
+    public static ItemEntry<? extends Item> registerColorTool(String id, String name, int color, String type, Tier tier, Item.Properties properties, int craftingDamage) {
+        return switch (type) {
+            case "sword" -> ElakeTech.REGISTER.<SwordDamageToolCrafting>item(id,
+                            (p) -> new SwordDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> {
+                        p.handheld(c, p.modLoc("item/tool/color/sword/head"));
+                        p.handheld(c, p.modLoc("item/tool/color/sword/handle"));
+                    })
+                    .lang(name)
+                    .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
+                    .register();
+            case "pickaxe" -> ElakeTech.REGISTER.<PickaxeDamageToolCrafting>item(id,
+                            (p) -> new PickaxeDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> {
+                        p.handheld(c, p.modLoc("item/tool/color/pickaxe/head"));
+                        p.handheld(c, p.modLoc("item/tool/color/pickaxe/handle"));
+                    })
+                    .lang(name)
+                    .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
+                    .register();
+            case "axe" -> ElakeTech.REGISTER.<AxeDamageToolCrafting>item(id,
+                            (p) -> new AxeDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> {
+                        p.handheld(c, p.modLoc("item/tool/color/axe/head"));
+                        p.handheld(c, p.modLoc("item/tool/color/axe/handle"));
+                    })
+                    .lang(name)
+                    .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
+                    .register();
+            case "shovel" -> ElakeTech.REGISTER.<ShovelDamageToolCrafting>item(id,
+                            (p) -> new ShovelDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> {
+                        p.handheld(c, p.modLoc("item/tool/color/shovel/head"));
+                        p.handheld(c, p.modLoc("item/tool/color/shovel/handle"));
+                    })
+                    .lang(name)
+                    .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
+                    .register();
+            case "hoe" -> ElakeTech.REGISTER.<HoeDamageToolCrafting>item(id,
+                            (p) -> new HoeDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> {
+                        p.handheld(c, p.modLoc("item/tool/color/hoe/head"));
+                        p.handheld(c, p.modLoc("item/tool/color/hoe/handle"));
+                    })
+                    .lang(name)
+                    .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
+                    .register();
+            case "hammer" -> ElakeTech.REGISTER.<HammerDamageToolCrafting>item(id,
+                            (p) -> new HammerDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> {
+                        p.handheld(c, p.modLoc("item/tool/color/hammer/head"));
+                        p.handheld(c, p.modLoc("item/tool/color/hammer/handle"));
+                    })
+                    .lang(name)
+                    .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
+                    .register();
             default -> throw new IllegalArgumentException("Error Type");
         };
     }

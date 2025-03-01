@@ -1,8 +1,6 @@
 package top.elake.elaketech.register.tool;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;

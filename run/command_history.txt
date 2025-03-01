@@ -40,3 +40,7 @@
 /give Dev elake_tech:metal_detector
 /give Dev elake_tech:test_tool
 /give Dev elake_tech:h
+/give Dev elake_tech:bronze_axe
+/give Dev elake_tech:bronze_hammere
+/give Dev elake_tech:bronze_hammer
+/give Dev elake_tech:flint_hatchet
