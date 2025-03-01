@@ -4,12 +4,18 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tiers;
+import top.elake.elaketech.ElakeTech;
+import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.util.Registers;
 
 /**
  * @author Qi-Month
  */
 public class Stone {
+    static {
+        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+    }
+
     public static void register() {
     }
 
@@ -18,8 +24,7 @@ public class Stone {
             "Stone Hammer",
             0xFFFF8C00,
             "pickaxe",
-            Tiers.STONE,
-            new Item.Properties()
+            Tiers.STONE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.STONE, 1, -2)), 0
     );
 }

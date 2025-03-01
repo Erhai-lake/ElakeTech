@@ -14,13 +14,6 @@ public class Common {
         addLanguage("advancements", "main.root.description", "Welcome to the Elake Tech", "欢迎来到洱海科技");
         addLanguage("advancements", "main.root.title", "Elake Tech", "洱海科技");
 
-        // 标签页
-        addLanguage("itemGroup", "all", "ElakeTech - All", "洱海科技 - 全部");
-        addLanguage("itemGroup", "element", "ElakeTech - Elements", "洱海科技 - 元素");
-        addLanguage("itemGroup", "tool", "ElakeTech - Tool", "洱海科技 - 工具");
-        addLanguage("itemGroup", "materials", "ElakeTech - Material", "洱海科技 - 材料");
-        addLanguage("itemGroup", "chemical_appliances", "ElakeTech - Chemical Appliances", "洱海科技 - 化学用具");
-        addLanguage("itemGroup", "sundries", "ElakeTech - Sundries", "洱海科技 - 杂项");
         // 画
         addLanguage("painting", "periodic_table_of_elements.title", "Periodic table of elements", "化学元素周期表");
         addLanguage("painting", "periodic_table_of_elements.author", "Дми́трий Ива́нович Менделе́ев/Elake", "德米特里·伊万诺维奇·门捷列夫/Elake");

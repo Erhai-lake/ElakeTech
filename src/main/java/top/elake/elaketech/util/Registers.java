@@ -20,30 +20,36 @@ public class Registers {
      * @param properties 工具属性
      * @return 工具句柄
      */
-    public static ItemEntry<? extends Item> registerAloneTool(String id, String name, String type, Tier tier, Item.Properties properties, int craftingDamage) {
+    public static ItemEntry<? extends Item> registerAloneTool(String id, String name, String type, Tier tier, Item.Properties properties, int craftingDamage, String texture) {
         return switch (type) {
             case "sword" -> ElakeTech.REGISTER.<SwordDamageToolCrafting>item(id,
                             (p) -> new SwordDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> p.generated(c, p.modLoc(texture)))
                     .lang(name)
                     .register();
             case "pickaxe" -> ElakeTech.REGISTER.<PickaxeDamageToolCrafting>item(id,
                             (p) -> new PickaxeDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> p.generated(c, p.modLoc(texture)))
                     .lang(name)
                     .register();
             case "axe" -> ElakeTech.REGISTER.<AxeDamageToolCrafting>item(id,
                             (p) -> new AxeDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> p.generated(c, p.modLoc(texture)))
                     .lang(name)
                     .register();
             case "shovel" -> ElakeTech.REGISTER.<ShovelDamageToolCrafting>item(id,
                             (p) -> new ShovelDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> p.generated(c, p.modLoc(texture)))
                     .lang(name)
                     .register();
             case "hoe" -> ElakeTech.REGISTER.<HoeDamageToolCrafting>item(id,
                             (p) -> new HoeDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> p.generated(c, p.modLoc(texture)))
                     .lang(name)
                     .register();
             case "hammer" -> ElakeTech.REGISTER.<HammerDamageToolCrafting>item(id,
                             (p) -> new HammerDamageToolCrafting(tier, properties, craftingDamage))
+                    .model((c, p) -> p.generated(c, p.modLoc(texture)))
                     .lang(name)
                     .register();
             default -> throw new IllegalArgumentException("Error Type");

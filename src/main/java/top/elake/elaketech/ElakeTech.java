@@ -20,7 +20,6 @@ import top.elake.elaketech.register.tool.tier.Bronze;
 import top.elake.elaketech.register.tool.tier.Flint;
 import top.elake.elaketech.register.tool.tier.Stone;
 import top.elake.elaketech.server.recipes.remove.ItemRecipes;
-import top.elake.elaketech.util.Registers;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -45,7 +44,7 @@ public class ElakeTech {
         // 创造模式物品栏
         ModCreativeModeTab.register();
         // 元素
-        Elements.register();
+        Element.Elements.register();
         // 材料
         Materials.register();
         // 粗矿

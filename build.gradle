@@ -11,6 +11,10 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    // Registrate
+    maven {
+        url "https://maven.ithundxr.dev/snapshots"
+    }
     // JEI
     maven {
         name = "Jared's maven"
@@ -38,22 +42,6 @@ repositories {
     // Patchouli
     maven {
         url = 'https://maven.blamejared.com'
-    }
-    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
-    maven { url = "https://mvn.devos.one/snapshots" } // Registrate
-
-    maven {
-        url "https://maven.saps.dev/releases"
-    }
-    maven {
-        url "https://api.modrinth.com/maven"
-    }
-    maven {
-        url "https://maven.architectury.dev"
-    }
-    maven {
-        name = "Fuzs Mod Resources"
-        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
     }
 }
 
@@ -114,21 +102,6 @@ sourceSets.main.resources {
 
 
 dependencies {
-    // fix
-//    implementation "curse.maven:ftbchunks-314906:6121389"
-//    implementation "curse.maven:ftbteams-404468:6119437"
-//    implementation "curse.maven:ftblibrary-404465:5583834"
-//    implementation "curse.maven:journeymap-32274:6213329"
-//    implementation "curse.maven:architectury-419699:5786327"
-//    implementation "curse.maven:forgeconfigapiport-547434:5982385"
-
-    // Create
-    implementation   "com.simibubi.create:create-${minecraft_version}:${create_version}"
-    implementation   "net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}"
-    compileOnly  "dev.engine-room.flywheel:flywheel-neoforge-api-${flywheel_minecraft_version}:${flywheel_version}"
-    runtimeOnly  "dev.engine-room.flywheel:flywheel-neoforge-${flywheel_minecraft_version}:${flywheel_version}"
-    implementation   "com.tterrag.registrate:Registrate:${registrate_version}"
-
     // JEI
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
@@ -147,7 +120,9 @@ dependencies {
     // Patchouli
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
-
+    // Registrate
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
 }
 
 tasks.withType(ProcessResources).configureEach {

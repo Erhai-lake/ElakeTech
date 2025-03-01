@@ -4,7 +4,7 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
-import net.neoforged.neoforge.registries.DeferredItem;
+import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.tag.ModItemTags;
 import top.elake.elaketech.util.Registers;
@@ -13,9 +13,10 @@ import top.elake.elaketech.util.Registers;
  * @author Erhai-lake
  */
 public class Flint {
-    /**
-     * 注册
-     */
+    static {
+        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+    }
+
     public static void register() {
     }
 
@@ -50,9 +51,9 @@ public class Flint {
             "flint_sword",
             "Flint Sword",
             "sword",
-            FLINT_TIER,
-            new Item.Properties()
-                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f)), 0
+            FLINT_TIER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 3, -2.4f)), 0,
+            "item/tool/flint/sword"
     );
     /**
      * 镐
@@ -61,9 +62,9 @@ public class Flint {
             "flint_pickaxe",
             "Flint Pickaxe",
             "pickaxe",
-            FLINT_TIER,
-            new Item.Properties()
-                    .attributes(SwordItem.createAttributes(FLINT_TIER, 1, -2.8f)), 0
+            FLINT_TIER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 1, -2.8f)), 0,
+            "item/tool/flint/pickaxe"
     );
     /**
      * 斧
@@ -72,9 +73,9 @@ public class Flint {
             "flint_axe",
             "Flint Axe",
             "axe",
-            FLINT_TIER,
-            new Item.Properties()
-                    .attributes(SwordItem.createAttributes(FLINT_TIER, 1, -2)), 0
+            FLINT_TIER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(FLINT_TIER, 1, -2)), 0,
+            "item/tool/flint/axe"
     );
     /**
      * 手斧
@@ -83,9 +84,9 @@ public class Flint {
             "flint_hatchet",
             "Flint Hatchet",
             "axe",
-            FLINT_TIER,
-            new Item.Properties()
-                    .attributes(AxeItem.createAttributes(FLINT_HATCHET_TIER, 1, -2)), 0
+            FLINT_TIER, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(FLINT_HATCHET_TIER, 1, -2)), 0,
+            "item/tool/flint/hatchet"
     );
     /**
      * 锹
@@ -94,9 +95,9 @@ public class Flint {
             "flint_shovel",
             "Flint Shovel",
             "shovel",
-            FLINT_TIER,
-            new Item.Properties()
-                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
+            FLINT_TIER, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0,
+            "item/tool/flint/shovel"
     );
     /**
      * 锄
@@ -105,8 +106,8 @@ public class Flint {
             "flint_hoe",
             "Flint Hoe",
             "hoe",
-            FLINT_TIER,
-            new Item.Properties()
-                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0
+            FLINT_TIER, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(FLINT_TIER, 1, -2)), 0,
+            "item/tool/flint/hoe"
     );
 }

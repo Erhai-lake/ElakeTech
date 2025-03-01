@@ -9,7 +9,9 @@ import top.elake.elaketech.ElakeTech;
  */
 public class ChemicalAppliancesItem {
     public static ItemEntry<Item> ASBESTOS_NET = ElakeTech.REGISTER.item("asbestos_net", Item::new)
+            .model((c, p) -> p.generated(c, p.modLoc("item/chemical_appliances/asbestos_net")))
             .register();
+
     public static void register() {
     }
 }
