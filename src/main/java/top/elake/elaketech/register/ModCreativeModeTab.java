@@ -22,7 +22,7 @@ public class ModCreativeModeTab {
      */
     public static final RegistryEntry<CreativeModeTab, CreativeModeTab> ELEMENTS = ElakeTech.REGISTER.defaultCreativeTab("elements",
                     (c) -> {
-//                        c.title(Component.translatable(IG + ElakeTech.MODID + ".elements"));
+                        c.title(Component.translatable(IG + ElakeTech.MODID + ".elements"));
                         c.icon(() -> new ItemStack(Element.Elements.H.item.asItem()));
                     })
             .register();
@@ -31,29 +31,29 @@ public class ModCreativeModeTab {
     /**
      * 化学用具
      */
-    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> CHEMICAL_APPLIANCES = ElakeTech.REGISTER.defaultCreativeTab("chemical_appliances",
-            (c) -> {
+//    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> CHEMICAL_APPLIANCES = ElakeTech.REGISTER.defaultCreativeTab("chemical_appliances",
+//            (c) -> {
 //                c.title(Component.translatable(IG + ElakeTech.MODID + ".chemical_appliances"));
-                c.icon(() -> new ItemStack(ChemicalAppliancesItem.ASBESTOS_NET.asItem()));
-            }).register();
-
-    /**
-     * 材料
-     */
-    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> MATERIALS = ElakeTech.REGISTER.defaultCreativeTab("materials",
-            (c) -> {
-                c.title(Component.translatable(IG + ElakeTech.MODID + ".materials"));
-                c.icon(() -> new ItemStack(OreBlock.TIN.asItem()));
-            }).register();
-
-    /**
-     * 工具
-     */
-    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> TOOLS = ElakeTech.REGISTER.defaultCreativeTab("tools",
-            (c) -> {
-//                c.title(Component.translatable(IG + ElakeTech.MODID + ".tools"));
-                c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
-            }).register();
+//                c.icon(() -> new ItemStack(ChemicalAppliancesItem.ASBESTOS_NET.asItem()));
+//            }).register();
+//
+//    /**
+//     * 材料
+//     */
+//    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> MATERIALS = ElakeTech.REGISTER.defaultCreativeTab("materials",
+//            (c) -> {
+//                c.title(Component.translatable(IG + ElakeTech.MODID + ".materials"));
+//                c.icon(() -> new ItemStack(OreBlock.TIN.asItem()));
+//            }).register();
+//
+//    /**
+//     * 工具
+//     */
+//    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> TOOLS = ElakeTech.REGISTER.defaultCreativeTab("aaaa",
+//            (c) -> {
+//                c.title(Component.translatable(IG + ElakeTech.MODID + ".aaaa"));
+//                c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
+//            }).register();
 
     public static void register() {
     }

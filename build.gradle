@@ -121,7 +121,6 @@ dependencies {
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
     // Registrate
-    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
 }
 

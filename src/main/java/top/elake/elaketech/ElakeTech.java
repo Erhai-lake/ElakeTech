@@ -10,16 +10,13 @@ import top.elake.elaketech.client.ModTooltip;
 import top.elake.elaketech.datagen.assets.model.*;
 import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.*;
-import top.elake.elaketech.register.ModCreativeModeTab;
-import top.elake.elaketech.register.ModMenuType;
+import top.elake.elaketech.register.*;
 import top.elake.elaketech.register.block.*;
 import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
-import top.elake.elaketech.register.tool.FunctionTool;
-import top.elake.elaketech.register.tool.tier.Bronze;
-import top.elake.elaketech.register.tool.tier.Flint;
-import top.elake.elaketech.register.tool.tier.Stone;
-import top.elake.elaketech.server.recipes.remove.ItemRecipes;
+import top.elake.elaketech.register.tool.*;
+import top.elake.elaketech.register.tool.tier.*;
+import top.elake.elaketech.server.recipes.remove.*;
 
 /**
  * @author Erhai-lake Qi-Month
@@ -63,11 +60,6 @@ public class ElakeTech {
         // 化学工具(物品)
         ChemicalAppliancesItem.register();
 
-//        // 注册物品
-//        Registers.registerItems(event);
-//        // 注册方块
-//        Registers.registerBlocks(event);
-
         // 燧石工具
         Flint.register();
         // 青铜工具
@@ -81,8 +73,6 @@ public class ElakeTech {
         Common.registers();
         // 物品模型
         ModItemModel.registers();
-        // 工具模型
-        ModToolItemModel.registers();
         // 方块
         ModBlockModel.registers();
         // 方块状态

@@ -4,6 +4,7 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
+import top.elake.elaketech.register.ModCreativeModeTab;
 import top.elake.elaketech.register.item.custom.MetalDetector;
 import top.elake.elaketech.register.item.custom.MetalDetectorT2;
 import top.elake.elaketech.register.item.custom.MetalDetectorT3;
@@ -12,6 +13,10 @@ import top.elake.elaketech.register.item.custom.MetalDetectorT3;
  * @author Qi-Month
  */
 public class FunctionTool {
+    static {
+//        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+    }
+
     /**
      * 一级探测器 - 只显示粒子
      */

@@ -39,14 +39,6 @@ import top.elake.elaketech.register.tool.tier.Flint;
 public class OreBlock {
     static TagKey<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
 
-    static {
-        ElakeTech.REGISTER.defaultCreativeTab("test", (c) -> {
-            c.title(Component.translatable("test"));
-            c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
-            c.build();
-        });
-    }
-
     public static BlockEntry<Block> TIN = registerColorOreBlock("tin", "Tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
     public static BlockEntry<Block> DEEPSLATE_TIN = registerColorDeepslateOreBlock("tin", "Tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
     public static BlockEntry<Block> GRAPHITE = registerOtherOreBlock("graphite", "Graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);

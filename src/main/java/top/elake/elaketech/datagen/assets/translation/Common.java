@@ -21,25 +21,6 @@ public class Common {
         addLanguage(null, "patchouli.book.name", "E-T Manual", "E-T手册");
         addLanguage(null, "patchouli.book.landing", "E-T Complete Reference Guide", "E-T完整参考指南");
 
-        // 金属板
-
-        // 工具
-        addLanguage("item", "stone_hammer", "Stone Hammer", "石锤");
-
-        addLanguage("item", "flint_sword", "Flint Sword", "燧石剑");
-        addLanguage("item", "flint_pickaxe", "Flint Pickaxe", "燧石镐");
-        addLanguage("item", "flint_axe", "Flint Axe", "燧石斧");
-        addLanguage("item", "flint_hatchet", "Flint Hatchet", "燧石手斧");
-        addLanguage("item", "flint_shovel", "Flint Shovel", "燧石锹");
-        addLanguage("item", "flint_hoe", "Flint Hoe", "燧石锄");
-
-        addLanguage("item", "bronze_sword", "Bronze Sword", "青铜剑");
-        addLanguage("item", "bronze_pickaxe", "Bronze Pickaxe", "青铜镐");
-        addLanguage("item", "bronze_axe", "Bronze Axe", "青铜斧");
-        addLanguage("item", "bronze_shovel", "Bronze Shovel", "青铜锹");
-        addLanguage("item", "bronze_hoe", "Bronze Hoe", "青铜锄");
-        addLanguage("item", "bronze_hammer", "Bronze Hammer", "青铜锤");
-
         //方块
         addLanguage("block", "alcohol_lamp", "Alcohol Lamp", "酒精灯");
         addLanguage("block", "dolostone", "Dolostone", "白云岩");

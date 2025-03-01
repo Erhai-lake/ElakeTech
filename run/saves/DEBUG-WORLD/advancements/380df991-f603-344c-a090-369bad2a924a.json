@@ -1091,9 +1091,9 @@
     },
     "done": true
   },
-  "create:root": {
+  "elake_tech:recipes/misc/crafting/shapeless/common/flint": {
     "criteria": {
-      "0": "2025-03-01 13:21:16 +0800"
+      "has_gravel": "2025-03-01 16:44:10 +0800"
     },
     "done": true
   },
