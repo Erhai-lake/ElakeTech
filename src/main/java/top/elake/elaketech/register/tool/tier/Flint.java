@@ -13,9 +13,9 @@ import top.elake.elaketech.util.Registers;
  * @author Erhai-lake
  */
 public class Flint {
-//    static {
-//        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
-//    }
+    static {
+        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+    }
 
     public static void register() {
     }

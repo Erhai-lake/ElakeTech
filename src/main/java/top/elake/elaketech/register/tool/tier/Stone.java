@@ -12,9 +12,9 @@ import top.elake.elaketech.util.Registers;
  * @author Qi-Month
  */
 public class Stone {
-//    static {
-//        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
-//    }
+    static {
+        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+    }
 
     public static void register() {
     }

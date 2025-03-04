@@ -1,6 +1,9 @@
 package top.elake.elaketech.register.tool;
 
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
@@ -14,7 +17,7 @@ import top.elake.elaketech.register.item.custom.MetalDetectorT3;
  */
 public class FunctionTool {
     static {
-//        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
     }
 
     /**

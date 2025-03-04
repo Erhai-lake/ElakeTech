@@ -38,10 +38,10 @@ public class ElakeTech {
      * @param event 事件总线
      */
     public ElakeTech(IEventBus event) {
+        // 元素
+        Element.ElementGroup.register();
         // 创造模式物品栏
         ModCreativeModeTab.register();
-        // 元素
-        Element.Elements.register();
         // 材料
         Materials.register();
         // 粗矿
