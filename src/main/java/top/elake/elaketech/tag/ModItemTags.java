@@ -30,5 +30,8 @@ public class ModItemTags {
 
         public static final TagKey<Item> PLATES = createItemTag("c", "plates");
         public static final TagKey<Item> IRON_PLATE = createItemTag("c", "plates/iron");
+        public static final TagKey<Item> TIN_PLATE = createItemTag("c", "plates/tin");
+        public static final TagKey<Item> BRONZE_PLATE = createItemTag("c", "plates/bronze");
+        public static final TagKey<Item> GRAPHITE_PLATE = createItemTag("c", "plates/graphite");
     }
 }

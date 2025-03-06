@@ -44,3 +44,4 @@
 /give Dev elake_tech:bronze_hammere
 /give Dev elake_tech:bronze_hammer
 /give Dev elake_tech:flint_hatchet
+/give Dev elake_tech:test_pickaxe
