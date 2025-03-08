@@ -1,25 +1,25 @@
 modLoader = "javafml"
-loaderVersion = "${loader_version_range}"
-license = "${mod_license}"
-logoFile="icon.png"
+loaderVersion = "[4,)"
+license = "MIT"
+logoFile = "icon.png"
 [[mods]]
-modId = "${mod_id}"
-version = "${mod_version}"
-displayName = "${mod_name}"
+modId = "elake_tech"
+version = "0.0.1"
+displayName = "Elake Tech"
 displayURL = "https://www.elake.top"
-authors = "${mod_authors}"
-description = '''${mod_description}'''
+authors = "Erhai-lake & Qi-Month"
+description = '''Elake Tech'''
 [[mixins]]
-config = "${mod_id}.mixins.json"
-[[dependencies."${mod_id}"]]
+config = "elake_tech.mixins.json"
+[[dependencies."elake_tech"]]
 modId = "neoforge"
 type = "required"
-versionRange = "${neo_version_range}"
+versionRange = "[21,)"
 ordering = "NONE"
 side = "BOTH"
-[[dependencies."${mod_id}"]]
+[[dependencies."elake_tech"]]
 modId = "minecraft"
 type = "required"
-versionRange = "${minecraft_version_range}"
+versionRange = "[1.21.1,1.22)"
 ordering = "NONE"
 side = "BOTH"
