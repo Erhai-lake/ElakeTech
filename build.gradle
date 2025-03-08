@@ -72,7 +72,7 @@ dependencies {
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
     // Ponder
-    implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    implementation jarJar("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
     // Registrate
     implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
 }
