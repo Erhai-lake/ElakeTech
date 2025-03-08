@@ -39,7 +39,6 @@ public class ElakeTech {
      */
     public ElakeTech(IEventBus event) {
         // 元素
-        Element.register();
         Element.ElementGroup.register();
         // 创造模式物品栏
         ModCreativeModeTab.register();
