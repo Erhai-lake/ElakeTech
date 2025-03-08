@@ -1,4 +1,4 @@
-package top.elake.elaketech.register.block.blockentity.registers;
+package top.elake.elaketech.register.block.entity.registers;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -25,17 +25,17 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import top.elake.elaketech.network.OpenGeneratorScreenPacket;
 import top.elake.elaketech.register.block.ModBlockEntity;
-import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
+import top.elake.elaketech.register.block.entity.ThermalBlockEntity;
 
 import java.util.List;
 
 /**
  * @author Qi-Month
  */
-public class RegistersThermalBlockEntity extends BaseEntityBlock {
+public class RegisterThermalBlockEntity extends BaseEntityBlock {
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
-    public RegistersThermalBlockEntity(Properties properties) {
+    public RegisterThermalBlockEntity(Properties properties) {
         super((properties)
                 // 当燃烧时发出亮度13的光
                 .lightLevel((state) -> state.getValue(LIT) ? 13 : 0)
@@ -100,7 +100,7 @@ public class RegistersThermalBlockEntity extends BaseEntityBlock {
 
     @Override
     protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
-        return simpleCodec(RegistersThermalBlockEntity::new);
+        return simpleCodec(RegisterThermalBlockEntity::new);
     }
 
     @Override

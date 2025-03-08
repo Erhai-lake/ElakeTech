@@ -17,7 +17,7 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.client.menu.ThermalMenu;
-import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
+import top.elake.elaketech.register.block.entity.ThermalBlockEntity;
 
 /**
  * @author Qi-Month

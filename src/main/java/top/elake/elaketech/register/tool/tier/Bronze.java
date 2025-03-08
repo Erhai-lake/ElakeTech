@@ -12,7 +12,9 @@ import top.elake.elaketech.util.Registers;
  */
 public class Bronze {
     static {
-        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+        ElakeTech.REGISTER.defaultCreativeTab("tool", (c) -> {
+            c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
+        }).lang((t) -> "itemGroup." + ElakeTech.MODID + ".tool", "Tool").register();
     }
 
     public static void register() {

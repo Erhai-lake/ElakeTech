@@ -1,6 +1,5 @@
-package top.elake.elaketech.register.item.custom;
+package top.elake.elaketech.register.item.custom.function;
 
-import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -12,18 +11,17 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.ElakeTech;
 
 /**
- * 二级矿物探测器 - 显示矿物名称
+ * 一级矿物探测器 - 只显示粒子效果
  * @author Qi-Month
  */
-public class MetalDetectorT2 extends Item {
-    public MetalDetectorT2(Properties properties) {
+public class MetalDetector extends Item {
+    public MetalDetector(Properties properties) {
         super(properties);
     }
 
@@ -39,11 +37,9 @@ public class MetalDetectorT2 extends Item {
             
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState state = context.getLevel().getBlockState(positionClicked.below(i));
-                Block block = state.getBlock();
 
                 if (isValuableBlock(state)) {
                     foundBlock = true;
-                    outputValuableCoordinates(block, player);
                     spawnFoundParticles(context, player);
                     break;
                 }
@@ -64,15 +60,10 @@ public class MetalDetectorT2 extends Item {
         return InteractionResult.SUCCESS;
     }
 
-    private void outputValuableCoordinates(Block block, Player player) {
-        player.sendSystemMessage(Component.translatable("info." + ElakeTech.MODID + I18n.get(block.getDescriptionId()),
-                I18n.get(block.getDescriptionId())));
-    }
-
     private void spawnFoundParticles(UseOnContext context, Player player) {
         BlockPos playerPos = player.blockPosition();
         // 玩家腰部高度约为1.0格
-        for(int j = 0; j < 8; j++) {
+        for(int j = 0; j < 5; j++) {
             double offsetX = context.getLevel().getRandom().nextDouble() * 0.5D - 0.25D;
             double offsetZ = context.getLevel().getRandom().nextDouble() * 0.5D - 0.25D;
             double offsetY = context.getLevel().getRandom().nextDouble() * 0.2D - 0.1D;
@@ -88,7 +79,10 @@ public class MetalDetectorT2 extends Item {
         }
     }
 
+    /**
+     * @param state 方块的状态
+     */
     private boolean isValuableBlock(BlockState state) {
         return state.is(Tags.Blocks.ORES);
     }
-} 
+}

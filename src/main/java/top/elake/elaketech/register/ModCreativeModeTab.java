@@ -35,10 +35,10 @@ public class ModCreativeModeTab {
     /**
      * 工具
      */
-    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> TOOLS = ElakeTech.REGISTER.defaultCreativeTab("tool",
-            (c) -> {
-                c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
-            }).lang((t) -> IG + ElakeTech.MODID + ".tool", "Tool").register();
+//    public static final RegistryEntry<CreativeModeTab, CreativeModeTab> TOOLS = ElakeTech.REGISTER.defaultCreativeTab("tool",
+//            (c) -> {
+//                c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
+//            }).lang((t) -> IG + ElakeTech.MODID + ".tool", "Tool").register();
 
     public static void register() {
     }

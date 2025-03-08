@@ -1,4 +1,4 @@
-package top.elake.elaketech.register.block.blockentity;
+package top.elake.elaketech.register.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

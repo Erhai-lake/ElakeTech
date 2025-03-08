@@ -1,6 +1,7 @@
 package top.elake.elaketech.register.tool.tier;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.world.item.*;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ModCreativeModeTab;
@@ -12,7 +13,9 @@ import top.elake.elaketech.util.Registers;
  */
 public class Flint {
     static {
-        ElakeTech.REGISTER.defaultCreativeTab(ModCreativeModeTab.TOOLS.getKey());
+        ElakeTech.REGISTER.defaultCreativeTab("tool", (c) -> {
+            c.icon(() -> new ItemStack(Flint.FLINT_PICKAXE.asItem()));
+        }).register();
     }
 
     public static void register() {

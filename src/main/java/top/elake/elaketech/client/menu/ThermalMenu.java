@@ -11,7 +11,7 @@ import net.neoforged.neoforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.register.ModMenuType;
 import top.elake.elaketech.register.block.Machine;
-import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
+import top.elake.elaketech.register.block.entity.ThermalBlockEntity;
 
 /**
  * @author Qi-Month

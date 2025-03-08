@@ -12,7 +12,7 @@ import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.*;
 import top.elake.elaketech.register.*;
 import top.elake.elaketech.register.block.*;
-import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
+import top.elake.elaketech.register.block.entity.ThermalBlockEntity;
 import top.elake.elaketech.register.item.*;
 import top.elake.elaketech.register.tool.*;
 import top.elake.elaketech.register.tool.tier.*;
@@ -39,6 +39,7 @@ public class ElakeTech {
      */
     public ElakeTech(IEventBus event) {
         // 元素
+        Element.register();
         Element.ElementGroup.register();
         // 创造模式物品栏
         ModCreativeModeTab.register();

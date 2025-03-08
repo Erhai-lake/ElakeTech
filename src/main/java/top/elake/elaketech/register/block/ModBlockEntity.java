@@ -4,7 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.register.block.blockentity.ThermalBlockEntity;
+import top.elake.elaketech.register.block.entity.ThermalBlockEntity;
 
 import java.util.function.Supplier;
 
