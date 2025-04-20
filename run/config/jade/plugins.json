@@ -1,7 +1,7 @@
 {
   "minecraft": {
     "item_storage.show_name_amount": 5,
-    "furnace": false,
+    "furnace": true,
     "harvest_tool.show_unbreakable": false,
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
@@ -57,21 +57,14 @@
     "entity": true,
     "entity_variant": true
   },
-  "mekanism": {
-    "chemical": true,
-    "remove_builtin": true,
-    "fluid": true,
-    "energy": true,
-    "tooltip_renderer": true
-  },
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,
-    "block_states": true,
+    "block_states": false,
     "distance": false,
     "block_face": false,
     "coordinates": false,
-    "registry_name": "ADVANCED_TOOLTIPS",
+    "registry_name": "OFF",
     "block_properties": false,
     "mod_name": true
   }

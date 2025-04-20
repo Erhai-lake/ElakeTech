@@ -32,10 +32,6 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    // Ponder
-    maven {
-        url = "https://maven.createmod.net"
-    }
     // KubeJS
     maven {
         url = "https://maven.saps.dev/minecraft"
@@ -47,34 +43,6 @@ repositories {
     maven {
         url = 'https://maven.blamejared.com'
     }
-    maven {
-        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven"
-    }
-}
-
-dependencies {
-    // JEI
-    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
-    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
-    // JER
-    implementation files("libs/JustEnoughResources-NeoForge-1.21.1-1.6.0.jar")
-    // Jade
-    implementation("curse.maven:jade-324717:${jade_file_id}")
-    // KubeJS
-    implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
-    implementation("curse.maven:rhino-416294:${rhino_file_id}")
-    implementation("curse.maven:probejs-585406:${probejs_file_id}")
-    // GeckoLib
-    implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
-    // ZeroCore2
-    implementation("curse.maven:zerocore2-247921:${zerocore2_file_id}")
-    // Patchouli
-    compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
-    runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
-    // Ponder
-    implementation jarJar("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
-    // Registrate
-    implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
 }
 
 base {
@@ -130,6 +98,31 @@ neoForge {
 
 sourceSets.main.resources {
     srcDir 'src/generated/resources'
+}
+
+
+dependencies {
+    // JEI
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    // JER
+    implementation files("libs/JustEnoughResources-NeoForge-1.21.1-1.6.0.jar")
+    // Jade
+    implementation("curse.maven:jade-324717:${jade_file_id}")
+    // KubeJS
+    implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
+    implementation("curse.maven:rhino-416294:${rhino_file_id}")
+    implementation("curse.maven:probejs-585406:${probejs_file_id}")
+    // GeckoLib
+    implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
+    // ZeroCore2
+    implementation("curse.maven:zerocore2-247921:${zerocore2_file_id}")
+    // Patchouli
+    compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+    runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
+    // Registrate
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
 }
 
 tasks.withType(ProcessResources).configureEach {

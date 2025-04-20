@@ -22,8 +22,8 @@ https://docs.neoforged.net/docs/items/tools/
 #### 直接使用原版的
 
 ```java
-public static final TagKey<Block> NEEDS_CUSTOM_TOOL =
-        TagKey.create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath("minecraft", "incorrect_for_wooden_tool"));
+public static final TagKey<Block> NEEDS_CUSTOM_TOOL = TagKey
+        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath("minecraft", "incorrect_for_wooden_tool"));
 ```
 
 `incorrect_for_wooden_tool`: 这个是原版`Tag`的名字,像这样的还有:
@@ -39,25 +39,25 @@ public static final TagKey<Block> NEEDS_CUSTOM_TOOL =
 * `minecraft:incorrect_for_diamond_tool`: 钻石工具不可挖掘Tag
 * `minecraft:incorrect_for_nerherite_tool`: 下界合金工具不可挖掘Tag
 
-至于这`Tag`里写了什么,还请自行翻原版的`Tags`(`NeoForge`的`Tags`也可以翻阅一下)
+至于这`Tag`里写了什么,还请自行翻原版的`Tags`
 
 #### 自定义
 
 定义什么方块需要这个工具
 
 ```java
-public static final TagKey<Block> NEEDS_CUSTOM_TOOL =
-        TagKey.create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeTech.ModID, "needs_custom_tool"));
+public static final TagKey<Block> NEEDS_CUSTOM_TOOL = TagKey
+        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeTech.ModID, "needs_custom_tool"));
 ```
 
 定义这个工具不能挖掘的方块
 
 ```java
-public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL =
-        TagKey.create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeTech.ModID, "incorrect_for_custom_tool"));
+public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
+        .create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(ElakeTech.ModID, "incorrect_for_custom_tool"));
 ```
 
-然后新建`Tag`, 目录在`src/main/resources/data/${modid}/tags/block`下
+然后新建`Tag`,目录在`src/main/resources/data/${modid}/tags/block`下
 
 如果想让这个工具只能挖石头,就这样写
 
@@ -71,7 +71,7 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL =
 }
 ```
 
-如果想让这个工具不能挖石头, 就这样写
+如果想让这个工具不能挖石头,就这样写
 
 `needs_custom_tool.json`
 
@@ -96,7 +96,7 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL =
 }
 ```
 
-这个的意思是,继承`minecraft:incorrect_for_diamond_tool`, 但是从中去除了`elake_tech:needs_custom_tool`
+这个的意思是,继承`minecraft:incorrect_for_diamond_tool`,但是从中去除了`elake_tech:needs_custom_tool`
 
 > [!NOTE]
 >

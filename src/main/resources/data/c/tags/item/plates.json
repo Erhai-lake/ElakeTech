@@ -1,9 +1,0 @@
-{
-    "values": [
-        "#c:plates/graphite",
-        {
-            "id": "#forge:plates",
-            "required": false
-        }
-    ]
-}
