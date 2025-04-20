@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "lit=false": {
+            "model": "elake_tech:block/thermal"
+        },
+        "lit=true": {
+            "model": "elake_tech:block/thermal_lit"
+        }
+    }
+}

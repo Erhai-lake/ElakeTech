@@ -2,11 +2,10 @@
     "required": true,
     "minVersion": "0.8",
     "package": "top.elake.elaketech.mixin",
-    "compatibilityLevel": "JAVA_8",
+    "compatibilityLevel": "JAVA_21",
     "refmap": "elake_tech.refmap.json",
     "mixins": [
-    ],
-    "client": [
+        "OpenWaterFishingHook"
     ],
     "injectors": {
         "defaultRequire": 1

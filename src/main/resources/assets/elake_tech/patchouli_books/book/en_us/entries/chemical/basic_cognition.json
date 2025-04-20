@@ -1,0 +1,31 @@
+{
+    "name": "Basic Cognition",
+    "category": "elake_tech:cognition",
+    "icon": "minecraft:writable_book",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Chemistry is a fundamental natural science that studies the composition, structure, properties, laws of change, and applications of matter. It conducts research at the atomic and molecular level, focusing on the structure of substances and chemical bonds of atoms, molecules, and ions (groups)."
+        },
+        {
+            "type":"patchouli:text",
+            "text": "$(li)Atoms are the basic units of matter, composed of a nucleus (containing protons and neutrons) and electrons orbiting around the nucleus. The properties of atoms are primarily determined by their electron structure, especially the outermost electrons (valence electrons), which play a decisive role in chemical reactions."
+        },
+        {
+            "type":"patchouli:text",
+            "text": "$(li)Molecules are particles formed by two or more atoms bonded together through chemical bonds, and they are the smallest units that retain the chemical properties of a substance. Molecules can be composed of atoms of the same element (such as oxygen O2) or atoms of different elements (such as water H2O)."
+        },
+        {
+            "type":"patchouli:text",
+            "text": "$(li)Ions are charged atoms or groups of atoms. When an atom loses or gains one or more electrons, it becomes an ion. Atoms that lose electrons form positively charged cations, while atoms that gain electrons form negatively charged anions."
+        },
+        {
+            "type":"patchouli:text",
+            "text": "Simply put:$(br2)Molecules and ions are both composed of atoms; the difference is that ions consist of charged atoms or groups of atoms.$(br2)When an atom loses or gains one or more electrons, it becomes an ion.$(br)$(li)Cation: When an atom loses one or more electrons, it carries a positive charge and becomes a cation. For example, a sodium atom (Na) becomes a sodium ion (Na⁺) after losing one electron."
+        },
+        {
+            "type":"patchouli:text",
+            "text": "$(li)Anion: When an atom gains one or more electrons, it carries a negative charge and becomes an anion. For example, a chlorine atom (Cl) becomes a chloride ion (Cl⁻) after gaining one electron.$(br2)This might seem complicated, but fortunately, in this module, there won't be the concept of atoms; the smallest units are molecules."
+        }
+    ]
+}

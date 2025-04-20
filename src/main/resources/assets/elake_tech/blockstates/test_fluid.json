@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "elake_tech:fluid/test_fluid"
+        }
+    }
+}
