@@ -3,11 +3,9 @@ package top.elake.elaketech.register.block;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.core.Holder;
-import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -26,7 +24,6 @@ import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.item.OreItem;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
-import top.elake.elaketech.register.tool.tier.Flint;
 
 /**
  * 矿石注册

@@ -1,12 +1,3 @@
-/effect give Dev minecraft:night_vision infinite
-/summon lightning_bolt ~ ~ ~
-/tp ~ ~ ~
-/advancement grant @a everything
-/difficulty peaceful
-/gamerule commandBlockOutput false
-/give Dev minecraft:command_block
-/fill -2 -61 8 -2 -61 8 minecraft:short_grass
-/clear
 /kill @e[type=item]
 /clone
 /clear
@@ -45,3 +36,15 @@
 /give Dev elake_tech:bronze_hammer
 /give Dev elake_tech:flint_hatchet
 /give Dev elake_tech:test_pickaxe
+/ponder index
+/ponder reload
+/ponder tags
+/ponder index
+/ponder tags
+/ponder elake_tech:test_ponder
+/ponder test_ponder
+/ponder reload
+/give Dev elake_tech:bronze_ingot
+/ponder reload
+/ponder tags
+/ponder index

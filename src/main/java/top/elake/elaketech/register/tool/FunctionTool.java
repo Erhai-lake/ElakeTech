@@ -58,4 +58,8 @@ public class FunctionTool {
 
     public static void register() {
     }
+
+    private static int number(int value) {
+        return 0;
+    }
 }
