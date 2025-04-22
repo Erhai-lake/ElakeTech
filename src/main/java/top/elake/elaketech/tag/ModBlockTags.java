@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Block;
 import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class ModBlockTags {
     /**

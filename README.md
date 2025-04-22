@@ -116,6 +116,22 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 
 </details>
 
+### 注册物品时添加`Tooltip`
+
+<details open>
+
+方法`.transform()`, 里面传入 `ItemTooltipExtensions.tooltip()`方法
+
+```java
+public static ItemEntry<Item> GRASS_FIBER = REGISTRATE.item("grass_fiber", Item::new)
+        .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip.elaketech.grass_fiber")))
+        .lang("Grass Fiber")
+        .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_fiber")))
+        .register();
+```
+
+</details>
+
 ## **致谢名单**
 
 * **神恩✘晓月**

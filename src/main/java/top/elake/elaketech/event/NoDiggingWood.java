@@ -14,7 +14,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
 public class NoDiggingWood {

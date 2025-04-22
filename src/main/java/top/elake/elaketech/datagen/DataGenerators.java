@@ -12,7 +12,7 @@ import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
 import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DataGenerators {

@@ -1,7 +1,7 @@
 package top.elake.elaketech.register.item.tools;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class Tools {
 

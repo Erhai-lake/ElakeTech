@@ -1,7 +1,7 @@
 package top.elake.elaketech.datagen.assets.translation;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class CreativeModeTab {
     /**

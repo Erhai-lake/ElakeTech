@@ -4,7 +4,7 @@ import top.elake.elaketech.register.item.materials.Materials;
 import top.elake.elaketech.register.item.tools.Tools;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class ElakeTechItems {
     /**

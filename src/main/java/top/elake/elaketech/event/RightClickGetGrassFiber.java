@@ -22,7 +22,7 @@ import java.util.Random;
 import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
 public class RightClickGetGrassFiber {
@@ -41,7 +41,7 @@ public class RightClickGetGrassFiber {
      * @param event 事件
      */
     @SubscribeEvent
-    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+    public static void rightClickBlockGetGrassFiber(PlayerInteractEvent.RightClickBlock event) {
         Player player = event.getEntity();
         Level level = event.getLevel();
         BlockPos blockPos = event.getPos();
@@ -57,12 +57,8 @@ public class RightClickGetGrassFiber {
         // 可以触发的方块
         boolean isCanGetGrassFiber = blockState.is(ModBlockTags.Blocks.GET_GRASS_FIBER);
         if (isCanGetGrassFiber) {
-            // 生成破坏粒子效果
-            if (level instanceof ServerLevel serverLevel) {
-                serverLevel.levelEvent(2001, blockPos, Block.getId(blockState));
-            }
-            // 替换成空气
-            level.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
+            // 摧毁方块
+            level.destroyBlock(blockPos, true, player, 1);
             // 右键动画
             player.swing(event.getHand(), true);
             // 生成物品

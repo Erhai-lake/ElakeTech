@@ -4,7 +4,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import top.elake.elaketech.datagen.assets.translation.Translation;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class Event {
     /**

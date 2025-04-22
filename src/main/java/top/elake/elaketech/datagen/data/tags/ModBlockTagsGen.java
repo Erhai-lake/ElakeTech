@@ -12,7 +12,7 @@ import top.elake.elaketech.tag.ModBlockTags;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class ModBlockTagsGen extends BlockTagsProvider {
     public ModBlockTagsGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {

@@ -1,6 +1,7 @@
 package top.elake.elaketech;
 
 import com.tterrag.registrate.Registrate;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import top.elake.elaketech.event.Event;
@@ -8,7 +9,7 @@ import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.register.ElakeTechItems;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 @Mod(ElakeTech.MODID)
 public class ElakeTech {
@@ -22,9 +23,9 @@ public class ElakeTech {
      */
     public static final Registrate REGISTRATE = Registrate.create(MODID);
 
-//    public static ResourceLocation loadRes(String path) {
-//        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
-//    }
+    public static ResourceLocation loadResource(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
 
     /**
      * 初始化
