@@ -14,16 +14,17 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.register.item.Materials;
+import top.elake.elaketech.register.item.materials.Materials;
 import top.elake.elaketech.tag.ModBlockTags;
 
 import java.util.Random;
 
+import static top.elake.elaketech.ElakeTech.MODID;
+
 /**
- * @author Qi-Month
+ * @author ElakeStudio
  */
-@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
+@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
 public class RightClickGetGrassFiber {
     /**
      * 注册事件
@@ -45,38 +46,33 @@ public class RightClickGetGrassFiber {
         Level level = event.getLevel();
         BlockPos blockPos = event.getPos();
         BlockState blockState = level.getBlockState(blockPos);
-
         // 确保事件只在服务器端执行
         if (level.isClientSide()) {
             return;
         }
-
         // 只能空手
         if (!player.getMainHandItem().isEmpty()) {
             return;
         }
-
         // 可以触发的方块
         boolean isCanGetGrassFiber = blockState.is(ModBlockTags.Blocks.GET_GRASS_FIBER);
-
         if (isCanGetGrassFiber) {
             // 生成破坏粒子效果
             if (level instanceof ServerLevel serverLevel) {
                 serverLevel.levelEvent(2001, blockPos, Block.getId(blockState));
             }
-
-            level.destroyBlock(blockPos, true, player, 1)
+            // 替换成空气
+            level.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
             // 右键动画
             player.swing(event.getHand(), true);
-
             // 生成物品
             double randomValue = new Random().nextDouble();
             // 概率35%
-            if (randomValue < 0.35) {
+            double probability = 0.35;
+            if (randomValue < probability) {
                 BlockPos spawnPos = blockPos.above();
                 ItemStack itemStack = new ItemStack(Materials.GRASS_FIBER.get());
                 ItemEntity itemEntity = new ItemEntity(level, spawnPos.getX() + 0.5, spawnPos.getY() - 0.5, spawnPos.getZ() + 0.5, itemStack);
-
                 // 添加物品在世界内
                 level.addFreshEntity(itemEntity);
                 // 防止物品乱飞
