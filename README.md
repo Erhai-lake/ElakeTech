@@ -125,7 +125,6 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL = TagKey
 ```java
 public static ItemEntry<Item> GRASS_FIBER = REGISTER.item("grass_fiber", Item::new)
         .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip.elaketech.grass_fiber")))
-        .lang("Grass Fiber")
         .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_fiber")))
         .register();
 ```
@@ -140,3 +139,4 @@ public static ItemEntry<Item> GRASS_FIBER = REGISTER.item("grass_fiber", Item::n
 * **啊哈**
 * **小胡闹**
 * **安宁**
+* **lcy0x1**

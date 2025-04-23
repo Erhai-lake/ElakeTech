@@ -143,12 +143,6 @@
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
-    "criteria": {
-      "has_grass_fiber": "2025-04-23 22:48:33 +0800"
-    },
-    "done": true
-  },
   "elake_tech:main/main": {
     "criteria": {
       "entered_overworld": "2025-04-24 00:39:00 +0800"
@@ -347,15 +341,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/red_sandstone": {
-    "criteria": {
-      "has_sand": "2025-04-24 01:10:49 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/sandstone": {
     "criteria": {
       "has_sand": "2025-04-24 01:10:30 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_sandstone": {
+    "criteria": {
+      "has_sand": "2025-04-24 01:10:49 +0800"
     },
     "done": true
   },

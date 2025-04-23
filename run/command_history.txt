@@ -3,3 +3,11 @@
 /give Dev minecraft:command_block
 /gamerule commandBlockOutput false
 /time set day
+/data get entity @s SelectedItem
+/loot give Dev loot minecraft:blocks/vine
+/loot give Dev loot minecraft:blocks/sand
+/loot give Dev mine -5 -60 53 minecraft:vine
+/loot give Dev mine -5 -60 53 elake_tech:grass_fiber
+/loot give Dev mine -5 -60 53 offhand
+/loot give Dev mine -3 -60 51 offhand
+/difficulty peaceful
