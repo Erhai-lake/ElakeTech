@@ -39,10 +39,6 @@ repositories {
             includeGroup "dev.latvian.mods"
         }
     }
-    // Patchouli
-    maven {
-        url = 'https://maven.blamejared.com'
-    }
     // Ponder
     maven {
         url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven"
