@@ -48,8 +48,8 @@ public class ElakeTechCreativeModeTabs {
      */
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> creativeModeTabRegister(String name, Supplier<ItemEntry<? extends Item>> iconItem) {
         return TABS.register(name, () -> CreativeModeTab.builder()
-                        .icon(() -> new ItemStack(iconItem.get().get()))
-                        .title(Component.translatable("itemGroup." + MODID + "." + name))
-                        .build());
+                .icon(() -> new ItemStack(iconItem.get().get()))
+                .title(Component.translatable("itemGroup.%s.%s_tab".formatted(MODID, name)))
+                .build());
     }
 }
