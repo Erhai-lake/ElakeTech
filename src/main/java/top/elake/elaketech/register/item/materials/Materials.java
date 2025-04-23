@@ -30,7 +30,6 @@ public class Materials {
      */
     public static ItemEntry<Item> GRASS_FIBER = REGISTRATE.item("grass_fiber", Item::new)
             .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip." + MODID + ".grass_fiber")))
-            .lang("Grass Fiber")
             .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_fiber")))
             .register();
 
@@ -38,7 +37,6 @@ public class Materials {
      * 草绳
      */
     public static ItemEntry<Item> GRASS_STRING = REGISTRATE.item("grass_string", Item::new)
-            .lang("Grass String")
             .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_string")))
             .register();
 
