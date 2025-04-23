@@ -1,13 +1,17 @@
 package top.elake.elaketech.register;
 
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elaketech.register.item.materials.Materials;
+
+import java.util.function.Supplier;
 
 import static top.elake.elaketech.ElakeTech.MODID;
 
@@ -17,6 +21,7 @@ import static top.elake.elaketech.ElakeTech.MODID;
 public class ElakeTechCreativeModeTabs {
     /**
      * 注册创造模式物品栏
+     *
      * @param event 事件总线
      */
     public static void register(IEventBus event) {
@@ -31,20 +36,20 @@ public class ElakeTechCreativeModeTabs {
     /**
      * 材料物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB = TABS.register("materials",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Materials.GRASS_FIBER.get()))
-                    .title(Component.translatable("itemGroup." + MODID + ".materials_tab"))
-                    .build()
-    );
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB = creativeModeTabRegister("materials_tab", () -> Materials.GRASS_FIBER);
 
     /**
      * 工具物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = TABS.register("tools",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(Materials.GRASS_FIBER.get()))
-                    .title(Component.translatable("itemGroup." + MODID + ".tools_tab"))
-                    .build()
-    );
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = creativeModeTabRegister("tools_tab", () -> Materials.GRASS_STRING);
+
+    /**
+     * 创造模式物品栏注册
+     */
+    public static DeferredHolder<CreativeModeTab, CreativeModeTab> creativeModeTabRegister(String name, Supplier<ItemEntry<? extends Item>> iconItem) {
+        return TABS.register(name, () -> CreativeModeTab.builder()
+                        .icon(() -> new ItemStack(iconItem.get().get()))
+                        .title(Component.translatable("itemGroup." + MODID + "." + name))
+                        .build());
+    }
 }
