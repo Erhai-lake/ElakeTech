@@ -2,3 +2,4 @@
 /time set day
 /give Dev minecraft:command_block
 /gamerule commandBlockOutput false
+/time set day

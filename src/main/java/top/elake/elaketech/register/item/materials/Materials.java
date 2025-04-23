@@ -8,6 +8,7 @@ import top.elake.elaketech.util.ItemTooltipExtensions;
 
 import java.util.Objects;
 
+import static top.elake.elaketech.ElakeTech.MODID;
 import static top.elake.elaketech.ElakeTech.REGISTRATE;
 
 /**
@@ -28,7 +29,7 @@ public class Materials {
      * 杂草
      */
     public static ItemEntry<Item> GRASS_FIBER = REGISTRATE.item("grass_fiber", Item::new)
-            .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip.elaketech.grass_fiber")))
+            .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip." + MODID + ".grass_fiber")))
             .lang("Grass Fiber")
             .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_fiber")))
             .register();
