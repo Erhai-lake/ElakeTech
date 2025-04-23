@@ -4,6 +4,7 @@ import com.tterrag.registrate.Registrate;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import top.elake.elaketech.datagen.assets.translation.Translation;
 import top.elake.elaketech.event.Event;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.register.ElakeTechItems;
@@ -39,6 +40,8 @@ public class ElakeTech {
         ElakeTechCreativeModeTabs.register(event);
         // 注册事件
         Event.register();
+        // 语言
+        Translation.registers();
     }
 
 //    private void registerCapabilities(RegisterCapabilitiesEvent event) {
