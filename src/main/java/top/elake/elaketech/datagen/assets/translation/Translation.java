@@ -15,6 +15,8 @@ public class Translation {
     public static void registers() {
         // 创造模式物品栏
         CreativeModeTab.registers();
+        // 工具提示
+        TooltipLanguage.registers();
         // 材料
         Materials.registers();
     }

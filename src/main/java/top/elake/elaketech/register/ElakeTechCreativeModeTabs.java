@@ -12,7 +12,7 @@ import top.elake.elaketech.register.item.materials.Materials;
 import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author ElakeStudio
+ * @author Elake Studio
  */
 public class ElakeTechCreativeModeTabs {
     /**
