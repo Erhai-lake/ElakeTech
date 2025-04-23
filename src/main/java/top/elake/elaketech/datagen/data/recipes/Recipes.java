@@ -17,8 +17,8 @@ import java.util.concurrent.CompletableFuture;
  * @author Elake Studio
  */
 public class Recipes extends RecipeProvider {
-    public Recipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries);
+    public Recipes(PackOutput output, CompletableFuture<HolderLookup.Provider> register) {
+        super(output, register);
     }
 
     @Override

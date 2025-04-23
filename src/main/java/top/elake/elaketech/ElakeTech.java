@@ -22,7 +22,7 @@ public class ElakeTech {
     /**
      * 注册器
      */
-    public static final Registrate REGISTRATE = Registrate.create(MODID);
+    public static final Registrate REGISTER  = Registrate.create(MODID);
 
     public static ResourceLocation loadResource(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);

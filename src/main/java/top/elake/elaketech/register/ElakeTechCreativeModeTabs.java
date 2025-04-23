@@ -31,25 +31,28 @@ public class ElakeTechCreativeModeTabs {
     /**
      * 创造模式物品栏注册
      */
-    private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    private static final DeferredRegister<CreativeModeTab> TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     /**
      * 材料物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB = creativeModeTabRegister("materials_tab", () -> Materials.GRASS_FIBER);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB =
+            addCreativeModeTab("materials", () -> Materials.GRASS_FIBER);
 
     /**
      * 工具物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = creativeModeTabRegister("tools_tab", () -> Materials.GRASS_STRING);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB =
+            addCreativeModeTab("tools", () -> Materials.GRASS_STRING);
 
     /**
      * 创造模式物品栏注册
      */
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> creativeModeTabRegister(String name, Supplier<ItemEntry<? extends Item>> iconItem) {
-        return TABS.register(name, () -> CreativeModeTab.builder()
-                        .icon(() -> new ItemStack(iconItem.get().get()))
-                        .title(Component.translatable("itemGroup." + MODID + "." + name))
-                        .build());
+    public static DeferredHolder<CreativeModeTab, CreativeModeTab> addCreativeModeTab(String name, Supplier<ItemEntry<? extends Item>> displayIcon) {
+        return TABS.register(name + "_tab", () -> CreativeModeTab.builder()
+                .icon(() -> new ItemStack(displayIcon.get().asItem()))
+                .title(Component.translatable("itemGroup.%s.%s_tab".formatted(MODID, name)))
+                .build());
     }
 }
