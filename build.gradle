@@ -43,6 +43,13 @@ repositories {
     maven {
         url = 'https://maven.blamejared.com'
     }
+    // Ponder
+    maven {
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven"
+    }
+    maven {
+        url = "https://maven.createmod.net"
+    }
 }
 
 base {
@@ -120,6 +127,8 @@ dependencies {
     // Patchouli
     compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
     runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
+    // Ponder
+    implementation jarJar("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
     // Registrate
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
