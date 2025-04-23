@@ -3,7 +3,7 @@ package top.elake.elaketech.datagen.assets.translation;
 /**
  * @author Elake Studio
  */
-public class TooltipLanguage {
+public class Tooltip {
     /**
      * 注册工具提示翻译
      */

@@ -16,7 +16,7 @@ public class Translation {
         // 创造模式物品栏
         CreativeModeTab.registers();
         // 工具提示
-        TooltipLanguage.registers();
+        Tooltip.registers();
         // 材料
         Materials.registers();
     }
