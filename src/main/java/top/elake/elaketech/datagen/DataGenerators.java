@@ -7,6 +7,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import top.elake.elaketech.datagen.assets.translation.language.EN;
 import top.elake.elaketech.datagen.assets.translation.language.ZH;
+import top.elake.elaketech.datagen.data.recipes.Recipes;
 import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
 
 import static top.elake.elaketech.ElakeTech.MODID;
@@ -24,5 +25,8 @@ public class DataGenerators {
         // Block Tags
         var blockTagsProvider = event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
                 (output) -> new ModBlockTagsGen(output, event.getLookupProvider(), event.getExistingFileHelper()));
+        // Recipes
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<Recipes>)
+                (output) -> new Recipes(output, event.getLookupProvider()));
     }
 }

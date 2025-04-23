@@ -31,20 +31,17 @@ public class ElakeTechCreativeModeTabs {
     /**
      * 创造模式物品栏注册
      */
-    private static final DeferredRegister<CreativeModeTab> TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     /**
      * 材料物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB =
-            addCreativeModeTab("materials", () -> Materials.GRASS_FIBER);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB = addCreativeModeTab("materials", () -> Materials.GRASS_FIBER);
 
     /**
      * 工具物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB =
-            addCreativeModeTab("tools", () -> Materials.GRASS_STRING);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = addCreativeModeTab("tools", () -> Materials.GRASS_STRING);
 
     /**
      * 创造模式物品栏注册

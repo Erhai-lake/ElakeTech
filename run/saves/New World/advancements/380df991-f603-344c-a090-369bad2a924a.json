@@ -131,5 +131,23 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/smoker": {
+    "criteria": {
+      "has_furnace": "2025-04-23 22:48:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2025-04-23 22:48:21 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
+    "criteria": {
+      "has_grass_fiber": "2025-04-23 22:48:33 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }
