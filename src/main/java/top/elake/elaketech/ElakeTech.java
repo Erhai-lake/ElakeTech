@@ -6,8 +6,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import top.elake.elaketech.datagen.assets.translation.Translation;
 import top.elake.elaketech.event.Event;
-import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.register.ElakeTechRegister;
+import top.elake.elaketech.server.recipes.remove.ItemRecipes;
 
 /**
  * @author Elake Studio
@@ -40,6 +40,8 @@ public class ElakeTech {
         Event.register();
         // 语言
         Translation.registers();
+        // 删除配方
+        ItemRecipes.removeRecipes();
     }
 
 //    private void registerCapabilities(RegisterCapabilitiesEvent event) {
