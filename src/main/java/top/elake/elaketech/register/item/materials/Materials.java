@@ -27,7 +27,7 @@ public class Materials {
     }
 
     /**
-     * 杂草
+     * 草纤维
      */
     public static ItemEntry<Item> GRASS_FIBER = REGISTER.item("grass_fiber", Item::new)
             .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip." + MODID + ".grass_fiber")))
