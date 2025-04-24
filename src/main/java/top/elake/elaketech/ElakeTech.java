@@ -7,7 +7,7 @@ import net.neoforged.fml.common.Mod;
 import top.elake.elaketech.datagen.assets.translation.Translation;
 import top.elake.elaketech.event.Event;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
-import top.elake.elaketech.register.ElakeTechItems;
+import top.elake.elaketech.register.ElakeTechRegister;
 
 /**
  * @author Elake Studio
@@ -34,10 +34,8 @@ public class ElakeTech {
      * @param event 总线
      */
     public ElakeTech(IEventBus event) {
-        // 注册物品
-        ElakeTechItems.register();
-        // 注册创造物品栏
-        ElakeTechCreativeModeTabs.register(event);
+        // 注册
+        ElakeTechRegister.register(event);
         // 注册事件
         Event.register();
         // 语言
