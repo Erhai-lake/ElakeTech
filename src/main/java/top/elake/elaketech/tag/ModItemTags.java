@@ -23,7 +23,6 @@ public class ModItemTags {
         public static final TagKey<Item> CLAY_BALL = createItemTag("c", "clay_ball");
         public static final TagKey<Item> FLINT = createItemTag("c", "flint");
 
-        public static final TagKey<Item> INGOTS = createItemTag("c", "ingots");
         public static final TagKey<Item> TIN_INGOT = createItemTag("c", "ingots/tin");
         public static final TagKey<Item> BRONZE_INGOT = createItemTag("c", "ingots/bronze");
         public static final TagKey<Item> GRAPHITE_INGOT = createItemTag("c", "ingots/graphite");

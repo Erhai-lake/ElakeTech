@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.datagen.data.recipes.blasting.MaterialBlasting;
 import top.elake.elaketech.datagen.data.recipes.blasting.OreBlasting;
 import top.elake.elaketech.datagen.data.recipes.shaped.MaterialShaped;
+import top.elake.elaketech.datagen.data.recipes.shaped.WorkBench;
 import top.elake.elaketech.datagen.data.recipes.shapeless.MaterialShapeless;
 import top.elake.elaketech.datagen.data.recipes.stonecutting.MaterialStoneCutting;
 
@@ -37,6 +38,8 @@ public class Recipes extends RecipeProvider {
     private void shaped(RecipeOutput output) {
         // 材料
         MaterialShaped.register(output);
+        // 工作台
+        WorkBench.generateRecipes(output);
     }
 
     /**
