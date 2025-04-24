@@ -3,6 +3,7 @@ package top.elake.elaketech.register.item.materials;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.util.ItemTooltipExtensions;
 
@@ -38,5 +39,6 @@ public class Materials {
      */
     public static ItemEntry<Item> GRASS_STRING = REGISTER.item("grass_string", Item::new)
             .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_string")))
+            .tag(Tags.Items.STRINGS)
             .register();
 }
