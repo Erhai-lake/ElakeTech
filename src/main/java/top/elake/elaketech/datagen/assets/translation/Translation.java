@@ -19,6 +19,8 @@ public class Translation {
         Tooltip.registers();
         // 材料
         Materials.registers();
+        // 工具
+        Tools.registers();
     }
 
     /**
