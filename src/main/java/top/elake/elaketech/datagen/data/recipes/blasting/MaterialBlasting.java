@@ -7,7 +7,7 @@ import net.minecraft.data.recipes.RecipeOutput;
  */
 public class MaterialBlasting {
     /**
-     * 生成熔炼配方
+     * 材料熔炼配方
      *
      * @param output 输出
      */

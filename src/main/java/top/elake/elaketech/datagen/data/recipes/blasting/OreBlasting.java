@@ -7,7 +7,7 @@ import net.minecraft.data.recipes.RecipeOutput;
  */
 public class OreBlasting {
     /**
-     * 生成熔炼配方
+     * 矿石熔炼配方
      * @param output 输出
      */
     public static void register(RecipeOutput output) {

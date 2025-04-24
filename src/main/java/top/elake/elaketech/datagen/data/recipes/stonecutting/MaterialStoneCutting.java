@@ -7,7 +7,7 @@ import net.minecraft.data.recipes.RecipeOutput;
  */
 public class MaterialStoneCutting {
     /**
-     * 生成切石机配方
+     * 材料切石机配方
      *
      * @param output 输出
      */

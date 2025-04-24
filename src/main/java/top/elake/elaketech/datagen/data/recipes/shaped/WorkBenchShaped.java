@@ -14,8 +14,13 @@ import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
 /**
  * @author Qi-Month
  */
-public class WorkBench {
-    public static void generateRecipes(RecipeOutput output) {
+public class WorkBenchShaped {
+    /**
+     * 工作台有序合成配方
+     *
+     * @param output 输出
+     */
+    public static void register(RecipeOutput output) {
         String workbench = "crafting/shaped/workbench/";
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CRAFTING_TABLE)

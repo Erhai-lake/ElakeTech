@@ -7,7 +7,7 @@ import net.minecraft.data.recipes.RecipeOutput;
  */
 public class MaterialShaped {
     /**
-     * 生成有序合成配方
+     * 材料有序合成配方
      *
      * @param output 输出
      */

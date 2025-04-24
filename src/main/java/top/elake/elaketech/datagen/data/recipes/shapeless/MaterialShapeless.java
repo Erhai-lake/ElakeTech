@@ -14,7 +14,7 @@ import static top.elake.elaketech.ElakeTech.loadResource;
  */
 public class MaterialShapeless {
     /**
-     * 生成无序合成配方
+     * 材料无序合成配方
      *
      * @param output 输出
      */
