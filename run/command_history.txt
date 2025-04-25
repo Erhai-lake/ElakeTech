@@ -11,3 +11,11 @@
 /loot give Dev mine -5 -60 53 offhand
 /loot give Dev mine -3 -60 51 offhand
 /difficulty peaceful
+/tp -17 -59 61
+/tp -18 -59 61
+/tp -18 -60 61
+/tp -17 -60 61
+/tp -18 -60 61
+/tp -18 -60 60
+/tp -18 -600 60
+/tp -18 -60 60
