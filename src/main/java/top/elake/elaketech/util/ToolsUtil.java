@@ -15,7 +15,6 @@ public class ToolsUtil {
     /**
      * 注册工具
      *
-     * @param name       名称
      * @param type       类型: Sword/Pickaxe/Axe/Shovel/Hoe
      * @param tier       等级
      * @param properties 工具属性
