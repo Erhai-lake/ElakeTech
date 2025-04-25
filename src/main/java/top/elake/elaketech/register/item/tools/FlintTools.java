@@ -28,7 +28,6 @@ public class FlintTools {
      */
     public static final ItemEntry<? extends Item> FLINT_SWORD = ToolsUtil.registerAloneTool(
             "flint_sword",
-            "Flint Sword",
             "sword",
             Tiers.FLINT_TIER, new Item.Properties()
                     .attributes(SwordItem.createAttributes(Tiers.FLINT_TIER, 3, -2.4f)), 0,
@@ -40,7 +39,6 @@ public class FlintTools {
      */
     public static final ItemEntry<? extends Item> FLINT_PICKAXE = ToolsUtil.registerAloneTool(
             "flint_pickaxe",
-            "Flint Pickaxe",
             "pickaxe",
             Tiers.FLINT_TIER, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(Tiers.FLINT_TIER, 1, -2.8f)), 0,
@@ -52,7 +50,6 @@ public class FlintTools {
      */
     public static final ItemEntry<? extends Item> FLINT_AXE = ToolsUtil.registerAloneTool(
             "flint_axe",
-            "Flint Axe",
             "axe",
             Tiers.FLINT_TIER, new Item.Properties()
                     .attributes(AxeItem.createAttributes(Tiers.FLINT_TIER, 1, -2)), 0,
@@ -64,7 +61,6 @@ public class FlintTools {
      */
     public static final ItemEntry<? extends Item> FLINT_HATCHET = ToolsUtil.registerAloneTool(
             "flint_hatchet",
-            "Flint Hatchet",
             "axe",
             Tiers.FLINT_HATCHET_TIER, new Item.Properties()
                     .attributes(AxeItem.createAttributes(Tiers.FLINT_HATCHET_TIER, 1, -2)), 0,
@@ -76,7 +72,6 @@ public class FlintTools {
      */
     public static final ItemEntry<? extends Item> FLINT_SHOVEL = ToolsUtil.registerAloneTool(
             "flint_shovel",
-            "Flint Shovel",
             "shovel",
             Tiers.FLINT_TIER, new Item.Properties()
                     .attributes(ShovelItem.createAttributes(Tiers.FLINT_TIER, 1, -2)), 0,
@@ -88,7 +83,6 @@ public class FlintTools {
      */
     public static final ItemEntry<? extends Item> FLINT_HOE = ToolsUtil.registerAloneTool(
             "flint_hoe",
-            "Flint Hoe",
             "hoe",
             Tiers.FLINT_TIER, new Item.Properties()
                     .attributes(HoeItem.createAttributes(Tiers.FLINT_TIER, 1, -2)), 0,
