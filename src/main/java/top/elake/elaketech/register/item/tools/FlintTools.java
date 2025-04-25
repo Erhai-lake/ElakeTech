@@ -30,8 +30,8 @@ public class FlintTools {
             "flint_sword",
             "Flint Sword",
             "sword",
-            Tools.FLINT_TIER, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(Tools.FLINT_TIER, 3, -2.4f)), 0,
+            Tiers.FLINT_TIER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(Tiers.FLINT_TIER, 3, -2.4f)), 0,
             "item/tools/flint/sword"
     );
 
@@ -42,8 +42,8 @@ public class FlintTools {
             "flint_pickaxe",
             "Flint Pickaxe",
             "pickaxe",
-            Tools.FLINT_TIER, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(Tools.FLINT_TIER, 1, -2.8f)), 0,
+            Tiers.FLINT_TIER, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(Tiers.FLINT_TIER, 1, -2.8f)), 0,
             "item/tools/flint/pickaxe"
     );
 
@@ -54,8 +54,8 @@ public class FlintTools {
             "flint_axe",
             "Flint Axe",
             "axe",
-            Tools.FLINT_TIER, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(Tools.FLINT_TIER, 1, -2)), 0,
+            Tiers.FLINT_TIER, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(Tiers.FLINT_TIER, 1, -2)), 0,
             "item/tools/flint/axe"
     );
 
@@ -66,8 +66,8 @@ public class FlintTools {
             "flint_hatchet",
             "Flint Hatchet",
             "axe",
-            Tools.FLINT_HATCHET_TIER, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(Tools.FLINT_HATCHET_TIER, 1, -2)), 0,
+            Tiers.FLINT_HATCHET_TIER, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(Tiers.FLINT_HATCHET_TIER, 1, -2)), 0,
             "item/tools/flint/hatchet"
     );
 
@@ -78,8 +78,8 @@ public class FlintTools {
             "flint_shovel",
             "Flint Shovel",
             "shovel",
-            Tools.FLINT_TIER, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(Tools.FLINT_TIER, 1, -2)), 0,
+            Tiers.FLINT_TIER, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(Tiers.FLINT_TIER, 1, -2)), 0,
             "item/tools/flint/shovel"
     );
 
@@ -90,8 +90,8 @@ public class FlintTools {
             "flint_hoe",
             "Flint Hoe",
             "hoe",
-            Tools.FLINT_TIER, new Item.Properties()
-                    .attributes(HoeItem.createAttributes(Tools.FLINT_TIER, 1, -2)), 0,
+            Tiers.FLINT_TIER, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(Tiers.FLINT_TIER, 1, -2)), 0,
             "item/tools/flint/hoe"
     );
 }
