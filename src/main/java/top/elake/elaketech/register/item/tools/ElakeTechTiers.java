@@ -15,7 +15,7 @@ public class ElakeTechTiers {
      */
     public static final Tier FLINT_TIER = new SimpleTier(
             Tiers.STONE.getIncorrectBlocksForDrops(),
-            60,
+            20,
             3F,
             1,
             0,
