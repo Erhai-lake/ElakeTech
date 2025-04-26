@@ -8,6 +8,7 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.HoeItem;
+import top.elake.elaketech.util.tools.damage.*;
 
 /**
  * @author ElakeStudio
@@ -28,8 +29,7 @@ public enum ToolType {
     private final float defaultAttackDamage;
     private final float defaultAttackSpeed;
 
-    ToolType(String path, TriFunction<Tier, Item.Properties, Integer, ? extends Item> itemFactory,
-             float defaultAttackDamage, float defaultAttackSpeed) {
+    ToolType(String path, TriFunction<Tier, Item.Properties, Integer, ? extends Item> itemFactory, float defaultAttackDamage, float defaultAttackSpeed) {
         this.path = path;
         this.itemFactory = itemFactory;
         this.defaultAttackDamage = defaultAttackDamage;

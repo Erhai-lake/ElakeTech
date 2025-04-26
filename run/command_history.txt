@@ -19,3 +19,4 @@
 /tp -18 -60 60
 /tp -18 -600 60
 /tp -18 -60 60
+/effect give Dev minecraft:night_vision infinite

@@ -3,7 +3,7 @@ package top.elake.elaketech.register.item.tools;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.*;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
-import top.elake.elaketech.util.ToolBuilder;
+import top.elake.elaketech.util.tools.ToolBuilder;
 import top.elake.elaketech.util.tools.ToolType;
 
 import java.util.Objects;
@@ -30,9 +30,9 @@ public class FlintTools {
     public static final ItemEntry<? extends Item> FLINT_SWORD = new ToolBuilder()
             .id("flint_sword")
             .type(ToolType.SWORD)
-            .tier(Tiers.FLINT_TIER)
-            .attack(3, -2.4f)
-            .texture("item/tools/flint/sword")
+            .tier(ElakeTechTiers.FLINT_TIER)
+            .property(3, -2.4f)
+            .texture("tools/flint/sword")
             .build();
 
     /**
@@ -41,9 +41,9 @@ public class FlintTools {
     public static final ItemEntry<? extends Item> FLINT_PICKAXE = new ToolBuilder()
             .id("flint_pickaxe")
             .type(ToolType.PICKAXE)
-            .tier(Tiers.FLINT_TIER)
-            .attack(1, -2.8f)
-            .texture("item/tools/flint/pickaxe")
+            .tier(ElakeTechTiers.FLINT_TIER)
+            .property(1, -2.8f)
+            .texture("tools/flint/pickaxe")
             .build();
 
     /**
@@ -52,9 +52,9 @@ public class FlintTools {
     public static  final ItemEntry<? extends Item> FLINT_AXE = new ToolBuilder()
             .id("flint_axe")
             .type(ToolType.AXE)
-            .tier(Tiers.FLINT_TIER)
-            .attack(3, -2.8f)
-            .texture("item/tools/flint/axe")
+            .tier(ElakeTechTiers.FLINT_TIER)
+            .property(3, -2.8f)
+            .texture("tools/flint/axe")
             .build();
 
     /**
@@ -63,9 +63,9 @@ public class FlintTools {
     public static final ItemEntry<? extends Item> FLINT_HATCHET = new ToolBuilder()
             .id("flint_hatchet")
             .type(ToolType.AXE)
-            .tier(Tiers.FLINT_HATCHET_TIER)
-            .attack(1, -2)
-            .texture("item/tools/flint/hatchet")
+            .tier(ElakeTechTiers.FLINT_HATCHET_TIER)
+            .property(1, -2)
+            .texture("tools/flint/hatchet")
             .build();
 
     /**
@@ -74,9 +74,9 @@ public class FlintTools {
     public static final ItemEntry<? extends Item> FLINT_SHOVEL = new ToolBuilder()
             .id("flint_shovel")
             .type(ToolType.SHOVEL)
-            .tier(Tiers.FLINT_TIER)
-            .attack(1, -2)
-            .texture("item/tools/flint/shovel")
+            .tier(ElakeTechTiers.FLINT_TIER)
+            .property(1, -2)
+            .texture("tools/flint/shovel")
             .build();
 
     /**
@@ -85,8 +85,8 @@ public class FlintTools {
     public static final ItemEntry<? extends Item> FLINT_HOE = new ToolBuilder()
             .id("flint_hoe")
             .type(ToolType.HOE)
-            .tier(Tiers.FLINT_TIER)
-            .attack(1, -2)
-            .texture("item/tools/flint/hoe")
+            .tier(ElakeTechTiers.FLINT_TIER)
+            .property(1, -2)
+            .texture("tools/flint/hoe")
             .build();
 }

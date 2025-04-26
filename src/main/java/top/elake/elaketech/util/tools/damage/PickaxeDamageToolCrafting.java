@@ -1,4 +1,4 @@
-package top.elake.elaketech.util.tools;
+package top.elake.elaketech.util.tools.damage;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -9,10 +9,10 @@ import org.jetbrains.annotations.NotNull;
 /**
  * @author Erhai-lake
  */
-public class HammerDamageToolCrafting extends PickaxeItem {
+public class PickaxeDamageToolCrafting extends PickaxeItem {
     private final int CRAFTING_SUBTRACTING_DAMAGE;
 
-    public HammerDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
+    public PickaxeDamageToolCrafting(Tier tier, Properties properties, int craftingSubtractingDamage) {
         super(tier, properties);
         // 要减去的耐久
         CRAFTING_SUBTRACTING_DAMAGE = craftingSubtractingDamage;

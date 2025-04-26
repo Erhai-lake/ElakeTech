@@ -10,6 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elaketech.register.item.materials.Materials;
+import top.elake.elaketech.register.item.tools.FlintTools;
 
 import java.util.function.Supplier;
 
@@ -41,7 +42,7 @@ public class ElakeTechCreativeModeTabs {
     /**
      * 工具物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = addCreativeModeTab("tools", () -> Materials.GRASS_STRING);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = addCreativeModeTab("tools", () -> FlintTools.FLINT_PICKAXE);
 
     /**
      * 创造模式物品栏注册

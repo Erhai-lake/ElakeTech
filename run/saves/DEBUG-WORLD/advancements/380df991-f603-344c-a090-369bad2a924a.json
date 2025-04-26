@@ -1055,5 +1055,11 @@
     },
     "done": true
   },
+  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
+    "criteria": {
+      "has_grass_fiber": "2025-04-26 17:42:23 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

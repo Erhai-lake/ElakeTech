@@ -1,12 +1,10 @@
-package top.elake.elaketech.util;
+package top.elake.elaketech.util.tools;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
-import top.elake.elaketech.util.tools.*;
 
 import static top.elake.elaketech.ElakeTech.REGISTER;
-
 
 /**
  * @author Erhai-lake
@@ -62,7 +60,7 @@ public class ToolBuilder {
      * @param speed  速度
      * @return ToolBuilder
      */
-    public ToolBuilder attack(int damage, float speed) {
+    public ToolBuilder property(int damage, float speed) {
         this.attackDamage = damage;
         this.attackSpeed = speed;
         return this;
@@ -86,7 +84,7 @@ public class ToolBuilder {
      * @return ToolBuilder
      */
     public ToolBuilder texture(String path) {
-        this.texture = path;
+        this.texture = "item/" + path;
         return this;
     }
 
@@ -126,7 +124,7 @@ public class ToolBuilder {
     private ItemEntry<? extends Item> registerStandardTool(Item.Properties properties) {
         String path = texture != null ? texture : String.format("item/tools/%s/%s", id.split("_")[0], type.getPath());
 
-        return REGISTER.item(id, p -> type.getItemFactory().apply(tier, properties, craftingDamage))
+        return REGISTER.item(id, (p) -> type.getItemFactory().apply(tier, properties, craftingDamage))
                 .model((c, p) -> p.generated(c, p.modLoc(path)))
                 .register();
     }
@@ -138,7 +136,7 @@ public class ToolBuilder {
      * @return ItemEntry
      */
     private ItemEntry<? extends Item> registerColorTool(Item.Properties properties) {
-        return REGISTER.item(id, p -> type.getItemFactory().apply(tier, properties, craftingDamage))
+        return REGISTER.item(id, (p) -> type.getItemFactory().apply(tier, properties, craftingDamage))
                 .model((c, p) -> {
                     p.handheld(c, p.modLoc("item/tools/color/" + type.getPath() + "/head"));
                     p.handheld(c, p.modLoc("item/tools/color/" + type.getPath() + "/handle"));
