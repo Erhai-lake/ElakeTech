@@ -16,7 +16,7 @@ public class ElakeTechTiers {
     public static final Tier FLINT_TIER = new SimpleTier(
             Tiers.STONE.getIncorrectBlocksForDrops(),
             20,
-            3F,
+            1.5F,
             1,
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
@@ -28,7 +28,7 @@ public class ElakeTechTiers {
     public static final Tier FLINT_HATCHET_TIER = new SimpleTier(
             Tiers.STONE.getIncorrectBlocksForDrops(),
             10,
-            1.5F,
+            1.0F,
             1,
             0,
             () -> Ingredient.of(ModItemTags.Items.FLINT)
