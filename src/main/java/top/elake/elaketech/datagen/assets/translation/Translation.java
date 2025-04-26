@@ -21,6 +21,8 @@ public class Translation {
         Materials.registers();
         // 工具
         Tools.registers();
+        // 矿物
+        Ores.registers();
     }
 
     /**
