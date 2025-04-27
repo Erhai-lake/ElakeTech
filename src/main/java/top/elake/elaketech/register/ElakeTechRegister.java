@@ -1,8 +1,11 @@
 package top.elake.elaketech.register;
 
 import net.neoforged.bus.api.IEventBus;
+import top.elake.elaketech.register.block.OreBlock;
 import top.elake.elaketech.register.item.ores.Ingots;
 import top.elake.elaketech.register.item.materials.Materials;
+import top.elake.elaketech.register.item.ores.OreItem;
+import top.elake.elaketech.register.item.ores.Plates;
 import top.elake.elaketech.register.item.tools.Tools;
 
 /**
@@ -17,8 +20,14 @@ public class ElakeTechRegister {
         Materials.register();
         // 工具
         Tools.register();
-        // 矿物
+        // 锭
         Ingots.register();
+        // 板
+        Plates.register();
+        // 粗矿
+        OreItem.register();
+        // 矿石方块
+        OreBlock.register();
         // 创造模式物品栏(必须最后)
         ElakeTechCreativeModeTabs.register(event);
     }

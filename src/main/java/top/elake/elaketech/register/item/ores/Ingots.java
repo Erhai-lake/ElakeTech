@@ -4,6 +4,7 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
+import top.elake.elaketech.tag.ModItemTags;
 
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public class Ingots {
 
     public static ItemEntry<Item> TIN = registerColorIngotItem("tin", 0xFFE1FFFF);
     public static ItemEntry<Item> BRONZE = registerColorIngotItem("bronze", 0xFFFF8C00);
-    public static ItemEntry<Item> GRAPHITE = registerOtherIngotItem("graphite");
+    public static ItemEntry<Item> GRAPHITE = registerAloneIngotItem("graphite");
 
     /**
      * 注册颜色矿物锭
@@ -39,19 +40,21 @@ public class Ingots {
                 .color(() -> () -> (itemStack, tintIndex) -> color)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/ingot")))
                 .tag(Tags.Items.INGOTS)
+                .tag(ModItemTags.createItemTag("c", "ingots/" + id))
                 .register();
     }
 
     /**
      * 注册其他矿物锭
      *
-     * @param id   id
+     * @param id id
      * @return ItemEntry
      */
-    public static ItemEntry<Item> registerOtherIngotItem(String id) {
+    public static ItemEntry<Item> registerAloneIngotItem(String id) {
         return REGISTER.item(id + "_ingot", Item::new)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/ingot")))
                 .tag(Tags.Items.INGOTS)
+                .tag(ModItemTags.createItemTag("c", "ingots/" + id))
                 .register();
     }
 }
