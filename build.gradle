@@ -13,7 +13,7 @@ repositories {
     mavenLocal()
     // Registrate
     maven {
-        url "https://maven.ithundxr.dev/snapshots"
+        url = "https://maven.ithundxr.dev/snapshots"
     }
     // JEI
     maven {
@@ -24,7 +24,7 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
-    // Jade
+    // CurseMaven
     maven {
         name = "CurseMaven"
         url = "https://www.cursemaven.com"
@@ -108,8 +108,6 @@ dependencies {
     // JEI
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
-    // JER
-    implementation files("libs/JustEnoughResources-NeoForge-1.21.1-1.6.0.jar")
     // Jade
     implementation("curse.maven:jade-324717:${jade_file_id}")
     // KubeJS
