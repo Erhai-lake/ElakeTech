@@ -49,7 +49,7 @@ public class FlintTools {
     /**
      * 斧
      */
-    public static  final ItemEntry<? extends Item> FLINT_AXE = new ToolBuilder()
+    public static final ItemEntry<? extends Item> FLINT_AXE = new ToolBuilder()
             .id("flint_axe")
             .type(ToolType.AXE)
             .tier(ElakeTechTiers.FLINT_TIER)
