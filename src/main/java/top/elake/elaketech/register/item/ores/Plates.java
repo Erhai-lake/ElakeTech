@@ -28,7 +28,7 @@ public class Plates {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
                 .color(() -> () -> (itemStack, tintIndex) -> color)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/plate")))
-                .tag(ModItemTags.Items.PLATES)
+                .tag(ModItemTags.PLATES)
                 .tag(ModItemTags.createItemTag("c", "plates/" + id))
                 .register();
     }
@@ -36,7 +36,7 @@ public class Plates {
     public static ItemEntry<Item> registerAlonePlateItem(String id) {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/plate")))
-                .tag(ModItemTags.Items.PLATES)
+                .tag(ModItemTags.PLATES)
                 .tag(ModItemTags.createItemTag("c", "plates/" + id))
                 .register();
     }

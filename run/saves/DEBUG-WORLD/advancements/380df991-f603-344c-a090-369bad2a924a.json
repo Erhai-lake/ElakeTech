@@ -1061,5 +1061,53 @@
     },
     "done": true
   },
+  "elake_tech:recipes/tools/crafting/shaped/tools/flint/sword": {
+    "criteria": {
+      "has_flint": "2025-04-29 10:42:41 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tools/flint/shovel": {
+    "criteria": {
+      "has_flint": "2025-04-29 10:42:41 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tools/flint/hoe": {
+    "criteria": {
+      "has_flint": "2025-04-29 10:42:41 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tools/flint/hatchet": {
+    "criteria": {
+      "has_flint": "2025-04-29 10:42:41 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tools/flint/pickaxe": {
+    "criteria": {
+      "has_flint": "2025-04-29 10:42:41 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/tools/crafting/shaped/tools/flint/axe": {
+    "criteria": {
+      "has_flint": "2025-04-29 10:42:41 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_blasting_deepslate_gold_ore": {
+    "criteria": {
+      "has_deepslate_gold_ore": "2025-04-29 10:56:50 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_smelting_deepslate_gold_ore": {
+    "criteria": {
+      "has_deepslate_gold_ore": "2025-04-29 10:56:49 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

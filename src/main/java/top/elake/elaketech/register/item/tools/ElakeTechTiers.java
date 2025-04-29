@@ -19,7 +19,7 @@ public class ElakeTechTiers {
             1.5F,
             1,
             0,
-            () -> Ingredient.of(ModItemTags.Items.FLINT)
+            () -> Ingredient.of(ModItemTags.FLINT)
     );
 
     /**
@@ -31,6 +31,6 @@ public class ElakeTechTiers {
             1.0F,
             1,
             0,
-            () -> Ingredient.of(ModItemTags.Items.FLINT)
+            () -> Ingredient.of(ModItemTags.FLINT)
     );
 }

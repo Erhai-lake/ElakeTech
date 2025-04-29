@@ -24,7 +24,5 @@ public class ModBlockTags {
     /**
      * 定义BlockTags
      */
-    public static class Blocks {
-        public static final TagKey<Block> GET_GRASS_FIBER = createBlockTag(MODID, "get_grass_fiber");
-    }
+    public static final TagKey<Block> GET_GRASS_FIBER = createBlockTag(MODID, "get_grass_fiber");
 }

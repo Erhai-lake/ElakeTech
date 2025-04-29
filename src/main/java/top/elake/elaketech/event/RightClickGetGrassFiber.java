@@ -42,7 +42,7 @@ public class RightClickGetGrassFiber {
         double probability = 0.0;
         if (blockState.is(Blocks.VINE)) {
             probability = 1.0;
-        } else if (blockState.is(ModBlockTags.Blocks.GET_GRASS_FIBER)) {
+        } else if (blockState.is(ModBlockTags.GET_GRASS_FIBER)) {
             probability = 0.35;
         }
 

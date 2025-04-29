@@ -19,19 +19,17 @@ public class ModItemTags {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
-    public static class Items {
-        public static final TagKey<Item> CLAY_BALL = createItemTag("c", "clay_ball");
-        public static final TagKey<Item> FLINT = createItemTag("c", "flint");
+    public static final TagKey<Item> CLAY_BALL = createItemTag("c", "clay_ball");
+    public static final TagKey<Item> FLINT = createItemTag("c", "flint");
 
-        public static final TagKey<Item> INGOTS = createItemTag("c", "ingots");
-        public static final TagKey<Item> TIN_INGOT = createItemTag("c", "ingots/tin");
-        public static final TagKey<Item> BRONZE_INGOT = createItemTag("c", "ingots/bronze");
-        public static final TagKey<Item> GRAPHITE_INGOT = createItemTag("c", "ingots/graphite");
+    public static final TagKey<Item> INGOTS = createItemTag("c", "ingots");
+    public static final TagKey<Item> TIN_INGOT = createItemTag("c", "ingots/tin");
+    public static final TagKey<Item> BRONZE_INGOT = createItemTag("c", "ingots/bronze");
+    public static final TagKey<Item> GRAPHITE_INGOT = createItemTag("c", "ingots/graphite");
 
-        public static final TagKey<Item> PLATES = createItemTag("c", "plates");
-        public static final TagKey<Item> IRON_PLATE = createItemTag("c", "plates/iron");
-        public static final TagKey<Item> TIN_PLATE = createItemTag("c", "plates/tin");
-        public static final TagKey<Item> BRONZE_PLATE = createItemTag("c", "plates/bronze");
-        public static final TagKey<Item> GRAPHITE_PLATE = createItemTag("c", "plates/graphite");
-    }
+    public static final TagKey<Item> PLATES = createItemTag("c", "plates");
+    public static final TagKey<Item> IRON_PLATE = createItemTag("c", "plates/iron");
+    public static final TagKey<Item> TIN_PLATE = createItemTag("c", "plates/tin");
+    public static final TagKey<Item> BRONZE_PLATE = createItemTag("c", "plates/bronze");
+    public static final TagKey<Item> GRAPHITE_PLATE = createItemTag("c", "plates/graphite");
 }

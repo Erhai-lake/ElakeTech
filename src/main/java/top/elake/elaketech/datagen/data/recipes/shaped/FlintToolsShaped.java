@@ -26,59 +26,59 @@ public class FlintToolsShaped {
                 .pattern(" A ")
                 .pattern("BAB")
                 .pattern(" C ")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
+                .unlockedBy("has_flint", has(ModItemTags.FLINT))
                 .save(output, loadResource( flint + "sword"));
         // 镐
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FlintTools.FLINT_PICKAXE)
                 .pattern("ABA")
                 .pattern(" C ")
                 .pattern(" C ")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
+                .unlockedBy("has_flint", has(ModItemTags.FLINT))
                 .save(output, loadResource( flint + "pickaxe"));
         // 斧
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FlintTools.FLINT_AXE)
                 .pattern("AB")
                 .pattern("AC")
                 .pattern(" C")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
+                .unlockedBy("has_flint", has(ModItemTags.FLINT))
                 .save(output, loadResource( flint + "axe"));
         // 手符
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FlintTools.FLINT_HATCHET)
                 .pattern("AB")
                 .pattern(" C")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
+                .unlockedBy("has_flint", has(ModItemTags.FLINT))
                 .save(output, loadResource( flint + "hatchet"));
         // 铲
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FlintTools.FLINT_SHOVEL)
                 .pattern("A")
                 .pattern("B")
                 .pattern("C")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
+                .unlockedBy("has_flint", has(ModItemTags.FLINT))
                 .save(output, loadResource( flint + "shovel"));
         // 锄
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FlintTools.FLINT_HOE)
                 .pattern("AB")
                 .pattern(" C")
                 .pattern(" C")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', Tags.Items.STRINGS)
                 .define('C', Tags.Items.RODS_WOODEN)
-                .unlockedBy("has_flint", has(ModItemTags.Items.FLINT))
+                .unlockedBy("has_flint", has(ModItemTags.FLINT))
                 .save(output, loadResource( flint + "hoe"));
     }
 }

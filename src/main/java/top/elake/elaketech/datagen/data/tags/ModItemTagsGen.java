@@ -24,7 +24,7 @@ public class ModItemTagsGen extends ItemTagsProvider {
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
         // 燧石
-        this.tag(ModItemTags.Items.FLINT)
+        this.tag(ModItemTags.FLINT)
                 .add(Items.FLINT);
     }
 }

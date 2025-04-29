@@ -26,7 +26,7 @@ public class WorkBenchShaped {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CRAFTING_TABLE)
                 .pattern("AB")
                 .pattern("CC")
-                .define('A', ModItemTags.Items.FLINT)
+                .define('A', ModItemTags.FLINT)
                 .define('B', ItemTags.LOGS)
                 .define('C', ItemTags.PLANKS)
                 .unlockedBy("has_logs", has(ItemTags.LOGS))

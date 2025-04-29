@@ -25,6 +25,7 @@ import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.register.item.ores.OreItem;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
+import top.elake.elaketech.tag.ModItemTags;
 
 import java.util.Objects;
 
@@ -39,7 +40,7 @@ import static top.elake.elaketech.ElakeTech.REGISTER;
  * @Quartz 石英
  */
 public class OreBlock {
-    private static final TagKey<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
+    public static final TagKey<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
 
     public static void register() {
     }
@@ -68,11 +69,12 @@ public class OreBlock {
                 .item()
                 .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
                 .tag(Tags.Items.ORES)
+                .tag(ModItemTags.createItemTag("c", "ores/" + id))
                 .build()
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .tag(miningLevel)
+                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
                 .color(() -> () -> (state, world, pos, tintIndex) -> tintIndex == 0 ? color : -1)
                 .initialProperties(() -> Blocks.IRON_ORE)
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
@@ -108,11 +110,12 @@ public class OreBlock {
                 .item()
                 .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
                 .tag(Tags.Items.ORES)
+                .tag(ModItemTags.createItemTag("c", "ores/" + id))
                 .build()
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .tag(miningLevel)
+                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
                 .color(() -> () -> (state, world, pos, tintIndex) -> tintIndex == 0 ? color : -1)
                 .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
@@ -146,11 +149,12 @@ public class OreBlock {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
+                .tag(ModItemTags.createItemTag("c", "ores/" + id))
                 .build()
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .tag(miningLevel)
+                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
                 .initialProperties(() -> Blocks.IRON_ORE)
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
                         .forAllStatesExcept((state) -> ConfiguredModel.builder()
@@ -185,11 +189,12 @@ public class OreBlock {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
+                .tag(ModItemTags.createItemTag("c", "ores/" + id))
                 .build()
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .tag(miningLevel)
+                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
                 .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
                         .forAllStatesExcept((state) -> ConfiguredModel.builder()
@@ -221,7 +226,7 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .tag(miningLevel)
+                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
                 .initialProperties(() -> Blocks.IRON_ORE)
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
                         .forAllStatesExcept((state) -> ConfiguredModel.builder()
@@ -253,7 +258,7 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .tag(miningLevel)
+                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
                 .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
                 .blockstate((c, p) -> p.getVariantBuilder(c.get())
                         .forAllStatesExcept((state) -> ConfiguredModel.builder()

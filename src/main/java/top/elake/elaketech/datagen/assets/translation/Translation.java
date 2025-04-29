@@ -23,6 +23,8 @@ public class Translation {
         Tools.registers();
         // 矿物
         Ores.registers();
+        // 方块
+        CommonBlock.registers();
     }
 
     /**

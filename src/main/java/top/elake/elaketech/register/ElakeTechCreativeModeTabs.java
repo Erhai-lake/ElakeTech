@@ -1,14 +1,14 @@
 package top.elake.elaketech.register;
 
-import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import top.elake.elaketech.register.block.CommonBlock;
 import top.elake.elaketech.register.item.materials.Materials;
 import top.elake.elaketech.register.item.tools.FlintTools;
 
@@ -37,19 +37,27 @@ public class ElakeTechCreativeModeTabs {
     /**
      * 材料物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB = addCreativeModeTab("materials", () -> Materials.GRASS_FIBER);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MATERIALS_TAB =
+            addCreativeModeTab("materials", () -> Materials.GRASS_FIBER);
 
     /**
      * 工具物品栏
      */
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB = addCreativeModeTab("tools", () -> FlintTools.FLINT_PICKAXE);
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS_TAB =
+            addCreativeModeTab("tools", () -> FlintTools.FLINT_PICKAXE);
+
+    /**
+     * 普通方块物品栏
+     */
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> COMMON_BLOCK_TAB =
+            addCreativeModeTab("common_blocks", () -> CommonBlock.REFRACTORY_BRICKS);
 
     /**
      * 创造模式物品栏注册
      */
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> addCreativeModeTab(String name, Supplier<ItemEntry<? extends Item>> displayIcon) {
+    public static DeferredHolder<CreativeModeTab, CreativeModeTab> addCreativeModeTab(String name, Supplier<? extends ItemLike> displayIcon) {
         return TABS.register(name + "_tab", () -> CreativeModeTab.builder()
-                .icon(() -> new ItemStack(displayIcon.get().asItem()))
+                .icon(() -> new ItemStack(displayIcon.get()))
                 .title(Component.translatable("itemGroup.%s.%s_tab".formatted(MODID, name)))
                 .build());
     }

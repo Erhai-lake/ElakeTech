@@ -22,7 +22,7 @@ public class ModBlockTagsGen extends BlockTagsProvider {
     @Override
     public void addTags(HolderLookup.@NotNull Provider provider) {
         // 可获取杂草的方块
-        this.tag(ModBlockTags.Blocks.GET_GRASS_FIBER)
+        this.tag(ModBlockTags.GET_GRASS_FIBER)
                 .add(Blocks.SHORT_GRASS)
                 .add(Blocks.TALL_GRASS);
     }
