@@ -124,7 +124,6 @@ public class RecipeRemovalConfig {
         
         try (FileWriter writer = new FileWriter(configFile)) {
             GSON.toJson(defaultConfig, writer);
-            LOGGER.info("Created default recipe removal config file");
         } catch (IOException e) {
             LOGGER.error("Failed to create default config file", e);
         }

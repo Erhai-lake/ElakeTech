@@ -24,14 +24,12 @@ import java.util.stream.Collectors;
  */
 @EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = { Dist.CLIENT, Dist.DEDICATED_SERVER })
 public class RemoveRecipes {
-    private static final Logger LOGGER = LoggerFactory.getLogger(RemoveRecipes.class);
 
     /**
      * 在服务器启动前加载配置
      */
     @SubscribeEvent
     public static void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Loading recipe removal configuration");
         RecipeRemovalConfig.getInstance().loadConfig();
     }
 
@@ -58,7 +56,6 @@ public class RemoveRecipes {
         
         // 如果配置为空，不需要进行处理
         if (modsToRemove.isEmpty() && recipesToRemove.isEmpty()) {
-            LOGGER.info("No recipes to remove from configuration");
             return;
         }
         
@@ -74,6 +71,5 @@ public class RemoveRecipes {
         recipeManager.replaceRecipes(recipesToKeep);
         
         int removedCount = originalSize - recipesToKeep.size();
-        LOGGER.info("Removed {} recipes based on configuration", removedCount);
     }
 }

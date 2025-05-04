@@ -49,7 +49,7 @@ public class ItemRecipes {
                     gson.toJson(config, writer);
                 }
             } catch (IOException e) {
-                LOGGER.error("创建配方移除配置文件失败", e);
+                LOGGER.error("Failed to create recipe removal configuration file", e);
             }
         }
     }
