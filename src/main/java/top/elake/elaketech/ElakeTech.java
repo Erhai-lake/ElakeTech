@@ -27,7 +27,7 @@ import top.elake.elaketech.server.recipes.remove.*;
  */
 @Mod(ElakeTech.MODID)
 public class ElakeTech {
-    public static final String MODID = "elaketech";
+    public static final String MODID = "elake_tech";
 
     public static final Registrate REGISTER = Registrate.create(MODID);
 

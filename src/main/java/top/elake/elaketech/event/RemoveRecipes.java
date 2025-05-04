@@ -7,7 +7,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.RecipesUpdatedEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -32,6 +31,7 @@ public class RemoveRecipes {
      */
     @SubscribeEvent
     public static void onServerStarting(ServerStartingEvent event) {
+        LOGGER.info("Loading recipe removal configuration");
         RecipeRemovalConfig.getInstance().loadConfig();
     }
 
@@ -58,10 +58,13 @@ public class RemoveRecipes {
         
         // 如果配置为空，不需要进行处理
         if (modsToRemove.isEmpty() && recipesToRemove.isEmpty()) {
+            LOGGER.info("No recipes to remove from configuration");
             return;
         }
         
         Collection<RecipeHolder<?>> allRecipes = recipeManager.getRecipes();
+        int originalSize = allRecipes.size();
+        
         Collection<RecipeHolder<?>> recipesToKeep = allRecipes.stream()
                 .filter((holder) -> {
                     ResourceLocation id = holder.id();
@@ -69,5 +72,8 @@ public class RemoveRecipes {
                 }).collect(Collectors.toList());
         
         recipeManager.replaceRecipes(recipesToKeep);
+        
+        int removedCount = originalSize - recipesToKeep.size();
+        LOGGER.info("Removed {} recipes based on configuration", removedCount);
     }
 }

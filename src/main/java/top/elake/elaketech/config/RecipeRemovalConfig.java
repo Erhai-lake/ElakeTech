@@ -31,9 +31,9 @@ public class RecipeRemovalConfig {
     
     private static RecipeRemovalConfig INSTANCE;
     
-    // 配方移除数据，使用transient防止序列化
-    private final transient Set<String> modIds = new HashSet<>();
-    private final transient Set<ResourceLocation> recipeIds = new HashSet<>();
+    // 配方移除数据
+    private final Set<String> modIds = new HashSet<>();
+    private final Set<ResourceLocation> recipeIds = new HashSet<>();
     
     private RecipeRemovalConfig() {
         // 私有构造函数
@@ -64,7 +64,6 @@ public class RecipeRemovalConfig {
             try {
                 Files.createDirectories(configDir);
             } catch (IOException e) {
-                LOGGER.error("Failed to create config directory", e);
                 return;
             }
         }
@@ -86,10 +85,9 @@ public class RecipeRemovalConfig {
                 
                 // 解析数据
                 parseConfig();
+                
             }
         } catch (Exception e) {
-            LOGGER.error("Error loading recipe removal config", e);
-            // 配置加载失败时，使用默认空配置
             this.modsToRemove = new ArrayList<>();
             this.recipesToRemove = new ArrayList<>();
         }
@@ -119,15 +117,16 @@ public class RecipeRemovalConfig {
         defaultConfig.modsToRemove = new ArrayList<>();
         defaultConfig.recipesToRemove = new ArrayList<>();
         
-        // 添加一些示例 （可以删除）
-//        defaultConfig.modsToRemove.add("example_mod");
-//        defaultConfig.recipesToRemove.add("minecraft:furnace");
-//        defaultConfig.recipesToRemove.add("minecraft:diamond_block");
+        // 添加一些示例
+        defaultConfig.modsToRemove.add("example_mod");
+        defaultConfig.recipesToRemove.add("minecraft:furnace");
+        defaultConfig.recipesToRemove.add("minecraft:diamond_block");
         
         try (FileWriter writer = new FileWriter(configFile)) {
             GSON.toJson(defaultConfig, writer);
+            LOGGER.info("Created default recipe removal config file");
         } catch (IOException e) {
             LOGGER.error("Failed to create default config file", e);
         }
     }
-} 
+}
