@@ -4,10 +4,11 @@ import com.tterrag.registrate.Registrate;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLPaths;
+import top.elake.elaketech.config.RecipeRemoveConfig;
 import top.elake.elaketech.datagen.assets.translation.Translation;
 import top.elake.elaketech.event.Event;
 import top.elake.elaketech.register.ElakeTechRegister;
-import top.elake.elaketech.server.recipes.remove.ItemRecipes;
 
 /**
  * @author Elake Studio
@@ -22,7 +23,7 @@ public class ElakeTech {
     /**
      * 注册器
      */
-    public static final Registrate REGISTER  = Registrate.create(MODID);
+    public static final Registrate REGISTER = Registrate.create(MODID);
 
     public static ResourceLocation loadResource(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
@@ -40,8 +41,10 @@ public class ElakeTech {
         Event.register();
         // 语言
         Translation.registers();
-        // 删除配方
-        ItemRecipes.removeRecipes();
+        // 确保配置目录存在
+        FMLPaths.CONFIGDIR.get().resolve(MODID).toFile().mkdirs();
+        // 预加载配置
+        RecipeRemoveConfig.getInstance();
     }
 
 //    private void registerCapabilities(RegisterCapabilitiesEvent event) {

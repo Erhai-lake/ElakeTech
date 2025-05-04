@@ -1,0 +1,16 @@
+{
+  "modsToRemove": [
+    "example_mod"
+  ],
+  "recipesToRemove": [
+    "minecraft:crafting_table",
+    "minecraft:furnace",
+    "minecraft:wooden_sword",
+    "minecraft:wooden_pickaxe",
+    "minecraft:wooden_axe",
+    "minecraft:wooden_shovel",
+    "minecraft:wooden_hoe"
+  ],
+  "modIds": [],
+  "recipeIds": []
+}

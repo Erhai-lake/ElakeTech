@@ -135,7 +135,7 @@ public static ItemEntry<Item> GRASS_FIBER = REGISTER.item("grass_fiber", Item::n
 
 * **神恩✘晓月**
 * **ฅ呜喵ฅ**
-* **Prizowo**
+* **LirxOwO**
 * **啊哈**
 * **小胡闹**
 * **安宁**
