@@ -4,9 +4,13 @@ import com.tterrag.registrate.Registrate;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.capabilities.*;
 import net.neoforged.neoforge.common.NeoForge;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import top.elake.elaketech.client.ModTooltip;
+import top.elake.elaketech.config.RecipeRemovalConfig;
 import top.elake.elaketech.datagen.assets.model.*;
 import top.elake.elaketech.datagen.assets.translation.Common;
 import top.elake.elaketech.event.*;
@@ -31,13 +35,19 @@ public class ElakeTech {
         return ResourceLocation.fromNamespaceAndPath(MODID, String.valueOf(path));
     }
 
-
     /**
      * 构造函数
      *
      * @param event 事件总线
      */
     public ElakeTech(IEventBus event) {
+
+        // 确保配置目录存在
+        FMLPaths.CONFIGDIR.get().resolve(MODID).toFile().mkdirs();
+        
+        // 预加载配置
+        RecipeRemovalConfig.getInstance();
+
         // 元素
         Element.ElementGroup.register();
         // 创造模式物品栏

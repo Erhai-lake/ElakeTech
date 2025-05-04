@@ -1,0 +1,11 @@
+{
+  "modsToRemove": [
+    "example_mod"
+  ],
+  "recipesToRemove": [
+    "minecraft:furnace",
+    "minecraft:diamond_block"
+  ],
+  "modIds": [],
+  "recipeIds": []
+}

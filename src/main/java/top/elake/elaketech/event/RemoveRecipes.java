@@ -6,12 +6,16 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RecipesUpdatedEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import top.elake.elaketech.ElakeTech;
+import top.elake.elaketech.config.RecipeRemovalConfig;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -20,58 +24,52 @@ import java.util.stream.Collectors;
  */
 @EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = { Dist.CLIENT, Dist.DEDICATED_SERVER })
 public class RemoveRecipes {
-    private static final Set<String> MODS_TO_REMOVE = new HashSet<>();
-    private static final Set<ResourceLocation> RECIPES_TO_REMOVE = new HashSet<>();
 
     /**
-     * 删除模组的所有配方
-     * 例如: removeMod("mekanism");
+     * 在服务器启动前加载配置
      */
-    public static void removeMod(String modId) {
-        MODS_TO_REMOVE.add(modId);
+    @SubscribeEvent
+    public static void onServerStarting(ServerStartingEvent event) {
+        RecipeRemovalConfig.getInstance().loadConfig();
     }
 
     /**
-     * 删除物品ID的配方
-     * 例如: removeItemId("minecraft:diamond_block");
+     * 客户端配方更新时移除配方
      */
-    public static void removeItemId(String itemId) {
-        RECIPES_TO_REMOVE.add(ResourceLocation.parse(itemId));
-    }
-
-    /**
-     * 删除配方ID的配方
-     * 例如: removeRecipeId("mekanism:factory/advanced/purifying");
-     */
-    public static void removeRecipeId(String recipeId) {
-        RECIPES_TO_REMOVE.add(ResourceLocation.parse(recipeId));
-    }
-
-    /**
-     * 删除指定命名空间和路径的配方
-     * 例如: removeRecipe("minecraft", "furnace");
-     */
-    public static void removeRecipe(String namespace, String path) {
-        RECIPES_TO_REMOVE.add(ResourceLocation.fromNamespaceAndPath(namespace, path));
-    }
-
     @SubscribeEvent
     public static void onRecipesUpdated(RecipesUpdatedEvent event) {
         removeRecipes(event.getRecipeManager());
     }
 
+    /**
+     * 服务器启动时移除配方
+     */
     @SubscribeEvent
     public static void onServerStarted(ServerStartedEvent event) {
         removeRecipes(event.getServer().getRecipeManager());
     }
 
     private static void removeRecipes(RecipeManager recipeManager) {
+        RecipeRemovalConfig config = RecipeRemovalConfig.getInstance();
+        Set<String> modsToRemove = config.getModIds();
+        Set<ResourceLocation> recipesToRemove = config.getRecipeIds();
+        
+        // 如果配置为空，不需要进行处理
+        if (modsToRemove.isEmpty() && recipesToRemove.isEmpty()) {
+            return;
+        }
+        
         Collection<RecipeHolder<?>> allRecipes = recipeManager.getRecipes();
+        int originalSize = allRecipes.size();
+        
         Collection<RecipeHolder<?>> recipesToKeep = allRecipes.stream()
                 .filter((holder) -> {
                     ResourceLocation id = holder.id();
-                    return !MODS_TO_REMOVE.contains(id.getNamespace()) && !RECIPES_TO_REMOVE.contains(id);
+                    return !modsToRemove.contains(id.getNamespace()) && !recipesToRemove.contains(id);
                 }).collect(Collectors.toList());
+        
         recipeManager.replaceRecipes(recipesToKeep);
+        
+        int removedCount = originalSize - recipesToKeep.size();
     }
 }

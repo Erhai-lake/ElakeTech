@@ -120,7 +120,7 @@ public static final TagKey<Block> INCORRECT_FOR_CUSTOM_TOOL =
 
 * **神恩✘晓月**
 * **ฅ呜喵ฅ**
-* **Prizowo**
+* **LirxOwO**
 * **啊哈**
 * **小胡闹**
 * **安宁**
