@@ -118,6 +118,8 @@ dependencies {
     implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
     // ZeroCore2
     implementation("curse.maven:zerocore2-247921:${zerocore2_file_id}")
+    // Flywheel
+    implementation jarJar("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     // Ponder
     implementation jarJar("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
     // Registrate

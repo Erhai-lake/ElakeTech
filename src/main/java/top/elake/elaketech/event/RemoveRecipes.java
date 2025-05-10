@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
  */
 @EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.GAME, value = { Dist.CLIENT, Dist.DEDICATED_SERVER })
 public class RemoveRecipes {
-
     /**
      * 在服务器启动前加载配置
      */

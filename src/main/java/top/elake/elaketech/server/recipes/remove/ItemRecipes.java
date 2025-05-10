@@ -48,8 +48,8 @@ public class ItemRecipes {
                 try (FileWriter writer = new FileWriter(configFile)) {
                     gson.toJson(config, writer);
                 }
-            } catch (IOException e) {
-                LOGGER.error("Failed to create recipe removal configuration file", e);
+            } catch (IOException exception) {
+                LOGGER.error("Failed to create recipe removal configuration file", exception);
             }
         }
     }
