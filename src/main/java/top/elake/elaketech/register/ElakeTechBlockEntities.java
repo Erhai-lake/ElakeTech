@@ -17,9 +17,6 @@ public class ElakeTechBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
 
-    public static void registers() {
-    }
-
     /**
      * 晾干架
      */

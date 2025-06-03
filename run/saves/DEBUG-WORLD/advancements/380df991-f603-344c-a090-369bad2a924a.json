@@ -1049,54 +1049,6 @@
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shaped/workbench/crafting_table": {
-    "criteria": {
-      "has_logs": "2025-04-25 18:59:38 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
-    "criteria": {
-      "has_grass_fiber": "2025-04-26 17:42:23 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tools/flint/sword": {
-    "criteria": {
-      "has_flint": "2025-04-29 10:42:41 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tools/flint/shovel": {
-    "criteria": {
-      "has_flint": "2025-04-29 10:42:41 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tools/flint/hoe": {
-    "criteria": {
-      "has_flint": "2025-04-29 10:42:41 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tools/flint/hatchet": {
-    "criteria": {
-      "has_flint": "2025-04-29 10:42:41 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tools/flint/pickaxe": {
-    "criteria": {
-      "has_flint": "2025-04-29 10:42:41 +0800"
-    },
-    "done": true
-  },
-  "elake_tech:recipes/tools/crafting/shaped/tools/flint/axe": {
-    "criteria": {
-      "has_flint": "2025-04-29 10:42:41 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/gold_ingot_from_smelting_deepslate_gold_ore": {
     "criteria": {
       "has_deepslate_gold_ore": "2025-04-29 10:56:49 +0800"
@@ -1124,6 +1076,150 @@
   "minecraft:recipes/misc/iron_ingot_from_blasting_raw_iron": {
     "criteria": {
       "has_raw_iron": "2025-06-03 21:46:55 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_sword": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_pickaxe": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_leggings": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/shield": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/hopper": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/iron_bars": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_boots": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_chestplate": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lantern": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bucket": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/iron_helmet": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/minecart": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_hoe": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_shovel": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:story/smelt_iron": {
+    "criteria": {
+      "iron": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/shears": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_trapdoor": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chain": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/iron_block": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/iron_axe": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smithing_table": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/iron_door": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
+    "criteria": {
+      "has_iron_ingot": "2025-06-04 01:24:51 +0800"
     },
     "done": true
   },

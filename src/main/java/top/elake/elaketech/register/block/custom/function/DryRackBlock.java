@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -31,27 +32,32 @@ public class DryRackBlock extends BaseEntityBlock {
      * 定义朝向
      */
     private static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    private static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
     public DryRackBlock(Properties properties) {
         super(properties);
+
         // 默认朝向(北)
         this.registerDefaultState(this.getStateDefinition().any()
+                .setValue(AXIS, Direction.Axis.Y)
                 .setValue(FACING, Direction.NORTH));
     }
 
     @Override
-    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+    public @NotNull MapCodec<? extends BaseEntityBlock> codec() {
         return BaseEntityBlock.simpleCodec(DryRackBlock::new);
     }
 
     @Override
     public void createBlockStateDefinition(@NotNull StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, AXIS);
     }
 
     @Override
     public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState()
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(AXIS, Direction.Axis.Y);
     }
 
     @Override

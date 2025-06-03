@@ -28,12 +28,12 @@ public class ElakeTechRegister {
         OreItem.register();
         // 矿石方块
         OreBlock.register();
+        // 方块实体
+        ElakeTechBlockEntities.BLOCK_ENTITIES.register(event);
         // 方块
         CommonBlock.registers();
         // 功能方块
         FunctionBlock.registers();
-        // 方块实体
-        ElakeTechBlockEntities.registers();
         // 创造模式物品栏(必须最后)
         ElakeTechCreativeModeTabs.register(event);
     }
