@@ -94,7 +94,7 @@ public class ToolBuilder {
      * @param color 颜色值
      * @return ToolBuilder
      */
-    public ToolBuilder colored(int color) {
+    public ToolBuilder color(int color) {
         this.color = color;
         this.isColored = true;
         return this;

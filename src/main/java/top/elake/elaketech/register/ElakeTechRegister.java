@@ -30,6 +30,10 @@ public class ElakeTechRegister {
         OreBlock.register();
         // 方块
         CommonBlock.registers();
+        // 功能方块
+        FunctionBlock.registers();
+        // 方块实体
+        ElakeTechBlockEntities.BLOCK_ENTITIES.register(event);
         // 创造模式物品栏(必须最后)
         ElakeTechCreativeModeTabs.register(event);
     }

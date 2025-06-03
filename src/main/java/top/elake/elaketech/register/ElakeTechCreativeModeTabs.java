@@ -9,6 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elaketech.register.block.CommonBlock;
+import top.elake.elaketech.register.block.FunctionBlock;
 import top.elake.elaketech.register.item.materials.Materials;
 import top.elake.elaketech.register.item.tools.FlintTools;
 
@@ -32,7 +33,8 @@ public class ElakeTechCreativeModeTabs {
     /**
      * 创造模式物品栏注册
      */
-    private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    private static final DeferredRegister<CreativeModeTab> TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     /**
      * 材料物品栏
@@ -51,6 +53,12 @@ public class ElakeTechCreativeModeTabs {
      */
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> COMMON_BLOCK_TAB =
             addCreativeModeTab("common_blocks", () -> CommonBlock.REFRACTORY_BRICKS);
+
+    /**
+     * 功能性方块
+     */
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> FUNCTION_BLOCK_TAB =
+            addCreativeModeTab("function_blocks", () -> FunctionBlock.DRY_RACK);
 
     /**
      * 创造模式物品栏注册
