@@ -2,35 +2,74 @@ package top.elake.elaketech.register.block.custom.function;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import top.elake.elaketech.register.block.entity.DryRackBlockEntity;
 
 /**
  * @author Elake Studio
  */
 public class DryRackBlock extends BaseEntityBlock {
-    private static final Logger log = LoggerFactory.getLogger(DryRackBlock.class);
+    /**
+     * 定义朝向
+     */
+    private static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public DryRackBlock(Properties properties) {
         super(properties);
+        try {
+            this.registerDefaultState(this.getStateDefinition().any()
+                    .setValue(FACING, Direction.NORTH));
+        } catch (Exception e) {
+            System.err.println("Error initializing DryRackBlock:");
+            e.printStackTrace();
+            throw e;
+        }
+        // 默认朝向(北)
+        this.registerDefaultState(this.getStateDefinition().any()
+                .setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+        return BaseEntityBlock.simpleCodec(DryRackBlock::new);
+    }
+
+    @Override
+    public void createBlockStateDefinition(@NotNull StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public @NotNull BlockState mirror(BlockState state, @NotNull Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
+
+    @Override
+    public @NotNull BlockState rotate(BlockState state, @NotNull Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
     }
 
     @Override
@@ -57,11 +96,6 @@ public class DryRackBlock extends BaseEntityBlock {
         }
         // 阻止动画
         return ItemInteractionResult.CONSUME;
-    }
-
-    @Override
-    public @NotNull MapCodec<? extends BaseEntityBlock> codec() {
-        return null;
     }
 
     @Nullable

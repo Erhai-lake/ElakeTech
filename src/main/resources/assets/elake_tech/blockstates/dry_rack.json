@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "elake_tech:block/function/dry_rack"
+        },
+        "facing=east": {
+            "model": "elake_tech:block/function/dry_rack",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "elake_tech:block/function/dry_rack",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "elake_tech:block/function/dry_rack",
+            "y": 270
+        }
+    }
+}

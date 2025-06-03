@@ -3,18 +3,25 @@ package top.elake.elaketech.register.block.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec2;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import top.elake.elaketech.register.ElakeTechBlockEntities;
 
 /**
  * @author Elake Studio
  */
 public class DryRackBlockEntity extends BlockEntity {
-    String inv = "Inventory";
+    private static final String INVENTORY_TAG = "Inventory";
     /**
      * 定义物品槽位(4个)
      */
@@ -40,8 +47,8 @@ public class DryRackBlockEntity extends BlockEntity {
     public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
         super.loadAdditional(tag, provider);
 
-        if (tag.contains(inv)) {
-            this.inventory.deserializeNBT(provider, tag.getCompound(inv));
+        if (tag.contains(INVENTORY_TAG)) {
+            this.inventory.deserializeNBT(provider, tag.getCompound(INVENTORY_TAG));
         } else {
             this.inventory.deserializeNBT(provider, tag);
         }
@@ -57,7 +64,7 @@ public class DryRackBlockEntity extends BlockEntity {
     public CompoundTag writeItems(CompoundTag tag, HolderLookup.@NotNull Provider provider) {
         super.saveAdditional(tag, provider);
 
-        tag.put(inv, this.inventory.serializeNBT(provider));
+        tag.put(INVENTORY_TAG, this.inventory.serializeNBT(provider));
         return tag;
     }
 
@@ -92,5 +99,49 @@ public class DryRackBlockEntity extends BlockEntity {
             }
         }
         return false;
+    }
+
+    public ItemStackHandler getInventory() {
+        return this.inventory;
+    }
+
+    public Vec2 getItemOffset(int i) {
+        float x = 0.2f;
+        float y = 0.2f;
+
+        Vec2[] offest = new Vec2[] {
+                new Vec2(x, y), new Vec2(-x, -y),
+                new Vec2(x, -y), new Vec2(-x, -y)
+        };
+        return offest[i];
+    }
+
+    /**
+     * 更新方块
+     *
+     * @return
+     */
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public void onDataPacket(@NotNull Connection net, @NotNull ClientboundBlockEntityDataPacket packet, HolderLookup.@NotNull Provider provider) {
+        super.loadAdditional(packet.getTag(), provider);
+    }
+
+    @Override
+    public void setChanged() {
+        super.setChanged();
+        if (this.level != null) {
+            this.level.sendBlockUpdated(
+                    this.getBlockPos(),
+                    this.getBlockState(),
+                    this.getBlockState(),
+                    Block.UPDATE_CLIENTS
+            );
+        }
     }
 }

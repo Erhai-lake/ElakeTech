@@ -17,10 +17,13 @@ public class ElakeTechBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
 
+    public static void registers() {
+    }
+
     /**
      * 晾干架
      */
-    public static final Supplier<BlockEntityType<?>> DRY_RACK = BLOCK_ENTITIES.register("dry_rack",
+    public static final Supplier<BlockEntityType<DryRackBlockEntity>> DRY_RACK = BLOCK_ENTITIES.register("dry_rack",
             () -> BlockEntityType.Builder.of(DryRackBlockEntity::new,
                     FunctionBlock.DRY_RACK.get()).build(null));
 }
