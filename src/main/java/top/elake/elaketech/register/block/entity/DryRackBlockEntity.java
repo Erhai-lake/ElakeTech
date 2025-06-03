@@ -1,6 +1,7 @@
 package top.elake.elaketech.register.block.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -13,13 +14,14 @@ import top.elake.elaketech.register.ElakeTechBlockEntities;
  * @author Elake Studio
  */
 public class DryRackBlockEntity extends BlockEntity {
+    String inv = "Inventory";
     /**
      * 定义物品槽位(4个)
      */
     private final ItemStackHandler inventory = new ItemStackHandler(4) {
         // 重写getStackLimit方法, 一个格子只能放一样东西
         @Override
-        protected int getStackLimit(int slot, @NotNull ItemStack stack) {
+        public int getStackLimit(int slot, @NotNull ItemStack stack) {
             return 1;
         }
     };
@@ -28,18 +30,52 @@ public class DryRackBlockEntity extends BlockEntity {
         super(ElakeTechBlockEntities.DRY_RACK.get(), pos, state);
     }
 
+    /**
+     * 重写loadAdditional方法
+     *
+     * @param tag
+     * @param provider
+     */
     @Override
-    public void load(@NotNull CompoundTag tag) {
-        super.load(tag);
+    public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
+        super.loadAdditional(tag, provider);
 
-        String inv = "Inventory";
         if (tag.contains(inv)) {
-            this.inventory.deserializeNBT(tag.getCompound(inv));
+            this.inventory.deserializeNBT(provider, tag.getCompound(inv));
         } else {
-            this.inventory.deserializeNBT(tag);
+            this.inventory.deserializeNBT(provider, tag);
         }
     }
 
+    /**
+     * 写入物品
+     *
+     * @param tag
+     * @param provider
+     * @return
+     */
+    public CompoundTag writeItems(CompoundTag tag, HolderLookup.@NotNull Provider provider) {
+        super.saveAdditional(tag, provider);
+
+        tag.put(inv, this.inventory.serializeNBT(provider));
+        return tag;
+    }
+
+    /**
+     * 重写saveAdditional方法, 用于保存
+     *
+     * @param tag
+     * @param provider
+     */
+    @Override
+    public void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
+        super.saveAdditional(tag, provider);
+    }
+
+    @Override
+    public @NotNull CompoundTag getUpdateTag(HolderLookup.@NotNull Provider provider) {
+        return this.writeItems(new CompoundTag(), provider);
+    }
 
     /**
      * 添加物品
