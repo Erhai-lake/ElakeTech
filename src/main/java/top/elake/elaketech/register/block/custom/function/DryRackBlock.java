@@ -34,14 +34,6 @@ public class DryRackBlock extends BaseEntityBlock {
 
     public DryRackBlock(Properties properties) {
         super(properties);
-        try {
-            this.registerDefaultState(this.getStateDefinition().any()
-                    .setValue(FACING, Direction.NORTH));
-        } catch (Exception e) {
-            System.err.println("Error initializing DryRackBlock:");
-            e.printStackTrace();
-            throw e;
-        }
         // 默认朝向(北)
         this.registerDefaultState(this.getStateDefinition().any()
                 .setValue(FACING, Direction.NORTH));
