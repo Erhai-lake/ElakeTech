@@ -55,16 +55,9 @@ public class ElakeTech {
 
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
-//        @SubscribeEvent
-//        public static void onClientSetup(FMLClientSetupEvent event) {}
-
         @SubscribeEvent
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ElakeTechBlockEntities.DRY_RACK.get(), DryRackBlockEntityRender::new);
         }
     }
-
-//    private void registerCapabilities(RegisterCapabilitiesEvent event) {
-//        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModBlockEntity.THERMAL_POWER.get(), ThermalBlockEntity::getEnergyStorage);
-//    }
 }

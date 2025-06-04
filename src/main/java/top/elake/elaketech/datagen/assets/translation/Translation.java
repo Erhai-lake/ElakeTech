@@ -25,6 +25,8 @@ public class Translation {
         Ores.registers();
         // 方块
         CommonBlock.registers();
+        // 功能性方块
+        FunctionBlock.registers();
     }
 
     /**
@@ -40,12 +42,12 @@ public class Translation {
      * @param ZH 中文
      */
     @SuppressWarnings("AlibabaLowerCamelCaseVariableNaming")
-    public static void addLanguage(String type, String id, String EN, String ZH) {
+    public static void addLanguage(String type, String key, String EN, String ZH) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
-            newList.add(MODID + "." + id);
+            newList.add(MODID + "." + key);
         } else {
-            newList.add(type + "." + MODID + "." + id);
+            newList.add(type + "." + MODID + "." + key);
         }
         newList.add(EN);
         newList.add(ZH);

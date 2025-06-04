@@ -21,3 +21,4 @@
 /tp -18 -60 60
 /effect give Dev minecraft:night_vision infinite
 /kill @e[type=item]
+/data get block 4 56 -8
