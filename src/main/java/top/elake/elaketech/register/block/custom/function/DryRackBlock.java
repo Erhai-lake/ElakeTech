@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -72,8 +73,32 @@ public class DryRackBlock extends BaseEntityBlock {
     }
 
     @Override
+//    public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+//        return Block.box(0d, 0d, 0d, 16d, 10d, 16d);
+//    }
+
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return Block.box(0d, 0d, 0d, 16d, 10d, 16d);
+        // 脚
+        VoxelShape leg1 = Block.box(0, 0, 0, 2, 8, 2);
+        VoxelShape leg2 = Block.box(0, 0, 14, 2, 8, 16);
+        VoxelShape leg3 = Block.box(14, 0, 0, 16, 8, 2);
+        VoxelShape leg4 = Block.box(14, 0, 14, 16, 8, 16);
+
+        // 筛板
+        VoxelShape topPlate = Block.box(0, 8, 0, 16, 9, 16);
+
+        // 顶部围栏
+        VoxelShape southRail = Block.box(1, 9, 0, 15, 10, 1);
+        VoxelShape northRail = Block.box(1, 9, 15, 15, 10, 16);
+        VoxelShape westRail = Block.box(0, 9, 0, 1, 10, 16);
+        VoxelShape eastRail = Block.box(15, 9, 0, 16, 10, 16);
+
+        // 合并所有碰撞箱
+        return Shapes.or(
+                leg1, leg2, leg3, leg4,
+                topPlate,
+                southRail, northRail, westRail, eastRail
+        );
     }
 
     // 设置渲染方式

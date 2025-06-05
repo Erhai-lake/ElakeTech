@@ -2,8 +2,6 @@ package top.elake.elaketech.register.block;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
