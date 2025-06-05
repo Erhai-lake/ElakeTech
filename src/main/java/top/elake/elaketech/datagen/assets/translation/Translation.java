@@ -37,7 +37,7 @@ public class Translation {
     /**
      * 添加翻译
      * @param type 类型
-     * @param id 物品id
+     * @param key 物品id
      * @param EN 英文
      * @param ZH 中文
      */
