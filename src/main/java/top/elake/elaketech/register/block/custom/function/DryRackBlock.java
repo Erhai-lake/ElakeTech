@@ -22,6 +22,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import top.elake.elaketech.register.block.entity.DryRackBlockEntity;
@@ -58,7 +59,7 @@ public class DryRackBlock extends BaseEntityBlock {
     @Override
     public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
         return this.defaultBlockState()
-                .setValue(FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(FACING, context.getHorizontalDirection())
                 .setValue(AXIS, Direction.Axis.Y);
     }
 
@@ -109,17 +110,45 @@ public class DryRackBlock extends BaseEntityBlock {
 
     @Override
     public @NotNull ItemInteractionResult useItemOn(@NotNull ItemStack stack, @NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hitResult) {
-        // 获取BlockEntity的坐标(pos)
         BlockEntity blockEntity = level.getBlockEntity(pos);
 
         if (blockEntity instanceof DryRackBlockEntity dryRackBlockEntity) {
-            // 如果不是在Client执行
-            if (!level.isClientSide() && dryRackBlockEntity.addItem(player.getMainHandItem())) {
-                return ItemInteractionResult.SUCCESS;
+            if (!level.isClientSide()) {
+                if (player.isShiftKeyDown()) {
+                    if (dryRackBlockEntity.hasItems()) {
+                        ItemStack removedItem = dryRackBlockEntity.removeItem();
+                        if (!removedItem.isEmpty()) {
+                            if (!player.getInventory().add(removedItem)) {
+                                player.drop(removedItem, false);
+                            }
+                            return ItemInteractionResult.SUCCESS;
+                        }
+                    }
+                } else {
+                    if (!player.getMainHandItem().isEmpty() && dryRackBlockEntity.addItem(player.getMainHandItem())) {
+                        return ItemInteractionResult.SUCCESS;
+                    }
+                }
             }
         }
-        // 阻止动画
         return ItemInteractionResult.CONSUME;
+    }
+
+    @Override
+    public void onRemove(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState newState, boolean movedByPiston) {
+        if (!state.is(newState.getBlock())) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (blockEntity instanceof DryRackBlockEntity dryRackBlockEntity) {
+                ItemStackHandler inventory = dryRackBlockEntity.getInventory();
+                for (int i = 0; i < inventory.getSlots(); i++) {
+                    ItemStack stack = inventory.getStackInSlot(i);
+                    if (!stack.isEmpty()) {
+                        popResource(level, pos, stack);
+                    }
+                }
+            }
+        }
+        super.onRemove(state, level, pos, newState, movedByPiston);
     }
 
     @Nullable

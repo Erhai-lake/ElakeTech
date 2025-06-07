@@ -26,10 +26,14 @@ public class DryRackBlockEntity extends BlockEntity {
      * 定义物品槽位(4个)
      */
     private final ItemStackHandler inventory = new ItemStackHandler(4) {
-        // 重写getStackLimit方法, 一个格子只能放一样东西
         @Override
         public int getStackLimit(int slot, @NotNull ItemStack stack) {
             return 1;
+        }
+        
+        @Override
+        protected void onContentsChanged(int slot) {
+            DryRackBlockEntity.this.setChanged();
         }
     };
 
@@ -77,6 +81,7 @@ public class DryRackBlockEntity extends BlockEntity {
     @Override
     public void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
         super.saveAdditional(tag, provider);
+        tag.put(INVENTORY_TAG, this.inventory.serializeNBT(provider));
     }
 
     @Override
@@ -94,7 +99,35 @@ public class DryRackBlockEntity extends BlockEntity {
             if (stack.isEmpty()) {
                 // 放入Item
                 this.inventory.setStackInSlot(i, itemStack.split(1));
-                setChanged();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 取出物品
+     * @return 取出的物品，如果没有物品则返回空ItemStack
+     */
+    public ItemStack removeItem() {
+        for (int i = this.inventory.getSlots() - 1; i >= 0; i--) {
+            ItemStack stack = this.inventory.getStackInSlot(i);
+            if (!stack.isEmpty()) {
+                ItemStack removed = stack.copy();
+                this.inventory.setStackInSlot(i, ItemStack.EMPTY);
+                return removed;
+            }
+        }
+        return ItemStack.EMPTY;
+    }
+
+    /**
+     * 检查是否有物品
+     * @return 如果有物品返回true，否则返回false
+     */
+    public boolean hasItems() {
+        for (int i = 0; i < this.inventory.getSlots(); i++) {
+            if (!this.inventory.getStackInSlot(i).isEmpty()) {
                 return true;
             }
         }
@@ -110,7 +143,7 @@ public class DryRackBlockEntity extends BlockEntity {
         float y = 0.2f;
 
         Vec2[] offest = new Vec2[] {
-                new Vec2(x, y), new Vec2(-x, -y),
+                new Vec2(x, y), new Vec2(-x, y),
                 new Vec2(x, -y), new Vec2(-x, -y)
         };
         return offest[i];
@@ -129,7 +162,10 @@ public class DryRackBlockEntity extends BlockEntity {
 
     @Override
     public void onDataPacket(@NotNull Connection net, @NotNull ClientboundBlockEntityDataPacket packet, HolderLookup.@NotNull Provider provider) {
-        super.loadAdditional(packet.getTag(), provider);
+        CompoundTag tag = packet.getTag();
+        if (tag != null) {
+            this.loadAdditional(tag, provider);
+        }
     }
 
     @Override

@@ -21,15 +21,13 @@ import top.elake.elaketech.register.block.entity.DryRackBlockEntity;
  */
 public class DryRackBlockEntityRender implements BlockEntityRenderer<DryRackBlockEntity> {
     public DryRackBlockEntityRender(BlockEntityRendererProvider.Context context) {
-
     }
 
     @Override
     public void render(@NotNull DryRackBlockEntity entity, float partialTicks, @NotNull PoseStack stack, @NotNull MultiBufferSource source, int combinedLight, int icombinedoverLay) {
-        Direction direction = entity.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING).getOpposite();
+        Direction direction = entity.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);
         ItemStackHandler inventory = entity.getInventory();
         int posLong = (int) entity.getBlockPos().asLong();
-
         for (int i = 0; i < inventory.getSlots(); i++) {
             ItemStack itemStack = inventory.getStackInSlot(i);
             if (!itemStack.isEmpty()) {
@@ -40,20 +38,13 @@ public class DryRackBlockEntityRender implements BlockEntityRenderer<DryRackBloc
                 stack.mulPose(Axis.XP.rotationDegrees(90f));
                 Vec2 itemOffset = entity.getItemOffset(i);
                 stack.translate(itemOffset.x, itemOffset.y, 0.0);
-                // 物品渲染的大小
                 stack.scale(0.285f, 0.285f, 0.285f);
 
                 if (entity.getLevel() != null) {
-                    Minecraft.getInstance().getItemRenderer().renderStatic(
-                            itemStack,
-                            ItemDisplayContext.FIXED,
-                            LevelRenderer.getLightColor(entity.getLevel(), entity.getBlockPos()),
-                            icombinedoverLay,
-                            stack,
-                            source,
-                            entity.getLevel(),
-                            posLong + i
-                    );
+                    // 光照值
+                    int lightLevel = LevelRenderer.getLightColor(entity.getLevel(), entity.getBlockPos().above());
+
+                    Minecraft.getInstance().getItemRenderer().renderStatic(itemStack, ItemDisplayContext.FIXED, lightLevel, icombinedoverLay, stack, source, entity.getLevel(), posLong + i);
                 }
 
                 stack.popPose();
