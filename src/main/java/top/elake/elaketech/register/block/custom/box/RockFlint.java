@@ -94,42 +94,21 @@ public class RockFlint extends Block {
 
     @Override
     public @NotNull ItemInteractionResult useItemOn(@NotNull ItemStack stack, @NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hitResult) {
-        // 只在服务端处理
         if (level.isClientSide()) {
             return ItemInteractionResult.SUCCESS;
         }
-
-        // 检查玩家是否空手或手中物品不重要（允许拾取）
         ItemStack heldItem = player.getItemInHand(hand);
-        
-        // 创建燧石物品
         ItemStack flintItem = new ItemStack(Items.FLINT);
-        
-        // 尝试将燧石添加到玩家背包
         if (player.getInventory().add(flintItem)) {
-            // 成功添加到背包，移除方块
             level.removeBlock(pos, false);
-            
-            // 播放拾取音效
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
-            
-            // 播放玩家手臂摆动动画
             player.swing(hand, true);
-            
             return ItemInteractionResult.SUCCESS;
         } else {
-            // 背包满了，将物品掉落在玩家位置
             player.drop(flintItem, false);
-            
-            // 移除方块
             level.removeBlock(pos, false);
-            
-            // 播放拾取音效
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
-            
-            // 播放玩家手臂摆动动画
             player.swing(hand, true);
-            
             return ItemInteractionResult.SUCCESS;
         }
     }
