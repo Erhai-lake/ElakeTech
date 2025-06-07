@@ -14,5 +14,7 @@ public class Event {
         NoDiggingWood.register(NeoForge.EVENT_BUS);
         // 右键获取杂草
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
+        // 使用燧石放置RockFlint方块
+        PlaceRockFlintEvent.register(NeoForge.EVENT_BUS);
     }
 }
