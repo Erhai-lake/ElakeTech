@@ -13,7 +13,7 @@ import top.elake.elaketech.register.item.tools.Tools;
  */
 public class ElakeTechRegister {
     /**
-     * 注册物品
+     * 注册总线
      */
     public static void register(IEventBus event) {
         // 材料
