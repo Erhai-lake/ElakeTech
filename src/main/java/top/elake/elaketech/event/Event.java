@@ -16,5 +16,7 @@ public class Event {
         RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
         // 使用燧石放置RockFlint方块
         PlaceRockFlintEvent.register(NeoForge.EVENT_BUS);
+
+        Test.register(NeoForge.EVENT_BUS);
     }
 }

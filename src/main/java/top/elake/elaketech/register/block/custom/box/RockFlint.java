@@ -99,17 +99,12 @@ public class RockFlint extends Block {
         }
         ItemStack heldItem = player.getItemInHand(hand);
         ItemStack flintItem = new ItemStack(Items.FLINT);
-        if (player.getInventory().add(flintItem)) {
-            level.removeBlock(pos, false);
-            level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
-            player.swing(hand, true);
-            return ItemInteractionResult.SUCCESS;
-        } else {
+        if (!player.getInventory().add(flintItem)) {
             player.drop(flintItem, false);
-            level.removeBlock(pos, false);
-            level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
-            player.swing(hand, true);
-            return ItemInteractionResult.SUCCESS;
         }
+        level.removeBlock(pos, false);
+        level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0F, 1.0F);
+        player.swing(hand, true);
+        return ItemInteractionResult.SUCCESS;
     }
 }

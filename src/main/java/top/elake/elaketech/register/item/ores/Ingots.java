@@ -24,9 +24,9 @@ public class Ingots {
         REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.MATERIALS_TAB.getKey()));
     }
 
-    public static ItemEntry<Item> TIN = registerColorIngotItem("tin", 0xFFE1FFFF);
-    public static ItemEntry<Item> BRONZE = registerColorIngotItem("bronze", 0xFFFF8C00);
-    public static ItemEntry<Item> GRAPHITE = registerAloneIngotItem("graphite");
+    public static ItemEntry<Item> TIN = addIngotItem("tin", 0xFFE1FFFF);
+    public static ItemEntry<Item> BRONZE = addIngotItem("bronze", 0xFFFF8C00);
+    public static ItemEntry<Item> GRAPHITE = addIngotItem("graphite");
 
     /**
      * 注册颜色矿物锭
@@ -35,7 +35,7 @@ public class Ingots {
      * @param color 颜色
      * @return ItemEntry
      */
-    public static ItemEntry<Item> registerColorIngotItem(String id, int color) {
+    public static ItemEntry<Item> addIngotItem(String id, int color) {
         return REGISTER.item(id + "_ingot", Item::new)
                 .color(() -> () -> (itemStack, tintIndex) -> color)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/ingot")))
@@ -50,7 +50,7 @@ public class Ingots {
      * @param id id
      * @return ItemEntry
      */
-    public static ItemEntry<Item> registerAloneIngotItem(String id) {
+    public static ItemEntry<Item> addIngotItem(String id) {
         return REGISTER.item(id + "_ingot", Item::new)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/ingot")))
                 .tag(Tags.Items.INGOTS)

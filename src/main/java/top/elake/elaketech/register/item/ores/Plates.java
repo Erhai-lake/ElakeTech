@@ -21,10 +21,10 @@ public class Plates {
         REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.MATERIALS_TAB.getKey()));
     }
 
-    public static ItemEntry<Item> TIN = registerColorPlateItem("tin", 0xFFE1FFFF);
-    public static ItemEntry<Item> GRAPHITE = registerAlonePlateItem("graphite");
+    public static ItemEntry<Item> TIN = addPlateItem("tin", 0xFFE1FFFF);
+    public static ItemEntry<Item> GRAPHITE = addPlateItem("graphite");
 
-    public static ItemEntry<Item> registerColorPlateItem(String id, int color) {
+    public static ItemEntry<Item> addPlateItem(String id, int color) {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
                 .color(() -> () -> (itemStack, tintIndex) -> color)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/plate")))
@@ -33,7 +33,7 @@ public class Plates {
                 .register();
     }
 
-    public static ItemEntry<Item> registerAlonePlateItem(String id) {
+    public static ItemEntry<Item> addPlateItem(String id) {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/plate")))
                 .tag(ModItemTags.PLATES)

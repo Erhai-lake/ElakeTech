@@ -1223,45 +1223,57 @@
     },
     "done": true
   },
-  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
-    "criteria": {
-      "has_grass_fiber": "2025-06-04 15:15:12 +0800"
-    },
-    "done": true
-  },
   "elake_tech:recipes/tools/crafting/shaped/tools/flint/sword": {
     "criteria": {
-      "has_flint": "2025-06-05 16:56:01 +0800"
+      "has_flint": "2025-06-13 11:22:12 +0800"
     },
     "done": true
   },
   "elake_tech:recipes/tools/crafting/shaped/tools/flint/shovel": {
     "criteria": {
-      "has_flint": "2025-06-05 16:56:01 +0800"
+      "has_flint": "2025-06-13 11:22:12 +0800"
     },
     "done": true
   },
   "elake_tech:recipes/tools/crafting/shaped/tools/flint/hoe": {
     "criteria": {
-      "has_flint": "2025-06-05 16:56:01 +0800"
+      "has_flint": "2025-06-13 11:22:12 +0800"
     },
     "done": true
   },
   "elake_tech:recipes/tools/crafting/shaped/tools/flint/hatchet": {
     "criteria": {
-      "has_flint": "2025-06-05 16:56:01 +0800"
+      "has_flint": "2025-06-13 11:22:12 +0800"
     },
     "done": true
   },
   "elake_tech:recipes/tools/crafting/shaped/tools/flint/pickaxe": {
     "criteria": {
-      "has_flint": "2025-06-05 16:56:01 +0800"
+      "has_flint": "2025-06-13 11:22:12 +0800"
     },
     "done": true
   },
   "elake_tech:recipes/tools/crafting/shaped/tools/flint/axe": {
     "criteria": {
-      "has_flint": "2025-06-05 16:56:01 +0800"
+      "has_flint": "2025-06-13 11:22:12 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/crafting/shapeless/common/grass_string": {
+    "criteria": {
+      "has_grass_fiber": "2025-06-13 11:22:19 +0800"
+    },
+    "done": true
+  },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2025-07-02 23:25:59 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/enchanting_table": {
+    "criteria": {
+      "has_obsidian": "2025-07-02 23:25:59 +0800"
     },
     "done": true
   },

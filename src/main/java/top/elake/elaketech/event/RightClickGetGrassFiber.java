@@ -40,6 +40,7 @@ public class RightClickGetGrassFiber {
         }
 
         double probability = 0.0;
+
         if (blockState.is(Blocks.VINE)) {
             probability = 1.0;
         } else if (blockState.is(ModBlockTags.GET_GRASS_FIBER)) {
@@ -55,15 +56,11 @@ public class RightClickGetGrassFiber {
         player.swing(event.getHand(), true);
 
         if (new Random().nextDouble() < probability) {
-            BlockPos spawnPos = blockPos.above();
+            int x = blockPos.above().getX();
+            int y = blockPos.above().getY();
+            int z = blockPos.above().getZ();
             ItemStack stack = new ItemStack(Materials.GRASS_FIBER.get());
-            ItemEntity item = new ItemEntity(
-                    level,
-                    spawnPos.getX() + 0.5,
-                    spawnPos.getY() - 0.5,
-                    spawnPos.getZ() + 0.5,
-                    stack
-            );
+            ItemEntity item = new ItemEntity(level, x + 0.5, y - 0.5, z + 0.5, stack);
             level.addFreshEntity(item);
             // 防止物品乱飞
             // itemEntity.setDeltaMovement(0, 0, 0);

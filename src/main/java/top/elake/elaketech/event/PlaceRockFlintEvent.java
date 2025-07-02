@@ -17,7 +17,10 @@ import top.elake.elaketech.register.block.CommonBlock;
 
 import static top.elake.elaketech.ElakeTech.MODID;
 
-@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.GAME, value = {Dist.CLIENT, Dist.DEDICATED_SERVER})
+/**
+ * @author Elake Studio
+ */
+@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.GAME, value = { Dist.CLIENT, Dist.DEDICATED_SERVER })
 public class PlaceRockFlintEvent {
 
     public static void register(IEventBus event) {
@@ -55,4 +58,4 @@ public class PlaceRockFlintEvent {
         }
         player.swing(event.getHand(), true);
     }
-} 
+}

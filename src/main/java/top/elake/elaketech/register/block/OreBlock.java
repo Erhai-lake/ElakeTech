@@ -49,12 +49,12 @@ public class OreBlock {
         REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.MATERIALS_TAB.getKey()));
     }
 
-    public static BlockEntry<Block> TIN = registerColorOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
-    public static BlockEntry<Block> DEEP_TIN = registerColorDeepslateOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
-    public static BlockEntry<Block> GRAPHITE = registerAloneOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
-    public static BlockEntry<Block> DEEP_GRAPHITE = registerAloneDeepslateOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
-    public static BlockEntry<Block> QUARTZ = registerAloneOreBlockWithItem("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
-    public static BlockEntry<Block> DEEP_QUARTZ = registerAloneDeepslateOreBlockWithItem("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+    public static BlockEntry<Block> TIN = addOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
+    public static BlockEntry<Block> DEEP_TIN = addDeepslateOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
+    public static BlockEntry<Block> GRAPHITE = addOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
+    public static BlockEntry<Block> DEEP_GRAPHITE = addDeepslateOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
+    public static BlockEntry<Block> QUARTZ = addOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+    public static BlockEntry<Block> DEEP_QUARTZ = addDeepslateOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
 
     /**
      * 浅层着色矿石
@@ -64,7 +64,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      * @param loot        战利品
      */
-    public static BlockEntry<Block> registerColorOreBlock(String id, int color, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
+    public static BlockEntry<Block> addOreBlock(String id, int color, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
@@ -105,7 +105,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      * @param loot        战利品
      */
-    public static BlockEntry<Block> registerColorDeepslateOreBlock(String id, int color, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
+    public static BlockEntry<Block> addDeepslateOreBlock(String id, int color, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .color(() -> () -> (itemStack, tintIndex) -> tintIndex == 0 ? color : -1)
@@ -145,7 +145,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      * @param loot        战利品
      */
-    public static BlockEntry<Block> registerAloneOreBlock(String id, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
+    public static BlockEntry<Block> addOreBlock(String id, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
@@ -185,7 +185,7 @@ public class OreBlock {
      * @param miningLevel 挖掘等级
      * @param loot        战利品
      */
-    public static BlockEntry<Block> registerAloneDeepslateOreBlock(String id, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
+    public static BlockEntry<Block> addDeepslateOreBlock(String id, TagKey<Block> miningLevel, ItemEntry<Item> loot) {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
@@ -218,7 +218,7 @@ public class OreBlock {
                 .register();
     }
 
-    public static BlockEntry<Block> registerAloneOreBlockWithItem(String id, TagKey<Block> miningLevel, Item loot) {
+    public static BlockEntry<Block> addOreBlock(String id, TagKey<Block> miningLevel, Item loot) {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
@@ -250,7 +250,7 @@ public class OreBlock {
                 .register();
     }
 
-    public static BlockEntry<Block> registerAloneDeepslateOreBlockWithItem(String id, TagKey<Block> miningLevel, Item loot) {
+    public static BlockEntry<Block> addDeepslateOreBlock(String id, TagKey<Block> miningLevel, Item loot) {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)

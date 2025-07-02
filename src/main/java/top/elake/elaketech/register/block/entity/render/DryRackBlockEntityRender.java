@@ -44,9 +44,17 @@ public class DryRackBlockEntityRender implements BlockEntityRenderer<DryRackBloc
                     // 光照值
                     int lightLevel = LevelRenderer.getLightColor(entity.getLevel(), entity.getBlockPos().above());
 
-                    Minecraft.getInstance().getItemRenderer().renderStatic(itemStack, ItemDisplayContext.FIXED, lightLevel, icombinedoverLay, stack, source, entity.getLevel(), posLong + i);
+                    Minecraft.getInstance().getItemRenderer().renderStatic(
+                            itemStack,
+                            ItemDisplayContext.FIXED,
+                            lightLevel,
+                            icombinedoverLay,
+                            stack,
+                            source,
+                            entity.getLevel(),
+                            posLong + i
+                    );
                 }
-
                 stack.popPose();
             }
         }
