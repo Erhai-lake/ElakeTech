@@ -32,6 +32,8 @@ public class ElakeTechRegister {
         ElakeTechBlockEntities.BLOCK_ENTITIES.register(event);
         // 方块
         CommonBlock.registers();
+        // 机器方块
+        MachineBlock.registers();
         // 功能方块
         FunctionBlock.registers();
         // 创造模式物品栏(必须最后)

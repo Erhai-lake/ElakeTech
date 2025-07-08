@@ -3,8 +3,10 @@ package top.elake.elaketech.register;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import top.elake.elaketech.register.block.entity.DryRackBlockEntity;
+import top.elake.elaketech.register.block.MachineBlock;
+import top.elake.elaketech.register.block.entity.function.DryRackBlockEntity;
 import top.elake.elaketech.register.block.FunctionBlock;
+import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
 
 import java.util.function.Supplier;
 
@@ -23,4 +25,11 @@ public class ElakeTechBlockEntities {
     public static final Supplier<BlockEntityType<DryRackBlockEntity>> DRY_RACK = BLOCK_ENTITIES.register("dry_rack",
             () -> BlockEntityType.Builder.of(DryRackBlockEntity::new,
                     FunctionBlock.DRY_RACK.get()).build(null));
+
+    /**
+     * 锅炉
+     */
+    public static final Supplier<BlockEntityType<BoilerBlockEntity>> BOILER = BLOCK_ENTITIES.register("boiler",
+            () -> BlockEntityType.Builder.of(BoilerBlockEntity::new,
+                    MachineBlock.BOILER.get()).build(null));
 }

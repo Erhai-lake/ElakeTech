@@ -25,7 +25,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import top.elake.elaketech.register.block.entity.DryRackBlockEntity;
+import top.elake.elaketech.register.block.entity.function.DryRackBlockEntity;
 
 /**
  * @author Elake Studio

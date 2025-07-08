@@ -1,4 +1,4 @@
-package top.elake.elaketech.register.block.entity;
+package top.elake.elaketech.register.block.entity.function;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;

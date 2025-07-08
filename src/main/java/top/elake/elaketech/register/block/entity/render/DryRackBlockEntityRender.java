@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec2;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
-import top.elake.elaketech.register.block.entity.DryRackBlockEntity;
+import top.elake.elaketech.register.block.entity.function.DryRackBlockEntity;
 
 /**
  * @author Elake Studio

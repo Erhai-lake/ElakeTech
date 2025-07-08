@@ -1277,5 +1277,23 @@
     },
     "done": true
   },
+  "mekanism:fluid_tank": {
+    "criteria": {
+      "basic_fluid_tank": "2025-07-08 19:57:37 +0800"
+    },
+    "done": true
+  },
+  "mekanism:fluid_transport": {
+    "criteria": {
+      "basic_mechanical_pipe": "2025-07-08 19:57:43 +0800"
+    },
+    "done": true
+  },
+  "mekanism:item_transport": {
+    "criteria": {
+      "basic_logistical_transporter": "2025-07-08 20:31:48 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }
