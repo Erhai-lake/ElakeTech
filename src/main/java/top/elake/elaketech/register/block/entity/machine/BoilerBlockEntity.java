@@ -14,13 +14,12 @@ import top.elake.elaketech.register.capability.boiler.BoilerItemHandler;
  * @author Elake Studio
  */
 public class BoilerBlockEntity extends BlockEntity {
-    public BoilerBlockEntity(BlockPos pos, BlockState blockState) {
-        super(ElakeTechBlockEntities.BOILER.get(), pos, blockState);
+    public BoilerBlockEntity(BlockPos pos, BlockState state) {
+        super(ElakeTechBlockEntities.BOILER.get(), pos, state);
     }
 
     private final BoilerItemHandler itemInventory = new BoilerItemHandler();
     private final BoilerFluidHandler fluidInventory = new BoilerFluidHandler();
-
 
     public IItemHandler getInvCap(Direction side) {
         return itemInventory;

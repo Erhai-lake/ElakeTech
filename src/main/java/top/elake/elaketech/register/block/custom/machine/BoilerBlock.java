@@ -3,8 +3,10 @@ package top.elake.elaketech.register.block.custom.machine;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -14,8 +16,8 @@ import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
  * @author Elake Studio
  */
 public class BoilerBlock extends BaseEntityBlock {
-    public BoilerBlock(Properties properties) {
-        super(properties);
+    public BoilerBlock(BlockBehaviour.Properties properties) {
+        super(Properties.ofFullCopy(Blocks.IRON_BLOCK));
     }
 
     @Override

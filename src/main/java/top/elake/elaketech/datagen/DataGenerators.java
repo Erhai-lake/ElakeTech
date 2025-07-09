@@ -10,6 +10,7 @@ import top.elake.elaketech.datagen.assets.translation.language.ZH;
 import top.elake.elaketech.datagen.data.recipes.Recipes;
 import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
 import top.elake.elaketech.datagen.data.tags.ModItemTagsGen;
+import top.elake.elaketech.datagen.data.worldgen.ore.ElakeWorldGen;
 
 import static top.elake.elaketech.ElakeTech.MODID;
 
@@ -23,8 +24,11 @@ public class DataGenerators {
         // Language Files
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
         event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ZH>) ZH::new);
+        // OreBlasting Generation
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ElakeWorldGen>)
+                (output) -> new ElakeWorldGen(output, event.getLookupProvider()));
         // Block Tags
-        var blockTagsProvider = event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
+        ModBlockTagsGen blockTagsProvider = event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
                 (output) -> new ModBlockTagsGen(output, event.getLookupProvider(), event.getExistingFileHelper()));
         // Item Tags
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)

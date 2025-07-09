@@ -51,8 +51,10 @@ public class OreBlock {
 
     public static BlockEntry<Block> TIN = addOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
     public static BlockEntry<Block> DEEP_TIN = addDeepslateOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
+
     public static BlockEntry<Block> GRAPHITE = addOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
     public static BlockEntry<Block> DEEP_GRAPHITE = addDeepslateOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
+
     public static BlockEntry<Block> QUARTZ = addOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
     public static BlockEntry<Block> DEEP_QUARTZ = addDeepslateOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
 

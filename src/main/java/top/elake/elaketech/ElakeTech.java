@@ -16,7 +16,7 @@ import top.elake.elaketech.datagen.assets.translation.Translation;
 import top.elake.elaketech.event.Event;
 import top.elake.elaketech.register.ElakeTechBlockEntities;
 import top.elake.elaketech.register.ElakeTechRegister;
-import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
+//import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
 import top.elake.elaketech.register.block.entity.render.DryRackBlockEntityRender;
 
 /**
