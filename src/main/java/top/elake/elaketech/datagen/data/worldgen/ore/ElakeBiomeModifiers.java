@@ -21,13 +21,13 @@ public class ElakeBiomeModifiers {
     /**
      * 石墨
      */
-    public static final ResourceKey<BiomeModifier> ADD_GRAPHITE_ORE = registerKey("graphite_ore");
+    public static final ResourceKey<BiomeModifier> GRAPHITE_ORE = registerKey("graphite_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
         // 石墨
-        context.register(ADD_GRAPHITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(GRAPHITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ElakeOrePlacements.ORE_GRAPHITE)),
                 GenerationStep.Decoration.UNDERGROUND_ORES

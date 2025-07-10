@@ -140,8 +140,8 @@ public class BoilerFluidHandler implements IFluidHandler, INBTSerializable<Compo
      *
      * @param stack  要抽取的流体类型和最大抽取量的 {@link FluidStack}。
      * @param action 操作类型, 控制是否真的抽取：
-     *                    {@link FluidAction#SIMULATE} — 模拟操作, 不会减少槽内流体;
-     *                    {@link FluidAction#EXECUTE} — 真正执行抽取, 减少槽内流体。
+     *               {@link FluidAction#SIMULATE} — 模拟操作, 不会减少槽内流体;
+     *               {@link FluidAction#EXECUTE} — 真正执行抽取, 减少槽内流体。
      * @return 抽取出的 {@link FluidStack}, 其类型与请求类型相同, 数量为实际抽取到的流体量;
      * 若无法抽取, 则返回 {@link FluidStack#EMPTY}。
      * @implNote 使用 {@code Math.min} 保证不会抽取超过当前槽内流体量。
@@ -161,9 +161,6 @@ public class BoilerFluidHandler implements IFluidHandler, INBTSerializable<Compo
         if (action.execute()) {
             fluids.set(1, new FluidStack(stack.getFluid(), currentFluid.getAmount() - drainAmount));
         }
-        return new
-
-                FluidStack(stack.getFluid(), drainAmount);
+        return new FluidStack(stack.getFluid(), drainAmount);
     }
-
 }

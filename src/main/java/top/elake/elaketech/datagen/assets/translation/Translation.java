@@ -38,19 +38,19 @@ public class Translation {
      * 添加翻译
      * @param type 类型
      * @param key 物品id
-     * @param EN 英文
-     * @param ZH 中文
+     * @param english 英文
+     * @param chinese 中文
      */
     @SuppressWarnings("AlibabaLowerCamelCaseVariableNaming")
-    public static void addLanguage(String type, String key, String EN, String ZH) {
+    public static void addLanguage(String type, String key, String english, String chinese) {
         List<String> newList = new ArrayList<>();
         if (type == null) {
             newList.add(MODID + "." + key);
         } else {
             newList.add(type + "." + MODID + "." + key);
         }
-        newList.add(EN);
-        newList.add(ZH);
+        newList.add(english);
+        newList.add(chinese);
         LIST.add(newList);
     }
 }
