@@ -10,6 +10,7 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.UnknownNullability;
+import net.minecraft.world.level.material.Fluid;
 
 /**
  * @author Elake Studio
@@ -117,5 +118,29 @@ public class BoilerFluidHandler implements IFluidHandler, INBTSerializable<Compo
         }
         fluids.clear();
         fluids.addAll(newList);
+    }
+
+    /**
+     * @param amount 要设置的水量
+     */
+    public void setWaterAmount(int amount) {
+        FluidStack current = fluids.get(0);
+        if (current.isEmpty() && amount > 0) {
+            fluids.set(0, new FluidStack(Fluids.WATER, amount));
+        } else if (!current.isEmpty()) {
+            fluids.set(0, new FluidStack(current.getFluid(), amount));
+        }
+    }
+
+    /**
+     * @param fluid  要设置的流体类型
+     * @param amount 要设置的流体量
+     */
+    public void setSteamAmount(Fluid fluid, int amount) {
+        if (amount <= 0) {
+            fluids.set(1, FluidStack.EMPTY);
+        } else {
+            fluids.set(1, new FluidStack(fluid, amount));
+        }
     }
 }

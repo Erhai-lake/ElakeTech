@@ -77,8 +77,14 @@ public class BoilerBlockEntity extends BlockEntity {
                 fuel.shrink(1);
                 itemInventory.setStackInSlot(0, fuel);
 
-                fluidInventory.drain(new FluidStack(Fluids.WATER, REQUIRED_WATER), IFluidHandler.FluidAction.EXECUTE);
-                fluidInventory.fill(new FluidStack(STEAM_PLACEHOLDER, PRODUCED_STEAM), IFluidHandler.FluidAction.EXECUTE);
+                // 消耗水
+                int currentWater = inputWater.getAmount();
+                fluidInventory.setWaterAmount(currentWater - REQUIRED_WATER);
+
+                // 生成熔岩
+                int currentSteam = outputSteam.isEmpty() ? 0 : outputSteam.getAmount();
+                int newSteamAmount = Math.min(currentSteam + PRODUCED_STEAM, fluidInventory.getTankCapacity(1));
+                fluidInventory.setSteamAmount(STEAM_PLACEHOLDER, newSteamAmount);
 
                 // 重置进度并标记为已更改
                 progress = 0;
