@@ -2,6 +2,8 @@ package top.elake.elaketech.register.block;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.register.block.custom.machine.BoilerBlock;
 
@@ -23,5 +25,9 @@ public class MachineBlock {
     public static final BlockEntry<BoilerBlock> BOILER = REGISTER.block("boiler", BoilerBlock::new)
             .simpleItem()
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+            .blockstate((c, p) -> p.getVariantBuilder(c.get())
+                    .forAllStatesExcept((state) -> ConfiguredModel.builder()
+                            .modelFile(p.models().getExistingFile(ElakeTech.loadResource("block/function/dry_rack")))
+                            .build()))
             .register();
 }

@@ -1295,5 +1295,17 @@
     },
     "done": true
   },
+  "elake_tech:recipes/misc/smelting/materials/smelting/tin_ingot": {
+    "criteria": {
+      "has_TagKey[minecraft:item / c:raw_materials/tin]": "2025-07-16 19:00:38 +0800"
+    },
+    "done": true
+  },
+  "elake_tech:recipes/misc/smelting/materials/blasting/tin_ingot": {
+    "criteria": {
+      "has_TagKey[minecraft:item / c:raw_materials/tin]": "2025-07-16 19:00:38 +0800"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

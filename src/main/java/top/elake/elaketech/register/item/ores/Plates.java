@@ -22,6 +22,7 @@ public class Plates {
     }
 
     public static ItemEntry<Item> TIN = addPlateItem("tin", 0xFFE1FFFF);
+    public static ItemEntry<Item> BRONZE = addPlateItem("bronze", 0xFFFFC370);
     public static ItemEntry<Item> GRAPHITE = addPlateItem("graphite");
 
     public static ItemEntry<Item> addPlateItem(String id, int color) {

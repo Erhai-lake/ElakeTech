@@ -22,11 +22,13 @@ public class Translation {
         // 工具
         Tools.registers();
         // 矿物
-        Ores.registers();
+        Metals.registers();
         // 方块
         CommonBlock.registers();
         // 功能性方块
         FunctionBlock.registers();
+        // 机器方块
+        MachineBlock.registers();
     }
 
     /**

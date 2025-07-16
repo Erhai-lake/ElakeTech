@@ -3,7 +3,7 @@ package top.elake.elaketech.datagen.assets.translation;
 /**
  * @author Elake Studio
  */
-public class Ores {
+public class Metals {
     public static void registers() {
         Translation.addLanguage("item", "tin_ingot", "Tin Ingot", "锡锭");
         Translation.addLanguage("item", "raw_tin", "Raw Tin", "粗锡");

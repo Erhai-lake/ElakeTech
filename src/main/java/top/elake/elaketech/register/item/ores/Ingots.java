@@ -25,7 +25,7 @@ public class Ingots {
     }
 
     public static ItemEntry<Item> TIN = addIngotItem("tin", 0xFFE1FFFF);
-    public static ItemEntry<Item> BRONZE = addIngotItem("bronze", 0xFFFF8C00);
+    public static ItemEntry<Item> BRONZE = addIngotItem("bronze", 0xFFFFC370);
     public static ItemEntry<Item> GRAPHITE = addIngotItem("graphite");
 
     /**

@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.datagen.data.recipes.blasting.MaterialBlasting;
 import top.elake.elaketech.datagen.data.recipes.blasting.OreBlasting;
 import top.elake.elaketech.datagen.data.recipes.shaped.FlintToolsShaped;
+import top.elake.elaketech.datagen.data.recipes.shaped.MachineShaped;
 import top.elake.elaketech.datagen.data.recipes.shaped.MaterialShaped;
 import top.elake.elaketech.datagen.data.recipes.shaped.WorkBenchShaped;
 import top.elake.elaketech.datagen.data.recipes.shapeless.MaterialShapeless;
@@ -36,13 +37,15 @@ public class Recipes extends RecipeProvider {
      *
      * @param output 输出
      */
-    private void shaped(RecipeOutput output) {
+    private void shaped(@NotNull RecipeOutput output) {
         // 材料
         MaterialShaped.register(output);
         // 燧石工具
         FlintToolsShaped.register(output);
         // 工作台
         WorkBenchShaped.register(output);
+        // 机器方块
+        MachineShaped.register(output);
     }
 
     /**
@@ -50,7 +53,7 @@ public class Recipes extends RecipeProvider {
      *
      * @param output 输出
      */
-    private void shapeless(RecipeOutput output) {
+    private void shapeless(@NotNull RecipeOutput output) {
         // 材料
         MaterialShapeless.register(output);
     }
@@ -60,7 +63,7 @@ public class Recipes extends RecipeProvider {
      *
      * @param output 输出
      */
-    private void stoneCutting(RecipeOutput output) {
+    private void stoneCutting(@NotNull RecipeOutput output) {
         // 材料
         MaterialStoneCutting.register(output);
     }
@@ -70,7 +73,7 @@ public class Recipes extends RecipeProvider {
      *
      * @param output 输出
      */
-    private void blasting(RecipeOutput output) {
+    private void blasting(@NotNull RecipeOutput output) {
         // 材料
         MaterialBlasting.register(output);
         // 矿石

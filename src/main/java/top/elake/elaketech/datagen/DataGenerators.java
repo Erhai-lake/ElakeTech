@@ -5,8 +5,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import top.elake.elaketech.datagen.assets.translation.language.EN;
-import top.elake.elaketech.datagen.assets.translation.language.ZH;
+import top.elake.elaketech.datagen.assets.translation.language.English;
+import top.elake.elaketech.datagen.assets.translation.language.Chinese;
 import top.elake.elaketech.datagen.data.recipes.Recipes;
 import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
 import top.elake.elaketech.datagen.data.tags.ModItemTagsGen;
@@ -22,9 +22,9 @@ public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         // Language Files
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ZH>) ZH::new);
-        // OreBlasting Generation
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<English>) English::new);
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<Chinese>) Chinese::new);
+        // OreBlastingUtil Generation
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ElakeWorldGen>)
                 (output) -> new ElakeWorldGen(output, event.getLookupProvider()));
         // Block Tags

@@ -12,15 +12,15 @@ import static top.elake.elaketech.ElakeTech.MODID;
  * @author Elake Studio
  */
 @SuppressWarnings("AlibabaClassNamingShouldBeCamel")
-public class EN extends LanguageProvider {
-    public EN(PackOutput output) {
-        super(output, MODID, "en_us");
+public class Chinese extends LanguageProvider {
+    public Chinese(PackOutput output) {
+        super(output, MODID, "zh_cn");
     }
 
     @Override
     protected void addTranslations() {
         for (List<String> item : Translation.LIST) {
-            add(item.get(0), item.get(1));
+            add(item.get(0), item.get(2));
         }
     }
 }
