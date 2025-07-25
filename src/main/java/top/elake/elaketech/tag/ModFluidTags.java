@@ -13,5 +13,9 @@ public class ModFluidTags {
         return FluidTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
-    public static final TagKey<Fluid> STEAM = createFluidTag("c", "steam");
+    public static final TagKey<Fluid> STEAM;
+
+    static {
+        STEAM = createFluidTag("c", "steam");
+    }
 }

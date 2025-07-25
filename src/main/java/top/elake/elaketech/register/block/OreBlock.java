@@ -224,6 +224,7 @@ public class OreBlock {
         return ElakeTech.REGISTER.block(id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
+                .tag(ModItemTags.createItemTag("c", "ores/" + id))
                 .build()
 
                 .tag(Tags.Blocks.ORES)
@@ -256,6 +257,7 @@ public class OreBlock {
         return ElakeTech.REGISTER.block("deepslate_" + id + "_ore", Block::new)
                 .item()
                 .tag(Tags.Items.ORES)
+                .tag(ModItemTags.createItemTag("c", "ores/" + id))
                 .build()
 
                 .tag(Tags.Blocks.ORES)

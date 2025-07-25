@@ -9,7 +9,7 @@ import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.tag.ModItemTags;
 
-import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
+import static top.elake.elaketech.datagen.data.recipes.utils.RecipesGeneratoresUtils.hasItem;
 
 /**
  * @author Qi-Month
@@ -29,7 +29,7 @@ public class WorkBenchShaped {
                 .define('A', ModItemTags.FLINT)
                 .define('B', ItemTags.LOGS)
                 .define('C', ItemTags.PLANKS)
-                .unlockedBy("has_logs", has(ItemTags.LOGS))
+                .unlockedBy("has_logs", hasItem(ItemTags.LOGS))
                 .save(output, ElakeTech.loadResource(workbench + "crafting_table"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.FURNACE)
@@ -39,7 +39,7 @@ public class WorkBenchShaped {
                 .define('A', Tags.Items.COBBLESTONES)
                 .define('B', Items.CLAY_BALL)
                 .define('C', Items.CLAY)
-                .unlockedBy("has_cobblestones", has(Tags.Items.COBBLESTONES))
+                .unlockedBy("has_cobblestones", hasItem(Tags.Items.COBBLESTONES))
                 .save(output, ElakeTech.loadResource(workbench + "furnace"));
     }
 }

@@ -21,8 +21,9 @@ public class ModBlockTags {
         return BlockTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
-    /**
-     * 定义BlockTags
-     */
-    public static final TagKey<Block> GET_GRASS_FIBER = createBlockTag(MODID, "get_grass_fiber");
+    public static final TagKey<Block> GET_GRASS_FIBER;
+
+    static {
+        GET_GRASS_FIBER = createBlockTag(MODID, "get_grass_fiber");
+    }
 }

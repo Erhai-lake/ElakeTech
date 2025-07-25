@@ -6,8 +6,8 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
 import top.elake.elaketech.register.item.materials.Materials;
 
-import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
 import static top.elake.elaketech.ElakeTech.loadResource;
+import static top.elake.elaketech.datagen.data.recipes.utils.RecipesGeneratoresUtils.hasItem;
 
 /**
  * @author Elake Studio
@@ -23,12 +23,12 @@ public class MaterialShapeless {
         // 燧石
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.FLINT)
                 .requires(Items.GRAVEL, 3)
-                .unlockedBy("has_gravel", has(Items.GRAVEL))
+                .unlockedBy("has_gravel", hasItem(Items.GRAVEL))
                 .save(output, loadResource(common + "flint"));
         // 草绳
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Materials.GRASS_STRING)
                 .requires(Materials.GRASS_FIBER, 3)
-                .unlockedBy("has_grass_fiber", has(Materials.GRASS_FIBER))
+                .unlockedBy("has_grass_fiber", hasItem(Materials.GRASS_FIBER))
                 .save(output, loadResource(common + "grass_string"));
     }
 }

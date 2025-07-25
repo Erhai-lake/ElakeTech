@@ -3,12 +3,12 @@ package top.elake.elaketech.datagen.data.recipes.shaped;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.block.CommonBlock;
 import top.elake.elaketech.register.block.MachineBlock;
 import top.elake.elaketech.tag.ModItemTags;
 
-import static com.tterrag.registrate.providers.RegistrateRecipeProvider.has;
-import static top.elake.elaketech.ElakeTech.loadResource;
+import static top.elake.elaketech.datagen.data.recipes.utils.RecipesGeneratoresUtils.hasItem;
 
 /**
  * @author Elake Studio
@@ -23,7 +23,7 @@ public class MachineShaped {
                 .pattern("BBB")
                 .define('A', ModItemTags.BRONZE_PLATE)
                 .define('B', CommonBlock.REFRACTORY_BRICKS)
-                .unlockedBy("has_bronze_plate", has(ModItemTags.BRONZE_PLATE))
-                .save(output, loadResource(machine + "boiler"));
+                .unlockedBy("has_bronze_plate", hasItem(ModItemTags.BRONZE_PLATE))
+                .save(output, ElakeTech.loadResource(machine + "boiler"));
     }
 }
