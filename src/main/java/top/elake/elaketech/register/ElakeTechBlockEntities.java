@@ -1,6 +1,7 @@
 package top.elake.elaketech.register;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import top.elake.elaketech.register.block.MachineBlock;
@@ -19,17 +20,20 @@ public class ElakeTechBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
 
-    /**
-     * 晾干架
-     */
-    public static final Supplier<BlockEntityType<DryRackBlockEntity>> DRY_RACK = BLOCK_ENTITIES.register("dry_rack",
-            () -> BlockEntityType.Builder.of(DryRackBlockEntity::new,
-                    FunctionBlock.DRY_RACK.get()).build(null));
+    private static Supplier registerBlockEntity(String id, BlockEntityType.BlockEntitySupplier entity, Block block) {
+        return BLOCK_ENTITIES.register(id, () -> {
+            return BlockEntityType.Builder.of(entity, block)
+                    .build(null);
+        });
+    }
 
-    /**
-     * 锅炉
-     */
-    public static final Supplier<BlockEntityType<BoilerBlockEntity>> BOILER = BLOCK_ENTITIES.register("boiler",
-            () -> BlockEntityType.Builder.of(BoilerBlockEntity::new,
-                    MachineBlock.BOILER.get()).build(null));
+    public static final Supplier<BlockEntityType<DryRackBlockEntity>> DRY_RACK;
+    public static final Supplier<BlockEntityType<BoilerBlockEntity>> BOILER;
+
+    static {
+        // 晾干架
+        DRY_RACK = registerBlockEntity("dry_rack", DryRackBlockEntity::new, FunctionBlock.DRY_RACK.get());
+        // 锅炉
+        BOILER = registerBlockEntity("boiler", BoilerBlockEntity::new, MachineBlock.BOILER.get());
+    }
 }

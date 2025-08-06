@@ -49,14 +49,28 @@ public class OreBlock {
         REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.MATERIALS_TAB.getKey()));
     }
 
-    public static BlockEntry<Block> TIN = addOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
-    public static BlockEntry<Block> DEEP_TIN = addDeepslateOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
+    public static BlockEntry<Block> TIN;
+    public static BlockEntry<Block> DEEP_TIN;
 
-    public static BlockEntry<Block> GRAPHITE = addOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
-    public static BlockEntry<Block> DEEP_GRAPHITE = addDeepslateOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
+    public static BlockEntry<Block> GRAPHITE;
+    public static BlockEntry<Block> DEEP_GRAPHITE;
 
-    public static BlockEntry<Block> QUARTZ = addOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
-    public static BlockEntry<Block> DEEP_QUARTZ = addDeepslateOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+    public static BlockEntry<Block> QUARTZ;
+    public static BlockEntry<Block> DEEP_QUARTZ;
+
+    static {
+        // 锡
+        TIN = addOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
+        DEEP_TIN = addDeepslateOreBlock("tin", 0xFFE1FFFF, BlockTags.NEEDS_STONE_TOOL, OreItem.TIN);
+
+        // 石墨
+        GRAPHITE = addOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
+        DEEP_GRAPHITE = addDeepslateOreBlock("graphite", BlockTags.INCORRECT_FOR_STONE_TOOL, OreItem.GRAPHITE);
+
+        // 石英
+        QUARTZ = addOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+        DEEP_QUARTZ = addDeepslateOreBlock("quartz", BlockTags.INCORRECT_FOR_STONE_TOOL, Items.QUARTZ);
+    }
 
     /**
      * 浅层着色矿石

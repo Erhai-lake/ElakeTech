@@ -22,12 +22,20 @@ public class OreItem {
         REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.MATERIALS_TAB.getKey()));
     }
 
-    public static ItemEntry<Item> TIN = addOreItem("tin", 0xFFE1FFFF);
-    public static ItemEntry<Item> GRAPHITE = addOreItem("graphite");
+    public static ItemEntry<Item> TIN;
+    public static ItemEntry<Item> GRAPHITE;
+
+    static {
+        // 锡
+        TIN = addOreItem("tin", 0xE1FFFF);
+        // 石墨
+        GRAPHITE = addOreItem("graphite");
+    }
 
     public static ItemEntry<Item> addOreItem(String id, int color) {
+        int fullColor = 0xFF000000 | color;
         return ElakeTech.REGISTER.item("raw_" + id, Item::new)
-                .color(() -> () -> (itemStack, tintIndex) -> color)
+                .color(() -> () -> (itemStack, tintIndex) -> fullColor)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/raw_ore")))
                 .tag(Tags.Items.RAW_MATERIALS)
                 .tag(ModItemTags.createItemTag("c", "raw_materials/" + id))

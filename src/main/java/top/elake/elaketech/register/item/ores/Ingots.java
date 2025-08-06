@@ -24,9 +24,18 @@ public class Ingots {
         REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.MATERIALS_TAB.getKey()));
     }
 
-    public static ItemEntry<Item> TIN = addIngotItem("tin", 0xFFE1FFFF);
-    public static ItemEntry<Item> BRONZE = addIngotItem("bronze", 0xFFFFC370);
-    public static ItemEntry<Item> GRAPHITE = addIngotItem("graphite");
+    public static ItemEntry<Item> TIN;
+    public static ItemEntry<Item> BRONZE;
+    public static ItemEntry<Item> GRAPHITE;
+
+    static {
+        // 锡
+        TIN = addIngotItem("tin", 0xE1FFFF);
+        // 青铜
+        BRONZE = addIngotItem("bronze", 0xFFC370);
+        // 石墨
+        GRAPHITE = addIngotItem("graphite");
+    }
 
     /**
      * 注册颜色矿物锭
@@ -36,8 +45,9 @@ public class Ingots {
      * @return ItemEntry
      */
     public static ItemEntry<Item> addIngotItem(String id, int color) {
+        int fullColor = 0xFF000000 | color;
         return REGISTER.item(id + "_ingot", Item::new)
-                .color(() -> () -> (itemStack, tintIndex) -> color)
+                .color(() -> () -> (itemStack, tintIndex) -> fullColor)
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/ingot")))
                 .tag(Tags.Items.INGOTS)
                 .tag(ModItemTags.createItemTag("c", "ingots/" + id))
