@@ -8,6 +8,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 
 public class UtilsMethod {
+    /**
+     * 这些方法用于从注册表里直接把id拉出来, 用法调用后直接写id
+     * 用法如下例子
+     * UtilsMethod.GetRegisterId.item("minecraft:stone")
+     */
     public static final class GetRegisterId {
         public static Item item(String id) {
             return BuiltInRegistries.ITEM.get(ResourceLocation.parse(id));
