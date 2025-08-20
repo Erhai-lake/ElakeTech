@@ -24,3 +24,8 @@
 /data get block 4 56 -8
 /data get block 6 56 -11
 /gamerule doMobSpawning false
+/ponder index
+/ponder tags
+/config showfile ponder
+/config showfile ponder COMMON
+/ponder reload

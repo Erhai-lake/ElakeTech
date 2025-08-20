@@ -21,7 +21,7 @@ public class UtilsMethod {
             return BuiltInRegistries.FLUID.get(ResourceLocation.parse(id));
         }
 
-        public static EntityType<?> entity(String id) {
+        public static EntityType entity(String id) {
             return BuiltInRegistries.ENTITY_TYPE.get(ResourceLocation.parse(id));
         }
     }

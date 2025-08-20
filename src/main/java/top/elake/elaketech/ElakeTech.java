@@ -1,22 +1,25 @@
 package top.elake.elaketech;
 
 import com.tterrag.registrate.Registrate;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
+import net.createmod.ponder.foundation.PonderIndex;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import top.elake.elaketech.client.ponder.ElakeTechPonderPlugin;
 import top.elake.elaketech.config.RecipeRemoveConfig;
 import top.elake.elaketech.datagen.assets.translation.Translation;
 import top.elake.elaketech.event.Event;
 import top.elake.elaketech.register.ElakeTechBlockEntities;
 import top.elake.elaketech.register.ElakeTechRegister;
-//import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
 import top.elake.elaketech.register.block.entity.render.DryRackBlockEntityRender;
 
 /**
@@ -61,6 +64,15 @@ public class ElakeTech {
         @SubscribeEvent
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ElakeTechBlockEntities.DRY_RACK.get(), DryRackBlockEntityRender::new);
+        }
+
+        public ClientModEvents(ModContainer container) {
+            container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        }
+
+        @SubscribeEvent
+        public static void onClientSetup(final FMLClientSetupEvent event) {
+            PonderIndex.addPlugin(new ElakeTechPonderPlugin());
         }
     }
 }

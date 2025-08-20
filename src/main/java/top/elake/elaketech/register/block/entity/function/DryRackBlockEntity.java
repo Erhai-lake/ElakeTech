@@ -30,7 +30,7 @@ public class DryRackBlockEntity extends BlockEntity {
         public int getStackLimit(int slot, @NotNull ItemStack stack) {
             return 1;
         }
-        
+
         @Override
         protected void onContentsChanged(int slot) {
             DryRackBlockEntity.this.setChanged();
@@ -107,6 +107,7 @@ public class DryRackBlockEntity extends BlockEntity {
 
     /**
      * 取出物品
+     *
      * @return 取出的物品，如果没有物品则返回空ItemStack
      */
     public ItemStack removeItem() {
@@ -123,6 +124,7 @@ public class DryRackBlockEntity extends BlockEntity {
 
     /**
      * 检查是否有物品
+     *
      * @return 如果有物品返回true，否则返回false
      */
     public boolean hasItems() {
