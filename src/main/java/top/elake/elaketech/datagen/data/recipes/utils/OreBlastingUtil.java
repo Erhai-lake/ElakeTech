@@ -8,6 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import top.elake.elaketech.ElakeTech;
 
 import static top.elake.elaketech.datagen.data.recipes.utils.RecipesGeneratoresUtils.hasItem;
@@ -21,11 +22,18 @@ public class OreBlastingUtil {
 
     /**
      * 物品处理
+     *
      * @param outputItem 输出物品
      * @param inputItem  输入物品
      */
     public static void addOreSmeltingRecipes(ItemLike outputItem, ItemLike inputItem, RecipeOutput output) {
         String getItemName = BuiltInRegistries.ITEM.getKey(outputItem.asItem()).getPath();
+
+        // 判断输入是否为方块
+        boolean isBlock = inputItem instanceof Block;
+        if (isBlock) {
+            getItemName = getItemName + "_ore_block";
+        }
 
         // 熔炉配方
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(inputItem), RecipeCategory.MISC, outputItem.asItem(), 0.7f, 200)
@@ -40,11 +48,18 @@ public class OreBlastingUtil {
 
     /**
      * 标签处理
+     *
      * @param outputItem 输出物品
      * @param inputItem  输入物品
      */
     public static void addOreSmeltingRecipes(ItemLike outputItem, TagKey<Item> inputItem, RecipeOutput output) {
         String getItemName = BuiltInRegistries.ITEM.getKey(outputItem.asItem()).getPath();
+
+        // 如果 tag 名里包含 "ores", 加上 _ore_block
+        String tagLocation = inputItem.location().getPath();
+        if (tagLocation.contains("ores")) {
+            getItemName = getItemName + "_ore_block";
+        }
 
         // 熔炉配方
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(inputItem), RecipeCategory.MISC, outputItem.asItem(), 0.7f, 200)
