@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.42-beta'
+    id 'net.neoforged.moddev' version '2.0.82'
 }
 
 version = mod_version
@@ -13,7 +13,7 @@ repositories {
     mavenLocal()
     // Registrate
     maven {
-        url "https://maven.ithundxr.dev/snapshots"
+        url = "https://maven.ithundxr.dev/snapshots"
     }
     // JEI
     maven {
@@ -24,17 +24,13 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
-    // Jade
+    // CurseMaven
     maven {
         name = "CurseMaven"
         url = "https://www.cursemaven.com"
         content {
             includeGroup "curse.maven"
         }
-    }
-    // Ponder
-    maven {
-        url = "https://maven.createmod.net"
     }
     // KubeJS
     maven {
@@ -43,38 +39,13 @@ repositories {
             includeGroup "dev.latvian.mods"
         }
     }
-    // Patchouli
-    maven {
-        url = 'https://maven.blamejared.com'
-    }
+    // Ponder
     maven {
         url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven"
     }
-}
-
-dependencies {
-    // JEI
-    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
-    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
-    // JER
-    implementation files("libs/JustEnoughResources-NeoForge-1.21.1-1.6.0.jar")
-    // Jade
-    implementation("curse.maven:jade-324717:${jade_file_id}")
-    // KubeJS
-    implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
-    implementation("curse.maven:rhino-416294:${rhino_file_id}")
-    implementation("curse.maven:probejs-585406:${probejs_file_id}")
-    // GeckoLib
-    implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
-    // ZeroCore2
-    implementation("curse.maven:zerocore2-247921:${zerocore2_file_id}")
-    // Patchouli
-    compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
-    runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
-    // Ponder
-    implementation jarJar("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
-    // Registrate
-    implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
+    maven {
+        url = "https://maven.createmod.net"
+    }
 }
 
 base {
@@ -108,6 +79,7 @@ neoForge {
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
+
         data {
             data()
 
@@ -116,7 +88,6 @@ neoForge {
 
         configureEach {
             systemProperty 'forge.logging.markers', 'REGISTRIES'
-
             logLevel = org.slf4j.event.Level.DEBUG
         }
     }
@@ -130,6 +101,33 @@ neoForge {
 
 sourceSets.main.resources {
     srcDir 'src/generated/resources'
+}
+
+
+dependencies {
+    // JEI
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    // Jade
+    implementation("curse.maven:jade-324717:${jade_file_id}")
+    // KubeJS
+    implementation("curse.maven:kubejs-238086:${kubejs_file_id}")
+    implementation("curse.maven:rhino-416294:${rhino_file_id}")
+    implementation("curse.maven:probejs-585406:${probejs_file_id}")
+    // GeckoLib
+    implementation("curse.maven:geckolib-388172:${geckolib_file_id}")
+    // ZeroCore2
+    implementation("curse.maven:zerocore2-247921:${zerocore2_file_id}")
+    // Flywheel
+    implementation jarJar("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
+    // Ponder
+    implementation jarJar("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    // Registrate
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation jarJar(group: 'com.tterrag.registrate', name: 'Registrate', version: "[${registrate_version},)")
+    // Patchouli
+    compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+    runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}")
 }
 
 tasks.withType(ProcessResources).configureEach {

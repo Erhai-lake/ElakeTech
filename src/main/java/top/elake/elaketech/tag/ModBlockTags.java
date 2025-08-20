@@ -4,10 +4,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import top.elake.elaketech.ElakeTech;
+
+import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author Qi-Month
+ * @author Elake Studio
  */
 public class ModBlockTags {
     /**
@@ -20,7 +21,9 @@ public class ModBlockTags {
         return BlockTags.create(ResourceLocation.fromNamespaceAndPath(namespace, tag));
     }
 
-    public static class Blocks {
-        public static final TagKey<Block> GET_GRASS_FIBER = createBlockTag(ElakeTech.MODID, "get_grass_fiber");
+    public static final TagKey<Block> GET_GRASS_FIBER;
+
+    static {
+        GET_GRASS_FIBER = createBlockTag(MODID, "get_grass_fiber");
     }
 }

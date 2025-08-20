@@ -1,50 +1,31 @@
-/kill @e[type=item]
-/clone
-/clear
-/probejs enable
-/probejs dump
-/probejs disable
-/probejs enable
-/probejs disable
-/give Dev minecraft:crafting_table
-/kjs hand
-/give Dev elake_tech:thermal_power
-/time set midnight
-/difficulty -
+/give Dev elake_tech:test
+/time set day
+/give Dev minecraft:command_block
+/gamerule commandBlockOutput false
+/time set day
+/data get entity @s SelectedItem
+/loot give Dev loot minecraft:blocks/vine
+/loot give Dev loot minecraft:blocks/sand
+/loot give Dev mine -5 -60 53 minecraft:vine
+/loot give Dev mine -5 -60 53 elake_tech:grass_fiber
+/loot give Dev mine -5 -60 53 offhand
+/loot give Dev mine -3 -60 51 offhand
 /difficulty peaceful
-/give Dev elake_tech:tin_ingot
-/give Dev diamond_block
-/give Dev elake_tech:test_fluid_bucket
-/setblock 2 55 -11 elake_tech:test_fluid
-/give Dev elake_tech:test_block
-/setblock 1 56 -19 elake_tech:test_block
-/give Dev elake_tech:test_block
-/give Dev elake_tech:test_fluid_bucket
-/give Dev elake_tech:graphite_ore
-/give Dev elake_tech:tin_ore
-/give Dev elake_tech:graphite_ore
-/give Dev elake_tech:raw_tin
-/give Dev elake_tech:raw_graphite
-/give Dev elake_tech:rock_flint
-/setblock -2 56 -16 elake_tech:rock_flint
-/setblock 0 57 -16 elake_tech:rock_flint
-/give Dev elake_tech:metal_detector
-/give Dev elake_tech:test_tool
-/give Dev elake_tech:h
-/give Dev elake_tech:bronze_axe
-/give Dev elake_tech:bronze_hammere
-/give Dev elake_tech:bronze_hammer
-/give Dev elake_tech:flint_hatchet
-/give Dev elake_tech:test_pickaxe
-/ponder index
-/ponder reload
-/ponder tags
+/tp -17 -59 61
+/tp -18 -59 61
+/tp -18 -60 61
+/tp -17 -60 61
+/tp -18 -60 61
+/tp -18 -60 60
+/tp -18 -600 60
+/tp -18 -60 60
+/effect give Dev minecraft:night_vision infinite
+/kill @e[type=item]
+/data get block 4 56 -8
+/data get block 6 56 -11
+/gamerule doMobSpawning false
 /ponder index
 /ponder tags
-/ponder elake_tech:test_ponder
-/ponder test_ponder
+/config showfile ponder
+/config showfile ponder COMMON
 /ponder reload
-/give Dev elake_tech:bronze_ingot
-/ponder reload
-/ponder tags
-/ponder index

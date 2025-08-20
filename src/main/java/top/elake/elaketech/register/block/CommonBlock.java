@@ -1,12 +1,11 @@
 package top.elake.elaketech.register.block;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.entry.FluidEntry;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -14,36 +13,40 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import top.elake.elaketech.ElakeTech;
+import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.register.block.custom.box.RockFlint;
+
+import java.util.Objects;
+
+import static top.elake.elaketech.ElakeTech.REGISTER;
 
 /**
  * @author Qi-Month
  */
 public class CommonBlock {
     /**
-     * 白云岩
+     * 注册
      */
-    public static final BlockEntry<Block> DOLOSTONE = ElakeTech.REGISTER.block("dolostone", Block::new)
-            .simpleItem()
-            .properties((properties) -> BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))
-            .register();
-    /**
-     * 高岭土
-     */
-    public static final BlockEntry<Block> KAOLIN = ElakeTech.REGISTER.block("kaolin", Block::new)
-            .simpleItem()
-            .properties((properties) -> BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY))
-            .register();
+    public static void registers() {
+    }
+
+    static {
+        REGISTER.defaultCreativeTab(Objects.requireNonNull(ElakeTechCreativeModeTabs.COMMON_BLOCK_TAB.getKey()));
+    }
+
     /**
      * 耐火砖块
      */
     public static final BlockEntry<Block> REFRACTORY_BRICKS = ElakeTech.REGISTER.block("refractory_bricks", Block::new)
             .simpleItem()
             .properties((properties) -> BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS))
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE)
             .register();
 
+    /**
+     * 燧石碎块
+     */
     public static final BlockEntry<RockFlint> ROCK_FLINT = ElakeTech.REGISTER.block("rock_flint", RockFlint::new)
-            .lang("Rock Flint")
             .blockstate((c, p) -> p.getVariantBuilder(c.get())
                     .forAllStatesExcept((state) -> ConfiguredModel.builder()
                             .modelFile(p.models()
@@ -56,10 +59,4 @@ public class CommonBlock {
                                     .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                     )))
             .register();
-
-    /**
-     * 注册
-     */
-    public static void registers() {
-    }
 }

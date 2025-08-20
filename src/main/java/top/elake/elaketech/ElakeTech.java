@@ -1,111 +1,78 @@
 package top.elake.elaketech;
 
 import com.tterrag.registrate.Registrate;
+import net.createmod.ponder.foundation.PonderIndex;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLPaths;
-import net.neoforged.neoforge.capabilities.*;
-import net.neoforged.neoforge.common.NeoForge;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import top.elake.elaketech.client.ModTooltip;
-import top.elake.elaketech.config.RecipeRemovalConfig;
-import top.elake.elaketech.datagen.assets.model.*;
-import top.elake.elaketech.datagen.assets.translation.Common;
-import top.elake.elaketech.event.*;
-import top.elake.elaketech.register.*;
-import top.elake.elaketech.register.block.*;
-import top.elake.elaketech.register.block.entity.ThermalBlockEntity;
-import top.elake.elaketech.register.item.*;
-import top.elake.elaketech.register.tool.*;
-import top.elake.elaketech.register.tool.tier.*;
-import top.elake.elaketech.server.recipes.remove.*;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import top.elake.elaketech.client.ponder.ElakeTechPonderPlugin;
+import top.elake.elaketech.config.RecipeRemoveConfig;
+import top.elake.elaketech.datagen.assets.translation.Translation;
+import top.elake.elaketech.event.Event;
+import top.elake.elaketech.register.ElakeTechBlockEntities;
+import top.elake.elaketech.register.ElakeTechRegister;
+import top.elake.elaketech.register.block.entity.render.DryRackBlockEntityRender;
 
 /**
- * @author Erhai-lake Qi-Month
+ * @author Elake Studio
  */
 @Mod(ElakeTech.MODID)
 public class ElakeTech {
+    /**
+     * 模组ID
+     */
     public static final String MODID = "elake_tech";
 
+    /**
+     * 注册器
+     */
     public static final Registrate REGISTER = Registrate.create(MODID);
 
     public static ResourceLocation loadResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MODID, String.valueOf(path));
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
     /**
-     * 构造函数
+     * 初始化
      *
-     * @param event 事件总线
+     * @param event 总线
      */
     public ElakeTech(IEventBus event) {
-
+        // 注册
+        ElakeTechRegister.register(event);
+        // 注册事件
+        Event.register();
+        // 语言
+        Translation.registers();
         // 确保配置目录存在
         FMLPaths.CONFIGDIR.get().resolve(MODID).toFile().mkdirs();
-        
         // 预加载配置
-        RecipeRemovalConfig.getInstance();
-
-        // 元素
-        Element.ElementGroup.register();
-        // 创造模式物品栏
-        ModCreativeModeTab.register();
-        // 材料
-        Materials.register();
-        // 粗矿
-        OreItem.register();
-        // 金属锭
-        IngotItem.register();
-        // 板材
-        PlateItem.register();
-        // 金属板
-        // 化学用具(方块)
-        ChemicalAppliancesBlock.register();
-        // 矿物
-        OreBlock.register();
-        // 方块
-        CommonBlock.registers();
-        // 化学工具(物品)
-        ChemicalAppliancesItem.register();
-
-        // 燧石工具
-        Flint.register();
-        // 青铜工具
-        Bronze.register();
-        // 石头工具
-        Stone.register();
-        // 功能性工具
-        FunctionTool.register();
-
-        //数据生成器
-        Common.registers();
-        // 物品模型
-        ModItemModel.registers();
-        // 方块
-        ModBlockModel.registers();
-        // 方块状态
-        ModBlockState.registers();
-
-        // 非空手挖掘木头
-        NoDiggingWood.register(NeoForge.EVENT_BUS);
-        // 右键获取杂草
-        RightClickGetGrassFiber.register(NeoForge.EVENT_BUS);
-        // Tooltip
-        ModTooltip.register(NeoForge.EVENT_BUS);
-
-        // test
-        Machine.registers();
-        ModBlockEntity.BLOCK_ENTITIES.register(event);
-        ModMenuType.MENU_TYPES.register(event);
-
-        event.addListener(this::registerCapabilities);
-
-        ItemRecipes.removeRecipes();
+        RecipeRemoveConfig.getInstance();
     }
 
-    private void registerCapabilities(RegisterCapabilitiesEvent event) {
-        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModBlockEntity.THERMAL_POWER.get(), ThermalBlockEntity::getEnergyStorage);
+    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ElakeTechBlockEntities.DRY_RACK.get(), DryRackBlockEntityRender::new);
+        }
+
+        public ClientModEvents(ModContainer container) {
+            container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        }
+
+        @SubscribeEvent
+        public static void onClientSetup(final FMLClientSetupEvent event) {
+            PonderIndex.addPlugin(new ElakeTechPonderPlugin());
+        }
     }
 }

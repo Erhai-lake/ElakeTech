@@ -1,5 +1,0 @@
-{
-    "parent": "neoforge:item/bucket_drip",
-    "loader": "neoforge:fluid_container",
-    "fluid": "elake_tech:test_fluid"
-}

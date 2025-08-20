@@ -1,7 +1,7 @@
 {
   "minecraft": {
     "item_storage.show_name_amount": 5,
-    "furnace": false,
+    "furnace": true,
     "harvest_tool.show_unbreakable": false,
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
@@ -67,7 +67,7 @@
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,
-    "block_states": true,
+    "block_states": false,
     "distance": false,
     "block_face": false,
     "coordinates": false,

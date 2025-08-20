@@ -10,12 +10,13 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import top.elake.elaketech.ElakeTech;
+
+import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author Erhai-lake Qi-Month
+ * @author Elake Studio
  */
-@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
+@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
 public class NoDiggingWood {
     /**
      * 注册事件

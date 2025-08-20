@@ -5,48 +5,36 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import top.elake.elaketech.ElakeTech;
-import top.elake.elaketech.datagen.assets.model.main.ModBlockModelGen;
-import top.elake.elaketech.datagen.assets.model.main.ModBlockStateGen;
-import top.elake.elaketech.datagen.assets.model.main.ModItemModelGen;
-import top.elake.elaketech.datagen.assets.translation.language.ZH;
-import top.elake.elaketech.datagen.assets.translation.language.EN;
-import top.elake.elaketech.datagen.data.recipes.ModRecipesGen;
+import top.elake.elaketech.datagen.assets.translation.language.English;
+import top.elake.elaketech.datagen.assets.translation.language.Chinese;
+import top.elake.elaketech.datagen.data.recipes.Recipes;
 import top.elake.elaketech.datagen.data.tags.ModBlockTagsGen;
 import top.elake.elaketech.datagen.data.tags.ModItemTagsGen;
-import top.elake.elaketech.datagen.data.worldgen.ore.ModWorldGen;
+import top.elake.elaketech.datagen.data.worldgen.ore.ElakeWorldGen;
 
+import static top.elake.elaketech.ElakeTech.MODID;
 
 /**
- * @author Erhai-lake Qi-Month
+ * @author Elake Studio
  */
-@EventBusSubscriber(modid = ElakeTech.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         // Language Files
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<EN>) EN::new);
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ZH>) ZH::new);
-        // Item Models
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModItemModelGen>)
-                (output) -> new ModItemModelGen(output, event.getExistingFileHelper()));
-        // Block Models
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModBlockModelGen>)
-                (output) -> new ModBlockModelGen(output, event.getExistingFileHelper()));
-        // Block States
-        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<ModBlockStateGen>)
-                (output) -> new ModBlockStateGen(output, event.getExistingFileHelper()));
-        // OreBlasting Generation
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModWorldGen>)
-                (output) -> new ModWorldGen(output, event.getLookupProvider()));
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<English>) English::new);
+        event.getGenerator().addProvider(event.includeClient(), (DataProvider.Factory<Chinese>) Chinese::new);
+        // OreBlastingUtil Generation
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ElakeWorldGen>)
+                (output) -> new ElakeWorldGen(output, event.getLookupProvider()));
         // Block Tags
-        var blockTagsProvider = event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
+        ModBlockTagsGen blockTagsProvider = event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModBlockTagsGen>)
                 (output) -> new ModBlockTagsGen(output, event.getLookupProvider(), event.getExistingFileHelper()));
         // Item Tags
         event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModItemTagsGen>)
                 (output) -> new ModItemTagsGen(output, event.getLookupProvider(), blockTagsProvider.contentsGetter(), event.getExistingFileHelper()));
-        // MainRecipes
-        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<ModRecipesGen>)
-                (output) -> new ModRecipesGen(output, event.getLookupProvider()));
+        // Recipes
+        event.getGenerator().addProvider(event.includeServer(), (DataProvider.Factory<Recipes>)
+                (output) -> new Recipes(output, event.getLookupProvider()));
     }
 }
