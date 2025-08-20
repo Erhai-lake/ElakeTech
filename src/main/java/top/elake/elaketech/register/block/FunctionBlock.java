@@ -25,9 +25,11 @@ public class FunctionBlock {
     public static final BlockEntry<DryRackBlock> DRY_RACK = REGISTER.block("dry_rack", DryRackBlock::new)
             .simpleItem()
             .tag(BlockTags.MINEABLE_WITH_AXE)
-            .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                    .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                            .modelFile(p.models().getExistingFile(ElakeTech.loadResource("block/function/dry_rack")))
-                            .build()))
+            .blockstate((c, p) -> {
+                p.getVariantBuilder(c.get())
+                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
+                                .modelFile(p.models().getExistingFile(ElakeTech.loadResource("block/function/dry_rack")))
+                                .build());
+            })
             .register();
 }

@@ -22,7 +22,7 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
-import top.elake.elaketech.register.item.ores.OreItem;
+import top.elake.elaketech.register.item.metal.OreItem;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import top.elake.elaketech.tag.ModItemTags;

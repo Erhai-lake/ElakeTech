@@ -1,4 +1,4 @@
-package top.elake.elaketech.register.item.ores;
+package top.elake.elaketech.register.item.metal;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;

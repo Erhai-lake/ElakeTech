@@ -6,6 +6,9 @@ import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import top.elake.elaketech.ElakeTech;
 
+/**
+ * @author Elake Studio
+ */
 public class ElakeTechPonderPlugin implements PonderPlugin {
     @Override
     public @NotNull String getModId() {

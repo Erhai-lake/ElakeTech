@@ -2,7 +2,7 @@ package top.elake.elaketech.datagen.data.recipes.blasting;
 
 import net.minecraft.data.recipes.RecipeOutput;
 import top.elake.elaketech.datagen.data.recipes.utils.OreBlastingUtil;
-import top.elake.elaketech.register.item.ores.Ingots;
+import top.elake.elaketech.register.item.metal.Ingots;
 import top.elake.elaketech.tag.ModItemTags;
 
 /**

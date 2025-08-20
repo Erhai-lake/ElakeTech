@@ -16,8 +16,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Qi-Month
  */
-public class ModItemTagsGen extends ItemTagsProvider {
-    public ModItemTagsGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
+public class ElakeTechItemTagsGen extends ItemTagsProvider {
+    public ElakeTechItemTagsGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, ElakeTech.MODID, existingFileHelper);
     }
 

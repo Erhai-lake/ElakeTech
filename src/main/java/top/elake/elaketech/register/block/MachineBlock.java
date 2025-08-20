@@ -25,9 +25,16 @@ public class MachineBlock {
     public static final BlockEntry<BoilerBlock> BOILER = REGISTER.block("boiler", BoilerBlock::new)
             .simpleItem()
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                    .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                            .modelFile(p.models().getExistingFile(ElakeTech.loadResource("block/function/dry_rack")))
-                            .build()))
+            .properties((properties) -> properties.lightLevel((state) -> state.getValue(BoilerBlock.ON) ? 15 : 3))
+            .blockstate((c, p) -> {
+                p.getVariantBuilder(c.get())
+                        .forAllStates((state) -> {
+                            boolean on = state.getValue(BoilerBlock.ON);
+                            ConfiguredModel[] builder = ConfiguredModel.builder().modelFile(p.models()
+                                            .getExistingFile(ElakeTech.loadResource(on ? "block/machine/boiler/on" : "block/machine/boiler/off")))
+                                    .build();
+                            return builder;
+                        });
+            })
             .register();
 }

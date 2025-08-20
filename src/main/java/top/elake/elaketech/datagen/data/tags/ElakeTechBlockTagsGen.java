@@ -14,8 +14,8 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author Elake Studio
  */
-public class ModBlockTagsGen extends BlockTagsProvider {
-    public ModBlockTagsGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
+public class ElakeTechBlockTagsGen extends BlockTagsProvider {
+    public ElakeTechBlockTagsGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, ElakeTech.MODID, existingFileHelper);
     }
 

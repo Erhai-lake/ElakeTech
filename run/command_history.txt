@@ -29,3 +29,5 @@
 /config showfile ponder
 /config showfile ponder COMMON
 /ponder reload
+/
+/time set midnight
