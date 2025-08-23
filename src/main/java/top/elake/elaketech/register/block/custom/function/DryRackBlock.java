@@ -59,7 +59,7 @@ public class DryRackBlock extends BaseEntityBlock {
     @Override
     public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
         return this.defaultBlockState()
-                .setValue(FACING, context.getHorizontalDirection())
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(AXIS, Direction.Axis.Y);
     }
 
@@ -73,11 +73,12 @@ public class DryRackBlock extends BaseEntityBlock {
         return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
     }
 
-    @Override
+//    @Override
 //    public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
 //        return Block.box(0d, 0d, 0d, 16d, 10d, 16d);
 //    }
 
+    @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         // 脚
         VoxelShape leg1 = Block.box(0, 0, 0, 2, 8, 2);
@@ -85,7 +86,7 @@ public class DryRackBlock extends BaseEntityBlock {
         VoxelShape leg3 = Block.box(14, 0, 0, 16, 8, 2);
         VoxelShape leg4 = Block.box(14, 0, 14, 16, 8, 16);
 
-        // 筛板
+        // 晒板
         VoxelShape topPlate = Block.box(0, 8, 0, 16, 9, 16);
 
         // 顶部围栏

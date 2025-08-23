@@ -31,3 +31,8 @@
 /ponder reload
 /
 /time set midnight
+/effect clear Dev
+/gamerule doDaylightCycle true
+/time set midnight
+/gamerule doDaylightCycle false
+/time set midnight

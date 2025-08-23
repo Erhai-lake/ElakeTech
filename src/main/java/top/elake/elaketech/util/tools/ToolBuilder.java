@@ -61,7 +61,7 @@ public class ToolBuilder {
      * @return ToolBuilder
      */
     public ToolBuilder property(int damage, float speed) {
-        this.attackDamage = damage;
+        this.attackDamage = damage - 2;
         this.attackSpeed = speed;
         return this;
     }
@@ -95,7 +95,8 @@ public class ToolBuilder {
      * @return ToolBuilder
      */
     public ToolBuilder color(int color) {
-        this.color = color;
+        int fullColor = 0xFF000000 | color;
+        this.color = fullColor;
         this.isColored = true;
         return this;
     }

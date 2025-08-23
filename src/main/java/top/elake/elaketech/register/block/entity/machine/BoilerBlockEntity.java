@@ -26,12 +26,13 @@ public class BoilerBlockEntity extends BlockEntity {
     private static final String FLUID_INVENTORY = "FluidInventory";
     private static final String PROGRESS = "progress";
     private int progress = 0;
+    private BoilerBlockEntity entity;
 
     public BoilerBlockEntity(BlockPos pos, BlockState state) {
         super(ElakeTechBlockEntities.BOILER.get(), pos, state);
     }
 
-    private final BoilerItemHandler itemInventory = new BoilerItemHandler();
+    private final BoilerItemHandler itemInventory = new BoilerItemHandler(entity);
     private final BoilerFluidHandler fluidInventory = new BoilerFluidHandler();
 
     public IItemHandler getInvCap(Direction side) {

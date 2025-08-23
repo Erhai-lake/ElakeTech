@@ -33,4 +33,16 @@ public class ElakeTechTiers {
             0,
             () -> Ingredient.of(ModItemTags.FLINT)
     );
+
+    /**
+     * 青铜
+     */
+    public static final Tier BRONZE_TIER = new SimpleTier(
+            Tiers.IRON.getIncorrectBlocksForDrops(),
+            120,
+            6F,
+            1,
+            0,
+            () -> Ingredient.of(ModItemTags.BRONZE_INGOT)
+    );
 }

@@ -14,5 +14,9 @@ public class Tools {
         Translation.addLanguage("item", "flint_hatchet", "Flint Hatchet", "燧石手斧");
         Translation.addLanguage("item", "flint_shovel", "Flint Shovel", "燧石锹");
         Translation.addLanguage("item", "flint_hoe", "Flint Hoe", "燧石锄");
+
+        Translation.addLanguage("item", "metal_detector", "Basic Metal Detector", "基础金属探测仪");
+        Translation.addLanguage("item", "metal_detector_t2", "Advanced Metal Detector", "高级金属探测仪");
+        Translation.addLanguage("item", "metal_detector_t3", "Elite Metal Detector", "精英金属探测仪");
     }
 }

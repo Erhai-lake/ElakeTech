@@ -2,17 +2,20 @@ package top.elake.elaketech.register.block.custom.machine;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
@@ -22,15 +25,33 @@ import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
  */
 public class BoilerBlock extends BaseEntityBlock {
     public static final BooleanProperty ON = BooleanProperty.create("on");
+    // 朝向
+    private static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    private static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
     public BoilerBlock(BlockBehaviour.Properties properties) {
-        super(properties);
+        super(properties.lightLevel((state) -> {
+            return state.getValue(BoilerBlock.ON) ? 15 : 3;
+        }));
         // 让玩家放下后默认关闭
-        this.registerDefaultState(this.stateDefinition.any().setValue(ON, false));
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(ON, false)
+                .setValue(AXIS, Direction.Axis.Y)
+                .setValue(FACING, Direction.NORTH)
+        );
     }
 
     @Override
-    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        // 根据玩家朝向来设置 FACING
+        return this.defaultBlockState()
+                // 机器面向玩家
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
+                .setValue(ON, false);
+    }
+
+    @Override
+    public @NotNull MapCodec<? extends BaseEntityBlock> codec() {
         return BlockBehaviour.simpleCodec(BoilerBlock::new);
     }
 
@@ -68,7 +89,18 @@ public class BoilerBlock extends BaseEntityBlock {
     }
 
     @Override
+    public @NotNull BlockState mirror(BlockState state, @NotNull Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
+
+    @Override
+    public @NotNull BlockState rotate(BlockState state, @NotNull Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Override
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(ON);
+        builder.add(FACING, AXIS);
     }
 }
