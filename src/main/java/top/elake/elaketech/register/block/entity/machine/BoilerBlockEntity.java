@@ -26,14 +26,13 @@ public class BoilerBlockEntity extends BlockEntity {
     private static final String FLUID_INVENTORY = "FluidInventory";
     private static final String PROGRESS = "progress";
     private int progress = 0;
-    private BoilerBlockEntity entity;
+
+    private final BoilerItemHandler itemInventory = new BoilerItemHandler(this);
+    private final BoilerFluidHandler fluidInventory = new BoilerFluidHandler();
 
     public BoilerBlockEntity(BlockPos pos, BlockState state) {
         super(ElakeTechBlockEntities.BOILER.get(), pos, state);
     }
-
-    private final BoilerItemHandler itemInventory = new BoilerItemHandler(entity);
-    private final BoilerFluidHandler fluidInventory = new BoilerFluidHandler();
 
     public IItemHandler getInvCap(Direction side) {
         return itemInventory;
@@ -67,7 +66,6 @@ public class BoilerBlockEntity extends BlockEntity {
             progress++;
             if (progress >= BURN_TIME) {
                 fuel.shrink(1);
-                itemInventory.setStackInSlot(0, fuel);
 
                 int currentWater = inputWater.getAmount();
                 fluidInventory.setWaterAmount(currentWater - REQUIRED_WATER);

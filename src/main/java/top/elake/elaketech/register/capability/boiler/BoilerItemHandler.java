@@ -1,5 +1,7 @@
 package top.elake.elaketech.register.capability.boiler;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -37,5 +39,13 @@ public class BoilerItemHandler extends ItemStackHandler {
             return stack;
         }
         return super.insertItem(slot, stack, simulate);
+    }
+
+    public CompoundTag serializeNBT(HolderLookup.Provider provider) {
+        return super.serializeNBT(provider);
+    }
+
+    public void deserializeNBT(HolderLookup.Provider provider, CompoundTag tag) {
+        super.deserializeNBT(provider, tag);
     }
 }

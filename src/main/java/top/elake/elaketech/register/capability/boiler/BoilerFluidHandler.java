@@ -104,20 +104,20 @@ public class BoilerFluidHandler implements IFluidHandler, INBTSerializable<Compo
 
     @Override
     public void deserializeNBT(HolderLookup.@NotNull Provider provider, @NotNull CompoundTag tag) {
-        NonNullList<FluidStack> newList = NonNullList.withSize(getTanks(), FluidStack.EMPTY);
+        for (int i = 0; i < getTanks(); i++) {
+            fluids.set(i, FluidStack.EMPTY);
+        }
         ListTag list = tag.getList("Fluids", 10);
         for (int i = 0; i < list.size(); i++) {
             CompoundTag sub = list.getCompound(i);
             FluidStack.parse(provider, sub)
                     .ifPresent((f) -> {
                         int s = sub.getInt("Slot");
-                        if (s >= 0 && s < newList.size()) {
-                            newList.set(s, f);
+                        if (s >= 0 && s < fluids.size()) {
+                            fluids.set(s, f);
                         }
                     });
         }
-        fluids.clear();
-        fluids.addAll(newList);
     }
 
     /**
