@@ -77,7 +77,7 @@ public class BoilerBlock extends BaseEntityBlock {
 
                 BlockState currentState = lvl.getBlockState(pos);
                 if (currentState.getValue(ON) != working) {
-                    lvl.setBlock(pos, currentState.setValue(ON, working), 3);
+                    lvl.setBlock(pos, currentState.setValue(ON, working), Block.UPDATE_CLIENTS);
                 }
             }
         };
