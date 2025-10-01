@@ -5,6 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,7 +26,10 @@ public class BoilerBlockEntity extends BlockEntity {
     private static final String ITEM_INVENTORY = "Inventory";
     private static final String FLUID_INVENTORY = "FluidInventory";
     private static final String PROGRESS = "progress";
+    private static final String BURN_TIME_REMAINING = "burnTimeRemaining";
+
     private int progress = 0;
+    private int burnTimeRemaining = 0; // 存储当前燃料剩余燃烧时间
 
     private final BoilerItemHandler itemInventory = new BoilerItemHandler(this);
     private final BoilerFluidHandler fluidInventory = new BoilerFluidHandler();
@@ -51,22 +55,26 @@ public class BoilerBlockEntity extends BlockEntity {
         FluidStack inputWater = fluidInventory.getFluidInTank(0);
         FluidStack outputSteam = fluidInventory.getFluidInTank(1);
 
-        final int REQUIRED_WATER = 100;
-        final int PRODUCED_STEAM = 100;
-        final int BURN_TIME = 100;
+        final int REQUIRED_WATER = 1; // 每tick需要1mb水
+        final int PRODUCED_STEAM = 2; // 每tick产出2mb蒸汽
         final Fluid STEAM_PLACEHOLDER = Fluids.LAVA;
 
-        boolean hasFuel = !fuel.isEmpty();
-        boolean hasEnoughWater = inputWater.getAmount() >= REQUIRED_WATER && inputWater.is(Fluids.WATER);
-        boolean canOutputSteam = outputSteam.isEmpty()
-                || (outputSteam.getFluid() == STEAM_PLACEHOLDER
-                && outputSteam.getAmount() + PRODUCED_STEAM <= fluidInventory.getTankCapacity(1));
-
-        if (hasFuel && hasEnoughWater && canOutputSteam) {
-            progress++;
-            if (progress >= BURN_TIME) {
+        if (burnTimeRemaining <= 0 && !fuel.isEmpty()) {
+            int fuelBurnTime = fuel.getBurnTime(RecipeType.SMELTING);
+            if (fuelBurnTime > 0) {
+                burnTimeRemaining = fuelBurnTime;
                 fuel.shrink(1);
+                this.setChanged();
+            }
+        }
 
+        if (burnTimeRemaining > 0) {
+            boolean hasEnoughWater = inputWater.getAmount() >= REQUIRED_WATER && inputWater.is(Fluids.WATER);
+            boolean canOutputSteam = outputSteam.isEmpty()
+                    || (outputSteam.getFluid() == STEAM_PLACEHOLDER
+                    && outputSteam.getAmount() + PRODUCED_STEAM <= fluidInventory.getTankCapacity(1));
+
+            if (hasEnoughWater && canOutputSteam) {
                 int currentWater = inputWater.getAmount();
                 fluidInventory.setWaterAmount(currentWater - REQUIRED_WATER);
 
@@ -74,12 +82,10 @@ public class BoilerBlockEntity extends BlockEntity {
                 int newSteamAmount = Math.min(currentSteam + PRODUCED_STEAM, fluidInventory.getTankCapacity(1));
                 fluidInventory.setSteamAmount(STEAM_PLACEHOLDER, newSteamAmount);
 
-                progress = 0;
+                burnTimeRemaining--;
                 this.setChanged();
-            }
-        } else {
-            if (progress != 0) {
-                progress = 0;
+            } else {
+                burnTimeRemaining--;
                 this.setChanged();
             }
         }
@@ -88,24 +94,10 @@ public class BoilerBlockEntity extends BlockEntity {
     /**
      * 判断锅炉当前是否处于工作状态
      *
-     * @return true 表示正在工作(有燃料、水够、输出槽可容纳蒸汽)
+     * @return true 表示正在工作(有燃料在燃烧)
      */
     public boolean isWorking() {
-        ItemStack fuel = itemInventory.getStackInSlot(0);
-        FluidStack inputWater = fluidInventory.getFluidInTank(0);
-        FluidStack outputSteam = fluidInventory.getFluidInTank(1);
-
-        final int REQUIRED_WATER = 100;
-        final int PRODUCED_STEAM = 100;
-        final Fluid STEAM_PLACEHOLDER = Fluids.LAVA;
-
-        boolean hasFuel = !fuel.isEmpty();
-        boolean hasEnoughWater = inputWater.getAmount() >= REQUIRED_WATER && inputWater.is(Fluids.WATER);
-        boolean canOutputSteam = outputSteam.isEmpty()
-                || (outputSteam.getFluid() == STEAM_PLACEHOLDER
-                && outputSteam.getAmount() + PRODUCED_STEAM <= fluidInventory.getTankCapacity(1));
-
-        return hasFuel && hasEnoughWater && canOutputSteam;
+        return burnTimeRemaining > 0;
     }
 
     public static void ticker(Level level, BlockPos pos, BlockState state, BoilerBlockEntity entity) {
@@ -119,6 +111,7 @@ public class BoilerBlockEntity extends BlockEntity {
     public void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
         super.saveAdditional(tag, provider);
         tag.putInt(PROGRESS, progress);
+        tag.putInt(BURN_TIME_REMAINING, burnTimeRemaining);
         tag.put(ITEM_INVENTORY, itemInventory.serializeNBT(provider));
         tag.put(FLUID_INVENTORY, fluidInventory.serializeNBT(provider));
     }
@@ -128,6 +121,9 @@ public class BoilerBlockEntity extends BlockEntity {
         super.loadAdditional(tag, provider);
         if (tag.contains(PROGRESS)) {
             progress = tag.getInt(PROGRESS);
+        }
+        if (tag.contains(BURN_TIME_REMAINING)) {
+            burnTimeRemaining = tag.getInt(BURN_TIME_REMAINING);
         }
         if (tag.contains(ITEM_INVENTORY)) {
             itemInventory.deserializeNBT(provider, tag.getCompound(ITEM_INVENTORY));
