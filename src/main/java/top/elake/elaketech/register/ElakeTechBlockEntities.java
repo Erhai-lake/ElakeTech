@@ -1,35 +1,27 @@
 package top.elake.elaketech.register;
 
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import top.elake.elaketech.register.block.MachineBlock;
 import top.elake.elaketech.register.block.entity.function.DryRackBlockEntity;
 import top.elake.elaketech.register.block.FunctionBlock;
 import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
 
-import java.util.function.Supplier;
-
-import static top.elake.elaketech.ElakeTech.MODID;
+import static top.elake.elaketech.ElakeTech.*;
 
 /**
  * @author Elake Studio
  */
 public class ElakeTechBlockEntities {
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, MODID);
-
-    private static <T extends BlockEntity> Supplier<BlockEntityType<T>> registerBlockEntity(String id, BlockEntityType.BlockEntitySupplier<T> entity, Supplier<? extends Block> block) {
-        return BLOCK_ENTITIES.register(id, () -> {
-            return BlockEntityType.Builder.of(entity, block.get()).build(null);
-        });
+    public static void register() {
     }
 
-    public static final Supplier<BlockEntityType<DryRackBlockEntity>> DRY_RACK =
-            registerBlockEntity("dry_rack", DryRackBlockEntity::new, FunctionBlock.DRY_RACK);
+    public static final BlockEntityEntry<DryRackBlockEntity> DRY_RACK = REGISTER
+            .blockEntity("dry_rack", DryRackBlockEntity::new)
+            .validBlocks(FunctionBlock.DRY_RACK)
+            .register();
 
-    public static final Supplier<BlockEntityType<BoilerBlockEntity>> BOILER =
-            registerBlockEntity("boiler", BoilerBlockEntity::new, MachineBlock.BOILER);
+    public static final BlockEntityEntry<BoilerBlockEntity> BOILER = REGISTER
+            .blockEntity("boiler", BoilerBlockEntity::new)
+            .validBlocks(MachineBlock.BOILER)
+            .register();
 }

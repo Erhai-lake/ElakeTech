@@ -31,6 +31,7 @@ import top.elake.elaketech.register.block.entity.function.DryRackBlockEntity;
  * @author Elake Studio
  */
 public class DryRackBlock extends BaseEntityBlock {
+    DryRackBlockEntity entity;
     /**
      * 定义朝向
      */
@@ -155,6 +156,6 @@ public class DryRackBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return new DryRackBlockEntity(pos, state);
+        return new DryRackBlockEntity(entity.getType(), pos, state);
     }
 }

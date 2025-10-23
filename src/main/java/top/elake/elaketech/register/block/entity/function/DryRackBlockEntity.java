@@ -10,6 +10,7 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec2;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -37,8 +38,8 @@ public class DryRackBlockEntity extends BlockEntity {
         }
     };
 
-    public DryRackBlockEntity(BlockPos pos, BlockState state) {
-        super(ElakeTechBlockEntities.DRY_RACK.get(), pos, state);
+    public DryRackBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
 
     /**
@@ -144,7 +145,7 @@ public class DryRackBlockEntity extends BlockEntity {
         float x = 0.2f;
         float y = 0.2f;
 
-        Vec2[] offest = new Vec2[] {
+        Vec2[] offest = new Vec2[]{
                 new Vec2(x, y), new Vec2(-x, y),
                 new Vec2(x, -y), new Vec2(-x, -y)
         };

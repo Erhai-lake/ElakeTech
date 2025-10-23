@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
@@ -15,7 +16,6 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
-import top.elake.elaketech.register.ElakeTechBlockEntities;
 import top.elake.elaketech.register.capability.boiler.BoilerFluidHandler;
 import top.elake.elaketech.register.capability.boiler.BoilerItemHandler;
 
@@ -34,8 +34,8 @@ public class BoilerBlockEntity extends BlockEntity {
     private final BoilerItemHandler itemInventory = new BoilerItemHandler(this);
     private final BoilerFluidHandler fluidInventory = new BoilerFluidHandler();
 
-    public BoilerBlockEntity(BlockPos pos, BlockState state) {
-        super(ElakeTechBlockEntities.BOILER.get(), pos, state);
+    public BoilerBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
 
     public IItemHandler getInvCap(Direction side) {

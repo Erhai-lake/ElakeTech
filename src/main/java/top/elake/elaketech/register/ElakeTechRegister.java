@@ -29,7 +29,7 @@ public class ElakeTechRegister {
         // 矿石方块
         OreBlock.register();
         // 方块实体
-        ElakeTechBlockEntities.BLOCK_ENTITIES.register(event);
+        ElakeTechBlockEntities.register();
         // 方块
         CommonBlock.registers();
         // 机器方块
