@@ -36,3 +36,4 @@
 /time set midnight
 /gamerule doDaylightCycle false
 /time set midnight
+/ponder index

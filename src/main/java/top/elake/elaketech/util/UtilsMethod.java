@@ -30,4 +30,8 @@ public class UtilsMethod {
             return BuiltInRegistries.ENTITY_TYPE.get(ResourceLocation.parse(id));
         }
     }
+
+    public static int colorConversion(int color) {
+        return 0xFF000000 | color;
+    }
 }

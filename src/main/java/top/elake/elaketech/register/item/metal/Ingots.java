@@ -5,6 +5,7 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.tag.ModItemTags;
+import top.elake.elaketech.util.UtilsMethod;
 
 import java.util.Objects;
 
@@ -45,10 +46,11 @@ public class Ingots {
      * @return ItemEntry
      */
     public static ItemEntry<Item> addIngotItem(String id, int color) {
-        int fullColor = 0xFF000000 | color;
         return REGISTER.item(id + "_ingot", Item::new)
-                .color(() -> () -> (itemStack, tintIndex) -> fullColor)
-                .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/ingot")))
+                .color(() -> () -> (itemStack, tintIndex) -> UtilsMethod.colorConversion(color))
+                .model((c, p) -> {
+                    p.generated(c, p.modLoc("item/materials/color/ingot"));
+                })
                 .tag(Tags.Items.INGOTS)
                 .tag(ModItemTags.createItemTag("c", "ingots/" + id))
                 .register();
@@ -62,7 +64,9 @@ public class Ingots {
      */
     public static ItemEntry<Item> addIngotItem(String id) {
         return REGISTER.item(id + "_ingot", Item::new)
-                .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/ingot")))
+                .model((c, p) -> {
+                    p.generated(c, p.modLoc("item/materials/alone/" + id + "/ingot"));
+                })
                 .tag(Tags.Items.INGOTS)
                 .tag(ModItemTags.createItemTag("c", "ingots/" + id))
                 .register();

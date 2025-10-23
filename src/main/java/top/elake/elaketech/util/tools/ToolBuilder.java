@@ -3,6 +3,7 @@ package top.elake.elaketech.util.tools;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
+import top.elake.elaketech.util.UtilsMethod;
 
 import static top.elake.elaketech.ElakeTech.REGISTER;
 
@@ -95,8 +96,7 @@ public class ToolBuilder {
      * @return ToolBuilder
      */
     public ToolBuilder color(int color) {
-        int fullColor = 0xFF000000 | color;
-        this.color = fullColor;
+        this.color = UtilsMethod.colorConversion(color);
         this.isColored = true;
         return this;
     }

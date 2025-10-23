@@ -5,6 +5,7 @@ import net.minecraft.world.item.Item;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.tag.ModItemTags;
+import top.elake.elaketech.util.UtilsMethod;
 
 import java.util.Objects;
 
@@ -35,9 +36,8 @@ public class Plates {
     }
 
     public static ItemEntry<Item> addPlateItem(String id, int color) {
-        int fullColor = 0xFF000000 | color;
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
-                .color(() -> () -> (itemStack, tintIndex) -> fullColor)
+                .color(() -> () -> (itemStack, tintIndex) -> UtilsMethod.colorConversion(color))
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/plate")))
                 .tag(ModItemTags.PLATES)
                 .tag(ModItemTags.createItemTag("c", "plates/" + id))
@@ -46,7 +46,9 @@ public class Plates {
 
     public static ItemEntry<Item> addPlateItem(String id) {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
-                .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/plate")))
+                .model((c, p) -> {
+                    p.generated(c, p.modLoc("item/materials/alone/" + id + "/plate"));
+                })
                 .tag(ModItemTags.PLATES)
                 .tag(ModItemTags.createItemTag("c", "plates/" + id))
                 .register();

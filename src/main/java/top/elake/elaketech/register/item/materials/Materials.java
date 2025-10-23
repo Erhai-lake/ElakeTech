@@ -30,15 +30,21 @@ public class Materials {
      * 草纤维
      */
     public static ItemEntry<Item> GRASS_FIBER = REGISTER.item("grass_fiber", Item::new)
-            .transform((b) -> ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip." + MODID + ".grass_fiber")))
-            .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_fiber")))
+            .transform((b) -> {
+                return ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip." + MODID + ".grass_fiber"));
+            })
+            .model((c, p) -> {
+                p.generated(c, p.modLoc("item/materials/grass_fiber"));
+            })
             .register();
 
     /**
      * 草绳
      */
     public static ItemEntry<Item> GRASS_STRING = REGISTER.item("grass_string", Item::new)
-            .model((c, p) -> p.generated(c, p.modLoc("item/materials/grass_string")))
+            .model((c, p) -> {
+                p.generated(c, p.modLoc("item/materials/grass_string"));
+            })
             .tag(Tags.Items.STRINGS)
             .register();
 }

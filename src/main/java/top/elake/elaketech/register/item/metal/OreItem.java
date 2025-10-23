@@ -6,6 +6,7 @@ import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.ElakeTech;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
 import top.elake.elaketech.tag.ModItemTags;
+import top.elake.elaketech.util.UtilsMethod;
 
 import java.util.Objects;
 
@@ -33,9 +34,8 @@ public class OreItem {
     }
 
     public static ItemEntry<Item> addOreItem(String id, int color) {
-        int fullColor = 0xFF000000 | color;
         return ElakeTech.REGISTER.item("raw_" + id, Item::new)
-                .color(() -> () -> (itemStack, tintIndex) -> fullColor)
+                .color(() -> () -> (itemStack, tintIndex) -> UtilsMethod.colorConversion(color))
                 .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/raw_ore")))
                 .tag(Tags.Items.RAW_MATERIALS)
                 .tag(ModItemTags.createItemTag("c", "raw_materials/" + id))
