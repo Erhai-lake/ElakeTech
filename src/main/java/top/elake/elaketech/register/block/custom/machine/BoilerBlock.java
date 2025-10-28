@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import top.elake.elaketech.register.ElakeTechBlockEntities;
 import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
 
 /**
@@ -25,7 +26,6 @@ import top.elake.elaketech.register.block.entity.machine.BoilerBlockEntity;
  */
 public class BoilerBlock extends BaseEntityBlock {
     public static final BooleanProperty ON = BooleanProperty.create("on");
-    BoilerBlockEntity entity;
     // 朝向
     private static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
@@ -59,7 +59,7 @@ public class BoilerBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return new BoilerBlockEntity(entity.getType(), pos, state);
+        return new BoilerBlockEntity(ElakeTechBlockEntities.BOILER.get(), pos, state);
     }
 
     @Nullable

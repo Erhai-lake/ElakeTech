@@ -24,10 +24,10 @@ public class MachineBlock {
     public static final BlockEntry<BoilerBlock> BOILER = REGISTER.block("boiler", BoilerBlock::new)
             .simpleItem()
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .blockstate((c, p) -> {
-                p.horizontalBlock(c.get(), (state) -> {
+            .blockstate((context, provider) -> {
+                provider.horizontalBlock(context.get(), (state) -> {
                     boolean on = state.getValue(BoilerBlock.ON);
-                    return p.models().getExistingFile(ElakeTech.loadResource(on ? "block/machine/boiler/on" : "block/machine/boiler/off"));
+                    return provider.models().getExistingFile(ElakeTech.loadResource(on ? "block/machine/boiler/on" : "block/machine/boiler/off"));
                 });
             })
             .register();

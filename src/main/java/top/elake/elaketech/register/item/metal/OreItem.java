@@ -36,7 +36,9 @@ public class OreItem {
     public static ItemEntry<Item> addOreItem(String id, int color) {
         return ElakeTech.REGISTER.item("raw_" + id, Item::new)
                 .color(() -> () -> (itemStack, tintIndex) -> UtilsMethod.colorConversion(color))
-                .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/raw_ore")))
+                .model((context, provider) -> {
+                    provider.generated(context, provider.modLoc("item/materials/color/raw_ore"));
+                })
                 .tag(Tags.Items.RAW_MATERIALS)
                 .tag(ModItemTags.createItemTag("c", "raw_materials/" + id))
                 .register();
@@ -44,7 +46,9 @@ public class OreItem {
 
     public static ItemEntry<Item> addOreItem(String id) {
         return ElakeTech.REGISTER.item("raw_" + id, Item::new)
-                .model((c, p) -> p.generated(c, p.modLoc("item/materials/alone/" + id + "/ore")))
+                .model((context, provider) -> {
+                    provider.generated(context, provider.modLoc("item/materials/alone/" + id + "/ore"));
+                })
                 .tag(Tags.Items.RAW_MATERIALS)
                 .tag(ModItemTags.createItemTag("c", "raw_materials/" + id))
                 .register();

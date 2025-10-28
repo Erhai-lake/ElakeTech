@@ -16,7 +16,6 @@ import net.minecraft.world.phys.Vec2;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import top.elake.elaketech.register.ElakeTechBlockEntities;
 
 /**
  * @author Elake Studio
@@ -44,9 +43,6 @@ public class DryRackBlockEntity extends BlockEntity {
 
     /**
      * 重写loadAdditional方法
-     *
-     * @param tag
-     * @param provider
      */
     @Override
     public void loadAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
@@ -61,10 +57,6 @@ public class DryRackBlockEntity extends BlockEntity {
 
     /**
      * 写入物品
-     *
-     * @param tag
-     * @param provider
-     * @return
      */
     public CompoundTag writeItems(CompoundTag tag, HolderLookup.@NotNull Provider provider) {
         super.saveAdditional(tag, provider);
@@ -75,9 +67,6 @@ public class DryRackBlockEntity extends BlockEntity {
 
     /**
      * 重写saveAdditional方法, 用于保存
-     *
-     * @param tag
-     * @param provider
      */
     @Override
     public void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider provider) {
@@ -154,8 +143,6 @@ public class DryRackBlockEntity extends BlockEntity {
 
     /**
      * 更新方块
-     *
-     * @return
      */
     @Nullable
     @Override

@@ -31,14 +31,6 @@ import java.util.Objects;
 
 import static top.elake.elaketech.ElakeTech.REGISTER;
 
-/**
- * 矿石注册
- *
- * @author Qi-Month
- * @Tin 锡
- * @Graphite 石墨
- * @Quartz 石英
- */
 public class OreBlock {
     public static final TagKey<Block> PICKAXE = BlockTags.MINEABLE_WITH_PICKAXE;
 
@@ -90,18 +82,24 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
+                .transform((builder) -> {
+                    return miningLevel != null ? builder.tag(miningLevel) : builder;
+                })
                 .color(() -> () -> (state, world, pos, tintIndex) -> tintIndex == 0 ? color : -1)
                 .initialProperties(() -> Blocks.IRON_ORE)
-                .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                                .modelFile(p.models().getExistingFile(ElakeTech.loadResource("block/ore/ore")))
-                                .build()))
-                .loot((l, b) -> {
-                    HolderLookup.Provider provider = l.getRegistries();
+                .blockstate((context, provider) -> {
+                    provider.getVariantBuilder(context.get())
+                            .forAllStatesExcept((state) -> {
+                                return ConfiguredModel.builder()
+                                        .modelFile(provider.models().getExistingFile(ElakeTech.loadResource("block/ore/ore")))
+                                        .build();
+                            });
+                })
+                .loot((tables, block) -> {
+                    HolderLookup.Provider provider = tables.getRegistries();
                     Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
                     Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
-                    l.add(b, LootTable.lootTable()
+                    tables.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
@@ -131,18 +129,24 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
+                .transform((builder) -> {
+                    return miningLevel != null ? builder.tag(miningLevel) : builder;
+                })
                 .color(() -> () -> (state, world, pos, tintIndex) -> tintIndex == 0 ? color : -1)
                 .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
-                .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                                .modelFile(p.models().getExistingFile(ElakeTech.loadResource("block/ore/deepslate")))
-                                .build()))
-                .loot((l, b) -> {
-                    HolderLookup.Provider provider = l.getRegistries();
+                .blockstate((context, provider) -> {
+                    provider.getVariantBuilder(context.get())
+                            .forAllStatesExcept((state) -> {
+                                return ConfiguredModel.builder()
+                                        .modelFile(provider.models().getExistingFile(ElakeTech.loadResource("block/ore/deepslate")))
+                                        .build();
+                            });
+                })
+                .loot((tables, block) -> {
+                    HolderLookup.Provider provider = tables.getRegistries();
                     Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
                     Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
-                    l.add(b, LootTable.lootTable()
+                    tables.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
@@ -170,19 +174,25 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
+                .transform((builder) -> {
+                    return miningLevel != null ? builder.tag(miningLevel) : builder;
+                })
                 .initialProperties(() -> Blocks.IRON_ORE)
-                .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                                .modelFile(p.models()
-                                        .cubeAll(id + "ore", p.modLoc("block/ore/" + id + "/ore"))
-                                        .texture("0", "block/ore/" + id + "/ore"))
-                                .build()))
-                .loot((l, b) -> {
-                    HolderLookup.Provider provider = l.getRegistries();
+                .blockstate((context, provider) -> {
+                    provider.getVariantBuilder(context.get())
+                            .forAllStatesExcept((state) -> {
+                                return ConfiguredModel.builder()
+                                        .modelFile(provider.models()
+                                                .cubeAll(id + "ore", provider.modLoc("block/ore/" + id + "/ore"))
+                                                .texture("0", "block/ore/" + id + "/ore"))
+                                        .build();
+                            });
+                })
+                .loot((tables, block) -> {
+                    HolderLookup.Provider provider = tables.getRegistries();
                     Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
                     Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
-                    l.add(b, LootTable.lootTable()
+                    tables.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
@@ -210,19 +220,25 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
+                .transform((builder) -> {
+                    return miningLevel != null ? builder.tag(miningLevel) : builder;
+                })
                 .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
-                .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                                .modelFile(p.models()
-                                        .cubeAll("deepslate_" + id + "_ore", p.modLoc("block/ore/" + id + "/deepslate"))
-                                        .texture("0", "block/ore/" + id + "/deepslate"))
-                                .build()))
-                .loot((l, b) -> {
-                    HolderLookup.Provider provider = l.getRegistries();
+                .blockstate((context, provider) -> {
+                    provider.getVariantBuilder(context.get())
+                            .forAllStatesExcept((state) -> {
+                                return ConfiguredModel.builder()
+                                        .modelFile(provider.models()
+                                                .cubeAll("deepslate_" + id + "_ore", provider.modLoc("block/ore/" + id + "/deepslate"))
+                                                .texture("0", "block/ore/" + id + "/deepslate"))
+                                        .build();
+                            });
+                })
+                .loot((tables, block) -> {
+                    HolderLookup.Provider provider = tables.getRegistries();
                     Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
                     Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
-                    l.add(b, LootTable.lootTable()
+                    tables.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot.get())
@@ -243,19 +259,25 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
+                .transform((builder) -> {
+                    return miningLevel != null ? builder.tag(miningLevel) : builder;
+                })
                 .initialProperties(() -> Blocks.IRON_ORE)
-                .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                                .modelFile(p.models()
-                                        .cubeAll(id + "ore", p.modLoc("block/ore/" + id + "/ore"))
-                                        .texture("0", "block/ore/" + id + "/ore"))
-                                .build()))
-                .loot((l, b) -> {
-                    HolderLookup.Provider provider = l.getRegistries();
+                .blockstate((context, provider) -> {
+                    provider.getVariantBuilder(context.get())
+                            .forAllStatesExcept((state) -> {
+                                return ConfiguredModel.builder()
+                                        .modelFile(provider.models()
+                                                .cubeAll(id + "ore", provider.modLoc("block/ore/" + id + "/ore"))
+                                                .texture("0", "block/ore/" + id + "/ore"))
+                                        .build();
+                            });
+                })
+                .loot((tables, block) -> {
+                    HolderLookup.Provider provider = tables.getRegistries();
                     Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
                     Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
-                    l.add(b, LootTable.lootTable()
+                    tables.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot)
@@ -276,19 +298,25 @@ public class OreBlock {
 
                 .tag(Tags.Blocks.ORES)
                 .tag(PICKAXE)
-                .transform((b) -> miningLevel != null ? b.tag(miningLevel) : b)
+                .transform((builder) -> {
+                    return miningLevel != null ? builder.tag(miningLevel) : builder;
+                })
                 .initialProperties(() -> Blocks.DEEPSLATE_IRON_ORE)
-                .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                        .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                                .modelFile(p.models()
-                                        .cubeAll("deepslate_" + id + "_ore", p.modLoc("block/ore/" + id + "/deepslate"))
-                                        .texture("0", "block/ore/" + id + "/deepslate"))
-                                .build()))
-                .loot((l, b) -> {
-                    HolderLookup.Provider provider = l.getRegistries();
+                .blockstate((context, provider) -> {
+                    provider.getVariantBuilder(context.get())
+                            .forAllStatesExcept((state) -> {
+                                return ConfiguredModel.builder()
+                                        .modelFile(provider.models()
+                                                .cubeAll("deepslate_" + id + "_ore", provider.modLoc("block/ore/" + id + "/deepslate"))
+                                                .texture("0", "block/ore/" + id + "/deepslate"))
+                                        .build();
+                            });
+                })
+                .loot((tables, block) -> {
+                    HolderLookup.Provider provider = tables.getRegistries();
                     Holder<Enchantment> fortune = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE);
                     Holder<Enchantment> silkTouch = provider.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH);
-                    l.add(b, LootTable.lootTable()
+                    tables.add(block, LootTable.lootTable()
                             .withPool(LootPool.lootPool()
                                     .setRolls(ConstantValue.exactly(1))
                                     .add(LootItem.lootTableItem(loot)

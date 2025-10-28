@@ -5,7 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
 import top.elake.elaketech.register.ElakeTechCreativeModeTabs;
-import top.elake.elaketech.util.ItemTooltipExtensions;
+import top.elake.elaketech.util.transform.client.AddTooltip;
 
 import java.util.Objects;
 
@@ -30,11 +30,9 @@ public class Materials {
      * 草纤维
      */
     public static ItemEntry<Item> GRASS_FIBER = REGISTER.item("grass_fiber", Item::new)
-            .transform((b) -> {
-                return ItemTooltipExtensions.tooltip(b, Component.translatable("tooltip." + MODID + ".grass_fiber"));
-            })
-            .model((c, p) -> {
-                p.generated(c, p.modLoc("item/materials/grass_fiber"));
+            .transform(AddTooltip.tooltip(Component.translatable("tooltip." + MODID + ".grass_fiber")))
+            .model((context, provider) -> {
+                provider.generated(context, provider.modLoc("item/materials/grass_fiber"));
             })
             .register();
 
@@ -42,8 +40,8 @@ public class Materials {
      * 草绳
      */
     public static ItemEntry<Item> GRASS_STRING = REGISTER.item("grass_string", Item::new)
-            .model((c, p) -> {
-                p.generated(c, p.modLoc("item/materials/grass_string"));
+            .model((context, provider) -> {
+                provider.generated(context, provider.modLoc("item/materials/grass_string"));
             })
             .tag(Tags.Items.STRINGS)
             .register();

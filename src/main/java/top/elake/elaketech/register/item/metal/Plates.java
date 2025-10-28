@@ -38,7 +38,9 @@ public class Plates {
     public static ItemEntry<Item> addPlateItem(String id, int color) {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
                 .color(() -> () -> (itemStack, tintIndex) -> UtilsMethod.colorConversion(color))
-                .model((c, p) -> p.generated(c, p.modLoc("item/materials/color/plate")))
+                .model((context, provider) -> {
+                    provider.generated(context, provider.modLoc("item/materials/color/plate"));
+                })
                 .tag(ModItemTags.PLATES)
                 .tag(ModItemTags.createItemTag("c", "plates/" + id))
                 .register();
@@ -46,8 +48,8 @@ public class Plates {
 
     public static ItemEntry<Item> addPlateItem(String id) {
         return ElakeTech.REGISTER.item(id + "_plate", Item::new)
-                .model((c, p) -> {
-                    p.generated(c, p.modLoc("item/materials/alone/" + id + "/plate"));
+                .model((context, provider) -> {
+                    provider.generated(context, provider.modLoc("item/materials/alone/" + id + "/plate"));
                 })
                 .tag(ModItemTags.PLATES)
                 .tag(ModItemTags.createItemTag("c", "plates/" + id))

@@ -25,13 +25,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import top.elake.elaketech.register.ElakeTechBlockEntities;
 import top.elake.elaketech.register.block.entity.function.DryRackBlockEntity;
 
 /**
  * @author Elake Studio
  */
 public class DryRackBlock extends BaseEntityBlock {
-    DryRackBlockEntity entity;
     /**
      * 定义朝向
      */
@@ -156,6 +156,6 @@ public class DryRackBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return new DryRackBlockEntity(entity.getType(), pos, state);
+        return new DryRackBlockEntity(ElakeTechBlockEntities.DRY_RACK.get(), pos, state);
     }
 }

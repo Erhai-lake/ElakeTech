@@ -48,8 +48,8 @@ public class Ingots {
     public static ItemEntry<Item> addIngotItem(String id, int color) {
         return REGISTER.item(id + "_ingot", Item::new)
                 .color(() -> () -> (itemStack, tintIndex) -> UtilsMethod.colorConversion(color))
-                .model((c, p) -> {
-                    p.generated(c, p.modLoc("item/materials/color/ingot"));
+                .model((context, provider) -> {
+                    provider.generated(context, provider.modLoc("item/materials/color/ingot"));
                 })
                 .tag(Tags.Items.INGOTS)
                 .tag(ModItemTags.createItemTag("c", "ingots/" + id))
@@ -64,8 +64,8 @@ public class Ingots {
      */
     public static ItemEntry<Item> addIngotItem(String id) {
         return REGISTER.item(id + "_ingot", Item::new)
-                .model((c, p) -> {
-                    p.generated(c, p.modLoc("item/materials/alone/" + id + "/ingot"));
+                .model((context, provider) -> {
+                    provider.generated(context, provider.modLoc("item/materials/alone/" + id + "/ingot"));
                 })
                 .tag(Tags.Items.INGOTS)
                 .tag(ModItemTags.createItemTag("c", "ingots/" + id))

@@ -1,8 +1,11 @@
 package top.elake.elaketech;
 
+import com.tterrag.registrate.AbstractRegistrate;
 import com.tterrag.registrate.Registrate;
 import net.createmod.ponder.foundation.PonderIndex;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -22,6 +25,8 @@ import top.elake.elaketech.register.ElakeTechBlockEntities;
 import top.elake.elaketech.register.ElakeTechRegister;
 import top.elake.elaketech.register.block.entity.render.DryRackBlockEntityRender;
 
+import java.util.Objects;
+
 /**
  * @author Elake Studio
  */
@@ -39,6 +44,10 @@ public class ElakeTech {
 
     public static ResourceLocation loadResource(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
+
+    public AbstractRegistrate setCreativeTab(ResourceKey<CreativeModeTab> tab) {
+        return REGISTER.defaultCreativeTab(Objects.requireNonNull(tab));
     }
 
     /**

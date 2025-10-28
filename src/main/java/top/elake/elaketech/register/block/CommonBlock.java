@@ -47,16 +47,22 @@ public class CommonBlock {
      * 燧石碎块
      */
     public static final BlockEntry<RockFlint> ROCK_FLINT = ElakeTech.REGISTER.block("rock_flint", RockFlint::new)
-            .blockstate((c, p) -> p.getVariantBuilder(c.get())
-                    .forAllStatesExcept((state) -> ConfiguredModel.builder()
-                            .modelFile(p.models()
-                                    .getExistingFile(ElakeTech.loadResource("block/rock_flint")))
-                            .build()))
-            .loot((t, b) -> t.add(b, LootTable.lootTable()
-                    .withPool(LootPool.lootPool()
-                            .setRolls(ConstantValue.exactly(1))
-                            .add(LootItem.lootTableItem(Items.FLINT)
-                                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
-                    )))
+            .blockstate((context, provider) -> {
+                provider.getVariantBuilder(context.get())
+                        .forAllStatesExcept((state) -> {
+                            return ConfiguredModel.builder()
+                                    .modelFile(provider.models()
+                                            .getExistingFile(ElakeTech.loadResource("block/rock_flint")))
+                                    .build();
+                        });
+            })
+            .loot((tables, block) -> {
+                tables.add(block, LootTable.lootTable()
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(Items.FLINT)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
+                        ));
+            })
             .register();
 }
